@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ccb1b742-92e7-1b7e-b771-eb55d275f3d3}</ProjectGuid>
+    <ProjectGuid>{a1ec6cb4-da81-b130-a115-b7107a5e47b2}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -41,15 +41,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsController.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/ICustomScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/PlayerController.cs" />
      <Compile Include="Assets/Scripts/ObjectsScripts/ObjectColliderScript.cs" />
-     <Compile Include="Assets/Scripts/GameManagerScript/SkillsScript.cs" />
-     <Compile Include="Assets/Scripts/PlayerScripts/P_SwordScript.cs" />
+     <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsScript.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/SkeletonsScript.cs" />
      <Compile Include="Assets/Scripts/UIScripts/CharracterFollow.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/DogsScript.cs" />
-     <Compile Include="Assets/Scripts/EnemyScripts/AIScript.cs" />
+     <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsDataScript.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AIScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/EnemyScript.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/UIScripts/IsGroundTouchScript.cs" />
@@ -57,10 +60,16 @@
      <Compile Include="Assets/Scripts/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/ButtonScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/ZombiesScript.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordController.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets/Scripts/PlayerScripts/SwordScripts" />
+     <Folder Include="Assets/Prefabs/Enemies" />
      <Folder Include="Assets/Images/Anim_PNG/Player" />
+     <Folder Include="Assets/Scripts/GameManagerScript/SkillsScripts" />
      <Folder Include="Assets/Images/Anim_PNG" />
      <Folder Include="Assets/Efectlerim" />
+     <Folder Include="Assets/Scripts/EnemyScripts/AIScripts" />
      <Folder Include="Assets/Scripts/PlayerScripts" />
      <Folder Include="Assets/Animations" />
      <Folder Include="Assets/Scripts/EnemyScripts/OwnScript" />
@@ -320,22 +329,22 @@
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -704,127 +713,127 @@
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Path.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>/Users/uur/Desktop/Yazılım/Unity_C#/Ege_proje/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>/Users/uur/Desktop/Yazılım/JetBrain_Yazılım/Ege_Proje_yeni/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

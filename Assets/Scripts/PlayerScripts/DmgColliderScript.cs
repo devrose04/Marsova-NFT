@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using EnemyScripts;
 using GameManagerScript;
+using GameManagerScript.SkillsScripts;
+using PlayerScripts.SwordScripts;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -47,12 +49,11 @@ namespace PlayerScripts
             
             if (_isEnemyLayer && dmgTime >= alongTime)
             {
-                CollisionIsActive(other, directionToEnemy);
+                CollisionIsActive(other, directionToEnemy);     // burda bi çelişki var
             }
         }
-        private void CollisionIsActive(Collider2D other, Vector2 directionToEnemy)
+        private void CollisionIsActive(Collider2D other, Vector2 directionToEnemy)  // bu Dash kullanıldıgında dmg olmasın diye yazılmıştır.
         {
-           
             if (__SkillsScript.isDashAtackUse == false)     // DashSkill kullanılıyorsa, Player dmg almasın diye bu if koşulu var.
             {
                     HitToPlayer(other, directionToEnemy);
@@ -60,7 +61,7 @@ namespace PlayerScripts
             else if (dashHitTime > 1f && other.gameObject != null)  // Dash Vurmak için bu var __SkillsScript.isDashAtackUse == TRUE oldugunda çalışır
             {       // dashHitTime olmasının nedeni: onu kullanmazsam hep Dash ile vuruyor olmasıdır. Yani alttaki kodun hep çalışıyor olmasına sebep oluyor.
                 other.gameObject.GetComponent<EnemyScript>().dashHitTime = 0;
-                StartCoroutine(HitToEnemy(other,directionToEnemy));
+                StartCoroutine(HitToEnemy(other,directionToEnemy)); // DashAtack çalışsın
             }
         }
         
@@ -81,7 +82,7 @@ namespace PlayerScripts
         {
             other.gameObject.GetComponent<EnemyScript>().dmgTime = 10;   // zamana 10 veriyorum çünkü, if koşulu içindeki HiToPlayer hemen çalışabililir duruma geçsin.
             EnemyScript __EnemyScript = other.gameObject.GetComponent<EnemyScript>();
-            float dmg = Player.GetComponent<P_SwordScript>().swordDamage/2; // %50 daha az dmg vurur ama 4 kere vurar
+            float dmg = Player.GetComponent<SwordScript>().swordDamage/2; // %50 daha az dmg vurur ama 4 kere vurar
             
             if (other != null) HitAndEffect(other,dmg,directionToEnemy,__EnemyScript);
             
@@ -98,7 +99,7 @@ namespace PlayerScripts
         void HitAndEffect(Collider2D other,float dmg,Vector2 directionToEnemy, EnemyScript __EnemyScript)
         {
             __EnemyScript.TakeDamages(dmg,directionToEnemy);
-            ParticleSystem Effect = Player.GetComponent<P_SwordScript>().hitEffect; // Hangi Effekti oldugunu alıyor    
+            ParticleSystem Effect = Player.GetComponent<SwordScript>().hitEffect; // Hangi Effekti oldugunu alıyor    
             ParticleSystem effect = Instantiate(Effect, other.gameObject.transform);
             Destroy(effect.gameObject,5f);
         }
