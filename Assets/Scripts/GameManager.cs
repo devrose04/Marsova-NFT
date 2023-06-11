@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using EnemyScripts;
+using EnemyScripts.AIScripts;
 using UnityEngine;
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
 // ReSharper disable Unity.PerformanceCriticalCodeNullComparison
@@ -25,36 +26,46 @@ public class GameManager : MonoBehaviour
     {
         foreach (var enemy in enemyList)
         {
-            var __EnemyScript = enemy.GetComponent<EnemyScript>();
-            var __AIScript = enemy.GetComponent<AIScript>();
-            
-            __EnemyScript.DeltaTimeUp();
-            __AIScript.MYFixedUpdate();
-            
+            if (enemy.gameObject != null)
+            {
+                var __EnemyScript = enemy.GetComponent<EnemyScript>();
+                var __AIScript = enemy.GetComponent<AIScript>();
+                
+                __EnemyScript.DeltaTimeUp();
+                __AIScript.MYFixedUpdate();
+            }
         }
     }
-    
+    private float timer = 0f;
     private void Update()    // tüm kodlar tek bir Update ile çalıştırılacak. Oda burası.
-    { 
+    {
+        timer += Time.deltaTime; 
+        if (timer > 1)    // bu koşul saniyede bir kere çalışmasını sağlıyor, buda Performanstan kazandırıyor.
+        {
+            CalculationsWhichEnemiesAround();
+            timer = 0f;
+        }
         
-        Collider2D[] enemyColliders = Physics2D.OverlapCircleAll(Player.transform.position, GameRadiues, enemyLayerMask);
-        isNotHaveRemoveList(enemyColliders);
-        addToList(enemyColliders);
-        
-        print("Çevredeki düşmanların sayısı: " + enemyList.Count);
-        
-        foreach (var enemy in enemyList)
+        foreach (var enemy in enemyList)    // InvokeRepeating fonksiyonu ile bunu daha kolay yazabilirsin.
         {
             var __EnemyScript = enemy.GetComponent<EnemyScript>();
             
             if (__EnemyScript.OwnEffect != null && __EnemyScript.effectTime >= __EnemyScript.sabitEffectTime)  // 5 sn de bir gerçekleştirmesine yarar
-                __EnemyScript.Effect();
+                __EnemyScript.Effect(); 
         }
+    }
+
+    void CalculationsWhichEnemiesAround()
+    {
+        Collider2D[] enemyColliders = Physics2D.OverlapCircleAll(Player.transform.position, GameRadiues, enemyLayerMask);
+        isNotHaveRemoveList(enemyColliders);
+        addToList(enemyColliders);
+
+        print("Çevredeki düşmanların sayısı: " + enemyList.Count);      // bunu canvasa geçir
     }
     
     void isNotHaveRemoveList(Collider2D[] _enemyColliders)  // GameRadiues alanındaki olmayan Enemyleri listeden çıkart
     {
-        
         for (int i = enemyList.Count - 1; i >= 0; i--)
         {
             GameObject enemyObject = enemyList[i];

@@ -1,5 +1,6 @@
 using System.Collections;
 using GameManagerScript;
+using GameManagerScript.SkillsScripts;
 using UnityEngine;
 
 namespace PlayerScripts

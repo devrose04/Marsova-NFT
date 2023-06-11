@@ -1,5 +1,7 @@
 using System;
 using GameManagerScript;
+using GameManagerScript.SkillsScripts;
+using PlayerScripts.SwordScripts;
 using UIScripts;
 using UnityEngine;
 // ReSharper disable CompareOfFloatsByEqualityOperator
@@ -12,54 +14,28 @@ namespace PlayerScripts
     {
         private GameObject GameManager;
         private SkillsScript __SkillsScript;
-        private ButtonScript __ButtonScript;
-        private P_SwordScript __pSwordScript;
+        private SkillsController __SkillsController;
+        private SwordScript __SwordScript;
         private PlayerScript __PlayerScript;
+        private SkillsDataScript __SkillsData;
+        private IsGroundTouchScript __isGroundTouch;
         private GameObject Player;
         private Rigidbody2D RB2;
-        private IsGroundTouchScript __isGroundTouch;
     
         private float speedSabit;
         private float speed;
         private float speedAmount;
-        private float _time;
-        
-        // *** Bu alltaki şeyler Data Verileridir. En son ne zaman vuruş yaptıgının veya o sklinin Dolum süresinin verisini burda tutar.
-        // ***  1-) lastNamePressAvailableTime    2-) lastNamePressTime     Aşagıdakiler Bu 2 sinin kısaltımı şekilde yazılmıştır.
-        
-        // ***  1-) lastNamePressAvailableTime = Skilin en son ne zaman kullanıldıgının zaman verisini tutar
-        // ***  2-) lastNamePressTime = En son basıldıgı zamanın verisini tutar
-        
-        // private float LSwordKPT1;              // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LSwordKPAvailableT1;        // bu butonun dolum süresinin verisini tutuyor.
-        
-        private float LSwordKPT2;                 // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LSwordKPAvailableT2;        // bu butonun dolum süresinin verisini tutuyor.
-        
-        // private float LHittingAllKPT1;         // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LHittingAllKPAvailableT1;   // bu butonun dolum süresinin verisini tutuyor.
-        
-        private float LHittingAllKPT2;            // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LHittingAllKPAvailableT2;   // bu butonun dolum süresinin verisini tutuyor.
-        
-        // private float lastDodgeKeyPressTime;   // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LDodgeKPAvailableT;         // bu butonun dolum süresinin verisini tutuyor.
-        
-        private float LDashAtackKPT;              // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LDashAtackKPAvailableT;     // bu butonun dolum süresinin verisini tutuyor.
-        
-        // private float LArmorFrameKPT;          // bu bir Buttona 2 veya 3 kere arka arka basıp basmadıgımızın, verisini tutuyor.
-        private float LArmorFrameKPAvailableT;    // bu butonun dolum süresinin verisini tutuyor.
-        
+
         private void Awake()
         {
             Player = GameObject.Find("Player");
-            GameManager = GameObject.Find("GameManager");
             RB2 = Player.GetComponent<Rigidbody2D>();
-            __pSwordScript = Player.GetComponent<P_SwordScript>();
+            GameManager = GameObject.Find("GameManager");
+            __SwordScript = Player.GetComponent<SwordScript>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
-            __ButtonScript = GameManager.GetComponent<ButtonScript>();
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
+            __SkillsData = GameManager.GetComponent<SkillsDataScript>();
+            __SkillsController = GameManager.GetComponent<SkillsController>();
             __isGroundTouch = Player.transform.Find("IsGrounTouch").GetComponent<IsGroundTouchScript>();    // IsGrounTouch sonunda d yok
         }
 
@@ -70,24 +46,15 @@ namespace PlayerScripts
         }
 
         private void FixedUpdate()
-        {
-            SkilsCoolDownTime();   // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
+        { 
+            __SkillsData.SkilsCoolDownTime();   // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
     
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse)   // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
                 return;
             
-            if (Input.GetButton("Horizontal") && __pSwordScript.isAttack == false)  // sağ ve sol yönlerine gitmek için
+            if (Input.GetButton("Horizontal") && __SwordScript.isAttack == false)  // sağ ve sol yönlerine gitmek için
             {
-                speed = Player.GetComponent<PlayerScript>().speed;  // bunu yazma nedenim: ArmorFrame gibi oyun içinde hızı azaltacak faktörleri uygulayabilmek için
-                if (__SkillsScript.isArmorFrameUse == false)
-                    Run();
-                speedAmount = speed * Time.deltaTime;
-                RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
-
-                if (Input.GetAxisRaw("Horizontal") == -1)
-                    Player.transform.rotation = new Quaternion(0, 180, 0, 0);
-                else if (Input.GetAxisRaw("Horizontal") == 1)
-                    Player.transform.rotation = new Quaternion(0, 0, 0, 0);
+                Walking();
             }
 
             if (__SkillsScript.isArmorFrameUse)     // bu ArmorFrame kullandıgında zıplamasını engelliyecektir
@@ -103,50 +70,56 @@ namespace PlayerScripts
         {
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) // havaya zıplatıp alan vurma skili
             {
-                LHittingAllKPAvailableT1 =
-                    __ButtonScript.ButtonAvailable_A(__pSwordScript.HittingAll1, 3f, LHittingAllKPAvailableT1);
-                
-                (LHittingAllKPT2, LHittingAllKPAvailableT2) =
-                    __ButtonScript.ManyPressButton(null,__pSwordScript.HittingAll2, null,  1f, 2, LHittingAllKPT2, 3f, LHittingAllKPAvailableT2);
+                // Aşagıda yaptıgın şey Skilli kullanıyor ve onun zaman verisini burdaki __SkillsData.HittingAllCanUse1'e atıyor.
+                __SkillsData.HittingAllCanUse1 = __SkillsController.HittingAll1_ctrl();
+
+                (__SkillsData.HittingAll2, __SkillsData.HittingAllCanUse2) = __SkillsController.HittingAll2_ctrl();
             }
-            else if (Input.GetKeyDown(KeyCode.Space))  // vuruş
+            else if (Input.GetKeyDown(KeyCode.Space))  // 3 lü vuruş combo
             {
-                // Aşagıda yaptıgın şey Skilli kullanıyor ve onun dolum süresini burdaki lastSwordKeyPressAvailableTime'e atıyor.
-                LSwordKPAvailableT1 = 
-                    __ButtonScript.ButtonAvailable_A(__pSwordScript.SwordAttack1, 1.5f, LSwordKPAvailableT1);
                 
-                (LSwordKPT2, LSwordKPAvailableT2) =
-                    __ButtonScript.ManyPressButton( __pSwordScript.SwordAttack2,__pSwordScript.SwordAttack3, null,1.5f, 3, LSwordKPT2, 1.5f,LSwordKPAvailableT2);
+                __SkillsData.SwordCanUse1 = __SkillsController.SwordAttack1_ctrl();
+
+                (__SkillsData.Sword2, __SkillsData.SwordCanUse2) = __SkillsController.SwordAttack2_and_SwordAttack3_ctrl();
             }
             
-            if (Input.GetKeyDown(KeyCode.X))    // ArmorFrame Skill
+            if (Input.GetKeyDown(KeyCode.X))  // ArmorFrame Skill
             {
-                LArmorFrameKPAvailableT =
-                    __ButtonScript.ButtonAvailable_C(__SkillsScript.ArmorFrame,10f, LArmorFrameKPAvailableT);
+                __SkillsData.ArmorFrameCanUse = __SkillsController.ArmorFrame_ctrl();
             }
 
-            
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __SkillsScript.isArmorFrameUse)   // Bu kod Player hit yediginde ve dodge, dashatack vs attıgında: hareket etmesini engeliyecektir.
                 return;     // bunun altındaki kodları etkiler.
 
-            if (Input.GetButtonUp("Horizontal"))    // bunu burdan bool ile ayarlıyıp, FixedUpdaten çagırabiliriz.
-            {   // Dash Atack
-                (LDashAtackKPT, LDashAtackKPAvailableT) =  
-                    __ButtonScript.ManyPressButton(null,null,__SkillsScript.DashAtack, 0.4f,3 ,LDashAtackKPT,5f,LDashAtackKPAvailableT);
+            if (Input.GetButtonUp("Horizontal"))  // DashAttack Skill
+            {
+                (__SkillsData.DashAttack, __SkillsData.DashAttackCanUse) = __SkillsController.DashAtack_ctrl();
             }
             
             if (Input.GetKeyDown(KeyCode.Q))    // q ile sola Dodge atıyor
             {
-                LDodgeKPAvailableT =
-                    __ButtonScript.ButtonAvailable_C(__SkillsScript.DodgeSkils_q, 3f, LDodgeKPAvailableT);
+                __SkillsData.DodgeCanUse = __SkillsController.DodgeSkils_q_ctrl();
             }
             if (Input.GetKeyDown(KeyCode.E))    // e ile sağa Dodge atıyor
             {
-                LDodgeKPAvailableT =
-                    __ButtonScript.ButtonAvailable_C(__SkillsScript.DodgeSkils_e, 3f, LDodgeKPAvailableT);
+                __SkillsData.DodgeCanUse = __SkillsController.DodgeSkils_e_ctrl();
             }
         }
 
+        void Walking()
+        {
+            speed = Player.GetComponent<PlayerScript>().speed;  // bunu yazma nedenim: ArmorFrame gibi oyun içinde hızı azaltacak faktörleri uygulayabilmek için
+            if (__SkillsScript.isArmorFrameUse == false)
+                Run();
+            speedAmount = speed * Time.deltaTime;
+            RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
+
+            if (Input.GetAxisRaw("Horizontal") == -1)
+                Player.transform.rotation = new Quaternion(0, 180, 0, 0);
+            else if (Input.GetAxisRaw("Horizontal") == 1)
+                Player.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+        
         void Run()
         {
             if (Input.GetKey(KeyCode.LeftShift))  // hızlı koşma
@@ -160,65 +133,42 @@ namespace PlayerScripts
             }
         }
 
-        private void SkilsCoolDownTime()    // burdan Canvasta Skillerin kullanılabilir hale geçip geçmediginin, işleyen bir fonksiyon.
-        {
-            // 3f ler 1.5f ler 10f ler skillerin dolum süresini gösteriyor.
-            _time += Time.deltaTime;
-            
-            if (_time > 3f + LHittingAllKPAvailableT1)  // HittingAll_1 Skils
-            {
-                // print("HittingAll1 Skili Kullanılabilir");   
-            }
-            else if (_time > 3f + LHittingAllKPAvailableT2)  // HittingAll_2 Skils
-            {
-                // print("HittingAll2 Skili Kullanılabilir");   
-            }
-
-            if (_time > 1.5f + LSwordKPAvailableT1) // SwordAtack_1 Skils
-            {
-                // print("SwordAttack_1 Skili Kullanılabilir");   
-            }
-            else if (_time > 1.5f + LSwordKPAvailableT2) // SwordAtack_2 ve SwordAtack_3 Skils
-            {
-                // print("SwordAttack_2 ve SwordAttack_3 Skili Kullanılabilir");   // burda SwordAttack_2'nin dolum süresini alamıyorum ondan: Tasarım kısmında aralında bir köprü görevi görür gibi bir hissiyat vermek lazım.
-            }
-
-            if (_time > 10f + LArmorFrameKPAvailableT)  // ArmorFrame Skils
-            {
-                // print("ArmorFrame Skili kullanılabilir");
-            }
-
-            if (_time > 5f + LDashAtackKPAvailableT)    // DashAtack Skils
-            {
-                // print("DashAtack Skili kullanılabilir");
-            }
-
-            if (_time > 3f + LDodgeKPAvailableT)
-            {
-                // print("Dodge Skili kullanılabilir");
-            }
-
-        }
     }
     // -Todo: -Uğur-
     
     // *Todo: Yapılacaklar:
+    
     // Todo: Error:  gizmoz niye çalışmıyor ona bak,
-    // Todo: PlayerController'dan SkilsCoolDownTime ve Zaman verilerini al başka bir Scripte aktar. Orda dursun ve ordan çagır kullan.
     // Todo: Enemy geldigi gibi çarparak dmg vurmasın. Onun özel bir IEnumator ile vuruş şeklini oluştur. Ve onu kullan.
+    // Todo: bazı if yerine Switch case kullanılabilirmi bak.
     // ---
     
     // *Todo: Belki Yapılabilir:
-    // Todo:  if (_time > 3f + LHittingAllKPAvailableT1)    Bu Scripteki 72. satırdaki koda Skillerin dolsun süresini tutan bir float oluşturabilirsin.
-    // Todo: StopMoveAndLookAround Fonksiyonuna kafalarının üstüne bir ünlem koyabiliriz.
+    
+    // Todo: GamaManager her saniye degil. saniyede 1 kere çalışsınki pc daha az yorulsun.
+    // Todo: DmgCollider daha okunaklı olabilir.    (Enemy'lerin vuruş şeklini degiştirdikten sonra bunu yap)
+    
+    // Todo: Hep tekrar tekrar tanımlayıp kullandıgım şeyleri GameManager da static olarak tanımla ve hep ordan çek.
+    // Todo: Skillerin Datasını tuttugun Scripte statik kullanmak verimli olurmu, ona bak.
+    // Todo: Time.delta'lı şeyleri static olarak kullansam daha mı verimli olur, ona bak.
+    
+    // Todo: Scriptlerin en başındaki yerleri düzenlicem.
+    // Todo: PlayerController daki FixedUpda ve Update'i bir tane fonksiyona koy ve GameManagerdan çagırmayı dene.
+    // Todo: GameManagerda OwnEffect yerinde InvokeRepeating fonksiyonunu kullanarak daha kısa ve öz yazabilirsin.
+    
+    // Todo: Invoke metodlarını kullanarak oyun mekanigine güzel eklentiler yapabilirsin.   (uygula bunu)
+    
+    // Todo: time dedigin yerlere Timer de.
+    // Todo: GameManager Update fonksiyonun üstüne Timer oluşturdugum gibi diger Scriptleri Fonksiyonlarada onu yap
     // ---
     
-    // *Todo: Yapılanlar 3:
-    // Todo: AI'da MyOwnBase'de IEnumerotör işlemleri entegre ettim.
-    // Todo: AI'da StopMoveAndLookAround Fonksiyonunu oluşturdum.
-    // Todo: AI'da Enemy'nin baktıgı yönlerin hepsini düzelttim.
-    // Todo: Tüm çevresine vuran bir skil yaptım. S ve Space tuşuna basınca çalışıyor.Combosuda var.
-    // Todo: Skillerin kullanılabilir hale geçip geçmedigini işleyen bir fonksiyon yazdım.
+    // *Todo: Yapılanlar 4:
+    
+    // Todo: PlayerController'dan SkillsDataScripti oluşturdum ve Zaman verilerini ordan alıp PlayerController'a aktarıyorum.
+    // Todo: Skilleri bir SkillsController oluşturdum ve ordan fonksiyona koydum ordan Controlerdan çagırıp işlem yapıyorum (daha okunaklı oldu)
+    // Todo: Kodun çogu Scriptlerini düzenledim daha okunaklı yaptım.
+    // Todo: AISkillsScripts oluşturdum ve AISkill kodlarını oraya aktardım (daha okunaklı oldu)
+    // Todo: SwordSkills ve SwordController oluşturdum. (daha okunaklı oldu)
     // ---
 
 }

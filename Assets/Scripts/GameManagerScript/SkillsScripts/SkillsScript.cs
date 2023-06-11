@@ -1,13 +1,11 @@
-using System;
 using System.Collections;
 using PlayerScripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 // ReSharper disable Unity.InefficientPropertyAccess
 // ReSharper disable CompareOfFloatsByEqualityOperator
 
-namespace GameManagerScript
+namespace GameManagerScript.SkillsScripts
 {
     public class SkillsScript : MonoBehaviour
     {
@@ -17,14 +15,12 @@ namespace GameManagerScript
 
         private GameObject Player;
         private Rigidbody2D RB2;
-        private CapsuleCollider2D capsuleCollider2D;
         private PlayerScript __PlayerScript; 
 
         private void Awake()
         {
             Player = GameObject.Find("Player");
             RB2 = Player.GetComponent<Rigidbody2D>();
-            capsuleCollider2D = Player.GetComponent<CapsuleCollider2D>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
         }
 
