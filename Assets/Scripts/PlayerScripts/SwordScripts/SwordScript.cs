@@ -12,15 +12,18 @@ namespace PlayerScripts.SwordScripts
         [SerializeField] public float swordDamage;
         [SerializeField] float swordRange;
         [SerializeField] float attackAngle;
-        [SerializeField] LayerMask enemyLayer;
         [SerializeField] public ParticleSystem hitEffect;
+        [SerializeField] LayerMask enemyLayer;
 
         private SwordSkilsScript __SwordSkilsScript;
         
         private Vector2 enemyPosition;
         private Vector2 directionToEnemy;
         private Vector2 playerDirection;
+        private Vector2 roundedDirectionToEnemy;
+        private Vector2 clampedDirectionToEnemy;
         private float angle;
+        
   
         public bool isAttack = false;
 
@@ -37,7 +40,7 @@ namespace PlayerScripts.SwordScripts
         public void SwordAttack(float dmgPower , float KnockBackPower,bool isJumpit, float moveOnTime, float HittingAllAngle)
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(this.transform.position, swordRange, enemyLayer);
-            print("Vurdugun kişi sayısı:" + hitEnemies.Length); // bunu canvasa yazdır.
+            // print("Vurdugun kişi sayısı:" + hitEnemies.Length); // bunu canvasa yazdır.
             StartCoroutine(__SwordSkilsScript.AttackAndMoveOn(moveOnTime,RB2));
             
             foreach (var enemy in hitEnemies)   // yuvarlagın içindeki vurulan Enemylere teker teker bakar.
@@ -55,8 +58,14 @@ namespace PlayerScripts.SwordScripts
                 // Düşmanın pozisyonunu al
                 enemyPosition = enemy.transform.position;
 
-                // Düşmanın pozisyonunun hangi yönde oldugunu buluyor.
-                directionToEnemy = (enemyPosition - (Vector2)transform.position).normalized;  // 1 , -1 arası değer (x,y)
+                // 1-) Düşmanın pozisyonunun hangi yönde oldugunu buluyor.
+                directionToEnemy = (enemyPosition - (Vector2)transform.position).normalized;  // 1 , -1 arasında bir değer (x,y)
+                
+                // 2-) X ve Y bileşenlerini yuvarlayarak tam sayı değerlere dönüştürüyoruz
+                roundedDirectionToEnemy = new Vector2(Mathf.Round(directionToEnemy.x), Mathf.Round(directionToEnemy.y)); 
+
+                // 3-) 1 veya -1 değerlerini almak için vektörün uzunluğunu 1'e sınırlıyoruz   // ya 1 veya -1 alır başka bişi almaz.
+                clampedDirectionToEnemy = Vector2.ClampMagnitude(roundedDirectionToEnemy, 1f);    // bunu KnocBack uygularken ya tam sağa yada tam sola dogru uygulamak için oluşturduk.
                 
                 // Player'ın yönünü al
                 playerDirection = transform.right;  // 1 veya -1
@@ -64,6 +73,8 @@ namespace PlayerScripts.SwordScripts
                 // Aradaki açıyı hesapla
                 angle = Vector2.Angle(playerDirection, directionToEnemy);
 
+                if (clampedDirectionToEnemy.x == 0) // Bazen Enemy Player'ın tam içine giriyor ve bu 0 değerini alıyor. Bu kod onun önüne geçiyor
+                    clampedDirectionToEnemy.x = 1;
             }
 
             void TakeDamages(Collider2D enemy)
@@ -71,7 +82,7 @@ namespace PlayerScripts.SwordScripts
                 if (isJumpit) // Enemyi zıplatır
                 {
                     Rigidbody2D EnemyRB2 = enemy.gameObject.GetComponent<Rigidbody2D>();
-                    EnemyRB2.AddForce(new Vector2(EnemyRB2.velocity.x, 30f),ForceMode2D.Impulse);  
+                    EnemyRB2.AddForce(new Vector2(EnemyRB2.velocity.x, Random.Range(25f,35f)),ForceMode2D.Impulse);  
                 }
                     
                 ParticleSystem _hitEffect = Instantiate(hitEffect, enemy.transform.position,Quaternion.identity);
@@ -79,7 +90,7 @@ namespace PlayerScripts.SwordScripts
                     
                 EnemyScript _enemyScript = enemy.GetComponent<EnemyScript>();
                 if (enemy != null)
-                    _enemyScript.TakeDamages( swordDamage * dmgPower, directionToEnemy * KnockBackPower);
+                    _enemyScript.TakeDamages( swordDamage * dmgPower, clampedDirectionToEnemy * KnockBackPower);
             }
             
             void OnDrawGizmosSelected()  // bu nedense çalışmadı

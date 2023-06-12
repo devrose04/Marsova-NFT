@@ -6,6 +6,8 @@ namespace EnemyScripts.OwnScript
 {
     public class SkeletonsScript : MonoBehaviour, ICustomScript  // iskeletler öldükten sonra tek vuruşla canla doguyorlar, aslında bu bir hara ama özellik olarak kalsın dedim
     {
+        public bool isHeLive = true;
+        
         private float speed;
         private float health;
         private float damage;
@@ -13,7 +15,6 @@ namespace EnemyScripts.OwnScript
         
         private GameObject Enemy;
         private Rigidbody2D RB2;
-        public bool isHeLive = true;
 
         private void Awake()
         {

@@ -10,6 +10,7 @@ namespace GameManagerScript.SkillsScripts
     {
         private GameObject Player;
         private GameObject GameManager;
+        
         private SkillsScript __SkillsScript;
         private ButtonScript __ButtonScript;
         private SwordController __SwordController;

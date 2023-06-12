@@ -12,13 +12,14 @@ namespace PlayerScripts
 {
     public class PlayerController : MonoBehaviour
     {
-        private GameObject GameManager;
         private SkillsScript __SkillsScript;
         private SkillsController __SkillsController;
         private SwordScript __SwordScript;
         private PlayerScript __PlayerScript;
         private SkillsDataScript __SkillsData;
         private IsGroundTouchScript __isGroundTouch;
+       
+        private GameObject GameManager;
         private GameObject Player;
         private Rigidbody2D RB2;
     
@@ -45,28 +46,32 @@ namespace PlayerScripts
             speedSabit = speed;
         }
 
-        private void FixedUpdate()
+        public void MYFixedUpdate() // GameManagerdan çagırıyorum
         { 
             __SkillsData.SkilsCoolDownTime();   // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
-    
+            
+            
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse)   // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
                 return;
+            
             
             if (Input.GetButton("Horizontal") && __SwordScript.isAttack == false)  // sağ ve sol yönlerine gitmek için
             {
                 Walking();
             }
 
+            
             if (__SkillsScript.isArmorFrameUse)     // bu ArmorFrame kullandıgında zıplamasını engelliyecektir
                 return;
-                
+            
+ 
             if (Input.GetKey(KeyCode.W) && __isGroundTouch.isGroundTouchBool)  // zıplamak
             {
                 RB2.velocity = new Vector2(RB2.velocity.x, 5);
             }
         }
 
-        private void Update()   
+        public void MYUpdate()     // GameManagerdan çagırıyorum
         {
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) // havaya zıplatıp alan vurma skili
             {
@@ -87,14 +92,17 @@ namespace PlayerScripts
             {
                 __SkillsData.ArmorFrameCanUse = __SkillsController.ArmorFrame_ctrl();
             }
-
+            
+            
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __SkillsScript.isArmorFrameUse)   // Bu kod Player hit yediginde ve dodge, dashatack vs attıgında: hareket etmesini engeliyecektir.
                 return;     // bunun altındaki kodları etkiler.
 
+                       
             if (Input.GetButtonUp("Horizontal"))  // DashAttack Skill
             {
                 (__SkillsData.DashAttack, __SkillsData.DashAttackCanUse) = __SkillsController.DashAtack_ctrl();
             }
+
             
             if (Input.GetKeyDown(KeyCode.Q))    // q ile sola Dodge atıyor
             {
@@ -136,39 +144,41 @@ namespace PlayerScripts
     }
     // -Todo: -Uğur-
     
+    // Todo: Error:  gizmoz niye çalışmıyor ona bak,
+    
     // *Todo: Yapılacaklar:
     
-    // Todo: Error:  gizmoz niye çalışmıyor ona bak,
-    // Todo: Enemy geldigi gibi çarparak dmg vurmasın. Onun özel bir IEnumator ile vuruş şeklini oluştur. Ve onu kullan.
-    // Todo: bazı if yerine Switch case kullanılabilirmi bak.
+    
+    // Todo: ortada ki çizgiyi kaldır.
+    // Todo: Player Controlerdaki Skiller fonksiyona konsun.
+    
+    // Todo: a-) Enemy geldigi gibi çarparak dmg vurmasın. Onun özel bir geçikmeli İnvoke fonks. ile vuruş şeklini oluştur. Ve onu kullan.
+    // Todo: a-) Enemy'e değdiginde direk canı gitmesin, 0.5f 1f arasında bir süre ile Enemy o alandaki yere vuruş yapsın.
+    // Todo: Dash'in KnockBackni ayarla.
+    
     // ---
+    
     
     // *Todo: Belki Yapılabilir:
     
-    // Todo: GamaManager her saniye degil. saniyede 1 kere çalışsınki pc daha az yorulsun.
-    // Todo: DmgCollider daha okunaklı olabilir.    (Enemy'lerin vuruş şeklini degiştirdikten sonra bunu yap)
     
-    // Todo: Hep tekrar tekrar tanımlayıp kullandıgım şeyleri GameManager da static olarak tanımla ve hep ordan çek.
-    // Todo: Skillerin Datasını tuttugun Scripte statik kullanmak verimli olurmu, ona bak.
-    // Todo: Time.delta'lı şeyleri static olarak kullansam daha mı verimli olur, ona bak.
-    
-    // Todo: Scriptlerin en başındaki yerleri düzenlicem.
-    // Todo: PlayerController daki FixedUpda ve Update'i bir tane fonksiyona koy ve GameManagerdan çagırmayı dene.
-    // Todo: GameManagerda OwnEffect yerinde InvokeRepeating fonksiyonunu kullanarak daha kısa ve öz yazabilirsin.
-    
-    // Todo: Invoke metodlarını kullanarak oyun mekanigine güzel eklentiler yapabilirsin.   (uygula bunu)
-    
-    // Todo: time dedigin yerlere Timer de.
-    // Todo: GameManager Update fonksiyonun üstüne Timer oluşturdugum gibi diger Scriptleri Fonksiyonlarada onu yap
+
+    // Todo: SwordAtack fonksiyonuna girilen parametleri TakesDamages fonksiyonun içinde kullanıyoruz ama orda parametre olarak girmemişiz? böyle çalışıyormu. oluyorsa diger Scriptlerede uygula
     // ---
     
-    // *Todo: Yapılanlar 4:
     
-    // Todo: PlayerController'dan SkillsDataScripti oluşturdum ve Zaman verilerini ordan alıp PlayerController'a aktarıyorum.
-    // Todo: Skilleri bir SkillsController oluşturdum ve ordan fonksiyona koydum ordan Controlerdan çagırıp işlem yapıyorum (daha okunaklı oldu)
-    // Todo: Kodun çogu Scriptlerini düzenledim daha okunaklı yaptım.
-    // Todo: AISkillsScripts oluşturdum ve AISkill kodlarını oraya aktardım (daha okunaklı oldu)
-    // Todo: SwordSkills ve SwordController oluşturdum. (daha okunaklı oldu)
+    // *Todo: Yapılanlar 5:
+    
+    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.
+    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.
+    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.
+    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.
+    // Todo: Scriptlerin en başındaki yerleri düzenledim.
+    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.
+    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.
+    // Todo: a-) DmgCollider daha okunaklı olabilir. 
+    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.
+    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.
     // ---
 
 }

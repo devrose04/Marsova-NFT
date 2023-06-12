@@ -9,6 +9,7 @@ namespace PlayerScripts
     {
         private GameObject Player;
         private Rigidbody2D RB2;
+        
         private SkillsScript __SkillsScript;
 
         [SerializeField] public float speed;

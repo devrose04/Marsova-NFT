@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4173778304432394488}
   - component: {fileID: 1688516230851231473}
   - component: {fileID: -3191952814899086404}
+  - component: {fileID: -8093018654728417480}
   m_Layer: 6
   m_Name: Zombi
   m_TagString: Zombies
@@ -156,12 +157,11 @@ MonoBehaviour:
   health: 1
   damage: 1
   hitTimeRange: 0
-  OwnEffect: {fileID: 0}
+  OwnEffect: {fileID: 6632549741689272037, guid: 368ae4ebaa8e74b6fb77ae4cc3cbdd4a, type: 3}
   HitEffect: {fileID: 7058215873622624022, guid: 5f57cac59b9de4f92a43fa37960cddb6, type: 3}
-  effectTime: 5
-  sabitEffectTime: 0
-  dmgTime: 10
-  dashHitTime: 10
+  effectCreationTimer: 5
+  HitToPlayerTimer: 10
+  canUseDashHitTimer: 10
 --- !u!114 &4173778304432394488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1763ee60de9da49d4956145865da2c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isKnockBackNotActive: 0
   isWaitingInTheBase: 0
+  isRight: 1
+  moveSpeed: 0
+  startingPosition: {x: 0, y: 0}
+  basePosition: {x: 0, y: 0}
   baseRange: 3
 --- !u!114 &1688516230851231473
 MonoBehaviour:
@@ -198,5 +203,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc6eaa9ba98c4f58a306e85987beff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8093018654728417480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173778304432394490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab6b58c6b43d462e900d6b9f8aa4a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

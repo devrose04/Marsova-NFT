@@ -6,13 +6,13 @@ namespace ObjectsScripts
 {
     public class ObjectColliderScript : MonoBehaviour
     {       //1-) zemine degdiginde gravity kapanacak  2-) Trigger hep açık olucak   
-        private GameObject _gameObject;
+        private GameObject GameObject;
         private Rigidbody2D RB2;
 
         private void Awake()
         {
-            _gameObject = this.gameObject;
-            RB2 = _gameObject.GetComponent<Rigidbody2D>();
+            GameObject = this.gameObject;
+            RB2 = GameObject.GetComponent<Rigidbody2D>();
         }
 
         private void OnTriggerEnter2D(Collider2D other) // Obje zemine ilk degdigi anda 1 kere çalışacak

@@ -5,8 +5,9 @@ namespace PlayerScripts.SwordScripts
 {
     public class SwordController : MonoBehaviour
     {
-        private SwordScript __SwordScript;
         private GameObject Player;
+        
+        private SwordScript __SwordScript;
 
         private void Awake()
         {

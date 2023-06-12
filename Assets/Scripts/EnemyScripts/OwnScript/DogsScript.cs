@@ -14,6 +14,7 @@ namespace EnemyScripts.OwnScript
         
         private GameObject Enemy;
         private Rigidbody2D RB2;
+        
         private IsGroundTouchScript __isGroundTouch;
 
         private void Awake()

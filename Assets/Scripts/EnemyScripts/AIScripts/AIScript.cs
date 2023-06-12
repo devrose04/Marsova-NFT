@@ -6,18 +6,21 @@ namespace EnemyScripts.AIScripts
 {
     public class AIScript : MonoBehaviour
     {
+        public bool isKnockBackNotActive;
+        
         private bool isEnemySeePlayer;
         public bool isWaitingInTheBase;
         public bool isRight = true;
         
         private int JustOneTimeWork;
         
-        private float moveSpeed; 
+        public float moveSpeed; 
         private float distance;  // Player ile Enemy arasoındaki mesafeyi ölçer 
         
         private Transform Player; // Hedef
         private GameObject Enemy;
         private Rigidbody2D RB2;
+        
         private EnemyScript __EnemyScript;
         private AISkillsScript __AISkillsScript;
 
@@ -33,6 +36,8 @@ namespace EnemyScripts.AIScripts
             RB2 = this.gameObject.GetComponent<Rigidbody2D>();
             __EnemyScript = Enemy.GetComponent<EnemyScript>();
             __AISkillsScript = Enemy.GetComponent<AISkillsScript>();
+
+            isKnockBackNotActive = true;
         }
 
         private void Start()
@@ -42,7 +47,7 @@ namespace EnemyScripts.AIScripts
             basePosition = startingPosition + new Vector2(baseRange,0); // Base'in genişligini ayarlıyorum.
            
         }
-
+        
         // ReSharper disable Unity.PerformanceAnalysis
         public void MYFixedUpdate()  // bunu GameManagerda çagırıyorum.
         {
@@ -60,9 +65,9 @@ namespace EnemyScripts.AIScripts
             else
             {
                 EnemyDontLookingToPlayer();
-                if (isWaitingInTheBase == false)
+                if (isWaitingInTheBase == false)    // Base'in içinde beklemiyor ise hareket etsin
                 {
-                    __AISkillsScript.MoveOwnBase(isWaitingInTheBase, distance,moveSpeed,startingPosition,basePosition,isRight,baseRange);
+                    __AISkillsScript.MoveOwnBase(distance,moveSpeed,startingPosition,basePosition,isRight,baseRange);
                     JustOneTimeWork = 1;
                 }
                 else if (JustOneTimeWork == 1)  // JustOneTimeWork bir kez çalışmasını saglıyor
@@ -75,7 +80,8 @@ namespace EnemyScripts.AIScripts
 
         void GoPlayerPosition()  // Player'a doğru hareket etme
         {
-            RB2.velocity = new Vector2(direction.x * moveSpeed, RB2.velocity.y);  // direction.x 1 ve ya -1 dir
+            if (isKnockBackNotActive)
+                RB2.velocity = new Vector2(direction.x * moveSpeed, RB2.velocity.y);  // direction.x 1 veya -1 dir
         }
 
         void EnemyLookingToPlayer()

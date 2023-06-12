@@ -15,6 +15,7 @@ namespace GameManagerScript.SkillsScripts
 
         private GameObject Player;
         private Rigidbody2D RB2;
+        
         private PlayerScript __PlayerScript; 
 
         private void Awake()

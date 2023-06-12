@@ -5,7 +5,7 @@ namespace GameManagerScript.SkillsScripts
 {
     public class SkillsDataScript : MonoBehaviour
     {
-        private float _time;
+        private float timer;
 
         // *** Bu alltaki şeyler Data Verileridir. En son ne zaman tuşa bastığının veya o sklinin Dolum süresinin verisini burda tutar.
         // ***  1-) lastPressTime    2-) lastPressCanUseTime     Aşagıdakiler Bu 2 sinin kısaltımı şekilde yazılmıştır.
@@ -45,37 +45,37 @@ namespace GameManagerScript.SkillsScripts
         public void SkilsCoolDownTime() // burdan Canvasta Skillerin kullanılabilir hale geçip geçmediginin, işleyen bir fonksiyon.
         {
             // 3f ler 1.5f ler 10f ler skillerin dolum süresini gösteriyor.
-            _time += Time.deltaTime;
+            timer += Time.deltaTime;
 
-            if (_time > HittingAllCD1 + HittingAllCanUse1) // HittingAll_1 Skils
+            if (timer > HittingAllCD1 + HittingAllCanUse1) // HittingAll_1 Skils
             {
                 // print("HittingAll1 Skili Kullanılabilir");   
             }
-            else if (_time > HittingAllCD2 + HittingAllCanUse2) // HittingAll_2 Skils
+            else if (timer > HittingAllCD2 + HittingAllCanUse2) // HittingAll_2 Skils
             {
                 // print("HittingAll2 Skili Kullanılabilir");   
             }
 
-            if (_time > SwordCD1 + SwordCanUse1) // SwordAtack_1 Skils
+            if (timer > SwordCD1 + SwordCanUse1) // SwordAtack_1 Skils
             {
                 // print("SwordAttack_1 Skili Kullanılabilir");   
             }
-            else if (_time > SwordCD2 + SwordCanUse2) // SwordAtack_2 ve SwordAtack_3 Skils
+            else if (timer > SwordCD2 + SwordCanUse2) // SwordAtack_2 ve SwordAtack_3 Skils
             {
                 // print("SwordAttack_2 ve SwordAttack_3 Skili Kullanılabilir");   // burda SwordAttack_2'nin dolum süresini alamıyorum ondan: Tasarım kısmında aralında bir köprü görevi görür gibi bir hissiyat vermek lazım.
             }
 
-            if (_time > ArmorFrameCD + ArmorFrameCanUse) // ArmorFrame Skils
+            if (timer > ArmorFrameCD + ArmorFrameCanUse) // ArmorFrame Skils
             {
                 // print("ArmorFrame Skili kullanılabilir");
             }
 
-            if (_time > DashAtackCD + DashAttackCanUse) // DashAtack Skils
+            if (timer > DashAtackCD + DashAttackCanUse) // DashAtack Skils
             {
                 // print("DashAtack Skili kullanılabilir");
             }
 
-            if (_time > DodgeCD + DodgeCanUse)
+            if (timer > DodgeCD + DodgeCanUse)
             {
                 // print("Dodge Skili kullanılabilir");
             }

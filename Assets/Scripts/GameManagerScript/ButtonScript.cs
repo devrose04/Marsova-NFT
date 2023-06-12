@@ -7,6 +7,7 @@ namespace GameManagerScript
     public class ButtonScript : MonoBehaviour   // 2 kere basımlık combo skillerde ManyPressButton kullanma en az 3 basımlık olacak ise kullan.
     {
         private bool canDoubleTap = false;
+        
         private int tapCount = 0;
         
         // *** Bu alltaki şeyler Data Verileridir. En son ne zaman tuşa bastığının veya o sklinin Dolum süresinin verisini burda tutar.

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EnemyScripts;
 using EnemyScripts.AIScripts;
+using PlayerScripts;
 using UnityEngine;
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
 // ReSharper disable Unity.PerformanceCriticalCodeNullComparison
@@ -10,20 +11,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
     [SerializeField] float GameRadiues;   // oyunun çalıştırılma alanı
-
-    private LayerMask enemyLayerMask;
     
+    private float timer = 0f;
+    
+    private PlayerController __PlayerController;
+    
+    private GameObject Player;
+    private LayerMask enemyLayerMask;
     private List<GameObject> enemyList ;
+    
     private void Awake()
     {
+        Player = GameObject.Find("Player");
         enemyList = new List<GameObject>();
         enemyLayerMask = LayerMask.GetMask("Enemy");
+        __PlayerController = Player.GetComponent<PlayerController>();
     }
 
     private void FixedUpdate()    // tüm kodlar tek bir FixedUpdate ile çalıştırılacak. Oda burası.
     {
+        __PlayerController.MYFixedUpdate();
+        
         foreach (var enemy in enemyList)
         {
             if (enemy.gameObject != null)
@@ -32,26 +41,33 @@ public class GameManager : MonoBehaviour
                 var __AIScript = enemy.GetComponent<AIScript>();
                 
                 __EnemyScript.DeltaTimeUp();
+                __EnemyScript.MYFixedUpdate();
                 __AIScript.MYFixedUpdate();
             }
         }
     }
-    private float timer = 0f;
+    
     private void Update()    // tüm kodlar tek bir Update ile çalıştırılacak. Oda burası.
     {
-        timer += Time.deltaTime; 
-        if (timer > 1)    // bu koşul saniyede bir kere çalışmasını sağlıyor, buda Performanstan kazandırıyor.
+        __PlayerController.MYUpdate();
+        
+        foreach (var enemy in enemyList)    // bu foreach'a bişi yazma aşagıdaki foreach'e yaz
+        {
+            if (enemy.gameObject==null) // eger eneym object ölmüş ise alttaki CalculationsWhichEnemiesAround çalışır. Bunu yapmazsak hata verir.
+                timer = 1;
+        }
+        timer += Time.deltaTime;
+        if (timer >= 1)    // bu koşul saniyede bir kere çalışmasını sağlıyor, buda Performanstan kazandırıyor.
         {
             CalculationsWhichEnemiesAround();
             timer = 0f;
         }
-        
-        foreach (var enemy in enemyList)    // InvokeRepeating fonksiyonu ile bunu daha kolay yazabilirsin.
+
+        foreach (var enemy in enemyList)
         {
             var __EnemyScript = enemy.GetComponent<EnemyScript>();
             
-            if (__EnemyScript.OwnEffect != null && __EnemyScript.effectTime >= __EnemyScript.sabitEffectTime)  // 5 sn de bir gerçekleştirmesine yarar
-                __EnemyScript.Effect(); 
+            __EnemyScript.CreateOwnEffect();
         }
     }
 

@@ -8,6 +8,7 @@ namespace EnemyScripts.AIScripts
     public class AISkillsScript : MonoBehaviour     // bunu Unityden bagla Enemy'e 
     {
         private GameObject Enemy;
+        
         private AIScript __AIScript;
 
         private void Awake()
@@ -17,7 +18,7 @@ namespace EnemyScripts.AIScripts
         }
         
         
-        public void MoveOwnBase(bool isWaitingInTheBase, float distance, float moveSpeed ,Vector2 startingPosition, Vector2 basePosition, bool isRight, float baseRange)     
+        public void MoveOwnBase(float distance, float moveSpeed ,Vector2 startingPosition, Vector2 basePosition, bool isRight, float baseRange)     
         {
             if (Random.Range(1, 500) == 2 && distance < 13)  // Player 15m Enemyye yakınsa bir ihtimal StopMoveAndLookAround fonksiyonunu çalıştırabilir.
             {
@@ -35,17 +36,19 @@ namespace EnemyScripts.AIScripts
             
             if (Vector2.Distance(transform.position, basePosition) < 0.1f) // Base'in en sol ve en sağına ulaştığında diger yere yöneltir
             {
-                if (isRight)
+                switch (isRight)
                 {
-                    __AIScript.isRight = false;
-                    __AIScript.basePosition = startingPosition - new Vector2(baseRange, 0);
-                    Enemy.transform.rotation = new Quaternion(0,1 , 0, 0);
-                }
-                else
-                {
-                    __AIScript.isRight = true;
-                    __AIScript.basePosition = startingPosition + new Vector2(baseRange, 0);
-                    Enemy.transform.rotation = new Quaternion(0,0 , 0, 0);
+                    case true:  // en sağda ise sola dönsün
+                        __AIScript.isRight = false;
+                        __AIScript.basePosition = startingPosition - new Vector2(baseRange, 0);
+                        Enemy.transform.rotation = new Quaternion(0, 1, 0, 0);
+                        break;
+
+                    case false: // en solda ise sağa dönsün
+                        __AIScript.isRight = true;
+                        __AIScript.basePosition = startingPosition + new Vector2(baseRange, 0);
+                        Enemy.transform.rotation = new Quaternion(0, 0, 0, 0);
+                        break;
                 }
             }
         }
@@ -87,7 +90,7 @@ namespace EnemyScripts.AIScripts
 
         IEnumerator isPlayerCloseBreakit(bool isWaitingInTheBase , float distance)
         {
-            if (distance < 10)
+            if (distance < 10)   // Player Enemy'nin menziline girdiyse çalışır ve StopMoveAndLookAround fonksiyonu durur.
             {
                 __AIScript.isWaitingInTheBase = false;
                 yield break;
