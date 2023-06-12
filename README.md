@@ -7,4 +7,8 @@ Bu yüzden kendi Branch'inizi Main'e direk Merge yapmicaksınız. İlk önce Pul
 
 Bu şekilde herkes kendi dalında kodunu yazıcak ve Mainde birleştiricez.
 Kafanıza takılan bir şey olursa bana yazabilirsiniz.
-# Proje
+
+time = 5, 10 gibi verileri tutar
+timer = bir sayaçtır ve time.deltatime ile hep artar.
+
+__ScriptName = 2 tane alt çizgi bir Script oldugunu belirtir.
