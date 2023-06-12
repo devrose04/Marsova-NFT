@@ -7,3 +7,4 @@ Bu yüzden kendi Branch'inizi Main'e direk Merge yapmicaksınız. İlk önce Pul
 
 Bu şekilde herkes kendi dalında kodunu yazıcak ve Mainde birleştiricez.
 Kafanıza takılan bir şey olursa bana yazabilirsiniz.
+# Proje
