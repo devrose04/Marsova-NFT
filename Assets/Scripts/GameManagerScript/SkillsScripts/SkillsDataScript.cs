@@ -9,39 +9,39 @@ namespace GameManagerScript.SkillsScripts
 
         // *** Bu alltaki şeyler Data Verileridir. En son ne zaman tuşa bastığının veya o sklinin Dolum süresinin verisini burda tutar.
         // ***  1-) lastPressTime    2-) lastPressCanUseTime     Aşagıdakiler Bu 2 sinin kısaltımı şekilde yazılmıştır.
-        
+
         // ***  1-) lastPressTime = En son basıldıgı zamanın verisini tutar     // 2 3 kere bir tuşa arka arka basınca kullanılacak veride bu
         // ***  2-) lastPressCanUseTime = Skilin en son ne zaman kullanıldıgının zaman verisini tutar
-        
+
         // private float Sword1;                      // bu En son butona basıldıgı zamanın verisini tutar  
-        public float SwordCanUse1;                    // bu Butonun en son ne zaman aktif olarak kullanıldıgının verisini tutuyor.
-        [SerializeField] public float SwordCD1;       // bu butonun dolum süresinin verisini tutuyor.
-        
-        public float Sword2;                          // ""
-        public float SwordCanUse2;                    // ""
-        [SerializeField] public float SwordCD2;       // ""
+        public float SwordCanUse1; // bu Butonun en son ne zaman aktif olarak kullanıldıgının verisini tutuyor.
+        [SerializeField] public float SwordCD1; // bu butonun dolum süresinin verisini tutuyor.
+
+        public float Sword2; // ""
+        public float SwordCanUse2; // ""
+        [SerializeField] public float SwordCD2; // ""
 
         // private float HittingAll1;                 // ""  
-        public float HittingAllCanUse1;               // ""
-        [SerializeField] public float HittingAllCD1;  // ""
+        public float HittingAllCanUse1; // ""
+        [SerializeField] public float HittingAllCD1; // ""
 
-        public float HittingAll2;                     // ""
-        public float HittingAllCanUse2;               // ""
-        [SerializeField] public float HittingAllCD2;  // ""
+        public float HittingAll2; // ""
+        public float HittingAllCanUse2; // ""
+        [SerializeField] public float HittingAllCD2; // ""
 
         // private float Dodge;                       // ""
-        public float DodgeCanUse;                     // ""
-        [SerializeField] public float DodgeCD;        // ""
+        public float DodgeCanUse; // ""
+        [SerializeField] public float DodgeCD; // ""
 
-        public float DashAttack;                      // ""
-        public float DashAttackCanUse;                // ""
-        [SerializeField] public float DashAtackCD;    // ""
+        public float DashAttack; // ""
+        public float DashAttackCanUse; // ""
+        [SerializeField] public float DashAtackCD; // ""
 
         // private float ArmorFrame;                  // ""
-        public float ArmorFrameCanUse;                // ""
-        [SerializeField] public float ArmorFrameCD;   // ""
+        public float ArmorFrameCanUse; // ""
+        [SerializeField] public float ArmorFrameCD; // ""
 
-        
+
         public void SkilsCoolDownTime() // burdan Canvasta Skillerin kullanılabilir hale geçip geçmediginin, işleyen bir fonksiyon.
         {
             // 3f ler 1.5f ler 10f ler skillerin dolum süresini gösteriyor.
@@ -80,6 +80,5 @@ namespace GameManagerScript.SkillsScripts
                 // print("Dodge Skili kullanılabilir");
             }
         }
-
     }
 }

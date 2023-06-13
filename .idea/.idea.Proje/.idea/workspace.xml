@@ -4,37 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca7d7b67-4af0-4545-8790-532b915de3b3" name="Changes" comment="    // *Todo: Yapılanlar 4: -Ugur-  Optimizasyon Yapıldı&#10;    &#10;    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.&#10;    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.&#10;    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.&#10;    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.&#10;    // Todo: Scriptlerin en başındaki yerleri düzenledim.&#10;    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.&#10;    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.&#10;    // Todo: a-) DmgCollider daha okunaklı olabilir. &#10;    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.&#10;    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.&#10;    // ---">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_06_2023_3_00_AM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_06_2023_3_00_AM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsDetails.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsDetails/DashAttackDetails.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsDetails/DashAttackDetails.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proje.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/FSTimeGet-619ffb83768fa49ffa48831dcc4c39b2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/FSTimeGet-805aca544d7fc45b4a6773406c4e411e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/FSTimeGet-d12ee0ee8ffd44bbcabdb92c17b715a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/FSTimeGet-e6d3f7ae7f08d4fd2a2f6f684d575c45" afterDir="false" />
+    <list default="true" id="ca7d7b67-4af0-4545-8790-532b915de3b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proje/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Dog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Dog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Skeleton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Zombi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Zombi.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/AIScripts/AIScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/AIScripts/AIScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/ICustomScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/ICustomScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/OwnScript/DogsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/OwnScript/DogsScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/OwnScript/SkeletonsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/OwnScript/SkeletonsScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/OwnScript/ZombiesScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/OwnScript/ZombiesScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/ButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/ButtonScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsDetails/DashAttackDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsDetails/DashAttackDetails.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsScripts/SkillsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsScripts/SkillsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsScripts/SkillsDataScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsScripts/SkillsDataScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsScripts/SkillsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript/SkillsScripts/SkillsScript.cs" afterDir="false" />
@@ -46,15 +29,22 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/CharracterFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/CharracterFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/IsGroundTouchScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/IsGroundTouchScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-137ba95739fc24c7797a67e7b8f6398d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-651584ac3de084ae3859037f1497255c" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/FSTimeGet-3c1dfd6bc37a842cc8f62cb7369c0e45" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-8ab666eea711546ea860029978a826d4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-3c1dfd6bc37a842cc8f62cb7369c0e45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-619ffb83768fa49ffa48831dcc4c39b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-805aca544d7fc45b4a6773406c4e411e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-d12ee0ee8ffd44bbcabdb92c17b715a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/FSTimeGet-e6d3f7ae7f08d4fd2a2f6f684d575c45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/UnityLockfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/workerlic" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
@@ -74,16 +64,41 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ac48e909-f6a3-4b87-9e1f-c176bc18ca29" />
+        <option name="url" value="https://github.com/uuRCnn/Proje.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/AIScripts/AIScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.3/Editor/CinemachinePixelPerfectEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.3/Editor/ObjectMenuCreation/GameObjectCreation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.3/Samples~/Scenes and Extras/Scenes/Rule Tiles/Scripts/Editor/RuleTileEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Tests/Runtime/Shared/055-TestStackalloc.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0170378618c449a8804434983a833f9b81f400/92/3deaadd1/TakeInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/2e/11d6a942/Single.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65a1e0840c48486cae789f6b5d6fb172159e00/aa/b92aa1a5/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78a9f04c0fc14c7fa63a6d99188aa0c01f800/54/fdbcf924/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78a9f04c0fc14c7fa63a6d99188aa0c01f800/e1/f963b856/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2R57KBWdkoiePbS1TJV5o9089Aw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -95,6 +110,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -161,7 +177,15 @@
       <workItem from="1686528109740" duration="1080000" />
       <workItem from="1686561824888" duration="14628000" />
       <workItem from="1686580433156" duration="67000" />
-      <workItem from="1686588459225" duration="14449000" />
+      <workItem from="1686588459225" duration="14917000" />
+      <workItem from="1686643316713" duration="4880000" />
+      <workItem from="1686648572116" duration="1531000" />
+      <workItem from="1686651410397" duration="1120000" />
+      <workItem from="1686652536596" duration="3292000" />
+      <workItem from="1686655839070" duration="3528000" />
+      <workItem from="1686659380334" duration="7775000" />
+      <workItem from="1686673656494" duration="103000" />
+      <workItem from="1686673765473" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache">
       <created>1686528240796</created>
@@ -177,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686528247514</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="    // *Todo: Yapılanlar 5: -Ugur-  Optimizasyon Yapıldı&#10;    &#10;    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.&#10;    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.&#10;    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.&#10;    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.&#10;    // Todo: Scriptlerin en başındaki yerleri düzenledim.&#10;    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.&#10;    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.&#10;    // Todo: a-) DmgCollider daha okunaklı olabilir. &#10;    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.&#10;    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.&#10;    // ---">
+      <created>1686606607284</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686606607284</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +228,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -214,6 +245,11 @@
     <MESSAGE value="mm" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" />
     <MESSAGE value="    // *Todo: Yapılanlar 4: -Ugur-  Optimizasyon Yapıldı&#10;    &#10;    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.&#10;    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.&#10;    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.&#10;    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.&#10;    // Todo: Scriptlerin en başındaki yerleri düzenledim.&#10;    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.&#10;    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.&#10;    // Todo: a-) DmgCollider daha okunaklı olabilir. &#10;    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.&#10;    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.&#10;    // ---" />
-    <option name="LAST_COMMIT_MESSAGE" value="    // *Todo: Yapılanlar 4: -Ugur-  Optimizasyon Yapıldı&#10;    &#10;    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.&#10;    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.&#10;    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.&#10;    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.&#10;    // Todo: Scriptlerin en başındaki yerleri düzenledim.&#10;    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.&#10;    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.&#10;    // Todo: a-) DmgCollider daha okunaklı olabilir. &#10;    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.&#10;    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.&#10;    // ---" />
+    <MESSAGE value="    // *Todo: Yapılanlar 5: -Ugur-  Optimizasyon Yapıldı&#10;    &#10;    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.&#10;    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.&#10;    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.&#10;    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.&#10;    // Todo: Scriptlerin en başındaki yerleri düzenledim.&#10;    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.&#10;    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.&#10;    // Todo: a-) DmgCollider daha okunaklı olabilir. &#10;    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.&#10;    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.&#10;    // ---" />
+    <option name="LAST_COMMIT_MESSAGE" value="    // *Todo: Yapılanlar 5: -Ugur-  Optimizasyon Yapıldı&#10;    &#10;    // Todo: GamaManager her saniye degil. saniyede 1 kere çalıştırıyorum ki pc daha az yorulsun diye.&#10;    // Todo: PlayerController daki FixedUpdat ve Update'i bir tane fonksiyona koydum ve GameManagerdan çagırdım.&#10;    // Todo: bazı yerlerde time dedigim yerleri Timer dedim.&#10;    // Todo: EnemyScripte CretedEffectk fonksiyonunu düzenledim.&#10;    // Todo: Scriptlerin en başındaki yerleri düzenledim.&#10;    // Todo: bazı yerlerde if else yerine Switch case olarak değiştirdim.&#10;    // Todo: a-) Dash vuruş mekanigini değiştirdim. ve başka bir yere taşıdım.&#10;    // Todo: a-) DmgCollider daha okunaklı olabilir. &#10;    // Todo: KnockBack'i tamamne degiştirdim ve başka özellikler ekeldim.&#10;    // Todo: Yeni bir KnockBack diye Script oluşturdum. ve oraya taşıdım.&#10;    // ---" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

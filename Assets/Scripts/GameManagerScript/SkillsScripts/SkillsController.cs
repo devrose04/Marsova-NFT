@@ -10,7 +10,7 @@ namespace GameManagerScript.SkillsScripts
     {
         private GameObject Player;
         private GameObject GameManager;
-        
+
         private SkillsScript __SkillsScript;
         private ButtonScript __ButtonScript;
         private SwordController __SwordController;
@@ -26,46 +26,53 @@ namespace GameManagerScript.SkillsScripts
             __SkillsData = GameManager.GetComponent<SkillsDataScript>();
         }
 
+        // *** Burda, skillerin en son ne zaman basıldığı veya aktif olup kullanıldıgının verileri aktarılır.
+        
         // ReSharper disable Unity.PerformanceAnalysis
-        public float HittingAll1_ctrl()
+        public void HittingAll1_ctrl()
         {
-            return __ButtonScript.ButtonCanUse_A(__SwordController.HittingAll1, __SkillsData.HittingAllCD1, __SkillsData.HittingAllCanUse1);
+            __SkillsData.HittingAllCanUse1  =
+                __ButtonScript.ButtonCanUse_A(__SwordController.HittingAll1, __SkillsData.HittingAllCD1, __SkillsData.HittingAllCanUse1);
         }
 
-        public (float, float) HittingAll2_ctrl()
+        public void HittingAll2_ctrl()
         {
-            return __ButtonScript.ManyPressButton(null, __SwordController.HittingAll2, null, 1f, 2, __SkillsData.HittingAll2, __SkillsData.HittingAllCD2, __SkillsData.HittingAllCanUse2);
+            (__SkillsData.HittingAll2,__SkillsData.HittingAllCanUse2) =
+                __ButtonScript.ManyPressButton(null, __SwordController.HittingAll2, null, 1f, 2, __SkillsData.HittingAll2, __SkillsData.HittingAllCD2, __SkillsData.HittingAllCanUse2);
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
-        public float SwordAttack1_ctrl()
+        public void SwordAttack1_ctrl()
         {
-            return __ButtonScript.ButtonCanUse_A(__SwordController.SwordAttack1, __SkillsData.SwordCD1, __SkillsData.SwordCanUse1);
+            __SkillsData.SwordCanUse1 =
+                __ButtonScript.ButtonCanUse_A(__SwordController.SwordAttack1, __SkillsData.SwordCD1, __SkillsData.SwordCanUse1);
         }
 
-        public (float, float) SwordAttack2_and_SwordAttack3_ctrl()
+        public void SwordAttack2_and_SwordAttack3_ctrl()
         {
-            return __ButtonScript.ManyPressButton(__SwordController.SwordAttack2, __SwordController.SwordAttack3, null, 1.5f, 3, __SkillsData.Sword2, __SkillsData.SwordCD2, __SkillsData.SwordCanUse2);
+            (__SkillsData.SwordCanUse2, __SkillsData.Sword2) =
+                __ButtonScript.ManyPressButton(__SwordController.SwordAttack2, __SwordController.SwordAttack3, null, 1.5f, 3, __SkillsData.Sword2, __SkillsData.SwordCD2, __SkillsData.SwordCanUse2);
         }
 
-        public float ArmorFrame_ctrl()
+        public void ArmorFrame_ctrl()
         {
-            return __ButtonScript.ButtonCanUse_C(__SkillsScript.ArmorFrame, __SkillsData.ArmorFrameCD, __SkillsData.ArmorFrameCanUse);
+            __SkillsData.ArmorFrameCanUse = __ButtonScript.ButtonCanUse_C(__SkillsScript.ArmorFrame, __SkillsData.ArmorFrameCD, __SkillsData.ArmorFrameCanUse);
         }
 
-        public (float, float) DashAtack_ctrl()
+        public void DashAtack_ctrl()
         {
-            return __ButtonScript.ManyPressButton(null, null, __SkillsScript.DashAtack, 0.4f, 3, __SkillsData.DashAttack, __SkillsData.DashAtackCD, __SkillsData.DashAttackCanUse);
+            (__SkillsData.DashAttack ,__SkillsData.DashAttackCanUse) =
+                __ButtonScript.ManyPressButton(null, null, __SkillsScript.DashAtack, 0.4f, 3, __SkillsData.DashAttack, __SkillsData.DashAtackCD, __SkillsData.DashAttackCanUse);
         }
 
-        public float DodgeSkils_q_ctrl()
+        public void DodgeSkils_q_ctrl()
         {
-            return __ButtonScript.ButtonCanUse_C(__SkillsScript.DodgeSkils_q, __SkillsData.DodgeCD, __SkillsData.DodgeCanUse);
+           __SkillsData.DodgeCanUse = __ButtonScript.ButtonCanUse_C(__SkillsScript.DodgeSkils_q, __SkillsData.DodgeCD, __SkillsData.DodgeCanUse);
         }
 
-        public float DodgeSkils_e_ctrl()
+        public void DodgeSkils_e_ctrl()
         {
-            return __ButtonScript.ButtonCanUse_C(__SkillsScript.DodgeSkils_e, __SkillsData.DodgeCD, __SkillsData.DodgeCanUse);
+            __SkillsData.DodgeCanUse = __ButtonScript.ButtonCanUse_C(__SkillsScript.DodgeSkils_e, __SkillsData.DodgeCD, __SkillsData.DodgeCanUse);
         }
     }
 }

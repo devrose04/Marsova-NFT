@@ -10,86 +10,83 @@ using Random = UnityEngine.Random;
 
 namespace EnemyScripts
 {
-        public class EnemyScript : MonoBehaviour  // Bu Scripte dışardan public ile kullanılacak kodlar olucak. 
-        {                                         // Enemy GameObjelerin hepsini GameManagerdan Update ile çagırıyorum.
-                public float speed;
-                public float health;
-                public float damage;
-                public float hitTimeRange;      // vuruş yapma sıklıgının süresi.
-                (float, float, float, float) OwnInformations;
-                
-                [SerializeField] public ParticleSystem OwnEffect;  // bu kendi Effecti, boş olsada olur
-                [SerializeField] public ParticleSystem HitEffect;  // bu vuruş effecti
-                [SerializeField] private float effectCreationTimer;  // effecti gerçekleştirme sürem
-                private float effectCreationTime;       // Efekt kaç sn de bir tekrarlansın
+    public class EnemyScript : MonoBehaviour // Bu Scripte dışardan public ile kullanılacak kodlar olucak. 
+    {
+        // Enemy GameObjelerin hepsini GameManagerdan Update ile çagırıyorum.
+        public float speed;
+        public float health;
+        public float damage;
+        public float hitTimeRange; // vuruş yapma sıklıgının süresi.
+        (float, float, float, float) OwnInformations;
 
-                private string Tag;
-               
-                private GameObject Enemy;
-                private Rigidbody2D RB2;
-                
-                private ICustomScript __ICustomScript;
-                private EnemyKnockBackScript __EnemyKnockBackScript;
-                
-                public float HitToPlayerTimer = 10f;  // 10 verme nedenim bir hatayı önlediğinden.   // en son ne zaman vuruş yaptıgının verisini tutuyor.
-                public float canUseDashHitTimer = 10f;  // bu, burayla alakalı degil ama DeltaTimeUp() fonksiyonu için buraya yazdım. 
+        [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
+        [SerializeField] public ParticleSystem HitEffect; // bu vuruş effecti
+        [SerializeField] private float effectCreationTimer; // effecti gerçekleştirme sürem
+        private float effectCreationTime; // Efekt kaç sn de bir tekrarlansın
 
-                private void Awake()
-                {
-                        Enemy = this.gameObject;
-                        Tag = Enemy.tag;
-                        RB2 = Enemy.GetComponent<Rigidbody2D>();
-                        effectCreationTime = effectCreationTimer;
+        private string Tag;
 
-                        __ICustomScript = Enemy.GetComponent<ICustomScript>();  // burda kendi özel oluşturdugumuz Scripti buluyoruz ve onu çagırıyoruz. 
-                        __EnemyKnockBackScript = Enemy.GetComponent<EnemyKnockBackScript>();
-                        
-                        if (__ICustomScript != null)
-                                OwnInformations = __ICustomScript.OwnInformations();  // Bu Obejini kendi bilgilerini buraya geçiriyoruz. Her Enemyinin farklı aralıkta bilgileri var.
-                        
-                        speed = OwnInformations.Item1;
-                        health = OwnInformations.Item2;
-                        damage = OwnInformations.Item3;
-                        hitTimeRange = OwnInformations.Item4;
-                }
+        private GameObject Enemy;
+        private Rigidbody2D RB2;
 
-                public void MYFixedUpdate()
-                {
-  
-                }
+        private ICustomScript __ICustomScript;
+        private EnemyKnockBackScript __EnemyKnockBackScript;
 
-                // ReSharper disable Unity.PerformanceAnalysis
-                public void TakeDamages(float dmg,Vector2 clampedDirectionToEnemy)
-                {
-                        StartCoroutine(__EnemyKnockBackScript.KnockBack(clampedDirectionToEnemy,RB2));
-                        health -= dmg;
-                        // print($"<color=yellow>Enemy Health:</color>" + health);
-                        if (health <= 0)
-                        {
-                                if (Tag == "Skeletons")
-                                        Enemy.GetComponent<SkeletonsScript>().ReBorn();
-                                Destroy(this.gameObject);
-                        }
-                }
+        public float HitToPlayerTimer = 10f; // 10 verme nedenim bir hatayı önlediğinden.   // en son ne zaman vuruş yaptıgının verisini tutuyor.
+        public float canUseDashHitTimer = 10f; // bu, burayla alakalı degil ama DeltaTimeUp() fonksiyonu için buraya yazdım. 
 
-                public void CreateOwnEffect()   
-                {
-                        if (OwnEffect != null && effectCreationTimer >= effectCreationTime)     
-                        {       //hepsinin kendi özel OwnEffekti oldugu için her Effektin tekrarlanma süresi farklıdır, o yüzden burda Timerlar var
-                                effectCreationTimer = 0;
-                                ParticleSystem Effect = Instantiate(OwnEffect, Enemy.transform);
-                                Destroy(Effect.gameObject,10f);
-                        }
-                }
-                
-                public void DeltaTimeUp()       // bunu ayrı bir Scripte oluştur oraya koy
-                {
-                        HitToPlayerTimer += Time.deltaTime;
-                        effectCreationTimer += Time.deltaTime;
-                        canUseDashHitTimer += Time.deltaTime;
-                }
+        private void Awake()
+        {
+            Enemy = this.gameObject;
+            Tag = Enemy.tag;
+            RB2 = Enemy.GetComponent<Rigidbody2D>();
+            effectCreationTime = effectCreationTimer;
 
-                
+            __ICustomScript = Enemy.GetComponent<ICustomScript>(); // burda kendi özel oluşturdugumuz Scripti buluyoruz ve onu çagırıyoruz. 
+            __EnemyKnockBackScript = Enemy.GetComponent<EnemyKnockBackScript>();
+
+            if (__ICustomScript != null)
+                OwnInformations = __ICustomScript.OwnInformations(); // Bu Obejini kendi bilgilerini buraya geçiriyoruz. Her Enemyinin farklı aralıkta bilgileri var.
+
+            speed = OwnInformations.Item1;
+            health = OwnInformations.Item2;
+            damage = OwnInformations.Item3;
+            hitTimeRange = OwnInformations.Item4;
         }
 
+        public void MYFixedUpdate()
+        {
+        }
+
+        public void TakeDamages(float dmg, Vector2 directionToEnemy)
+        {
+            StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2));
+            health -= dmg;
+            // print($"<color=yellow>Enemy Health:</color>" + health);
+            if (health <= 0)
+            {
+                if (Tag == "Skeletons")
+                    Enemy.GetComponent<SkeletonsScript>().ReBorn();
+                Destroy(this.gameObject);
+            }
+        }
+
+        public void CreateOwnEffect()
+        {
+            if (OwnEffect != null && effectCreationTimer >= effectCreationTime)
+            {
+                //hepsinin kendi özel OwnEffekti oldugu için her Effektin tekrarlanma süresi farklıdır, o yüzden burda Timerlar var
+                effectCreationTimer = 0;
+                ParticleSystem Effect = Instantiate(OwnEffect, Enemy.transform);
+                Destroy(Effect.gameObject, 10f);
+            }
+        }
+
+        public void DeltaTimeUp() // bunu ayrı bir Scripte oluştur oraya koy
+        {
+            HitToPlayerTimer += Time.deltaTime;
+            effectCreationTimer += Time.deltaTime;
+            canUseDashHitTimer += Time.deltaTime;
+        }
+    }
 }

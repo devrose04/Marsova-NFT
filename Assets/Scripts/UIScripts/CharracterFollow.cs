@@ -7,9 +7,9 @@ namespace UIScripts
         [SerializeField] private float smoothSpeed;
         [SerializeField] private Transform target; // Takip edilecek nesne
         [SerializeField] private Vector3 offset; // Kamera ve karakter arasındaki mesafe
-    
+
         private Vector3 initialPosition; // Başlangıç pozisyonu
-        
+
         private bool isInitialPositionSet = false; // Başlangıç pozisyonunun ayarlandığı kontrol flag'i
 
         void Start()
@@ -34,14 +34,14 @@ namespace UIScripts
                         transform.position = initialPosition; // Tam olarak başlangıç pozisyonuna yerleştir
                         isInitialPositionSet = true;
                     }
+
                     break;
-                    
+
                 case false:
                     desiredPosition = target.position + offset;
                     Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
                     transform.position = smoothedPosition; // Kamera pozisyonu güncellenir
                     break;
-                    
             }
         }
     }

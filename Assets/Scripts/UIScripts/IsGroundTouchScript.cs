@@ -11,11 +11,11 @@ namespace UIScripts
             if (other.gameObject.CompareTag("Ground"))
                 isGroundTouchBool = true;
         }
+
         private void OnTriggerExit2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Ground"))
                 isGroundTouchBool = false;
         }
-
     }
 }

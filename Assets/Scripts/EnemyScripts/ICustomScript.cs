@@ -1,4 +1,3 @@
-
 namespace EnemyScripts
 {
     public interface ICustomScript

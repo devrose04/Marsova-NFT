@@ -49,6 +49,7 @@
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordController.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/SkeletonsScript.cs" />
@@ -63,7 +64,7 @@
      <Compile Include="Assets/Scripts/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/ButtonScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/ZombiesScript.cs" />
-     <Compile Include="Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" />
+     <Compile Include="Assets/Scripts/ObjectsScripts/Calculations.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/PlayerScripts/SwordScripts" />
      <Folder Include="Assets/Prefabs/Enemies" />
