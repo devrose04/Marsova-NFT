@@ -1,5 +1,6 @@
 using System.Collections;
 using EnemyScripts.OwnScript;
+using PlayerScripts;
 using UnityEngine;
 
 namespace EnemyScripts.AIScripts
@@ -11,6 +12,8 @@ namespace EnemyScripts.AIScripts
         private bool isEnemySeePlayer;
         public bool isWaitingInTheBase;
         public bool isRight = true;
+        public bool isEnemyAttackToPlayer = false;
+
 
         private int JustOneTimeWork;
 
@@ -23,6 +26,7 @@ namespace EnemyScripts.AIScripts
 
         private EnemyScript __EnemyScript;
         private AISkillsScript __AISkillsScript;
+        private DmgColliderScript __DmgColliderScript;
 
         private Vector2 direction; // bu Enemy'e karşılık Player hangi yönde onu bulur.   -1 ise Enemy Player'ın sağında
         public Vector2 startingPosition; // Başlangıç pozisyonu
@@ -54,15 +58,17 @@ namespace EnemyScripts.AIScripts
             direction = (Player.position - transform.position).normalized; // Player Enemy'nin hangi tarafında onu hesaplar
             distance = Vector2.Distance(Player.position, transform.position); // Player ile Enemy arasoındaki mesafeyi ölçer
 
-            if (distance < 10) // 10 metre içinde görüyorsa hareket edicektir
+            SpecialFunctions1();
+
+            if (distance < 10) // 10 metre içinde görüyorsa ve Enemy vuruş hareketi yapmıyor ise hareket edicektir
             {
                 GoPlayerPosition();
                 if (distance < 0.8f) // Enemy Player'ın dibine geldiginde, Enemy dursun.
                     RB2.velocity = new Vector2(0, 0);
-                SpecialFunctions(); // Dogs - Zombi vb. Scriptlerin kullanıldıgı yer
+                SpecialFunctions2(); // Dogs - Zombi vb. Scriptlerin kullanıldıgı yer
                 EnemyLookingToPlayer();
             }
-            else
+            else if (distance >= 10)
             {
                 EnemyDontLookingToPlayer();
                 if (isWaitingInTheBase == false) // Base'in içinde beklemiyor ise hareket etsin
@@ -105,10 +111,14 @@ namespace EnemyScripts.AIScripts
             isEnemySeePlayer = false;
         }
 
-        void SpecialFunctions()
+        void SpecialFunctions2()
         {
             if (Enemy.CompareTag("Dogs")) // eger Dogs ise zıplasın
                 Enemy.GetComponent<DogsScript>().Jump();
+        }
+
+        void SpecialFunctions1()
+        {
             if (Enemy.CompareTag("Skeletons") && __EnemyScript.health <= 0)
                 Enemy.GetComponent<SkeletonsScript>().ReBorn();
         }

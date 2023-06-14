@@ -17,7 +17,10 @@ namespace EnemyScripts
         public float health;
         public float damage;
         public float hitTimeRange; // vuruş yapma sıklıgının süresi.
-        (float, float, float, float) OwnInformations;
+        public float attackRadius;
+        public float knockBackPower;
+        
+        (float, float, float, float, float, float) OwnInformations;
 
         [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
         [SerializeField] public ParticleSystem HitEffect; // bu vuruş effecti
@@ -52,6 +55,8 @@ namespace EnemyScripts
             health = OwnInformations.Item2;
             damage = OwnInformations.Item3;
             hitTimeRange = OwnInformations.Item4;
+            attackRadius = OwnInformations.Item5;
+            knockBackPower = OwnInformations.Item6;
         }
 
         public void MYFixedUpdate()

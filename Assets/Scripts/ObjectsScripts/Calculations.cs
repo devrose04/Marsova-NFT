@@ -4,36 +4,39 @@ namespace ObjectsScripts
 {
     public class Calculations : MonoBehaviour
     {
-        public (Vector2, float) CalculationsAboutToEnemy(Collider2D enemy) // temel olarak açı verisini ve clampedDirectionToEnemy şeyleri hesaplar.
+        public (Vector2, float) CalculationsAboutToObject(GameObject thisAttackingObject, Collider2D target) // temel olarak açı verisini ve clampedDirectionToEnemy şeyleri hesaplar.
         {
             // Düşmanın pozisyonunu al
-            Vector2 enemyPosition = enemy.transform.position;
+            Vector2 targetPosition = target.transform.position;
+            Vector2 attackingPosition = thisAttackingObject.transform.position;
 
-            // 1-) Düşmanın pozisyonunun hangi yönde oldugunu buluyor.
-            Vector2 approximatelyDirectionToEnemy = (enemyPosition - (Vector2)transform.position).normalized; // 1 , -1 arasında bir değer (x,y)
+            // 1-) Düşmanın pozisyonunun hangi yönde oldugunu buluyor.      // Todo: burdak kaldnı
+            Vector2 approximatelyDirectionToTarget = (targetPosition - attackingPosition).normalized; // 1 , -1 arasında bir değer (x,y)
 
             // 2-) aşagı da  X ve Y bileşenlerini yuvarlayarak tam sayı değerlere dönüştürüyoruz (ya 1 ayda -1 olacak şekilde)
 
-            approximatelyDirectionToEnemy.y = 0;
+            approximatelyDirectionToTarget.y = 0;
 
-            if (approximatelyDirectionToEnemy.x < 0)
-                approximatelyDirectionToEnemy.x = -1;
+            if (approximatelyDirectionToTarget.x < 0)
+                approximatelyDirectionToTarget.x = -1;
             else
-                approximatelyDirectionToEnemy.x = 1;
+                approximatelyDirectionToTarget.x = 1;
 
 
-            Vector2 roundedDirectionToEnemy = new Vector2((approximatelyDirectionToEnemy.x), (approximatelyDirectionToEnemy.y));
+            Vector2 roundedDirectionToTarget = new Vector2((approximatelyDirectionToTarget.x), (approximatelyDirectionToTarget.y));
 
             // 3-) 1 veya -1 değerlerini almak için vektörün uzunluğunu 1'e sınırlıyoruz   // ya 1 veya -1 alır başka bişi almaz.
-            Vector2 directionToEnemy = Vector2.ClampMagnitude(roundedDirectionToEnemy, 1f); // bunu KnocBack uygularken ya tam sağa yada tam sola dogru uygulamak için oluşturduk.
+            Vector2 directionToTarget = Vector2.ClampMagnitude(roundedDirectionToTarget, 1f); // bunu KnocBack uygularken ya tam sağa yada tam sola dogru uygulamak için oluşturduk.
 
-            // Player'ın yönünü al
-            Vector2 playerDirection = transform.right; // 1 veya -1
+            // Saldıran Objen'nin yönünü al
+            Vector2 attackingDirection = thisAttackingObject.transform.right; // 1 veya -1
 
             // Aradaki açıyı hesapla
-            float angle = Vector2.Angle(playerDirection, approximatelyDirectionToEnemy);
+            float attackAngle = Vector2.Angle(attackingDirection, approximatelyDirectionToTarget);
 
-            return (directionToEnemy, angle);
+            // print("Calculation içi: " + directionToTarget);
+
+            return (directionToTarget, attackAngle);
         }
     }
 }

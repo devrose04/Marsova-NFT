@@ -14,7 +14,7 @@ namespace PlayerScripts
     public class PlayerController : MonoBehaviour
     {
         private SkillsScript __SkillsScript;
-        private SkillsController __SkillsController;
+        private SkillsManager __SkillsManager;
         private SwordScript __SwordScript;
         private PlayerScript __PlayerScript;
         private SkillsDataScript __SkillsData;
@@ -37,7 +37,7 @@ namespace PlayerScripts
             __PlayerScript = Player.GetComponent<PlayerScript>();
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
             __SkillsData = GameManager.GetComponent<SkillsDataScript>();
-            __SkillsController = GameManager.GetComponent<SkillsController>();
+            __SkillsManager = GameManager.GetComponent<SkillsManager>();
             __isGroundTouch = Player.transform.Find("IsGrounTouch").GetComponent<IsGroundTouchScript>(); // IsGrounTouch sonunda d yok
         }
 
@@ -77,20 +77,20 @@ namespace PlayerScripts
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) // havaya zıplatıp alan vurma skili
             {
                 // Aşagıda yaptıgın şey Skilli kullanıyor ve onun zaman verisini burdaki __SkillsData.HittingAllCanUse1'e atıyor.
-                __SkillsController.HittingAll1_ctrl();
+                __SkillsManager.HittingAll1_manager();
 
-                __SkillsController.HittingAll2_ctrl();
+                __SkillsManager.HittingAll2_manager();
             }
             else if (Input.GetKeyDown(KeyCode.Space)) // 3 lü vuruş combo
             {
-                __SkillsController.SwordAttack1_ctrl();
+                __SkillsManager.SwordAttack1_manager();
 
-                __SkillsController.SwordAttack2_and_SwordAttack3_ctrl();
+                __SkillsManager.SwordAttack2_and_SwordAttack3_manager();
             }
 
             if (Input.GetKeyDown(KeyCode.X)) // ArmorFrame Skill
             {
-                __SkillsController.ArmorFrame_ctrl();
+                __SkillsManager.ArmorFrame_manager();
             }
 
 
@@ -100,18 +100,18 @@ namespace PlayerScripts
 
             if (Input.GetButtonUp("Horizontal")) // DashAttack Skill
             {
-                __SkillsController.DashAtack_ctrl();
+                __SkillsManager.DashAtack_manager();
             }
 
 
             if (Input.GetKeyDown(KeyCode.Q)) // q ile sola Dodge atıyor
             {
-                __SkillsController.DodgeSkils_q_ctrl();
+                __SkillsManager.DodgeSkils_q_manager();
             }
 
             if (Input.GetKeyDown(KeyCode.E)) // e ile sağa Dodge atıyor
             {
-                __SkillsController.DodgeSkils_e_ctrl();
+                __SkillsManager.DodgeSkils_e_manager();
             }
         }
 
@@ -147,33 +147,36 @@ namespace PlayerScripts
             RB2.velocity = new Vector2(RB2.velocity.x, 5);
         }
     }
+
     // -*-Todo: -Uğur-
 
     // ***Todo: Yapılacaklar:
 
-    // Todo: Enemy ile Player çarpışma oldugunda, direk dmg vurmicak, 0.5f 1f saniye sonra o alana dmg vuracak,
-    // Todo: OverlapCircleAll ile 60 derecelik bir alana vuruş yaparlar.
-    // Todo: direk değince canı gitmesini tuzaklar olursa orada kullan.
-
-    // Todo: a-) Enemy geldigi gibi çarparak dmg vurmasın. Onun özel bir geçikmeli İnvoke fonks. ile vuruş şeklini oluştur. Ve onu kullan.
-    // Todo: a-) Enemy'e değdiginde direk canı gitmesin, 0.5f 1f arasında bir süre ile Enemy o alandaki yere vuruş yapsın.
-
+    // Todo: DmgCollider daki HitToPlayerTimer vb. kullanılmayan parametreleri sil
+    // Todo: DmgCollider da ki fonksiyonları yeni Scripte aktar 
+    // Todo: Solid prensipleri ile kodu daha okunaklı yap 
+    // Todo: Reborn da sıkıntı var
     // ---
 
 
     // ***Todo: Belki Yapılabilir:
 
     // Todo: Eror:   Knockback yerinde hepsini farklı güçte itmesi lazım ama öyle olmuyor.
-
+    // Todo: SwordAndAttack fonksiyonuna ilerde bunları ekleyebiliriz:     bool isJumpit, float dmgPower, float KnockBackPower,
+    // Todo:
 
     // ---
 
 
-    // ***Todo: Yapılanlar 6:
+    // ***Todo: Yapılanlar 7:
 
 
     // Todo: Player Controlerdaki Skiller SkillsContoller ile birleştirildi.
     // Todo: Calculations'ı yeni Scripte taşıdım ve digerlerine entegre ettim.
     // Todo: Dash'in KnockBackni ayarlandı.    Calculations' ıda oraya bağlandı
+    // Todo: SkillsManager oluşturdum ve veri aktarımını orada yapıyorum.
+    // Todo: Enemy ile Player çarpışma oldugunda, direk dmg vurmicak, 0.5f 1f saniye sonra o alana dmg vuracak,
+    // Todo: Savaş Mekanigi'ni kökten değiştirdim. 
+    // Todo: 
     // ---
 }

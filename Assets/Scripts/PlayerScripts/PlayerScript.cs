@@ -26,7 +26,7 @@ namespace PlayerScripts
             __SkillsScript = GameObject.Find("GameManager").GetComponent<SkillsScript>();
         }
 
-        public void TakeDamage(float dmg, Vector2 clampedDirectionToEnemy)
+        public void TakeDamage(float dmg, Vector2 directionToPlayer, float knockBackPower)
         {
             dmg = dmg * (0.01f * (100 - armor)); // 0.01 yazma nedenim: 100'ü 0.01 ile çarparsak 1 elder ederiz. Yani %1 ini elde ederiz.
             health -= dmg;
@@ -39,14 +39,19 @@ namespace PlayerScripts
             }
 
             if (__SkillsScript.isArmorFrameUse == false) // ArmorFrame Skili kullanıldıgına Knock.back'i deActive etmek için bu if koşulunu koydum
-                StartCoroutine(DoKnockback(clampedDirectionToEnemy));
+                StartCoroutine(DoKnockback(directionToPlayer, knockBackPower));
         }
 
-        private IEnumerator DoKnockback(Vector2 clampedDirectionToEnemy) // Bu Player'ın KnockBack'i dir
+        private IEnumerator DoKnockback(Vector2 directionToPlayer, float knockBackPower) // Bu Player'ın KnockBack'i dir
         {
             isKnockbacked = true;
-            print(clampedDirectionToEnemy);
-            Vector2 knockbackVector = new Vector2(-clampedDirectionToEnemy.x * knockbackForce, clampedDirectionToEnemy.y);
+
+            if (RB2.gravityScale == 1)
+                knockbackForce = 300;
+            else
+                knockbackForce = 600;
+
+            Vector2 knockbackVector = new Vector2(directionToPlayer.x * knockbackForce * knockBackPower, directionToPlayer.y);
             RB2.AddForce(knockbackVector, ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(0.35f);

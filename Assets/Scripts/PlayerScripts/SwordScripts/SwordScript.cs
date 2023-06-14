@@ -2,6 +2,7 @@ using System.Collections;
 using EnemyScripts;
 using ObjectsScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // ReSharper disable Unity.InefficientPropertyAccess
 // ReSharper disable Unity.PreferNonAllocApi
@@ -11,8 +12,7 @@ namespace PlayerScripts.SwordScripts
     public class SwordScript : MonoBehaviour
     {
         [SerializeField] public float swordDamage;
-        [SerializeField] float swordRange;
-        [SerializeField] float attackAngle;
+        [SerializeField] float playerSwordRadius;
         [SerializeField] public ParticleSystem hitEffect;
         [SerializeField] LayerMask enemyLayer;
 
@@ -36,20 +36,21 @@ namespace PlayerScripts.SwordScripts
             __Calculations = Player.GetComponent<Calculations>();
         }
 
-        public void SwordAttack(float dmgPower, float KnockBackPower, bool isJumpit, float moveOnTime, float HittingAllAngle)
+        public void SwordAttack(float dmgPower, float KnockBackPower, bool isJumpit, float moveOnTime, bool isJustHitFrontArea)
         {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(this.transform.position, swordRange, enemyLayer);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(this.transform.position, playerSwordRadius, enemyLayer);
             // print("Vurdugun kişi sayısı:" + hitEnemies.Length); // bunu canvasa yazdır.
             StartCoroutine(__SwordSkilsScript.AttackAndMoveOn(moveOnTime, RB2));
-
+            
+            float attackAngle = isJustHitFrontArea ? 0 : 180; // burda Sadece önüne vurdugu bir skilmi yoksa, arkasınada vurdugu bir skill mi oldugunun ayarını yapıyoruz.
+            
             foreach (var enemy in hitEnemies) // yuvarlagın içindeki vurulan Enemylere teker teker bakar.
             {
-                var result = __Calculations.CalculationsAboutToEnemy(enemy); // swordun çarpıtıgı Enemylerin verileri hesaplanır.
+                var result = __Calculations.CalculationsAboutToObject(Player ,enemy); // swordun çarpıtıgı Enemylerin verileri hesaplanır.
                 (directionToEnemy, angle) = result;
-                // Açı 60 derecenin içindeyse Enemy'e hasar ver
-                if (angle <= attackAngle * HittingAllAngle) // isHittingAll == 1 ise, 60 derecelik bir açıya vurur. Yani sadece önüne vurur.
+                
+                if (angle <= attackAngle) // attackAngle == 0 ise, sadece önüne vuruyor. // attackAngle == 180 ise hem önüne, hem arkasına vuruyor.
                 {
-                    // isHittingAll == 4 ise 240 derecelik bir açıya vurur. Oda arkasında vurmasını sağlar.
                     TakeDamages(enemy, isJumpit, dmgPower, KnockBackPower);
                 }
             }
@@ -60,7 +61,13 @@ namespace PlayerScripts.SwordScripts
             if (isJumpit) // Enemyi zıplatır
             {
                 Rigidbody2D EnemyRB2 = enemy.gameObject.GetComponent<Rigidbody2D>();
-                EnemyRB2.AddForce(new Vector2(EnemyRB2.velocity.x, Random.Range(25f, 35f)), ForceMode2D.Impulse);
+                float jumpPower;
+                if (EnemyRB2.gravityScale == 1)
+                    jumpPower = Random.Range(15f,18f);
+                else
+                    jumpPower = Random.Range(25f, 35f);
+                
+                EnemyRB2.AddForce(new Vector2(EnemyRB2.velocity.x, jumpPower), ForceMode2D.Impulse);
             }
 
             ParticleSystem _hitEffect = Instantiate(hitEffect, enemy.transform.position, Quaternion.identity);
@@ -71,12 +78,12 @@ namespace PlayerScripts.SwordScripts
                 _enemyScript.TakeDamages(swordDamage * dmgPower, directionToEnemy * KnockBackPower);
         }
 
-        void OnDrawGizmosSelected() // Player'ın vuruş menzilini gösterir
-        {
-            // Kılıç menzilini görselleştirme
-            Gizmos.color = Color.red;
-
-            Gizmos.DrawSphere((Vector2)this.transform.position, swordRange);
-        }
+        // void OnDrawGizmosSelected() // Player'ın vuruş menzilini gösterir
+        // {
+        //     // Kılıç menzilini görselleştirme
+        //     Gizmos.color = Color.red;
+        //
+        //     Gizmos.DrawSphere((Vector2)this.transform.position, playerSwordRadius);
+        // }
     }
 }
