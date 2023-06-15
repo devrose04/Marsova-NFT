@@ -12,3 +12,4 @@ time = 5, 10 gibi verileri tutar
 timer = bir sayaçtır ve time.deltatime ile hep artar.
 
 __ScriptName = 2 tane alt çizgi bir Script oldugunu belirtir.
+# UzayProje
