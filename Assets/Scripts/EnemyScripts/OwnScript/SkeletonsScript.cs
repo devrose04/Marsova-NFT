@@ -14,7 +14,7 @@ namespace EnemyScripts.OwnScript
         private float hitTimeRange;
         private float attackRadius;
         private float knockBackPower;
-        
+
         private GameObject Enemy;
         private Rigidbody2D RB2;
 
@@ -43,10 +43,10 @@ namespace EnemyScripts.OwnScript
         public (float, float, float, float, float, float) OwnInformations()
         {
             speed = Random.Range(2f, 2.4f);
-            health = Random.Range(45f, 60f);
+            health = Random.Range(400f, 400f); // 45f, 60f
             damage = Random.Range(8f, 12f);
             hitTimeRange = Random.Range(0.8f, 1f);
-            attackRadius = Random.Range(2.2f,2.6f);
+            attackRadius = Random.Range(2.2f, 2.6f);
             knockBackPower = Random.Range(1f, 1.2f);
             return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower);
         }

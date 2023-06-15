@@ -1,4 +1,5 @@
 using System.Collections;
+using EnemyScripts.Enemy;
 using EnemyScripts.OwnScript;
 using PlayerScripts;
 using UnityEngine;
@@ -7,13 +8,11 @@ namespace EnemyScripts.AIScripts
 {
     public class AIScript : MonoBehaviour
     {
-        public bool isKnockBackNotActive;
-
+        public bool isKnockBackNotActive = true;
         private bool isEnemySeePlayer;
         public bool isWaitingInTheBase;
         public bool isRight = true;
         public bool isEnemyAttackToPlayer = false;
-
 
         private int JustOneTimeWork;
 
@@ -27,6 +26,7 @@ namespace EnemyScripts.AIScripts
         private EnemyScript __EnemyScript;
         private AISkillsScript __AISkillsScript;
         private DmgColliderScript __DmgColliderScript;
+        private EnemyAttackScript __EnemyAttackScript;
 
         private Vector2 direction; // bu Enemy'e karşılık Player hangi yönde onu bulur.   -1 ise Enemy Player'ın sağında
         public Vector2 startingPosition; // Başlangıç pozisyonu
@@ -41,6 +41,7 @@ namespace EnemyScripts.AIScripts
             RB2 = this.gameObject.GetComponent<Rigidbody2D>();
             __EnemyScript = Enemy.GetComponent<EnemyScript>();
             __AISkillsScript = Enemy.GetComponent<AISkillsScript>();
+            __EnemyAttackScript = Enemy.GetComponent<EnemyAttackScript>();
 
             isKnockBackNotActive = true;
         }
@@ -59,12 +60,13 @@ namespace EnemyScripts.AIScripts
             distance = Vector2.Distance(Player.position, transform.position); // Player ile Enemy arasoındaki mesafeyi ölçer
 
             SpecialFunctions1();
-
-            if (distance < 10) // 10 metre içinde görüyorsa ve Enemy vuruş hareketi yapmıyor ise hareket edicektir
+            
+            if (distance < 1.5f) // Enemy Player'ın dibine geldiginde, Enemy dursun. ve vursun
+                AttackToPlayer();
+            
+            else if (distance < 10) // 10 metre içinde görüyorsa ve Enemy vuruş hareketi yapmıyor ise hareket edicektir
             {
                 GoPlayerPosition();
-                if (distance < 0.8f) // Enemy Player'ın dibine geldiginde, Enemy dursun.
-                    RB2.velocity = new Vector2(0, 0);
                 SpecialFunctions2(); // Dogs - Zombi vb. Scriptlerin kullanıldıgı yer
                 EnemyLookingToPlayer();
             }
@@ -121,6 +123,12 @@ namespace EnemyScripts.AIScripts
         {
             if (Enemy.CompareTag("Skeletons") && __EnemyScript.health <= 0)
                 Enemy.GetComponent<SkeletonsScript>().ReBorn();
+        }
+
+        void AttackToPlayer()
+        {
+            if (!isEnemyAttackToPlayer) // bu if koşulunun nedeni hep çalışıp döngüye girmesin diye.
+                __EnemyAttackScript.StopAndAttack(this.gameObject);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using EnemyScripts;
+using EnemyScripts.Enemy;
 using ObjectsScripts;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -17,7 +18,7 @@ namespace PlayerScripts.SwordScripts
         [SerializeField] LayerMask enemyLayer;
 
         private SwordSkilsScript __SwordSkilsScript;
-        private Calculations __Calculations;    
+        private Calculations __Calculations;
 
         private Vector2 directionToEnemy;
         private float angle;
@@ -41,14 +42,14 @@ namespace PlayerScripts.SwordScripts
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(this.transform.position, playerSwordRadius, enemyLayer);
             // print("Vurdugun kişi sayısı:" + hitEnemies.Length); // bunu canvasa yazdır.
             StartCoroutine(__SwordSkilsScript.AttackAndMoveOn(moveOnTime, RB2));
-            
+
             float attackAngle = isJustHitFrontArea ? 0 : 180; // burda Sadece önüne vurdugu bir skilmi yoksa, arkasınada vurdugu bir skill mi oldugunun ayarını yapıyoruz.
-            
+
             foreach (var enemy in hitEnemies) // yuvarlagın içindeki vurulan Enemylere teker teker bakar.
             {
-                var result = __Calculations.CalculationsAboutToObject(Player ,enemy); // swordun çarpıtıgı Enemylerin verileri hesaplanır.
+                var result = __Calculations.CalculationsAboutToObject(Player, enemy); // swordun çarpıtıgı Enemylerin verileri hesaplanır.
                 (directionToEnemy, angle) = result;
-                
+
                 if (angle <= attackAngle) // attackAngle == 0 ise, sadece önüne vuruyor. // attackAngle == 180 ise hem önüne, hem arkasına vuruyor.
                 {
                     TakeDamages(enemy, isJumpit, dmgPower, KnockBackPower);
@@ -58,24 +59,12 @@ namespace PlayerScripts.SwordScripts
 
         void TakeDamages(Collider2D enemy, bool isJumpit, float dmgPower, float KnockBackPower)
         {
-            if (isJumpit) // Enemyi zıplatır
-            {
-                Rigidbody2D EnemyRB2 = enemy.gameObject.GetComponent<Rigidbody2D>();
-                float jumpPower;
-                if (EnemyRB2.gravityScale == 1)
-                    jumpPower = Random.Range(15f,18f);
-                else
-                    jumpPower = Random.Range(25f, 35f);
-                
-                EnemyRB2.AddForce(new Vector2(EnemyRB2.velocity.x, jumpPower), ForceMode2D.Impulse);
-            }
-
             ParticleSystem _hitEffect = Instantiate(hitEffect, enemy.transform.position, Quaternion.identity);
             Destroy(_hitEffect.gameObject, 2f);
 
             EnemyScript _enemyScript = enemy.GetComponent<EnemyScript>();
             if (enemy != null)
-                _enemyScript.TakeDamages(swordDamage * dmgPower, directionToEnemy * KnockBackPower);
+                _enemyScript.TakeDamages(swordDamage * dmgPower, directionToEnemy * KnockBackPower, isJumpit);
         }
 
         // void OnDrawGizmosSelected() // Player'ın vuruş menzilini gösterir

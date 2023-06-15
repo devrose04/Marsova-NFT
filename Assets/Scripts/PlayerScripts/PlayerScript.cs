@@ -15,7 +15,7 @@ namespace PlayerScripts
         [SerializeField] public float speed;
         [SerializeField] public float health;
         [SerializeField] public float armor; // armor 10 ise %10 hasar azaltır. max 100 olur
-        [SerializeField] float knockbackForce;
+        private float knockbackForce = 750;
 
         public bool isKnockbacked = false; // Player'ın yürüme skillerini kullanamaması için oluşturdum
 
@@ -47,9 +47,9 @@ namespace PlayerScripts
             isKnockbacked = true;
 
             if (RB2.gravityScale == 1)
-                knockbackForce = 300;
+                knockbackForce = 450;
             else
-                knockbackForce = 600;
+                knockbackForce = 750;
 
             Vector2 knockbackVector = new Vector2(directionToPlayer.x * knockbackForce * knockBackPower, directionToPlayer.y);
             RB2.AddForce(knockbackVector, ForceMode2D.Impulse);

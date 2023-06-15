@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1688516230851231473}
   - component: {fileID: -3191952814899086404}
   - component: {fileID: -8093018654728417480}
+  - component: {fileID: 2282277712394432830}
   m_Layer: 6
   m_Name: Zombi
   m_TagString: Zombies
@@ -157,6 +158,8 @@ MonoBehaviour:
   health: 1
   damage: 1
   hitTimeRange: 0
+  attackRadius: 0
+  knockBackPower: 0
   OwnEffect: {fileID: 6632549741689272037, guid: 368ae4ebaa8e74b6fb77ae4cc3cbdd4a, type: 3}
   HitEffect: {fileID: 7058215873622624022, guid: 5f57cac59b9de4f92a43fa37960cddb6, type: 3}
   effectCreationTimer: 5
@@ -177,6 +180,7 @@ MonoBehaviour:
   isKnockBackNotActive: 0
   isWaitingInTheBase: 0
   isRight: 1
+  isEnemyAttackToPlayer: 0
   moveSpeed: 0
   startingPosition: {x: 0, y: 0}
   basePosition: {x: 0, y: 0}
@@ -217,3 +221,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab6b58c6b43d462e900d6b9f8aa4a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2282277712394432830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173778304432394490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aefc2d8626ac4115a3761a6fbaa20a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images: {fileID: 8993420968674981516, guid: 7aa0268ff47b845fbb8eb457b5a0bb19, type: 3}
+  enemyAttackRadius: 2.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128

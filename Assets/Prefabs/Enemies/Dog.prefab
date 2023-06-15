@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7268318297108444991}
   - component: {fileID: 8559569879012672284}
   - component: {fileID: -5590691358087348084}
+  - component: {fileID: 6758059987510116480}
   m_Layer: 6
   m_Name: Dog
   m_TagString: Dogs
@@ -253,6 +254,8 @@ MonoBehaviour:
   health: 1
   damage: 1
   hitTimeRange: 0
+  attackRadius: 0
+  knockBackPower: 0
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6619194722741141945, guid: 3c0bbef8581a24016bbae2e3b92d15de, type: 3}
   effectCreationTimer: 0
@@ -273,6 +276,7 @@ MonoBehaviour:
   isKnockBackNotActive: 0
   isWaitingInTheBase: 0
   isRight: 1
+  isEnemyAttackToPlayer: 0
   moveSpeed: 0
   startingPosition: {x: 0, y: 0}
   basePosition: {x: 0, y: 0}
@@ -313,6 +317,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab6b58c6b43d462e900d6b9f8aa4a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6758059987510116480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3743587821907160077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aefc2d8626ac4115a3761a6fbaa20a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAttackRadius: 1.8
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &3743587823310534013
 GameObject:
   m_ObjectHideFlags: 0

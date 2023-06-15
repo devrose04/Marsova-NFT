@@ -50,7 +50,7 @@
      <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsManager.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
-     <Compile Include="Assets/Scripts/EnemyScripts/EnemyKnockBackScript.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyKnockBackScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordController.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/SkeletonsScript.cs" />
@@ -58,7 +58,7 @@
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/DogsScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsDataScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AIScript.cs" />
-     <Compile Include="Assets/Scripts/EnemyScripts/EnemyScript.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyScript.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/UIScripts/IsGroundTouchScript.cs" />
      <Compile Include="Assets/Scripts/ObjectsScripts/Calculations.cs" />
@@ -66,6 +66,7 @@
      <Compile Include="Assets/Scripts/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/ButtonScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/ZombiesScript.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyAttackScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/PlayerScripts/SwordScripts" />
      <Folder Include="Assets/Prefabs/Enemies" />
@@ -78,6 +79,7 @@
      <Folder Include="Assets/Animations" />
      <Folder Include="Assets/Scripts/EnemyScripts/OwnScript" />
      <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/Scripts/EnemyScripts/Enemy" />
      <Folder Include="Assets/Scripts/GameManagerScript" />
      <Folder Include="Assets/Scripts/UIScripts" />
      <Folder Include="Assets/Scripts/GameManagerScript/SkillsDetails" />

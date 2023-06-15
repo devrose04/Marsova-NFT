@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EnemyScripts;
 using EnemyScripts.AIScripts;
+using EnemyScripts.Enemy;
 using PlayerScripts;
 using UnityEngine;
 

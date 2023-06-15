@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using EnemyScripts.AIScripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace EnemyScripts
+namespace EnemyScripts.Enemy
 {
     public class EnemyKnockBackScript : MonoBehaviour
     {
@@ -15,9 +14,20 @@ namespace EnemyScripts
             __AIScript = this.gameObject.GetComponent<AIScript>();
         }
 
-        public IEnumerator KnockBack(Vector2 directionToEnemy, Rigidbody2D RB2)
+        public IEnumerator KnockBack(Vector2 directionToEnemy, Rigidbody2D RB2, bool isJumpit)
         {
             __AIScript.isKnockBackNotActive = false;
+
+            if (isJumpit) // Enemyi zıplatır
+            {
+                float jumpPower;
+                if (RB2.gravityScale == 1)
+                    jumpPower = Random.Range(18f, 20f);
+                else
+                    jumpPower = Random.Range(25f, 35f);
+
+                RB2.AddForce(new Vector2(RB2.velocity.x, jumpPower), ForceMode2D.Impulse);
+            }
 
             float duration = 1.2f; // Döngünün çalışma süresi
             float elapsedTime = 0f; // Geçen süre

@@ -35,7 +35,7 @@ namespace EnemyScripts.OwnScript
         public (float, float, float, float, float, float) OwnInformations()
         {
             speed = Random.Range(3f, 4.5f);
-            health = Random.Range(30f, 45f);
+            health = Random.Range(200f,200f); //30f, 45f
             damage = Random.Range(5f, 8f);
             hitTimeRange = Random.Range(0.4f, 0.6f);
             attackRadius = Random.Range(1.5f, 1.8f);

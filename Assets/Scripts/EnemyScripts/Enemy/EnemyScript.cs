@@ -1,14 +1,7 @@
-using System;
-using System.Collections;
-using EnemyScripts.AIScripts;
 using EnemyScripts.OwnScript;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
-namespace EnemyScripts
+namespace EnemyScripts.Enemy
 {
     public class EnemyScript : MonoBehaviour // Bu Scripte dışardan public ile kullanılacak kodlar olucak. 
     {
@@ -63,9 +56,9 @@ namespace EnemyScripts
         {
         }
 
-        public void TakeDamages(float dmg, Vector2 directionToEnemy)
+        public void TakeDamages(float dmg, Vector2 directionToEnemy, bool isJumpit)
         {
-            StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2));
+            StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2 , isJumpit));
             health -= dmg;
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)

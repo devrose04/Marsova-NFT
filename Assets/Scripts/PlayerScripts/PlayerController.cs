@@ -152,8 +152,7 @@ namespace PlayerScripts
 
     // ***Todo: Yapılacaklar:
 
-    // Todo: DmgCollider daki HitToPlayerTimer vb. kullanılmayan parametreleri sil
-    // Todo: DmgCollider da ki fonksiyonları yeni Scripte aktar 
+
     // Todo: Solid prensipleri ile kodu daha okunaklı yap 
     // Todo: Reborn da sıkıntı var
     // ---
@@ -163,20 +162,16 @@ namespace PlayerScripts
 
     // Todo: Eror:   Knockback yerinde hepsini farklı güçte itmesi lazım ama öyle olmuyor.
     // Todo: SwordAndAttack fonksiyonuna ilerde bunları ekleyebiliriz:     bool isJumpit, float dmgPower, float KnockBackPower,
+    // *Todo: DmgCollider daki HitToPlayerTimer vb. kullanılmayan parametreleri sil
     // Todo:
 
     // ---
 
 
-    // ***Todo: Yapılanlar 7:
+    // ***Todo: Yapılanlar 8:
+    // *Todo: Collisin'a çarpan nesneler duruyor bunu araştır düzelttim. 
+    // Todo: DmgCollider da ki fonksiyonları yeni Scripte aktardım 
 
 
-    // Todo: Player Controlerdaki Skiller SkillsContoller ile birleştirildi.
-    // Todo: Calculations'ı yeni Scripte taşıdım ve digerlerine entegre ettim.
-    // Todo: Dash'in KnockBackni ayarlandı.    Calculations' ıda oraya bağlandı
-    // Todo: SkillsManager oluşturdum ve veri aktarımını orada yapıyorum.
-    // Todo: Enemy ile Player çarpışma oldugunda, direk dmg vurmicak, 0.5f 1f saniye sonra o alana dmg vuracak,
-    // Todo: Savaş Mekanigi'ni kökten değiştirdim. 
-    // Todo: 
     // ---
 }

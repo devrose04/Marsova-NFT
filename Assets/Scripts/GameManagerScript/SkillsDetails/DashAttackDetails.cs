@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using EnemyScripts;
+using EnemyScripts.Enemy;
 using PlayerScripts.SwordScripts;
 using UnityEngine;
 
@@ -36,7 +37,7 @@ namespace GameManagerScript.SkillsDetails
 
         private void HitAndEffect(Collider2D other, float dmg, Vector2 directionToEnemy, EnemyScript __EnemyScript)
         {
-            __EnemyScript.TakeDamages(dmg, directionToEnemy);
+            __EnemyScript.TakeDamages(dmg, directionToEnemy, false);
             ParticleSystem Effect = Player.GetComponent<SwordScript>().hitEffect; // Hangi Effekti oldugunu alıyor    
             ParticleSystem effect = Instantiate(Effect, other.gameObject.transform);
             Destroy(effect.gameObject, 5f);
