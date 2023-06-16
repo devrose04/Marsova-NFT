@@ -26,7 +26,8 @@ namespace EnemyScripts.AIScripts
         private EnemyScript __EnemyScript;
         private AISkillsScript __AISkillsScript;
         private DmgColliderScript __DmgColliderScript;
-        private EnemyAttackScript __EnemyAttackScript;
+        private NearEnemyAttackScript _nearEnemyAttackScript;   //Todo: Enemy objesi yakından vuruyorsa __RangeEnemyAttackScript'ini kaldır.
+        private RangeEnemyAttackScript __RangeEnemyAttackScript;    //Todo: Enemy objesi uzaktan vuruyorsa _nearEnemyAttackScript'ini kaldır.
 
         private Vector2 direction; // bu Enemy'e karşılık Player hangi yönde onu bulur.   -1 ise Enemy Player'ın sağında
         public Vector2 startingPosition; // Başlangıç pozisyonu
@@ -39,9 +40,11 @@ namespace EnemyScripts.AIScripts
             Player = GameObject.Find("Player").transform;
             Enemy = this.gameObject;
             RB2 = this.gameObject.GetComponent<Rigidbody2D>();
+            
             __EnemyScript = Enemy.GetComponent<EnemyScript>();
             __AISkillsScript = Enemy.GetComponent<AISkillsScript>();
-            __EnemyAttackScript = Enemy.GetComponent<EnemyAttackScript>();
+            _nearEnemyAttackScript = Enemy.GetComponent<NearEnemyAttackScript>();
+            __RangeEnemyAttackScript = Enemy.GetComponent<RangeEnemyAttackScript>();
 
             isKnockBackNotActive = true;
         }
@@ -61,13 +64,17 @@ namespace EnemyScripts.AIScripts
 
             SpecialFunctions1();
             
-            if (distance < 1.5f) // Enemy Player'ın dibine geldiginde, Enemy dursun. ve vursun
-                AttackToPlayer();
+            if (distance < 1.5f && !__EnemyScript.isAttackinRange) // Enemy Player'ın dibine geldiginde, Enemy dursun. ve vursun
+                NearAttackToPlayer();
             
             else if (distance < 10) // 10 metre içinde görüyorsa ve Enemy vuruş hareketi yapmıyor ise hareket edicektir
             {
-                GoPlayerPosition();
-                SpecialFunctions2(); // Dogs - Zombi vb. Scriptlerin kullanıldıgı yer
+                if (distance < 7 && __EnemyScript.isAttackinRange)  // Enemy menzilli ise vursun.
+                    RangeAttackToPlayer();
+                else
+                    GoPlayerPosition(); //eger Enemy uzaktan vurmuyor ise Player'ın dibine git.
+               
+                SpecialFunctions2(); // slime - giant vb. Scriptlerin kullanıldıgı yer
                 EnemyLookingToPlayer();
             }
             else if (distance >= 10)
@@ -116,19 +123,24 @@ namespace EnemyScripts.AIScripts
         void SpecialFunctions2()
         {
             if (Enemy.CompareTag("Dogs")) // eger Dogs ise zıplasın
-                Enemy.GetComponent<DogsScript>().Jump();
+                Enemy.GetComponent<SlimeScript>().Jump();
         }
 
         void SpecialFunctions1()
         {
-            if (Enemy.CompareTag("Skeletons") && __EnemyScript.health <= 0)
-                Enemy.GetComponent<SkeletonsScript>().ReBorn();
+            
         }
 
-        void AttackToPlayer()
+        void NearAttackToPlayer()
         {
             if (!isEnemyAttackToPlayer) // bu if koşulunun nedeni hep çalışıp döngüye girmesin diye.
-                __EnemyAttackScript.StopAndAttack(this.gameObject);
+                _nearEnemyAttackScript.StopAndAttack(this.gameObject);
+        }
+
+        void RangeAttackToPlayer()      // todo: __EnemyAttackScript'in ismini degiştir, bir tane daah Script aç, onada uzaktan vuran fonksiyonarı yaz.
+        {
+            if (!isEnemyAttackToPlayer)
+                __RangeEnemyAttackScript.StopAndAttack(Enemy);
         }
     }
 }

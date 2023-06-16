@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace EnemyScripts.OwnScript
 {
-    public class DogsScript : MonoBehaviour, ICustomScript // bu Scripte sadece Dogs'a özel kodlar olucak.
+    public class SlimeScript : MonoBehaviour, ICustomScript // bu Scripte sadece Dogs'a özel kodlar olucak.
     {
         private float speed;
         private float health;
@@ -13,6 +13,7 @@ namespace EnemyScripts.OwnScript
         private float hitTimeRange;
         private float attackRadius;
         private float knockBackPower;
+        private bool isAttackinRange;
 
         private GameObject Enemy;
         private Rigidbody2D RB2;
@@ -32,15 +33,16 @@ namespace EnemyScripts.OwnScript
                 RB2.velocity = new Vector2(RB2.velocity.x, Random.Range(3, 6));
         }
 
-        public (float, float, float, float, float, float) OwnInformations()
+        public (float, float, float, float, float, float, bool) OwnInformations()
         {
             speed = Random.Range(3f, 4.5f);
-            health = Random.Range(200f,200f); //30f, 45f
+            health = Random.Range(30f, 45f); 
             damage = Random.Range(5f, 8f);
             hitTimeRange = Random.Range(0.4f, 0.6f);
             attackRadius = Random.Range(1.5f, 1.8f);
             knockBackPower = Random.Range(0.4f, 0.6f);
-            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower);
+            isAttackinRange = false;
+            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange);
         }
     }
 }

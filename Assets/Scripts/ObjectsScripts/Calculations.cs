@@ -10,7 +10,7 @@ namespace ObjectsScripts
             Vector2 targetPosition = target.transform.position;
             Vector2 attackingPosition = thisAttackingObject.transform.position;
 
-            // 1-) Düşmanın pozisyonunun hangi yönde oldugunu buluyor.      // Todo: burdak kaldnı
+            // 1-) Düşmanın pozisyonunun hangi yönde oldugunu buluyor.   
             Vector2 approximatelyDirectionToTarget = (targetPosition - attackingPosition).normalized; // 1 , -1 arasında bir değer (x,y)
 
             // 2-) aşagı da  X ve Y bileşenlerini yuvarlayarak tam sayı değerlere dönüştürüyoruz (ya 1 ayda -1 olacak şekilde)

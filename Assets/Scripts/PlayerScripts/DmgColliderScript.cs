@@ -3,6 +3,7 @@ using System.Collections;
 using EnemyScripts;
 using EnemyScripts.AIScripts;
 using EnemyScripts.Enemy;
+using EnemyScripts.Enemy.EnemyAttack;
 using GameManagerScript;
 using GameManagerScript.SkillsDetails;
 using GameManagerScript.SkillsScripts;
@@ -47,6 +48,13 @@ namespace PlayerScripts
             float HitToPlayerTimer = 0;
             float AgainHitToPlayerTime = 0;
 
+            if (other.gameObject.CompareTag("EnemyBullet"))
+            {
+                Collider2D PlayerCollider2D = Player.GetComponent<Collider2D>();
+                
+                EnemyBulletScript _enemyBulletScript = other.GetComponent<EnemyBulletScript>();
+                _enemyBulletScript.BulletIsTouchThePlayer(PlayerCollider2D);
+            }
 
             if (other.gameObject.GetComponent<EnemyScript>() != null)
             {

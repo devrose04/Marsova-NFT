@@ -8,6 +8,7 @@ TagManager:
   - Dogs
   - Skeletons
   - Zombies
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

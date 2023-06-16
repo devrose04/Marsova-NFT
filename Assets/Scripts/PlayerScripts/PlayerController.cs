@@ -154,7 +154,6 @@ namespace PlayerScripts
 
 
     // Todo: Solid prensipleri ile kodu daha okunaklı yap 
-    // Todo: Reborn da sıkıntı var
     // ---
 
 
@@ -168,10 +167,13 @@ namespace PlayerScripts
     // ---
 
 
-    // ***Todo: Yapılanlar 8:
+    // ***Todo: Yapılanlar 10:
     // *Todo: Collisin'a çarpan nesneler duruyor bunu araştır düzelttim. 
     // Todo: DmgCollider da ki fonksiyonları yeni Scripte aktardım 
-
+    // Todo: EnemyBullet Scriptini oluşturdum.
+    // Todo: Yakından ve Uzaktan vuran 2 farklı Script oluşturdum.
+    // Todo: OwnScripteki tüm özel canavarları kendilerine göre ayarladım.
+    // Todo: Mermi Zemine çarptıgında yok oluyor.
 
     // ---
 }

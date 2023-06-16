@@ -12,8 +12,9 @@ namespace EnemyScripts.Enemy
         public float hitTimeRange; // vuruş yapma sıklıgının süresi.
         public float attackRadius;
         public float knockBackPower;
+        public bool isAttackinRange;
         
-        (float, float, float, float, float, float) OwnInformations;
+        (float, float, float, float, float, float, bool) OwnInformations;
 
         [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
         [SerializeField] public ParticleSystem HitEffect; // bu vuruş effecti
@@ -50,6 +51,7 @@ namespace EnemyScripts.Enemy
             hitTimeRange = OwnInformations.Item4;
             attackRadius = OwnInformations.Item5;
             knockBackPower = OwnInformations.Item6;
+            isAttackinRange = OwnInformations.Item7;
         }
 
         public void MYFixedUpdate()
@@ -63,8 +65,6 @@ namespace EnemyScripts.Enemy
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
             {
-                if (Tag == "Skeletons")
-                    Enemy.GetComponent<SkeletonsScript>().ReBorn();
                 Destroy(this.gameObject);
             }
         }

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace EnemyScripts.Enemy
 {
-    public class EnemyAttackScript : MonoBehaviour
+    public class NearEnemyAttackScript : MonoBehaviour
     {
         [SerializeField] float enemyAttackRadius;
         [SerializeField] LayerMask playerLayer;
@@ -28,23 +28,23 @@ namespace EnemyScripts.Enemy
             __PlayerScript = Player.GetComponent<PlayerScript>();
         }
 
-        public void StopAndAttack(GameObject other)
+        public void StopAndAttack(GameObject enemy)
         {
-            __AIScript.isEnemyAttackToPlayer = true; // bunu bir yerde kullanmıyorum şuan
+            __AIScript.isEnemyAttackToPlayer = true; 
 
-            StartCoroutine(AttackReaction(other));
+            StartCoroutine(AttackReaction(enemy));
         }
 
-        IEnumerator AttackReaction(GameObject other)
+        IEnumerator AttackReaction(GameObject enemy)
         {
-            float hitTimeRange = other.GetComponent<EnemyScript>().hitTimeRange;
+            float hitTimeRange = enemy.GetComponent<EnemyScript>().hitTimeRange;
             yield return new WaitForSeconds(hitTimeRange);
-            if (other != null)
+            if (enemy != null)
             {
-                Collider2D[] _Player = Physics2D.OverlapCircleAll(other.transform.position, enemyAttackRadius, playerLayer);
+                Collider2D[] _Player = Physics2D.OverlapCircleAll(enemy.transform.position, enemyAttackRadius, playerLayer);
                 // print("Vurdugun kişi sayısı:" + hitEnemies.Length); // bunu canvasa yazdır.
 
-                EnemyScript _enemyScript = other.GetComponent<EnemyScript>();
+                EnemyScript _enemyScript = enemy.GetComponent<EnemyScript>();
 
                 ParticleSystem hitEffect = _enemyScript.HitEffect; // Enemy'nin vuruş Efektini burdan alıyoruz. 
                 float damages = _enemyScript.damage;
@@ -55,7 +55,7 @@ namespace EnemyScripts.Enemy
                     Vector2 directionToPlayer;
                     float angle;
 
-                    var result = __Calculations.CalculationsAboutToObject(other, player); // Enemy'lerin vuruş yaptıgı yerin verileri hesaplanır.
+                    var result = __Calculations.CalculationsAboutToObject(enemy, player); // Enemy'lerin vuruş yaptıgı yerin verileri hesaplanır.
                     (directionToPlayer, angle) = result;
 
                     if (angle == 0) // attackAngle == 0 ise, sadece önüne vuruyor. // attackAngle == 180 ise hem önüne, hem arkasına vuruyor.
