@@ -111,4 +111,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    
+    // selam
 }
