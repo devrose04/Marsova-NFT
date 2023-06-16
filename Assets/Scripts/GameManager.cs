@@ -110,5 +110,7 @@ public class GameManager : MonoBehaviour
                 enemyList.Add(enemyObject);
             }
         }
+        // todasdlasğdpo
+        // sdğfldspfmoısdffs
     }
 }
