@@ -3,7 +3,7 @@ using EnemyScripts.AIScripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace EnemyScripts.Enemy
+namespace EnemyScripts.Enemy.Enemy
 {
     public class EnemyKnockBackScript : MonoBehaviour
     {

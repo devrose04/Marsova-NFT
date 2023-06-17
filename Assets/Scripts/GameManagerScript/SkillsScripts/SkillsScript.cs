@@ -1,5 +1,6 @@
 using System.Collections;
 using PlayerScripts;
+using PlayerScripts.Player;
 using UnityEngine;
 
 // ReSharper disable Unity.InefficientPropertyAccess
@@ -17,6 +18,9 @@ namespace GameManagerScript.SkillsScripts
         private Rigidbody2D RB2;
 
         private PlayerScript __PlayerScript;
+
+        [SerializeField] public float JetPackFuel;
+        [SerializeField] private ParticleSystem JetPackEffect;
 
         private void Awake()
         {
@@ -111,6 +115,20 @@ namespace GameManagerScript.SkillsScripts
             __PlayerScript.speed = realSpeed;
 
             isArmorFrameUse = false;
+        }
+
+        public void JetPack()
+        {
+            if (RB2.velocity.y < 5 && JetPackFuel > 0)
+            {
+                JetPackFuel -= Time.deltaTime;
+                RB2.AddForce(new Vector2(RB2.velocity.x, 50), ForceMode2D.Impulse);
+                if (JetPackFuel > 0.2)
+                {
+                    ParticleSystem Effect = Instantiate(JetPackEffect, Player.transform);
+                    Destroy(Effect.gameObject, 1.2f);
+                }
+            }
         }
     }
 }

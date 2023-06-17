@@ -1,9 +1,8 @@
 using System.Collections;
-using GameManagerScript;
 using GameManagerScript.SkillsScripts;
 using UnityEngine;
 
-namespace PlayerScripts
+namespace PlayerScripts.Player
 {
     public class PlayerScript : MonoBehaviour
     {

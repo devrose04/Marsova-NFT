@@ -11,16 +11,9 @@ namespace EnemyScripts.OwnScript
         private float attackRadius;
         private float knockBackPower;
         private bool isAttackinRange;
-
-        private GameObject Enemy;
-
-        private void Awake()
-        {
-            Enemy = this.gameObject;
-        }
-
-
-        public (float, float, float, float, float, float, bool) OwnInformations()
+        private bool isItFly;
+        
+        public (float, float, float, float, float, float, bool, bool) OwnInformations()
         {
             speed = Random.Range(1.8f, 2.2f ); 
             health = Random.Range(100f, 140f);
@@ -29,7 +22,8 @@ namespace EnemyScripts.OwnScript
             attackRadius = Random.Range(2.5f, 3f);
             knockBackPower = Random.Range(1.2f, 1.4f);
             isAttackinRange = false;
-            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange);
+            isItFly = false;
+            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange,isItFly);
         }
     }
 }

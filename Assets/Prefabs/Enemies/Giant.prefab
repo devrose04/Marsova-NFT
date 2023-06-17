@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -8093018654728417480}
   - component: {fileID: 2282277712394432830}
   - component: {fileID: 4020317158842891427}
+  - component: {fileID: -6959351619565380150}
   m_Layer: 6
   m_Name: Giant
   m_TagString: Zombies
@@ -252,3 +253,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8909499812899439524, guid: 138b51b8ba90f4894a11da96a0a217bf, type: 3}
+--- !u!114 &-6959351619565380150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173778304432394490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0739e1e0f7dbb493bbf0d070d10dda3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

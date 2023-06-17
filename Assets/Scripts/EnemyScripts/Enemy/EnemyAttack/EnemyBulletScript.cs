@@ -1,6 +1,7 @@
 using System;
 using ObjectsScripts;
 using PlayerScripts;
+using PlayerScripts.Player;
 using Unity.VisualScripting;
 using UnityEngine;
 

@@ -1,3 +1,4 @@
+using EnemyScripts.Enemy.Enemy;
 using EnemyScripts.OwnScript;
 using UnityEngine;
 
@@ -13,8 +14,9 @@ namespace EnemyScripts.Enemy
         public float attackRadius;
         public float knockBackPower;
         public bool isAttackinRange;
+        private bool isItFly;
         
-        (float, float, float, float, float, float, bool) OwnInformations;
+        (float, float, float, float, float, float, bool, bool) OwnInformations;
 
         [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
         [SerializeField] public ParticleSystem HitEffect; // bu vuruş effecti
@@ -52,6 +54,7 @@ namespace EnemyScripts.Enemy
             attackRadius = OwnInformations.Item5;
             knockBackPower = OwnInformations.Item6;
             isAttackinRange = OwnInformations.Item7;
+            isItFly = OwnInformations.Item8;
         }
 
         public void MYFixedUpdate()
@@ -60,7 +63,9 @@ namespace EnemyScripts.Enemy
 
         public void TakeDamages(float dmg, Vector2 directionToEnemy, bool isJumpit)
         {
-            StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2 , isJumpit));
+            if (isItFly == false) // eger uçmuyor ise Knockback uygulansın
+                StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2 , isJumpit));
+            
             health -= dmg;
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
