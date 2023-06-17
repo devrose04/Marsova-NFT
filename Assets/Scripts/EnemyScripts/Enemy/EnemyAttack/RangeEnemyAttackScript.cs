@@ -46,8 +46,8 @@ namespace EnemyScripts.Enemy
                 // buraya mermiyi oluştur ve Player'a yolla
 
                 GameObject CreatedBullet = Instantiate(EnemyBullet, this.transform.position, Quaternion.identity, null); // mermiyi oluşturdum
-
-
+                Destroy(CreatedBullet,5f);
+                
                 // merminin bilgilerini aktardım.
                 EnemyBulletScript _enemyBulletScript = CreatedBullet.GetComponent<EnemyBulletScript>();
                 _enemyBulletScript.damages = damages;

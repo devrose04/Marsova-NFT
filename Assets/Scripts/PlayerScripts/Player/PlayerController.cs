@@ -1,5 +1,4 @@
-using System;
-using GameManagerScript;
+using System.Threading;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.SwordScripts;
 using UIScripts;
@@ -9,7 +8,7 @@ using UnityEngine;
 // ReSharper disable RedundantCheckBeforeAssignment
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
 
-namespace PlayerScripts
+namespace PlayerScripts.Player
 {
     public class PlayerController : MonoBehaviour
     {
@@ -19,10 +18,17 @@ namespace PlayerScripts
         private PlayerScript __PlayerScript;
         private SkillsDataScript __SkillsData;
         private IsGroundTouchScript __isGroundTouch;
+        private WeaponScript _weaponScript;
+
+        [SerializeField] private GameObject PlayerLaserBullet;
+
+        private float LaserTimer = 1; // todo:  Laserle alakalı bir Script aç ve Oraya Mermi miktarını vb. şeyleride yaz 
 
         private GameObject GameManager;
         private GameObject Player;
         private Rigidbody2D RB2;
+        private GameObject Weapon;
+        private Transform ShotPoint;
 
         private float speedSabit;
         private float speed;
@@ -31,10 +37,13 @@ namespace PlayerScripts
         private void Awake()
         {
             Player = GameObject.Find("Player");
+            Weapon = GameObject.Find("Weapon");
             RB2 = Player.GetComponent<Rigidbody2D>();
             GameManager = GameObject.Find("GameManager");
+            ShotPoint = Weapon.transform.Find("shotPoint");
             __SwordScript = Player.GetComponent<SwordScript>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
+            _weaponScript = Weapon.GetComponent<WeaponScript>();
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
             __SkillsData = GameManager.GetComponent<SkillsDataScript>();
             __SkillsManager = GameManager.GetComponent<SkillsManager>();
@@ -70,10 +79,18 @@ namespace PlayerScripts
             {
                 Jump();
             }
+
+            if (Input.GetKey(KeyCode.C)) // JetPack
+            {
+                __SkillsScript.JetPack();
+                Run();
+            }
         }
 
         public void MYUpdate() // GameManagerdan çagırıyorum
         {
+            _weaponScript.MYUpdate();
+            
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) // havaya zıplatıp alan vurma skili
             {
                 // Aşagıda yaptıgın şey Skilli kullanıyor ve onun zaman verisini burdaki __SkillsData.HittingAllCanUse1'e atıyor.
@@ -93,6 +110,14 @@ namespace PlayerScripts
                 __SkillsManager.ArmorFrame_manager();
             }
 
+            LaserTimer += Time.deltaTime;
+            if (Input.GetMouseButton(0) && LaserTimer > 0.3f) // Laser silahı
+            {
+                GameObject Laser = Instantiate(PlayerLaserBullet, ShotPoint.position, transform.rotation); // todo:  burdan Player yerine shot pointetn oluşsun mermi
+
+                Destroy(Laser, 5f);
+                LaserTimer = 0;
+            }
 
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __SkillsScript.isArmorFrameUse) // Bu kod Player hit yediginde ve dodge, dashatack vs attıgında: hareket etmesini engeliyecektir.
                 return; // bunun altındaki kodları etkiler.
@@ -118,8 +143,8 @@ namespace PlayerScripts
         void Walking()
         {
             speed = Player.GetComponent<PlayerScript>().speed; // bunu yazma nedenim: ArmorFrame gibi oyun içinde hızı azaltacak faktörleri uygulayabilmek için
-            if (__SkillsScript.isArmorFrameUse == false)
-                Run();
+            // if (__SkillsScript.isArmorFrameUse == false) // bu Shifte basınca hızlı koşmaydı
+            //     Run();
             speedAmount = speed * Time.deltaTime;
             RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
 
@@ -131,7 +156,7 @@ namespace PlayerScripts
 
         void Run()
         {
-            if (Input.GetKey(KeyCode.LeftShift)) // hızlı koşma
+            if (Input.GetKey(KeyCode.C)) // hızlı koşma
             {
                 if (speed != speedSabit * 1.8f)
                     speed = speedSabit * 1.8f;
@@ -168,12 +193,13 @@ namespace PlayerScripts
 
 
     // ***Todo: Yapılanlar 10:
-    // *Todo: Collisin'a çarpan nesneler duruyor bunu araştır düzelttim. 
-    // Todo: DmgCollider da ki fonksiyonları yeni Scripte aktardım 
-    // Todo: EnemyBullet Scriptini oluşturdum.
-    // Todo: Yakından ve Uzaktan vuran 2 farklı Script oluşturdum.
-    // Todo: OwnScripteki tüm özel canavarları kendilerine göre ayarladım.
-    // Todo: Mermi Zemine çarptıgında yok oluyor.
 
+    // Todo: JetPack'i yaptım.
+    // Todo: Bird'ü oluşturdum.
+    /// Todo: Player'ın Silahını ve Mermisini oluşturdum.
+    /// Todo: EnemDmgCollider oluşturdum
+    
+    
+    
     // ---
 }

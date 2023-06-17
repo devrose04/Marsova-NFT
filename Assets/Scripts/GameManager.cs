@@ -4,6 +4,7 @@ using EnemyScripts;
 using EnemyScripts.AIScripts;
 using EnemyScripts.Enemy;
 using PlayerScripts;
+using PlayerScripts.Player;
 using UnityEngine;
 
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
@@ -110,7 +111,5 @@ public class GameManager : MonoBehaviour
                 enemyList.Add(enemyObject);
             }
         }
-        // todasdlasğdpo
-        // sdğfldspfmoısdffs
     }
 }

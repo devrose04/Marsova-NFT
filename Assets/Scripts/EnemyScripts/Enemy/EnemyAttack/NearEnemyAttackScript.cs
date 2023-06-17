@@ -3,6 +3,7 @@ using System.Collections;
 using EnemyScripts.AIScripts;
 using ObjectsScripts;
 using PlayerScripts;
+using PlayerScripts.Player;
 using UnityEngine;
 
 namespace EnemyScripts.Enemy

@@ -9,6 +9,8 @@ TagManager:
   - Skeletons
   - Zombies
   - EnemyBullet
+  - Birds
+  - PlayerBuller
   layers:
   - Default
   - TransparentFX
