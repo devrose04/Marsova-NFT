@@ -1,5 +1,8 @@
 using System.Threading;
+using EnemyScripts.Enemy;
 using GameManagerScript.SkillsScripts;
+using PlayerScripts.PlayerLaserAbout;
+using PlayerScripts.PlayerLaserAbout.Drone;
 using PlayerScripts.SwordScripts;
 using UIScripts;
 using UnityEngine;
@@ -18,7 +21,9 @@ namespace PlayerScripts.Player
         private PlayerScript __PlayerScript;
         private SkillsDataScript __SkillsData;
         private IsGroundTouchScript __isGroundTouch;
-        private WeaponScript _weaponScript;
+        private StartShipAttack _startShipAttack;
+        private DroneScript _droneScript;
+        private EnemyDetector _enemyDetector;
 
         [SerializeField] private GameObject PlayerLaserBullet;
 
@@ -29,6 +34,7 @@ namespace PlayerScripts.Player
         private Rigidbody2D RB2;
         private GameObject Weapon;
         private Transform ShotPoint;
+        private GameObject Drone;
 
         private float speedSabit;
         private float speed;
@@ -38,12 +44,15 @@ namespace PlayerScripts.Player
         {
             Player = GameObject.Find("Player");
             Weapon = GameObject.Find("Weapon");
+            Drone = GameObject.Find("Drone");
             RB2 = Player.GetComponent<Rigidbody2D>();
             GameManager = GameObject.Find("GameManager");
             ShotPoint = Weapon.transform.Find("shotPoint");
+            _enemyDetector = Drone.GetComponent<EnemyDetector>();
+            _droneScript = Drone.GetComponent<DroneScript>();
             __SwordScript = Player.GetComponent<SwordScript>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
-            _weaponScript = Weapon.GetComponent<WeaponScript>();
+            _startShipAttack = Weapon.GetComponent<StartShipAttack>();
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
             __SkillsData = GameManager.GetComponent<SkillsDataScript>();
             __SkillsManager = GameManager.GetComponent<SkillsManager>();
@@ -89,8 +98,10 @@ namespace PlayerScripts.Player
 
         public void MYUpdate() // GameManagerdan çagırıyorum
         {
-            _weaponScript.MYUpdate();
-            
+            _startShipAttack.MYUpdate();
+            _droneScript.MYUpdate();
+            _enemyDetector.MYUpdate();
+
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) // havaya zıplatıp alan vurma skili
             {
                 // Aşagıda yaptıgın şey Skilli kullanıyor ve onun zaman verisini burdaki __SkillsData.HittingAllCanUse1'e atıyor.
@@ -111,9 +122,9 @@ namespace PlayerScripts.Player
             }
 
             LaserTimer += Time.deltaTime;
-            if (Input.GetMouseButton(0) && LaserTimer > 0.3f) // Laser silahı
+            if (Input.GetMouseButton(0) && LaserTimer > 0.2f) // Laser silahı
             {
-                GameObject Laser = Instantiate(PlayerLaserBullet, ShotPoint.position, transform.rotation); // todo:  burdan Player yerine shot pointetn oluşsun mermi
+                GameObject Laser = Instantiate(PlayerLaserBullet, ShotPoint.position, transform.rotation);
 
                 Destroy(Laser, 5f);
                 LaserTimer = 0;
@@ -192,14 +203,11 @@ namespace PlayerScripts.Player
     // ---
 
 
-    // ***Todo: Yapılanlar 10:
+    // ***Todo: Yapılanlar 11:
 
-    // Todo: JetPack'i yaptım.
-    // Todo: Bird'ü oluşturdum.
-    /// Todo: Player'ın Silahını ve Mermisini oluşturdum.
-    /// Todo: EnemDmgCollider oluşturdum
-    
-    
-    
+    // Todo: Dron oluşturuldu, tüm kodları yazıldı(Player'ın yanına gelip Enemylere Elektirik vuruyor)
+    // Todo: StarShip oluşturuldu, tüm kodları yazıldı(uzaydan mermi yagdırabiliyoruz.)
+    // Todo: Pley Buller geliştirildi.
+    // todo: EnemyDetector oluşturudlu.
     // ---
 }

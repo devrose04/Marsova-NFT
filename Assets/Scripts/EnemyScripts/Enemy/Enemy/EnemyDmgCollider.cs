@@ -1,5 +1,6 @@
 using System;
 using PlayerScripts;
+using PlayerScripts.PlayerLaserAbout;
 using UnityEngine;
 
 namespace EnemyScripts.Enemy.Enemy

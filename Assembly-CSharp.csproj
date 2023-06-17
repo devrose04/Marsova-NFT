@@ -51,12 +51,14 @@
      <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsManager.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/StartShipAttack.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/Enemy/EnemyKnockBackScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordController.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/EyesScript.cs" />
      <Compile Include="Assets/Scripts/UIScripts/CharracterFollow.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/Drone/DroneScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/SlimeScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsDataScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AIScript.cs" />
@@ -68,38 +70,136 @@
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyAttack/RangeEnemyAttackScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/Player/PlayerScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/DmgColliderScript.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/Drone/EnemyDetector.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/ButtonScript.cs" />
-     <Compile Include="Assets/Scripts/PlayerScripts/PlayerBullet.cs" />
+     <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/PlayerBullet.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/BirdScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/GiantScript.cs" />
-     <Compile Include="Assets/Scripts/PlayerScripts/WeaponScript.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/PlayerScripts/SwordScripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />
      <Folder Include="Assets/Prefabs/Enemies" />
      <Folder Include="Assets/Images/Anim_PNG/Player" />
      <Folder Include="Assets/Scripts/GameManagerScript/SkillsScripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Electric" />
+     <None Include="Assets/JMO Assets/Cartoon FX (legacy)/Shaders/CFX3 Multiply Color.shader" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails/Ice" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Misc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Electric" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Glow.shader" />
      <Folder Include="Assets/Images/Anim_PNG" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Texts" />
      <Folder Include="Assets/Efectlerim" />
      <Folder Include="Assets/Scripts/EnemyScripts/AIScripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Environment" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Ubershader.shader" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc" />
      <Folder Include="Assets/Scripts/PlayerScripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Misc" />
+     <None Include="Assets/JMO Assets/Cartoon FX (legacy)/CartoonFX Free.txt" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails/Fire" />
      <Folder Include="Assets/Animations" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Light" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Electric" />
      <Folder Include="Assets/Scripts/EnemyScripts/OwnScript" />
      <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Liquids" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs" />
      <Folder Include="Assets/Scripts/EnemyScripts/Enemy" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR.cginc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Magic" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Fire" />
      <Folder Include="Assets/Scripts/GameManagerScript" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Fire" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Light" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Explosions" />
      <Folder Include="Assets/Scripts/EnemyScripts/Enemy/EnemyAttack" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Hits" />
      <Folder Include="Assets/Effektler_eski" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Animated" />
      <Folder Include="Assets/Scripts/EnemyScripts/Enemy/Enemy" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster" />
      <Folder Include="Assets/Photos" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire" />
      <Folder Include="Assets/Scripts/UIScripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Magic Misc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Light" />
+     <Folder Include="Assets/AssetEfectlerim" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Meshes" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Misc" />
      <Folder Include="Assets/Scripts/GameManagerScript/SkillsDetails" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo" />
      <Folder Include="Assets/Prefabs" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails/Plain" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Stretched" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Blood" />
+     <Folder Include="Assets/JMO Assets" />
      <Folder Include="Assets/Scripts/PlayerScripts/Player" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Misc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Readme Cartoon FX Remaster FREE.txt" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Light" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Shaders" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Texts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Skull &amp; Ghosts Effects" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Misc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Mesh" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/UI Canvas" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Texts/_Make your own text effect.txt" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Misc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Ice" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_PASSES.cginc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric" />
      <Folder Include="Assets/Animations/Player" />
+     <None Include="Assets/JMO Assets/Cartoon FX (legacy)/Shaders/CFXM_MobileParticleAdd_Alpha8.shader" />
+     <Folder Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/Drone" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Water" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Procedural Ring.shader" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Fire" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Electric" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Symbols" />
      <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails" />
      <Folder Include="Assets/Scripts/ObjectsScripts" />
      <Folder Include="Assets/Scripts/EnemyScripts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Water" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Pickup Items" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Water" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Debris Hits" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Blood" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics" />
      <Folder Include="Assets/Images" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Textures" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Electric" />
+     <Folder Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout" />
+     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Distortion.shader" />
+     <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Explosions" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -855,6 +955,30 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{85445c75-6e4b-38c3-bde7-4e2423ca8dbe}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{aafa9df9-dc6a-0e9c-f2ac-860575a4a990}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{a4f114d8-da33-a828-7788-cfa1f58ec168}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{c2928448-d8c3-6755-1096-ce1045cd6ac9}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{1d513ffe-afd2-6d61-3ecc-8c4de2a5b8cb}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{d8166b55-34d3-1148-7eae-d01da71d4f3a}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
