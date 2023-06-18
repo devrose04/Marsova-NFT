@@ -15,7 +15,8 @@ namespace GameManagerScript.SkillsScripts
         private ButtonScript __ButtonScript;
         private SwordController __SwordController;
         private SkillsDataScript __SkillsData;
-
+        
+        
         private void Awake()
         {
             GameManager = GameObject.Find("GameManager");

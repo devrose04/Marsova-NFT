@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Rotate.cs" />
      <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo.asmdef" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets" />

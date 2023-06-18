@@ -1,3 +1,6 @@
+using System;
+using GameManagerScript.SkillsScripts;
+using PlayerScripts.Player;
 using UnityEngine;
 
 namespace UIScripts
@@ -10,6 +13,11 @@ namespace UIScripts
         {
             if (other.gameObject.CompareTag("Ground"))
                 isGroundTouchBool = true;
+
+            if (this.gameObject.GetComponentInParent<PlayerScript>() != null)
+            {
+                this.gameObject.GetComponentInParent<PlayerScript>().CreateTouchTheGroundEffeckt();
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)

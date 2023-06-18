@@ -70,6 +70,10 @@ namespace EnemyScripts.Enemy
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
             {
+                if (this.gameObject.GetComponent<SalyangozScript>() != null)
+                {
+                    this.gameObject.GetComponent<SalyangozScript>().TakeHeal();
+                }
                 Destroy(this.gameObject);
             }
         }
