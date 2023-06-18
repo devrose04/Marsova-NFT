@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
 using EnemyScripts.Enemy;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace PlayerScripts.PlayerLaserAbout.Drone
 {
@@ -12,47 +15,47 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
         [SerializeField] private ParticleSystem BigElectric;
         [SerializeField] private ParticleSystem SmaleElectric;
 
+        private Collider2D[] hitColliders;
+
+        public bool DroneIsReadyToAttack = false;
+
         private float time;
+
+        public int JustOneTimeWork; // Drone Player'ın yanında durmasına yarıcak değişken
+
+        private DroneScript _droneScript;
+        private GameObject Player;
+
+        private void Awake()
+        {
+            _droneScript = this.gameObject.GetComponent<DroneScript>();
+            Player = GameObject.Find("Player");
+        }
 
         public void MYUpdate()
         {
-            CalculationsWhichEnemiesAround();
-            time += Time.deltaTime;
-            if (time > 2)
+            if (DroneIsReadyToAttack)
             {
-                time = 0;
-                AttackingDrone();
+                CalculationsWhichEnemiesAround();
+                time += Time.deltaTime;
+                if (time > 2)
+                {
+                    time = 0;
+                    AttackingDrone();
+                }
             }
         }
 
         void CalculationsWhichEnemiesAround()
         {
             // Enemy katmanındaki objeleri algılamak için bir küre yayılımı kullanın
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, LayerMask.GetMask("Enemy"));
+            hitColliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, LayerMask.GetMask("Enemy"));
 
-            // Algılanan her bir obje için işlem yapın
-            foreach (Collider2D collider in hitColliders)
-            {
-                GameObject enemy = collider.gameObject;
+            AddToList();
 
-                // Eğer daha önce algılanmamışsa listeye ekle
-                if (!detectedEnemies.Contains(enemy))
-                {
-                    detectedEnemies.Add(enemy);
-                }
-            }
+            AreThereEnemies();
 
-            // Algılanan objeleri kontrol edin ve listeden çıkarın
-            for (int i = detectedEnemies.Count - 1; i >= 0; i--)
-            {
-                GameObject enemy = detectedEnemies[i];  /// todo: Nulll Objecy hatası verdi Burda kaldın, en son: Dronun Vuruş yapmasını sagladım.
-
-                // Eğer obje hala algılanıyorsa ve 10 metrelik alandan çıkmışsa listeden çıkar
-                if (Vector2.Distance(transform.position, enemy.transform.position) > detectionRadius)
-                {
-                    detectedEnemies.RemoveAt(i);
-                }
-            }
+            RemoveToList();
         }
 
         void AttackingDrone()
@@ -65,8 +68,11 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
                 enemy.GetComponent<EnemyScript>().TakeDamages(10, new Vector2(0, 0), false);
             }
 
-            ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
-            Destroy(_bigElectric.gameObject, 3f);
+            if (_droneScript.DroneLookThisObject != Player)
+            {
+                ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
+                Destroy(_bigElectric.gameObject, 3f);
+            }
         }
 
         void OnDrawGizmosSelected()
@@ -74,6 +80,61 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
             // Gizmos üzerinde algılama yarıçapını göstermek için bir çember çizin
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, detectionRadius);
+        }
+
+
+        void AddToList()
+        {
+            // Algılanan her bir obje için işlem yapın
+            foreach (Collider2D collider in hitColliders)
+            {
+                GameObject enemy = collider.gameObject;
+
+                // Eğer daha önce algılanmamışsa listeye ekle
+                if (!detectedEnemies.Contains(enemy))
+                {
+                    detectedEnemies.Add(enemy);
+                }
+
+                LookAtThisObject();
+            }
+        }
+
+        void AreThereEnemies()
+        {
+            if (detectedEnemies.Count == 0 && JustOneTimeWork == 0) // burda Etrafta hiç bir Enemy yok ise Drone Player'ın yanında dursun.
+                _droneScript.EnemiesAreThere = false;
+            else // burda 1 tane bile enemy görürse ise JustOneTimeWork'ü artırıyorum ki bir daha çalışmasın diye
+            {
+                _droneScript.EnemiesAreThere = true;
+                JustOneTimeWork = 1;
+            }
+        }
+
+        void RemoveToList()
+        {
+            // Algılanan objeleri kontrol edin ve listeden çıkarın
+            for (int i = detectedEnemies.Count - 1; i >= 0; i--)
+            {
+                GameObject enemy = detectedEnemies[i];
+
+                if (enemy == null) // Enemy ölmüş ise listeden çıkar    
+                    detectedEnemies.RemoveAt(i);
+                // Eğer obje hala algılanıyorsa ve 10 metrelik alandan çıkmışsa listeden çıkar
+                else if (Vector2.Distance(transform.position, enemy.transform.position) > detectionRadius)
+                    detectedEnemies.RemoveAt(i);
+            }
+        }
+
+        void LookAtThisObject()
+        {
+            if (detectedEnemies[0] != null)
+                _droneScript.DroneLookThisObject = detectedEnemies[0];
+        }
+
+        public void ClearList()
+        {
+            detectedEnemies.Clear();
         }
     }
 }

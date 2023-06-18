@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private float timer = 0f;
 
     private PlayerController __PlayerController;
+    private PlayerScript _playerScript;
 
     private GameObject Player;
     private LayerMask enemyLayerMask;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
     private void Update() // tüm kodlar tek bir Update ile çalıştırılacak. Oda burası.
     {
         __PlayerController.MYUpdate();
+        // _playerScript.CreateTouchTheGroundEffeckt();
 
         foreach (var enemy in enemyList) // bu foreach'a bişi yazma aşagıdaki foreach'e yaz
         {
@@ -81,7 +83,7 @@ public class GameManager : MonoBehaviour
         isNotHaveRemoveList(enemyColliders);
         addToList(enemyColliders);
 
-        print("Çevredeki düşmanların sayısı: " + enemyList.Count); // bunu canvasa geçir
+        // print("Çevredeki düşmanların sayısı: " + enemyList.Count); // bunu canvasa geçir
     }
 
     void isNotHaveRemoveList(Collider2D[] _enemyColliders) // GameRadiues alanındaki olmayan Enemyleri listeden çıkart

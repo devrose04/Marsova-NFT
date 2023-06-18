@@ -43,21 +43,27 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsController.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/ICustomScript.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/Player/PlayerController.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsDetails/DashAttackDetails.cs" />
      <Compile Include="Assets/Scripts/ObjectsScripts/ObjectColliderScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyAttack/NearEnemyAttackScript.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsScript.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsManager.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/StartShipAttack.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/Enemy/EnemyKnockBackScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/SwordScripts/SwordController.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/EyesScript.cs" />
      <Compile Include="Assets/Scripts/UIScripts/CharracterFollow.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/Drone/DroneScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/SlimeScript.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/SkillsScripts/SkillsDataScript.cs" />
@@ -67,24 +73,19 @@
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyAttack/EnemyBulletScript.cs" />
      <Compile Include="Assets/Scripts/UIScripts/IsGroundTouchScript.cs" />
      <Compile Include="Assets/Scripts/ObjectsScripts/Calculations.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/Enemy/EnemyAttack/RangeEnemyAttackScript.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/Player/PlayerScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/Drone/EnemyDetector.cs" />
      <Compile Include="Assets/Scripts/GameManagerScript/ButtonScript.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
      <Compile Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/PlayerBullet.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/BirdScript.cs" />
      <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/GiantScript.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/OwnScript/SalyangozScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/PlayerScripts/SwordScripts" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />
@@ -114,8 +115,13 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Light" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Electric" />
      <Folder Include="Assets/Scripts/EnemyScripts/OwnScript" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 1/frames" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 2/thrust" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 2" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 3/frames-thrust/thrust-back" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 3/frames-thrust" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Liquids" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs" />
      <Folder Include="Assets/Scripts/EnemyScripts/Enemy" />
@@ -138,12 +144,15 @@
      <Folder Include="Assets/Photos" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire" />
      <Folder Include="Assets/Scripts/UIScripts" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 3" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Magic Misc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Light" />
      <Folder Include="Assets/AssetEfectlerim" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 1/thrust" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Meshes" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Misc" />
      <Folder Include="Assets/Scripts/GameManagerScript/SkillsDetails" />
+     <Folder Include="Assets/Warped Vehicles" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets" />
@@ -152,6 +161,7 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Blood" />
      <Folder Include="Assets/JMO Assets" />
      <Folder Include="Assets/Scripts/PlayerScripts/Player" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 3/frames-thrust/thrust-bottom" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Misc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc" />
@@ -161,6 +171,7 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Texts" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Skull &amp; Ghosts Effects" />
+     <Folder Include="Assets/Warped Vehicles/Scenes" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Misc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Mesh" />
@@ -170,8 +181,11 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Ice" />
      <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_PASSES.cginc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs" />
+     <Folder Include="Assets/Warped Vehicles/Music" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 1" />
      <Folder Include="Assets/Animations/Player" />
      <None Include="Assets/JMO Assets/Cartoon FX (legacy)/Shaders/CFXM_MobileParticleAdd_Alpha8.shader" />
      <Folder Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout/Drone" />
@@ -186,6 +200,7 @@
      <Folder Include="Assets/Scripts/ObjectsScripts" />
      <Folder Include="Assets/Scripts/EnemyScripts" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Water" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 3/frames" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Pickup Items" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs" />
      <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc" />
@@ -196,6 +211,7 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics" />
      <Folder Include="Assets/Images" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Textures" />
+     <Folder Include="Assets/Warped Vehicles/Pixel Art/vehicle 2/frames" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Electric" />
      <Folder Include="Assets/Scripts/PlayerScripts/PlayerLaserAbout" />
      <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Distortion.shader" />
@@ -878,9 +894,6 @@
      <Reference Include="Unity.2D.IK.Editor">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
@@ -889,9 +902,6 @@
      </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -910,6 +920,12 @@
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
@@ -963,14 +979,6 @@
       <Project>{aafa9df9-dc6a-0e9c-f2ac-860575a4a990}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
-      <Project>{a4f114d8-da33-a828-7788-cfa1f58ec168}</Project>
-      <Name>CFXR.WelcomeScreen</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{c2928448-d8c3-6755-1096-ce1045cd6ac9}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
       <Project>{1d513ffe-afd2-6d61-3ecc-8c4de2a5b8cb}</Project>
       <Name>KinoBloom.Runtime</Name>
@@ -978,6 +986,14 @@
     <ProjectReference Include="CFXRDemo.csproj">
       <Project>{d8166b55-34d3-1148-7eae-d01da71d4f3a}</Project>
       <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{a4f114d8-da33-a828-7788-cfa1f58ec168}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{c2928448-d8c3-6755-1096-ce1045cd6ac9}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

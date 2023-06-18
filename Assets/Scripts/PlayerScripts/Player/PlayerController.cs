@@ -118,15 +118,18 @@ namespace PlayerScripts.Player
 
             if (Input.GetKeyDown(KeyCode.X)) // ArmorFrame Skill
             {
-                __SkillsManager.ArmorFrame_manager();
+                if (RB2.gravityScale == 1)  // havada ise çalışsın
+                    __SkillsManager.ArmorFrame_manager();
             }
 
             LaserTimer += Time.deltaTime;
-            if (Input.GetMouseButton(0) && LaserTimer > 0.2f) // Laser silahı
+            if (Input.GetMouseButton(0) && LaserTimer > 0.2f && _startShipAttack.SpaceShipAttackIsActive) // Laser silahı
             {
                 GameObject Laser = Instantiate(PlayerLaserBullet, ShotPoint.position, transform.rotation);
-
                 Destroy(Laser, 5f);
+
+                _startShipAttack.amountOfBullets--;
+                
                 LaserTimer = 0;
             }
 
@@ -203,11 +206,11 @@ namespace PlayerScripts.Player
     // ---
 
 
-    // ***Todo: Yapılanlar 11:
+    // ***Todo: Yapılanlar 12:
 
-    // Todo: Dron oluşturuldu, tüm kodları yazıldı(Player'ın yanına gelip Enemylere Elektirik vuruyor)
-    // Todo: StarShip oluşturuldu, tüm kodları yazıldı(uzaydan mermi yagdırabiliyoruz.)
-    // Todo: Pley Buller geliştirildi.
-    // todo: EnemyDetector oluşturudlu.
+    // Todo: Drone'un tüm mekanıgı, AI hepsi bitti
+    // Todo: SkyShip in tüm mekanigi bitti,
+    // Todo: ArmorFrame özelligi güncellendi, yerçekimi eklendi
+    // Todo: vs...
     // ---
 }

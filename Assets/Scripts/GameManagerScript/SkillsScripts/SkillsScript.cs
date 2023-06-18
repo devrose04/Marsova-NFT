@@ -1,6 +1,8 @@
 using System.Collections;
 using PlayerScripts;
 using PlayerScripts.Player;
+using PlayerScripts.SwordScripts;
+using UIScripts;
 using UnityEngine;
 
 // ReSharper disable Unity.InefficientPropertyAccess
@@ -18,6 +20,9 @@ namespace GameManagerScript.SkillsScripts
         private Rigidbody2D RB2;
 
         private PlayerScript __PlayerScript;
+
+
+        public int justOneTimeWork;
 
         [SerializeField] public float JetPackFuel;
         [SerializeField] private ParticleSystem JetPackEffect;
@@ -83,7 +88,10 @@ namespace GameManagerScript.SkillsScripts
         public IEnumerator ArmorFrame() // Player 4.5 saniyeligine daha az hasar alır.
         {
             // Zombi Yeniçeri Özelligi
+            justOneTimeWork = 1;
             isArmorFrameUse = true;
+
+            RB2.gravityScale = 10;
 
             float realArmor = __PlayerScript.armor; // gerçek Armor
             float armorFrameArmor; // bu Skilin verdigi Armor
@@ -113,6 +121,7 @@ namespace GameManagerScript.SkillsScripts
 
             __PlayerScript.armor = realArmor;
             __PlayerScript.speed = realSpeed;
+            RB2.gravityScale = 0;
 
             isArmorFrameUse = false;
         }

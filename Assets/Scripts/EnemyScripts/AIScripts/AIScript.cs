@@ -9,7 +9,7 @@ namespace EnemyScripts.AIScripts
     public class AIScript : MonoBehaviour
     {
         public bool isKnockBackNotActive = true;
-        private bool isEnemySeePlayer;
+        public bool isEnemySeePlayer;
         public bool isWaitingInTheBase;
         public bool isRight = true;
         public bool isEnemyAttackToPlayer = false;
@@ -22,7 +22,7 @@ namespace EnemyScripts.AIScripts
         private Transform Player; // Hedef
         private GameObject Enemy;
         private Rigidbody2D RB2;
-
+        
         private EnemyScript __EnemyScript;
         private AISkillsScript __AISkillsScript;
         private DmgColliderScript __DmgColliderScript;
@@ -62,6 +62,8 @@ namespace EnemyScripts.AIScripts
             direction = (Player.position - transform.position).normalized; // Player Enemy'nin hangi tarafında onu hesaplar
             distance = Vector2.Distance(Player.position, transform.position); // Player ile Enemy arasoındaki mesafeyi ölçer
 
+            print(isEnemySeePlayer);
+            
             SpecialFunctions1();
             
             if (distance < 1.5f && !__EnemyScript.isAttackinRange) // Enemy Player'ın dibine geldiginde, Enemy dursun. ve vursun

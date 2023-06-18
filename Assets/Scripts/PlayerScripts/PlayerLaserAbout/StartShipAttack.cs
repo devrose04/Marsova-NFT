@@ -12,6 +12,12 @@ namespace PlayerScripts.PlayerLaserAbout
         private float distance;
         private Vector2 direction;
 
+        private float ShipReloadTimeCD = 20;
+        private float ShipReloadTheBulletTimer = 20; // oyun başladıgında skilli direk kulana bilsin diye 20 verdim.
+        public bool SpaceShipAttackIsActive = true;
+
+        public int amountOfBullets = 30;
+
         private void Awake()
         {
             Ship = this.gameObject;
@@ -23,11 +29,12 @@ namespace PlayerScripts.PlayerLaserAbout
         {
             LookingTheMousePosition();
             WalkingTheSky();
+            ShipBulletReload();
         }
 
         void LookingTheMousePosition()
         {
-            Vector2 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position; 
+            Vector2 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
             if (difference.x > 0)
                 this.GetComponent<SpriteRenderer>().flipY = false;
@@ -51,6 +58,30 @@ namespace PlayerScripts.PlayerLaserAbout
             distance = Vector2.Distance(playerTransform.position, transform.position); // Player ile Drone arasoındaki mesafeyi ölçer
 
             RB2.AddForce(new Vector2(direction.x, RB2.velocity.y), ForceMode2D.Impulse); // direction.x 1 veya -1 dir
+        }
+
+        void ShipBulletReload()
+        {
+            if (amountOfBullets == 29)
+            {
+                ShipReloadTheBulletTimer = 0;
+            }
+
+            if (ShipReloadTheBulletTimer > ShipReloadTimeCD) // mermileri 20 sn de bir fullüyor
+            {
+                SpaceShipAttackIsActive = true;
+                amountOfBullets = 30;
+            }
+            else if (amountOfBullets != 30)
+            {
+                ShipReloadTheBulletTimer += Time.deltaTime;
+            }
+
+
+            if (amountOfBullets == 0) // mermi 0 ise ateş edemesin.
+            {
+                SpaceShipAttackIsActive = false;
+            }
         }
     }
 }
