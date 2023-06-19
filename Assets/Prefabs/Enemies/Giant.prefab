@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2282277712394432830}
   - component: {fileID: 4020317158842891427}
   - component: {fileID: -6959351619565380150}
+  - component: {fileID: 7484091862205281414}
   m_Layer: 6
   m_Name: Giant
   m_TagString: Zombies
@@ -36,8 +37,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4173778304432394490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.78, y: -1.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,8 +85,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.6226415, g: 0.1321645, b: 0.1321645, a: 0.46666667}
+  m_Sprite: {fileID: 21300000, guid: d04d35c0c959445b0b95ab6420e9709d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,8 +130,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.05783584, y: -0.040527046}
+  m_Size: {x: 0.3573805, y: 0.37665904}
   m_Direction: 0
 --- !u!114 &4173778304432394489
 MonoBehaviour:
@@ -181,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isKnockBackNotActive: 0
+  isEnemySeePlayer: 0
   isWaitingInTheBase: 0
   isRight: 1
   isEnemyAttackToPlayer: 0
@@ -265,3 +267,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0739e1e0f7dbb493bbf0d070d10dda3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7484091862205281414
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173778304432394490}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61089cf8af02746028337e2fbb8be56c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

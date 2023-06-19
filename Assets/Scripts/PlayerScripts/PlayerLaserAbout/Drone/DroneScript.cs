@@ -12,11 +12,13 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
         private Rigidbody2D RB2;
         private GameObject Player;
 
+        [SerializeField] private GameObject LookAtThis;
+
         private float distance;
         private Vector2 direction;
 
         private float DroneSkilCD = 10;
-        private float DroneCDTimer = 10; // 30 verme nedenim oyun başladıgı gibi, skili kullanabiliyor olsun diye
+        private float DroneCDTimer = 10; // 10 verme nedenim oyun başladıgı gibi, skili kullanabiliyor olsun diye
 
         private float ActiveDroneTime = 6.5f;
         public float DroneStartAttackTimer = 0;
@@ -34,7 +36,7 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
             RB2 = Drone.GetComponent<Rigidbody2D>();
             _enemyDetector = Drone.GetComponent<EnemyDetector>();
             Player = GameObject.Find("Player");
-            DroneLookThisObject = Player;
+            DroneLookThisObject = LookAtThis;
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -51,10 +53,10 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
 
         void LookingTheEnemy()
         {
-            if (DroneLookThisObject == null)
-            {
+            if (distance > 6)
                 DroneLookThisObject = Player;
-            }
+            else
+                DroneLookThisObject = LookAtThis;
 
             Vector2 difference = DroneLookThisObject.transform.position - transform.position;
 
@@ -72,8 +74,12 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
         void GoPlayerPossition()
         {
             Calculations();
-
-            if (distance < 4)
+            if (distance < 2.5f)
+            {
+                _enemyDetector.DroneIsReadyToAttack = true;
+                RB2.velocity = new Vector2(0, 0);
+            }
+            else if (distance < 4)
             {
                 _enemyDetector.DroneIsReadyToAttack = true;
                 RB2.velocity = new Vector2(direction.x * 3, 0); // Drone Player'a yakınsa yavaşça yanında harekt ediyor

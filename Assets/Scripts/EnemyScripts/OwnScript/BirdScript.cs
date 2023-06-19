@@ -20,7 +20,7 @@ namespace EnemyScripts.OwnScript
             damage = Random.Range(8f, 12f);
             hitTimeRange = Random.Range(2.2f, 3f);
             attackRadius = Random.Range(2.2f, 2.6f);    // bu kullanılmıyor
-            knockBackPower = Random.Range(1f, 1.2f);
+            knockBackPower = Random.Range(0f, 0f);
             isAttackinRange = true;
             isItFly = true;
             return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly);
