@@ -15,7 +15,7 @@ namespace EnemyScripts.Enemy
         public float knockBackPower;
         public bool isAttackinRange;
         private bool isItFly;
-        
+
         (float, float, float, float, float, float, bool, bool) OwnInformations;
 
         [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
@@ -64,16 +64,15 @@ namespace EnemyScripts.Enemy
         public void TakeDamages(float dmg, Vector2 directionToEnemy, bool isJumpit)
         {
             if (isItFly == false) // eger uçmuyor ise Knockback uygulansın
-                StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2 , isJumpit));
-            
+                StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2, isJumpit));
+
             health -= dmg;
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
             {
-                if (this.gameObject.GetComponent<SalyangozScript>() != null)
-                {
-                    this.gameObject.GetComponent<SalyangozScript>().TakeHeal();
-                }
+                if (Enemy.CompareTag("Salyangoz"))
+                    Enemy.GetComponent<SalyangozScript>().TakeHeal();
+
                 Destroy(this.gameObject);
             }
         }

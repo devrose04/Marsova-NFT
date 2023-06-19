@@ -15,6 +15,8 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
         [SerializeField] private ParticleSystem BigElectric;
         [SerializeField] private ParticleSystem SmaleElectric;
 
+        [SerializeField] private GameObject LookAtThis;
+
         private Collider2D[] hitColliders;
 
         public bool DroneIsReadyToAttack = false;
@@ -65,13 +67,13 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
                 ParticleSystem _smaleElectric = Instantiate(SmaleElectric, enemy.transform.position, transform.rotation);
                 Destroy(_smaleElectric.gameObject, 3f);
 
-                enemy.GetComponent<EnemyScript>().TakeDamages(10, new Vector2(0, 0), false);
-            }
+                enemy.GetComponent<EnemyScript>().TakeDamages(5, new Vector2(0, 0), false);
 
-            if (_droneScript.DroneLookThisObject != Player)
-            {
-                ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
-                Destroy(_bigElectric.gameObject, 3f);
+                if (enemy != null)
+                {
+                    ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
+                    Destroy(_bigElectric.gameObject, 3f);
+                }
             }
         }
 
@@ -95,8 +97,6 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
                 {
                     detectedEnemies.Add(enemy);
                 }
-
-                LookAtThisObject();
             }
         }
 
@@ -124,12 +124,6 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
                 else if (Vector2.Distance(transform.position, enemy.transform.position) > detectionRadius)
                     detectedEnemies.RemoveAt(i);
             }
-        }
-
-        void LookAtThisObject()
-        {
-            if (detectedEnemies[0] != null)
-                _droneScript.DroneLookThisObject = detectedEnemies[0];
         }
 
         public void ClearList()

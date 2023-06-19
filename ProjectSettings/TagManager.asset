@@ -6,12 +6,12 @@ TagManager:
   tags:
   - Ground
   - Dogs
-  - Skeletons
   - Zombies
   - EnemyBullet
   - Birds
   - PlayerBuller
   - Salyangoz
+  - Bee
   layers:
   - Default
   - TransparentFX

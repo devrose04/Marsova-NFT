@@ -118,7 +118,7 @@ namespace PlayerScripts.Player
 
             if (Input.GetKeyDown(KeyCode.X)) // ArmorFrame Skill
             {
-                if (RB2.gravityScale == 1)  // havada ise çalışsın
+                if (RB2.gravityScale == 1) // havada ise çalışsın
                     __SkillsManager.ArmorFrame_manager();
             }
 
@@ -129,7 +129,7 @@ namespace PlayerScripts.Player
                 Destroy(Laser, 5f);
 
                 _startShipAttack.amountOfBullets--;
-                
+
                 LaserTimer = 0;
             }
 
@@ -206,11 +206,11 @@ namespace PlayerScripts.Player
     // ---
 
 
-    // ***Todo: Yapılanlar 12:
+    // ***Todo: Yapılanlar 13:
 
-    // Todo: Drone'un tüm mekanıgı, AI hepsi bitti
-    // Todo: SkyShip in tüm mekanigi bitti,
-    // Todo: ArmorFrame özelligi güncellendi, yerçekimi eklendi
-    // Todo: vs...
+    // Todo: İhtiyacımız olacak tüm Assetleri aradım buldum, gereklı olanları satın aldık. Bundan sonra Assetleri entegre etmek kaldı.
+    // Todo: Drone Sklini geliştirdim.
+    // Todo: Enemy Animasyonların çocugunu ekledim.
+    // Todo: Kamera mosun baktıgı yöne bakıyor ve karem Scirptini geliştridim
     // ---
 }
