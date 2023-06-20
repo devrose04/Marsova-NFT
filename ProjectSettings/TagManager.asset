@@ -5,13 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Dogs
-  - Zombies
   - EnemyBullet
-  - Birds
-  - PlayerBuller
   - Salyangoz
   - Bee
+  - FxTemporaire
+  - Shield
+  - Ahtapot
+  - Giant
+  - Smale
+  - PlayerBullet
+  - White
   layers:
   - Default
   - TransparentFX

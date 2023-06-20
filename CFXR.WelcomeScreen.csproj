@@ -41,11 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.cs" />
-     <None Include="Assets/JMO Assets/Welcome Screen/CFXR.WelcomeScreen.asmdef" />
-     <Folder Include="Assets/JMO Assets/Welcome Screen" />
-     <None Include="Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uss" />
-     <None Include="Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uxml" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.cs" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Welcome Screen/CFXR.WelcomeScreen.asmdef" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Welcome Screen" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uss" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.uxml" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

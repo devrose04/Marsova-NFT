@@ -41,10 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomEditor.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomGraphDrawer.cs" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/KinoBloom.Editor.asmdef" />
-     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomEditor.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomGraphDrawer.cs" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/KinoBloom.Editor.asmdef" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
