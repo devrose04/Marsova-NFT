@@ -41,12 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_BuildShaderPreprocessor.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_Styles.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_MaterialInspector.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_ExpressionParser.cs" />
-     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR Editor.asmdef" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_BuildShaderPreprocessor.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_Styles.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_MaterialInspector.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_ExpressionParser.cs" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR Editor.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

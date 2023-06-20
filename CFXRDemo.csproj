@@ -41,12 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Rotate.cs" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo.asmdef" />
-     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets" />
-     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/UI" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Rotate.cs" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR Demo.asmdef" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/UI" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

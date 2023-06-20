@@ -41,13 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs" />
-     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.shader" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.cginc" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/KinoBloom.Runtime.asmdef" />
-     <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom" />
-     <None Include="Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Kino Bloom License.txt" />
+     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.shader" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.cginc" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/KinoBloom.Runtime.asmdef" />
+     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom" />
+     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Kino Bloom License.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
