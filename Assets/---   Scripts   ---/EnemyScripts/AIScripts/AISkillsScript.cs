@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using ______Scripts______.EnemyScripts.Enemy.EnemyAnimations;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimationsScripts;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -9,13 +10,17 @@ namespace EnemyScripts.AIScripts
     public class AISkillsScript : MonoBehaviour // bunu Unityden bagla Enemy'e 
     {
         private GameObject Enemy;
+        private GameObject GameManger;
 
         private AIScript __AIScript;
+        private AnimationsController _animationsController;
 
         private void Awake()
         {
             Enemy = this.gameObject;
+            GameManger = GameObject.Find("GameManager");
             __AIScript = Enemy.GetComponent<AIScript>();
+            _animationsController = GameManger.GetComponent<AnimationsController>();
         }
 
 
@@ -54,7 +59,7 @@ namespace EnemyScripts.AIScripts
             }
         }
 
-        public IEnumerator StopMoveAndLookAround(bool isWaitingInTheBase, float distance)
+        public IEnumerator StopMoveAndLookAround(float distance)
         {
             int oppositeRotation = 0;
             int directionRotation = 1;
@@ -66,52 +71,39 @@ namespace EnemyScripts.AIScripts
 
             __AIScript.isWaitingInTheBase = true;
 
-            EnemyAnimations();
+            _animationsController.EnemyAnimations(Enemy);
 
             yield return new WaitForSeconds(1f);
             Enemy.transform.rotation = new Quaternion(0, oppositeRotation, 0, 0); // bu zıttına kafasını çeviriyor
-            yield return isPlayerCloseBreakit(isWaitingInTheBase, distance);
+            yield return isPlayerCloseBreakit(distance);
 
             yield return new WaitForSeconds(1f);
             Enemy.transform.rotation = new Quaternion(0, directionRotation, 0, 0); // bu normal asıl baktıgı yere baktırıyor.
-            yield return isPlayerCloseBreakit(isWaitingInTheBase, distance);
+            yield return isPlayerCloseBreakit(distance);
 
             yield return new WaitForSeconds(1f);
             Enemy.transform.rotation = new Quaternion(0, oppositeRotation, 0, 0); // bu gine zıttına 
-            yield return isPlayerCloseBreakit(isWaitingInTheBase, distance);
+            yield return isPlayerCloseBreakit(distance);
 
             yield return new WaitForSeconds(1f);
             Enemy.transform.rotation = new Quaternion(0, directionRotation, 0, 0); // bu asıl baktıgı yöne bakıyor ve yürümeye başlıyor.
-            yield return isPlayerCloseBreakit(isWaitingInTheBase, distance);
+            yield return isPlayerCloseBreakit(distance);
 
             yield return new WaitForSeconds(1f);
-            yield return isPlayerCloseBreakit(isWaitingInTheBase, distance);
+            yield return isPlayerCloseBreakit(distance);
 
             __AIScript.isWaitingInTheBase = false;
 
-            EnemyAnimations();
+            _animationsController.EnemyAnimations(Enemy);
         }
 
-        IEnumerator isPlayerCloseBreakit(bool isWaitingInTheBase, float distance)
+        IEnumerator isPlayerCloseBreakit(float distance)
         {
             if (distance < 10) // Player Enemy'nin menziline girdiyse çalışır ve StopMoveAndLookAround fonksiyonu durur.
             {
                 __AIScript.isWaitingInTheBase = false;
+                _animationsController.EnemyAnimations(Enemy);
                 yield break;
-            }
-        }
-
-        void EnemyAnimations()
-        {
-            if (Enemy.CompareTag("Giant"))
-            {
-                GiantAnimations _giantAnimations = this.gameObject.GetComponent<GiantAnimations>();
-                _giantAnimations.SetBoolParameter("isWaitingInTheBase", __AIScript.isWaitingInTheBase);
-            }
-            else if (Enemy.CompareTag("Smale"))
-            {
-                SmaleAnimations _smaleAnimations = this.gameObject.GetComponent<SmaleAnimations>();
-                _smaleAnimations.SetBoolParameter("isWaitingInTheBase", __AIScript.isWaitingInTheBase);
             }
         }
     }

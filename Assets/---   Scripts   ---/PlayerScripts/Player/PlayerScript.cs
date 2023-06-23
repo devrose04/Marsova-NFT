@@ -1,4 +1,5 @@
 using System.Collections;
+using ______Scripts______.PlayerScripts.Player;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.SwordScripts;
 using UIScripts;
@@ -16,6 +17,9 @@ namespace PlayerScripts.Player
 
         private SkillsScript __SkillsScript;
         private SwordController _swordController;
+        private PlayerAnimations _playerAnimations;
+        private CapsuleCollider2D _capsuleCollider2D;
+        private GameObject IsGrounTouch;
 
         [SerializeField] public float speed;
         [SerializeField] public float health;
@@ -30,7 +34,10 @@ namespace PlayerScripts.Player
             RB2 = Player.GetComponent<Rigidbody2D>();
             __SkillsScript = GameObject.Find("GameManager").GetComponent<SkillsScript>();
             _isGroundTouchScript = Player.GetComponentInChildren<IsGroundTouchScript>();
+            IsGrounTouch = _isGroundTouchScript.gameObject;
             _swordController = Player.GetComponent<SwordController>();
+            _playerAnimations = Player.GetComponent<PlayerAnimations>();
+            _capsuleCollider2D = Player.GetComponent<CapsuleCollider2D>();
         }
 
         public void TakeDamage(float dmg, Vector2 directionToPlayer, float knockBackPower)
@@ -40,9 +47,13 @@ namespace PlayerScripts.Player
             // print($"<color=green>Player Health:</color>" + health);
             if (health <= 0)
             {
-                Destroy(this.gameObject);
+                _playerAnimations.SetBoolParameter("isHeDied", true);
+                // Destroy(this.gameObject);
                 print($"<color=red>GAME OVER</color>");
-                Time.timeScale = 0; // oyun bitti
+
+                _capsuleCollider2D.size = new Vector2(0.13f, 0.2f);
+                IsGrounTouch.SetActive(false);
+                Invoke("GameOver", 3.5f);
             }
 
             if (__SkillsScript.isArmorFrameUse == false) // ArmorFrame Skili kullanıldıgına Knock.back'i deActive etmek için bu if koşulunu koydum
@@ -75,6 +86,11 @@ namespace PlayerScripts.Player
                 __SkillsScript.justOneTimeWork = 0;
                 _swordController.HittingAll1();
             }
+        }
+
+        void GameOver()
+        {
+            Time.timeScale = 0; // oyun bitti
         }
     }
 }
