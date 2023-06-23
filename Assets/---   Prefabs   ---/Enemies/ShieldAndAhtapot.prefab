@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 7395889606956555148}
   - component: {fileID: 7826952573693806856}
   - component: {fileID: 7395889606956555138}
+  - component: {fileID: 8477300114162714820}
   m_Layer: 6
   m_Name: Ahtapot
   m_TagString: Ahtapot
@@ -166,6 +167,8 @@ MonoBehaviour:
   attackRadius: 0
   knockBackPower: 0
   isAttackinRange: 0
+  isItFly: 0
+  suportArmor: 0
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 7058215873622624022, guid: a149c616e912e4dc78eb39345fa63afa, type: 3}
   effectCreationTimer: 0
@@ -257,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8909499812899439524, guid: 138b51b8ba90f4894a11da96a0a217bf, type: 3}
+  shotPoint: {fileID: 0}
 --- !u!114 &7826952573693806856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +294,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8477300114162714820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161220435694207425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b36f82227484e218b45910434b498f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  HealBulletPrefabs: {fileID: 4649029770015000103, guid: d87be40187109449a829a8167454282a, type: 3}
 --- !u!1 &4575402200685429844
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +455,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

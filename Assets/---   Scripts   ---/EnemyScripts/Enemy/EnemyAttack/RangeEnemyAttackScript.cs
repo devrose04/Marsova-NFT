@@ -17,6 +17,8 @@ namespace EnemyScripts.Enemy
         private GameObject Enemy;
         private GameObject Player;
 
+        [SerializeField] private GameObject shotPoint;
+
         private void Awake()
         {
             Enemy = this.gameObject;
@@ -34,7 +36,8 @@ namespace EnemyScripts.Enemy
         IEnumerator BulletIsCreated(GameObject enemy)
         {
             float hitTimeRange = enemy.GetComponent<EnemyScript>().hitTimeRange;
-            yield return new WaitForSeconds(hitTimeRange);
+            yield return new WaitForSeconds(hitTimeRange); // Burda Dolum süresi zamanı
+
             if (enemy != null)
             {
                 EnemyScript _enemyScript = enemy.GetComponent<EnemyScript>();
@@ -45,7 +48,9 @@ namespace EnemyScripts.Enemy
 
                 // buraya mermiyi oluştur ve Player'a yolla
 
-                GameObject CreatedBullet = Instantiate(EnemyBullet, this.transform.position, Quaternion.identity, null); // mermiyi oluşturdum
+                // Quaternion rotation = Quaternion.LookRotation(Player.transform.position - transform.position);
+
+                GameObject CreatedBullet = Instantiate(EnemyBullet, shotPoint.transform.position, Quaternion.identity, null); // mermiyi oluşturdum
                 Destroy(CreatedBullet, 5f);
 
                 // merminin bilgilerini aktardım.
@@ -53,7 +58,6 @@ namespace EnemyScripts.Enemy
                 _enemyBulletScript.damages = damages;
                 _enemyBulletScript.knockBackPower = knockBackPower;
                 _enemyBulletScript.hitEffect = hitEffect;
-
 
                 __AIScript.isEnemyAttackToPlayer = false;
             }

@@ -1,6 +1,7 @@
 using EnemyScripts.Enemy.Enemy;
 using EnemyScripts.OwnScript;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EnemyScripts.Enemy
 {
@@ -14,8 +15,9 @@ namespace EnemyScripts.Enemy
         public float attackRadius;
         public float knockBackPower;
         public bool isAttackinRange;
-        private bool isItFly;
-        private float suportArmor;
+        public bool isItFly;
+        public float suportArmor;
+        public float maxSuportArmor = 50;
 
         (float, float, float, float, float, float, bool, bool, float) OwnInformations;
 
@@ -68,7 +70,14 @@ namespace EnemyScripts.Enemy
             // if (isItFly == false) // eger uçmuyor ise Knockback uygulansın
             StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2, isJumpit));
 
-            health -= dmg;
+            print(suportArmor);
+            print(health);
+
+            if (suportArmor <= 0)
+                health -= dmg;
+            else
+                suportArmor -= dmg;
+
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
             {
@@ -98,6 +107,16 @@ namespace EnemyScripts.Enemy
             HitToPlayerTimer += Time.deltaTime;
             effectCreationTimer += Time.deltaTime;
             canUseDashHitTimer += Time.deltaTime;
+        }
+
+        public void UpSuportArmor()
+        {
+            if (suportArmor <= maxSuportArmor)
+                suportArmor += 5;
+            else if (suportArmor > maxSuportArmor)
+                suportArmor = maxSuportArmor;
+            else
+                suportArmor = 0;
         }
     }
 }

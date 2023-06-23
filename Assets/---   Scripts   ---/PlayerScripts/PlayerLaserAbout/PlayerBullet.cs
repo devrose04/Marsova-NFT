@@ -66,9 +66,9 @@ namespace PlayerScripts.PlayerLaserAbout
             if (other.gameObject.CompareTag("Shield"))
             {
                 SuportShield Script = other.GetComponent<SuportShield>();
-                Script.TakeDamagesShield(damages);    
+                Script.TakeDamagesShield(damages);
                 Script.CreateHitEffect(Bullet);
-                
+
                 Destroy(Bullet);
             }
         }

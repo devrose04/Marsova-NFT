@@ -210,10 +210,11 @@ namespace ______Scripts______.PlayerScripts.Player
     // ---
 
 
-    // ***Todo: Yapılanlar 14:
+    // ***Todo: Yapılanlar 15:
 
     // Todo: Ahtapot oluşturuldu.
     // Todo: Suport'un kalkanı yapıldı.
     // Todo: PlayerBullet scritpien eklemler yapıldı.
+    // Todo: kalkan verebiliyor.
     // ---
 }

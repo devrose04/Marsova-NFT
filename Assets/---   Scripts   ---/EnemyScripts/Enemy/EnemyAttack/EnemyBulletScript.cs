@@ -56,12 +56,19 @@ namespace EnemyScripts.Enemy.EnemyAttack
             // 1-) Düşmanın pozisyonunun hangi yönde oldugunu buluyor.   
             Vector2 approximatelyDirectionToTarget = (targetPosition - attackingPosition).normalized; // 1 , -1 arasında bir değer (x,y)
 
-            float bulletSpeed = 220;
+            float bulletSpeed = 3;
 
-            RB2.AddForce(new Vector2(approximatelyDirectionToTarget.x * bulletSpeed, approximatelyDirectionToTarget.y * bulletSpeed));
+            // Mermiyi hedefe doğru hareket ettir
+            Vector2 yon = Player.transform.position - transform.position;
+            yon.Normalize();
+            GetComponent<Rigidbody2D>().velocity = yon * bulletSpeed;
+
+            // Merminin baktıgı yer hedefe dogru bakar
+            float angle = Mathf.Atan2(yon.y, yon.x) * Mathf.Rad2Deg; 
+            this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
-        private void OnTriggerStay2D(Collider2D other)  // Mermi Ground'a çarpar ise yok olur
+        private void OnTriggerStay2D(Collider2D other) // Mermi Ground'a çarpar ise yok olur
         {
             if (other.gameObject.CompareTag("Ground"))
             {

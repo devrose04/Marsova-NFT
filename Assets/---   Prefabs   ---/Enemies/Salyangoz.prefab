@@ -20,8 +20,9 @@ GameObject:
   - component: {fileID: 2685970684734319796}
   - component: {fileID: 1619576232169703239}
   - component: {fileID: 8622643392706713234}
-  - component: {fileID: 5439480361746743371}
   - component: {fileID: 5439480361746743368}
+  - component: {fileID: 2319427451156498794}
+  - component: {fileID: 369556038588421571}
   m_Layer: 6
   m_Name: Salyangoz
   m_TagString: Salyangoz
@@ -148,6 +149,9 @@ MonoBehaviour:
   attackRadius: 0
   knockBackPower: 0
   isAttackinRange: 0
+  isItFly: 0
+  suportArmor: 0
+  maxSuportArmor: 50
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6632549741689272037, guid: 368ae4ebaa8e74b6fb77ae4cc3cbdd4a, type: 3}
   effectCreationTimer: 0
@@ -239,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8909499812899439524, guid: 138b51b8ba90f4894a11da96a0a217bf, type: 3}
+  shotPoint: {fileID: 0}
 --- !u!114 &8622643392706713234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,27 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0739e1e0f7dbb493bbf0d070d10dda3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5439480361746743371
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5439480361746743353}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3272073809a014b30b819b15cf728a04, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &5439480361746743368
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -288,3 +272,36 @@ CapsuleCollider2D:
   m_Offset: {x: 0.018556356, y: -0.055668563}
   m_Size: {x: 0.30959272, y: 0.30959272}
   m_Direction: 0
+--- !u!114 &2319427451156498794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439480361746743353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3dccd4202ab14527b33957dcab5aa8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &369556038588421571
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439480361746743353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b7da0b09f6e5403c961eb47a5b62b03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

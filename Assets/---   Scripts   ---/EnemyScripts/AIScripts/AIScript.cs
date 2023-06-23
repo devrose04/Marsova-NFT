@@ -1,4 +1,5 @@
 using System.Collections;
+using ______Scripts______.EnemyScripts.Enemy.EnemyAnimations;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimationsScripts;
 using EnemyScripts.Enemy;
 using EnemyScripts.OwnScript;
@@ -23,10 +24,12 @@ namespace EnemyScripts.AIScripts
         private Transform Player; // Hedef
         private GameObject Enemy;
         private Rigidbody2D RB2;
+        private GameObject GameManager;
 
         private EnemyScript __EnemyScript;
         private AISkillsScript __AISkillsScript;
         private DmgColliderScript __DmgColliderScript;
+        private AnimationsController _animationsController;
         private NearEnemyAttackScript _nearEnemyAttackScript; //Todo: Enemy objesi yakından vuruyorsa __RangeEnemyAttackScript'ini kaldır.
         private RangeEnemyAttackScript __RangeEnemyAttackScript; //Todo: Enemy objesi uzaktan vuruyorsa _nearEnemyAttackScript'ini kaldır.
 
@@ -41,9 +44,11 @@ namespace EnemyScripts.AIScripts
             Player = GameObject.Find("Player").transform;
             Enemy = this.gameObject;
             RB2 = this.gameObject.GetComponent<Rigidbody2D>();
+            GameManager = GameObject.Find("GameManager");
 
             __EnemyScript = Enemy.GetComponent<EnemyScript>();
             __AISkillsScript = Enemy.GetComponent<AISkillsScript>();
+            _animationsController = GameManager.GetComponent<AnimationsController>();
             _nearEnemyAttackScript = Enemy.GetComponent<NearEnemyAttackScript>();
             __RangeEnemyAttackScript = Enemy.GetComponent<RangeEnemyAttackScript>();
 
@@ -67,7 +72,6 @@ namespace EnemyScripts.AIScripts
 
             if (distance < 1.5f && !__EnemyScript.isAttackinRange) // Enemy Player'ın dibine geldiginde, Enemy dursun. ve vursun
                 NearAttackToPlayer();
-
             else if (distance < 10) // 10 metre içinde görüyorsa ve Enemy vuruş hareketi yapmıyor ise hareket edicektir
             {
                 if (distance < 7 && __EnemyScript.isAttackinRange) // Enemy menzilli ise vursun.
@@ -90,14 +94,18 @@ namespace EnemyScripts.AIScripts
                 {
                     // ilerde bunun gibi farklı Bekleme şeyleride yaparsın.
                     JustOneTimeWork = 0;
-                    StartCoroutine(__AISkillsScript.StopMoveAndLookAround(isWaitingInTheBase, distance)); // durur ve etrafına bakar.
+                    StartCoroutine(__AISkillsScript.StopMoveAndLookAround(distance)); // durur ve etrafına bakar.
                 }
             }
         }
 
         void GoPlayerPosition() // Player'a doğru hareket etme
         {
-            if (isKnockBackNotActive)
+            if (isKnockBackNotActive && !__EnemyScript.isItFly)
+            {
+                RB2.velocity = new Vector2(direction.x * moveSpeed, RB2.velocity.y); // direction.x 1 veya -1 dir
+            }
+            else if (isKnockBackNotActive)
                 RB2.velocity = new Vector2(direction.x * moveSpeed, direction.y * moveSpeed); // direction.x 1 veya -1 dir
         }
 
@@ -132,6 +140,7 @@ namespace EnemyScripts.AIScripts
 
         void SpecialFunctions1()
         {
+            _animationsController.SalyangozTurtleActive(Enemy);
         }
 
         void NearAttackToPlayer()
@@ -146,10 +155,6 @@ namespace EnemyScripts.AIScripts
 
             if (!isEnemyAttackToPlayer)
                 __RangeEnemyAttackScript.StopAndAttack(Enemy);
-        }
-
-        void WalkOnPlayer()
-        {
         }
     }
 }

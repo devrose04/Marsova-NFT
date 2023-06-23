@@ -1,4 +1,5 @@
 using System;
+using ______Scripts______.EnemyScripts.Enemy.EnemySkills.SuportSkills_Ahtapot;
 using UnityEngine;
 
 namespace EnemyScripts.Enemy.EnemySkills.SuportSkills_Ahtapot
@@ -11,7 +12,8 @@ namespace EnemyScripts.Enemy.EnemySkills.SuportSkills_Ahtapot
 
         private void Awake()
         {
-            InvokeRepeating("LookingWhichEnemiesAround", 0f, 1.5f);
+            ActionRadius = 8;
+            InvokeRepeating("LookingWhichEnemiesAround", 0f, 3f);
         }
 
         void LookingWhichEnemiesAround()
@@ -21,17 +23,14 @@ namespace EnemyScripts.Enemy.EnemySkills.SuportSkills_Ahtapot
 
             foreach (var enemy in Enemies) // yuvarlagın içindeki olan Enemylere teker teker bakar.
             {
-                HealBulletGoToEnemyPossition(enemy.gameObject);
+                WhichGoingToEnemy(enemy.gameObject);
             }
         }
 
-// todo: yapman gereken: Enemy objlerine dogru mermi oluştur ve yolla
-        void HealBulletGoToEnemyPossition(GameObject enemy)
+        void WhichGoingToEnemy(GameObject enemy)
         {
-            Vector2 DirectionToTarget = (enemy.transform.position - this.gameObject.transform.position).normalized; // 1 , -1 arasında bir değer (x,y)
-            //
-            // HealBulletPrefabs.transform.right = mousePosition - (Vector2)HealBulletPrefabs.transform.position; // todo: buraya instantion ettigin bullet'ı yaz
-            // RB2.AddForce(ShotPoint.right * 30f, ForceMode2D.Impulse);
+            GameObject HealBullet = Instantiate(HealBulletPrefabs, this.transform.position, Quaternion.identity);
+            HealBullet.GetComponent<HealBullet>().TargetEnemy = enemy;
         }
     }
 }
