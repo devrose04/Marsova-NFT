@@ -16,7 +16,7 @@ namespace EnemyScripts.OwnScript
         
         public (float, float, float, float, float, float, bool, bool, float) OwnInformations()
         {
-            speed = Random.Range(1.8f, 2.2f ); 
+            speed = Random.Range(2.5f, 3.2f ); 
             health = Random.Range(100f, 140f);
             damage = Random.Range(15f, 18f);
             hitTimeRange = Random.Range(1.4f, 1.8f);

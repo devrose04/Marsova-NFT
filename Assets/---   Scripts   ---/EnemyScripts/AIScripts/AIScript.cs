@@ -81,6 +81,8 @@ namespace EnemyScripts.AIScripts
 
                 SpecialFunctions2(); // slime - giant vb. Scriptlerin kullanıldıgı yer
                 EnemyLookingToPlayer();
+
+                isWaitingInTheBase = false; // hatayı önledigi için buraya yazıyorum.
             }
             else if (distance >= 10)
             {
@@ -141,6 +143,8 @@ namespace EnemyScripts.AIScripts
         void SpecialFunctions1()
         {
             _animationsController.SalyangozTurtleActive(Enemy);
+            _animationsController.AnimationSpeedUp(Enemy, isEnemySeePlayer);
+            _animationsController.EnemyAnimations(Enemy);
         }
 
         void NearAttackToPlayer()

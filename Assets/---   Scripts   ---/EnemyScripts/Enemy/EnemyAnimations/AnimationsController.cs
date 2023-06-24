@@ -29,9 +29,21 @@ namespace ______Scripts______.EnemyScripts.Enemy.EnemyAnimations
 
             if (enemy.CompareTag("Salyangoz"))
             {
-                print(__AIScript.isEnemySeePlayer);
                 SalyangozAnimations _salyangozAnimations = enemy.gameObject.GetComponent<SalyangozAnimations>();
                 _salyangozAnimations.SetBoolParameter("isEnemySeePlayer", __AIScript.isEnemySeePlayer);
+            }
+        }
+
+        public void AnimationSpeedUp(GameObject enemy, bool isEnemySeePlayer)
+        {
+            if (enemy.GetComponent<Animator>() != null)
+            {
+                Animator _animator = enemy.GetComponent<Animator>();
+
+                if (isEnemySeePlayer == true)
+                    _animator.speed = 1f;
+                else // EnemyPlayer'ı görmüyor ise çalışır
+                    _animator.speed = 0.8f;
             }
         }
     }

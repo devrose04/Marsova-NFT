@@ -150,6 +150,9 @@ MonoBehaviour:
   attackRadius: 0
   knockBackPower: 0
   isAttackinRange: 0
+  isItFly: 0
+  suportArmor: 0
+  maxSuportArmor: 50
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6619194722741141945, guid: 3c0bbef8581a24016bbae2e3b92d15de, type: 3}
   effectCreationTimer: 0
@@ -241,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8909499812899439524, guid: 138b51b8ba90f4894a11da96a0a217bf, type: 3}
+  shotPoint: {fileID: 0}
 --- !u!114 &-8131592582904481114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +288,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.055766106, y: 0.0074620843}

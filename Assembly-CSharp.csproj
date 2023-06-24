@@ -44,6 +44,7 @@
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportGivesArmor.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/ICustomScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/MeteorMove.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerController.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails/DashAttackDetails.cs" />
@@ -398,6 +399,7 @@
      <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Debris Hits" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpRise" />
+     <Folder Include="Assets/---   PNG   ---/Anim_PNG/Player/Attack" />
      <Folder Include="Assets/---   Animations   ---/Drone" />
      <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Font" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/BowDraw" />
@@ -431,6 +433,7 @@
      <Folder Include="Assets/---   Using Assets   ---/GothicVania Church/Environment" />
      <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_Sprite.shader" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Spark" />
+     <Folder Include="Assets/---   PNG   ---/Anim_PNG/Player/Attack_White" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Explosions" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LedgeClimb" />
