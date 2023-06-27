@@ -1,4 +1,5 @@
 using System.Collections;
+using ______Scripts______.PlayerScripts.Player;
 using PlayerScripts;
 using PlayerScripts.Player;
 using PlayerScripts.SwordScripts;
@@ -15,12 +16,13 @@ namespace GameManagerScript.SkillsScripts
         public bool isMoveSkilsUse = false;
         public bool isDashAtackUse = false;
         public bool isArmorFrameUse = false;
+        private bool isDashAttackUse = false;
 
         private GameObject Player;
         private Rigidbody2D RB2;
 
         private PlayerScript __PlayerScript;
-
+        private PlayerAnimations _playerAnimations;
 
         public int justOneTimeWork;
 
@@ -32,6 +34,7 @@ namespace GameManagerScript.SkillsScripts
             Player = GameObject.Find("Player");
             RB2 = Player.GetComponent<Rigidbody2D>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
+            _playerAnimations = Player.GetComponent<PlayerAnimations>();
         }
 
         public IEnumerator DashAtack() // Bu ileri atılıp saldırma skili
@@ -60,36 +63,48 @@ namespace GameManagerScript.SkillsScripts
         public IEnumerator DodgeSkils_q() // q ile sola Dodge atıyor    bu kodu ilerde diger  dodge kodu ile birleştire bilirisin.
         {
             isMoveSkilsUse = true;
+            isDashAttackUse = true;
+            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
 
-            int pushPower = 20;
+            int pushPower = 28;
             if (RB2.gravityScale == 1) // zemine degmiyor ise çalışır
-                pushPower = 6;
+                pushPower = 13;
 
             RB2.velocity = new Vector2(-pushPower, RB2.velocity.y);
+            Player.transform.rotation = new Quaternion(0, 180, 0, 0);
 
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.50f);
+
             isMoveSkilsUse = false;
+            isDashAttackUse = false;
+            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
         }
 
         public IEnumerator DodgeSkils_e() // e ile sağa Dodge atıyor
         {
             isMoveSkilsUse = true;
+            isDashAttackUse = true;
+            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
 
-            int pushPower = 20;
+            int pushPower = 28;
             if (RB2.gravityScale == 1) // zemine degmiyor ise çalışır
-                pushPower = 6;
+                pushPower = 13;
 
             RB2.velocity = new Vector2(pushPower, RB2.velocity.y);
+            Player.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.50f);
+
             isMoveSkilsUse = false;
+            isDashAttackUse = false;
+            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
         }
 
         public IEnumerator ArmorFrame() // Player 4.5 saniyeligine daha az hasar alır.
         {
             // Zombi Yeniçeri Özelligi
             justOneTimeWork = 1;
-            isArmorFrameUse = true;
+            isArmorFrameUse = true; // todo: armor frame kullanıdlgıdan ve yere ilk degene kadar 1. animasyn çalışsın
 
             RB2.gravityScale = 10;
 
@@ -108,22 +123,21 @@ namespace GameManagerScript.SkillsScripts
                 armorFrameArmor = 75f;
 
             __PlayerScript.armor = realArmor; // armor'ı bi anda artırıyor ve zamanla düşürüyor.
-            __PlayerScript.speed = realSpeed * (1 - 0.8f); // speed'i bi anlık düşüyor ve zamanla artırıyor.
+            __PlayerScript.speed = realSpeed * (1 - 0.6f); // speed'i bi anlık düşüyor ve zamanla artırıyor.
             yield return new WaitForSeconds(2f);
 
+            RB2.gravityScale = 0;
+            isArmorFrameUse = false; // karakter hareket edebilir artık.
             __PlayerScript.armor = armorFrameArmor - 10f;
-            __PlayerScript.speed = realSpeed * (1 - 0.7f);
+            __PlayerScript.speed = realSpeed * (1 - 0.3f);
             yield return new WaitForSeconds(1.5f);
 
             __PlayerScript.armor = armorFrameArmor - 20f;
-            __PlayerScript.speed = realSpeed * (1 - 0.6f);
+            __PlayerScript.speed = realSpeed * (1 - 0.1f);
             yield return new WaitForSeconds(1f);
 
             __PlayerScript.armor = realArmor;
             __PlayerScript.speed = realSpeed;
-            RB2.gravityScale = 0;
-
-            isArmorFrameUse = false;
         }
 
         public void JetPack()
