@@ -1,4 +1,5 @@
 using System;
+using ______Scripts______.PlayerScripts.Player;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.Player;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace UIScripts
     public class IsGroundTouchScript : MonoBehaviour
     {
         public bool isGroundTouchBool;
-
+        
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Ground"))

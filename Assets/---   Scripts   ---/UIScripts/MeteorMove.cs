@@ -13,6 +13,7 @@ namespace ______Scripts______.UIScripts
 
         [SerializeField] private Transform SpawnPosition; // spawn yapıcak yer
         [SerializeField] private Transform StartGamePosition;
+        [SerializeField] private Transform EndPosition;
 
         private float Start_Z_Rotation; // kaç derece dönük şekilde başlayacagını ayarlar
         private float Start_Y_Position; // en sağda Y ekseninde başladıgı yer
@@ -35,9 +36,10 @@ namespace ______Scripts______.UIScripts
             AwakeMeteor();
 
             StartGameSpawn_x_position();
+            InvokeRepeating("ReSpawnMeteors", 15f, 2f);
         }
 
-        public void RandomCounts()
+        void RandomCounts()
         {
             Start_Z_Rotation = Random.Range(0f, 360f);
             Start_Y_Position = Random.Range(-12f, 12f); // eger yukarda başladı ise y'i neğatif ver
@@ -46,7 +48,7 @@ namespace ______Scripts______.UIScripts
             RotateDirection = Random.Range(1, 3);
         }
 
-        public void AwakeMeteor()
+        void AwakeMeteor()
         {
             Which_y_DirectionGo(); // MovingPower_y = Random.Range(-3f, 3f);
             x_Moving_Power(); // MovingPower_x = Random.Range(10f, 45f);
@@ -124,9 +126,19 @@ namespace ______Scripts______.UIScripts
             Meteor.transform.position = new Vector3(StartGamePosition.position.x + Start_X_Position, Start_Y_Position);
         }
 
-        public void StartSpawn_x_position() // bunu Meteor en sağa gittiginde, solda spawn olmasına sağlıyacak
+        void StartSpawn_x_position() // bunu Meteor en sağa gittiginde, solda spawn olmasına sağlıyacak
         {
             Meteor.transform.position = new Vector3(SpawnPosition.position.x, Start_Y_Position);
+        }
+
+        public void ReSpawnMeteors()
+        {
+            if (EndPosition.position.x < Meteor.transform.position.x)
+            {
+                RandomCounts();
+                AwakeMeteor();
+                StartSpawn_x_position();
+            }
         }
     }
 }

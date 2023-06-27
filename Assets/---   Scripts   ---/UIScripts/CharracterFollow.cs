@@ -89,8 +89,8 @@ namespace UIScripts
             Vector3 desiredPosition = player.position + offset;
 
             // Fare imlecinin x ve y pozisyonlarına göre kamerayı kaydırma
-            desiredPosition.x += Mathf.Sign(deltaX) * 1.6f; // İstenilen kayma miktarını belirleyebilirsiniz
-            desiredPosition.y += Mathf.Sign(deltaY) * 1.6f; // İstenilen kayma miktarını belirleyebilirsiniz
+            desiredPosition.x += Mathf.Sign(deltaX) * 1.8f; // İstenilen kayma miktarını belirleyebilirsiniz
+            desiredPosition.y += Mathf.Sign(deltaY) * 0.8f; // İstenilen kayma miktarını belirleyebilirsiniz
 
             Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothSpeed);
             transform.position = smoothedPosition;

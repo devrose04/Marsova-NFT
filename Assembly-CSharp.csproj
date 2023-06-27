@@ -100,7 +100,6 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/WhiteScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/MeteorEndCollision.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
      <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Textures" />

@@ -27,7 +27,7 @@ namespace PlayerScripts.SwordScripts
 
         public void SwordAttack3()
         {
-            __SwordScript.SwordAttack(1.5f, 0.8f, true, 0.8f, true);
+            __SwordScript.SwordAttack(1.5f, 0.8f, true, 0.8f, false);
         }
 
         public void HittingAll1()
