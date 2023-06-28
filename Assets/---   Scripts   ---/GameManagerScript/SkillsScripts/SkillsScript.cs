@@ -16,7 +16,7 @@ namespace GameManagerScript.SkillsScripts
         public bool isMoveSkilsUse = false;
         public bool isDashAtackUse = false;
         public bool isArmorFrameUse = false;
-        private bool isDashAttackUse = false;
+        private bool isDodgeUse = false;
 
         private GameObject Player;
         private Rigidbody2D RB2;
@@ -42,6 +42,8 @@ namespace GameManagerScript.SkillsScripts
             Quaternion lookingRotation = Player.transform.rotation.normalized;
             isMoveSkilsUse = true;
             isDashAtackUse = true;
+            _playerAnimations.SetBoolParameter("isDashAtackUse",isDashAtackUse);
+            
             int pushPower = 800;
             float time = 1f;
             if (RB2.gravityScale == 0) // zemine degili ise çalışır
@@ -58,13 +60,14 @@ namespace GameManagerScript.SkillsScripts
             yield return new WaitForSeconds(time);
             isMoveSkilsUse = false;
             isDashAtackUse = false;
+            _playerAnimations.SetBoolParameter("isDashAtackUse",isDashAtackUse);
         }
 
         public IEnumerator DodgeSkils_q() // q ile sola Dodge atıyor    bu kodu ilerde diger  dodge kodu ile birleştire bilirisin.
         {
             isMoveSkilsUse = true;
-            isDashAttackUse = true;
-            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
+            isDodgeUse = true;
+            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
 
             int pushPower = 28;
             if (RB2.gravityScale == 1) // zemine degmiyor ise çalışır
@@ -76,15 +79,15 @@ namespace GameManagerScript.SkillsScripts
             yield return new WaitForSeconds(0.50f);
 
             isMoveSkilsUse = false;
-            isDashAttackUse = false;
-            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
+            isDodgeUse = false;
+            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
         }
 
         public IEnumerator DodgeSkils_e() // e ile sağa Dodge atıyor
         {
             isMoveSkilsUse = true;
-            isDashAttackUse = true;
-            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
+            isDodgeUse = true;
+            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
 
             int pushPower = 28;
             if (RB2.gravityScale == 1) // zemine degmiyor ise çalışır
@@ -96,8 +99,8 @@ namespace GameManagerScript.SkillsScripts
             yield return new WaitForSeconds(0.50f);
 
             isMoveSkilsUse = false;
-            isDashAttackUse = false;
-            _playerAnimations.SetBoolParameter("isDashAttackUse", isDashAttackUse);
+            isDodgeUse = false;
+            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
         }
 
         public IEnumerator ArmorFrame() // Player 4.5 saniyeligine daha az hasar alır.

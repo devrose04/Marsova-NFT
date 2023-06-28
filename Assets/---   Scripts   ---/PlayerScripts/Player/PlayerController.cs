@@ -104,7 +104,10 @@ namespace ______Scripts______.PlayerScripts.Player
             _startShipAttack.MYUpdate();
             _droneScript.MYUpdate();
             _enemyDetector.MYUpdate();
-            GroundSlameAnim();
+            _playerAnimations.GroundSlameAnim(RB2);
+
+            if (RB2.gravityScale == 10) // ArmorFrame kullanıldıgında, hava da iken çalışacak.  Bu havadayekn vuruş yapmasın diye koydum
+                return; // bunun altındaki kodları etkiler.
 
 
             if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) // havaya zıplatıp alan vurma skili
@@ -165,7 +168,6 @@ namespace ______Scripts______.PlayerScripts.Player
             // if (__SkillsScript.isArmorFrameUse == false) // bu Shifte basınca hızlı koşmaydı
             MovedSpeedUp();
             speedAmount = speed * Time.deltaTime;
-            print(Input.GetAxisRaw("Horizontal"));
             RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
 
             if (Input.GetAxisRaw("Horizontal") == -1)
@@ -190,14 +192,6 @@ namespace ______Scripts______.PlayerScripts.Player
         void Jump()
         {
             RB2.velocity = new Vector2(RB2.velocity.x, 5);
-        }
-
-        void GroundSlameAnim() // todo: Bu animasyonu geliştir
-        {
-            if (RB2.gravityScale == 10) // 10 ise ArmorFrame çalışmıştır demek
-                _playerAnimations.SetBoolParameter("isGroundSlameUse", true);
-            else
-                _playerAnimations.SetBoolParameter("isGroundSlameUse", false);
         }
     }
 

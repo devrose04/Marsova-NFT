@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4278bed0d63243599f50f96c4ca1567
+guid: 9c86964ef632449a2878e90f7843379c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,169 +105,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_0
+      name: BasicAttack_3_0
       rect:
         serializedVersion: 2
-        x: 31
+        x: 36
         y: 0
-        width: 28
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2717bd30424c437c997563698689e94
-      internalID: -296033572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_1
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 0
-        width: 25
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 663d7f2fbcf07464da36e33a7ff590f5
-      internalID: 121481451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_2
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 0
-        width: 64
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36d7a241611a443f5aa1d0ea4a39d22e
-      internalID: 60321980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_3
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 0
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0870a96f854f6437ea33c037ccbc3f52
-      internalID: 1040124562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_4
-      rect:
-        serializedVersion: 2
-        x: 423
-        y: 0
-        width: 26
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32a26f7def9a7452e86188bdc05f8a88
-      internalID: 1235516387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_5
-      rect:
-        serializedVersion: 2
-        x: 521
-        y: 0
-        width: 29
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 567da05f8c45d42768e89423654eaa16
-      internalID: 1330515937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_6
-      rect:
-        serializedVersion: 2
-        x: 621
-        y: 0
-        width: 23
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2571d2af13b14b998c4dced15d2a143
-      internalID: 1361985153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: astronaut_sword_attack_pngs_7
-      rect:
-        serializedVersion: 2
-        x: 717
-        y: 0
-        width: 21
+        width: 18
         height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 046782689cd7e4b809583893b1ef30aa
-      internalID: 1352079930
+      spriteID: 5d41b2cea488f48198190f570e54563f
+      internalID: -611469634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicAttack_3_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2385a99b52d8e4ccbaf6931c536a1d2b
+      internalID: -1536653283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicAttack_3_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8702348617aa4cb1b05f40027adb476
+      internalID: -1406181870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicAttack_3_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 0
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed69dc605fa345099d5646581fae2b8
+      internalID: 1062645344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicAttack_3_4
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 0
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a5ae301b4834e7a8db1c9d82b39a61
+      internalID: -1377960882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicAttack_3_5
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 0
+        width: 22
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fc60f5beeb4482c9101d9e0b3f1f5e
+      internalID: -162391326
       vertices: []
       indices: 
       edges: []
@@ -283,14 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      astronaut_sword_attack_pngs_0: -296033572
-      astronaut_sword_attack_pngs_1: 121481451
-      astronaut_sword_attack_pngs_2: 60321980
-      astronaut_sword_attack_pngs_3: 1040124562
-      astronaut_sword_attack_pngs_4: 1235516387
-      astronaut_sword_attack_pngs_5: 1330515937
-      astronaut_sword_attack_pngs_6: 1361985153
-      astronaut_sword_attack_pngs_7: 1352079930
+      BasicAttack_3_0: -611469634
+      BasicAttack_3_1: -1536653283
+      BasicAttack_3_2: -1406181870
+      BasicAttack_3_3: 1062645344
+      BasicAttack_3_4: -1377960882
+      BasicAttack_3_5: -162391326
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

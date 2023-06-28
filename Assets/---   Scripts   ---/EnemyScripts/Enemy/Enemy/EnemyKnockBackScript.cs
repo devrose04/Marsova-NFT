@@ -22,9 +22,9 @@ namespace EnemyScripts.Enemy.Enemy
             {
                 float jumpPower;
                 if (RB2.gravityScale == 1)
-                    jumpPower = Random.Range(18f, 20f);
+                    jumpPower = Random.Range(22f, 26f);
                 else
-                    jumpPower = Random.Range(25f, 35f);
+                    jumpPower = Random.Range(35f, 42f);
 
                 RB2.AddForce(new Vector2(RB2.velocity.x, jumpPower), ForceMode2D.Impulse);
             }

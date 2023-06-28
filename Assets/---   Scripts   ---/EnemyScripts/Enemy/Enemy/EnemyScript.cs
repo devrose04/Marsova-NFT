@@ -70,8 +70,8 @@ namespace EnemyScripts.Enemy
             // if (isItFly == false) // eger uçmuyor ise Knockback uygulansın
             StartCoroutine(__EnemyKnockBackScript.KnockBack(directionToEnemy, RB2, isJumpit));
 
-            print(suportArmor);
-            print(health);
+            // print(suportArmor);
+            // print(health);
 
             if (suportArmor <= 0)
                 health -= dmg;
