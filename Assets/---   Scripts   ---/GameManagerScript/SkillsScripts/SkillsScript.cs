@@ -1,15 +1,12 @@
 using System.Collections;
 using ______Scripts______.PlayerScripts.Player;
-using PlayerScripts;
 using PlayerScripts.Player;
-using PlayerScripts.SwordScripts;
-using UIScripts;
 using UnityEngine;
 
 // ReSharper disable Unity.InefficientPropertyAccess
 // ReSharper disable CompareOfFloatsByEqualityOperator
 
-namespace GameManagerScript.SkillsScripts
+namespace ______Scripts______.GameManagerScript.SkillsScripts
 {
     public class SkillsScript : MonoBehaviour
     {
@@ -42,8 +39,9 @@ namespace GameManagerScript.SkillsScripts
             Quaternion lookingRotation = Player.transform.rotation.normalized;
             isMoveSkilsUse = true;
             isDashAtackUse = true;
-            _playerAnimations.SetBoolParameter("isDashAtackUse",isDashAtackUse);
-            
+            // _playerAnimations.SetBoolParameter("isDashAtackUse",isDashAtackUse);
+            _playerAnimations.ChangeAnimationState("DashAttack");
+
             int pushPower = 800;
             float time = 1f;
             if (RB2.gravityScale == 0) // zemine degili ise çalışır
@@ -60,14 +58,16 @@ namespace GameManagerScript.SkillsScripts
             yield return new WaitForSeconds(time);
             isMoveSkilsUse = false;
             isDashAtackUse = false;
-            _playerAnimations.SetBoolParameter("isDashAtackUse",isDashAtackUse);
+            // _playerAnimations.SetBoolParameter("isDashAtackUse",isDashAtackUse);
+            _playerAnimations.ChangeAnimationState("idle");
         }
 
         public IEnumerator DodgeSkils_q() // q ile sola Dodge atıyor    bu kodu ilerde diger  dodge kodu ile birleştire bilirisin.
         {
             isMoveSkilsUse = true;
             isDodgeUse = true;
-            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            // _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            _playerAnimations.ChangeAnimationState("Dodge");
 
             int pushPower = 28;
             if (RB2.gravityScale == 1) // zemine degmiyor ise çalışır
@@ -80,14 +80,16 @@ namespace GameManagerScript.SkillsScripts
 
             isMoveSkilsUse = false;
             isDodgeUse = false;
-            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            // _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            _playerAnimations.ChangeAnimationState("idle");
         }
 
         public IEnumerator DodgeSkils_e() // e ile sağa Dodge atıyor
         {
             isMoveSkilsUse = true;
             isDodgeUse = true;
-            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            // _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            _playerAnimations.ChangeAnimationState("Dodge");
 
             int pushPower = 28;
             if (RB2.gravityScale == 1) // zemine degmiyor ise çalışır
@@ -100,7 +102,8 @@ namespace GameManagerScript.SkillsScripts
 
             isMoveSkilsUse = false;
             isDodgeUse = false;
-            _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            // _playerAnimations.SetBoolParameter("isDodgeUse", isDodgeUse);
+            _playerAnimations.ChangeAnimationState("idle");
         }
 
         public IEnumerator ArmorFrame() // Player 4.5 saniyeligine daha az hasar alır.
@@ -108,6 +111,7 @@ namespace GameManagerScript.SkillsScripts
             // Zombi Yeniçeri Özelligi
             justOneTimeWork = 1;
             isArmorFrameUse = true; // todo: armor frame kullanıdlgıdan ve yere ilk degene kadar 1. animasyn çalışsın
+            isMoveSkilsUse = true;
 
             RB2.gravityScale = 10;
 
@@ -127,6 +131,8 @@ namespace GameManagerScript.SkillsScripts
 
             __PlayerScript.armor = realArmor; // armor'ı bi anda artırıyor ve zamanla düşürüyor.
             __PlayerScript.speed = realSpeed * (1 - 0.6f); // speed'i bi anlık düşüyor ve zamanla artırıyor.
+            yield return new WaitForSeconds(1f);
+            isMoveSkilsUse = false;
             yield return new WaitForSeconds(2f);
 
             RB2.gravityScale = 0;

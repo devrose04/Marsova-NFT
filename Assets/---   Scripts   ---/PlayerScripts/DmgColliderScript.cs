@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using ______Scripts______.GameManagerScript.SkillsScripts;
 using EnemyScripts;
 using EnemyScripts.AIScripts;
 using EnemyScripts.Enemy;

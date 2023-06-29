@@ -1,3 +1,5 @@
+using ______Scripts______.GameManagerScript.SkillsScripts;
+using ______Scripts______.PlayerScripts.SwordScripts;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.Player;
 using PlayerScripts.PlayerLaserAbout;
@@ -71,17 +73,19 @@ namespace ______Scripts______.PlayerScripts.Player
             __SkillsData.SkilsCoolDownTime(); // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
 
 
-            if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse) // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
+            if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __PlayerScript.isHeDead == true) // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
                 return;
 
 
             if (Input.GetButton("Horizontal") && __SwordScript.isAttack == false) // sağ ve sol yönlerine gitmek için
             {
                 Walking();
-                _playerAnimations.SetBoolParameter("isHeWalking", true);
+                // _playerAnimations.SetBoolParameter("isHeWalking", true);
             }
             else
-                _playerAnimations.SetBoolParameter("isHeWalking", false);
+            {
+                // _playerAnimations.SetBoolParameter("isHeWalking", false);
+            }
 
 
             if (__SkillsScript.isArmorFrameUse) // bu ArmorFrame kullandıgında zıplamasını engelliyecektir
@@ -105,8 +109,10 @@ namespace ______Scripts______.PlayerScripts.Player
             _droneScript.MYUpdate();
             _enemyDetector.MYUpdate();
             _playerAnimations.GroundSlameAnim(RB2);
+            _playerAnimations.idleAnim(RB2);
+            _playerAnimations.JetPackAnimation(RB2, __SwordScript.isAttack);
 
-            if (RB2.gravityScale == 10) // ArmorFrame kullanıldıgında, hava da iken çalışacak.  Bu havadayekn vuruş yapmasın diye koydum
+            if (RB2.gravityScale == 10 || __PlayerScript.isHeDead == true) // ArmorFrame kullanıldıgında, hava da iken çalışacak.  Bu havadayekn vuruş yapmasın diye koydum
                 return; // bunun altındaki kodları etkiler.
 
 
@@ -170,6 +176,9 @@ namespace ______Scripts______.PlayerScripts.Player
             speedAmount = speed * Time.deltaTime;
             RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
 
+            if (RB2.gravityScale == 0) // sadece yerde oldugunda çalışsın
+                _playerAnimations.ChangeAnimationState("Run");
+
             if (Input.GetAxisRaw("Horizontal") == -1)
                 Player.transform.rotation = new Quaternion(0, 180, 0, 0);
             else if (Input.GetAxisRaw("Horizontal") == 1)
@@ -214,7 +223,7 @@ namespace ______Scripts______.PlayerScripts.Player
     // ---
 
 
-    // ***Todo: Yapılanlar 18:
+    // ***Todo: Yapılanlar 20:
 
     // ---
 }

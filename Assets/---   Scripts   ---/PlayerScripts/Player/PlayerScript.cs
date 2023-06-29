@@ -1,4 +1,5 @@
 using System.Collections;
+using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.Player;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.SwordScripts;
@@ -26,6 +27,7 @@ namespace PlayerScripts.Player
         [SerializeField] public float armor; // armor 10 ise %10 hasar azaltır. max 100 olur
         private float knockbackForce = 750;
 
+        public bool isHeDead;
         public bool isKnockbacked = false; // Player'ın yürüme skillerini kullanamaması için oluşturdum
 
         private void Awake()
@@ -47,7 +49,10 @@ namespace PlayerScripts.Player
             // print($"<color=green>Player Health:</color>" + health);
             if (health <= 0)
             {
-                _playerAnimations.SetBoolParameter("isHeDied", true);
+                isHeDead = true;
+                _playerAnimations.ChangeAnimationState("Die");
+                _playerAnimations.SetBoolParameter("isHeDead", true);
+
                 // Destroy(this.gameObject);
                 print($"<color=red>GAME OVER</color>");
 
@@ -84,7 +89,7 @@ namespace PlayerScripts.Player
                 ParticleSystem _effect = Instantiate(TouchGroundEffect, Player.transform);
                 Destroy(_effect.gameObject, 3f);
                 __SkillsScript.justOneTimeWork = 0;
-                _swordController.HittingAll1();
+                _swordController.ArmorFrameAttack();
             }
         }
 
