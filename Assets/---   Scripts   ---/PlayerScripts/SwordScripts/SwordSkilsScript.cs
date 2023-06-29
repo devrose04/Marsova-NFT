@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using ______Scripts______.PlayerScripts.Player;
+using ______Scripts______.PlayerScripts.SwordScripts;
 using UnityEngine;
 
 namespace PlayerScripts.SwordScripts
@@ -9,11 +11,13 @@ namespace PlayerScripts.SwordScripts
         private GameObject Player;
 
         private SwordScript __SwordScript;
+        private PlayerAnimations _playerAnimations;
 
         private void Awake()
         {
             Player = this.gameObject;
             __SwordScript = Player.GetComponent<SwordScript>();
+            _playerAnimations = Player.GetComponent<PlayerAnimations>();
         }
 
         public IEnumerator AttackAndMoveOn(float _moveOnTime, Rigidbody2D RB2) // vurdutkan sonr bir adım öne gidiyor ve 0.35 sn hareket edemiyor.

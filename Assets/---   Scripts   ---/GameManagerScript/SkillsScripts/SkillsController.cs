@@ -1,4 +1,5 @@
 using System;
+using ______Scripts______.GameManagerScript.SkillsScripts;
 using PlayerScripts;
 using PlayerScripts.SwordScripts;
 using UIScripts;

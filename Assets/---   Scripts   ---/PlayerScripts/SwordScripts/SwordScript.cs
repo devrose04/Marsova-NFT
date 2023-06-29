@@ -1,14 +1,12 @@
-using System.Collections;
-using EnemyScripts;
 using EnemyScripts.Enemy;
 using ObjectsScripts;
+using PlayerScripts.SwordScripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 // ReSharper disable Unity.InefficientPropertyAccess
 // ReSharper disable Unity.PreferNonAllocApi
 
-namespace PlayerScripts.SwordScripts
+namespace ______Scripts______.PlayerScripts.SwordScripts
 {
     public class SwordScript : MonoBehaviour
     {
@@ -28,6 +26,8 @@ namespace PlayerScripts.SwordScripts
         private GameObject Player;
         public Rigidbody2D RB2;
 
+        private Coroutine myCoroutine;
+
         // ReSharper disable Unity.PerformanceAnalysis
         private void Awake()
         {
@@ -41,7 +41,9 @@ namespace PlayerScripts.SwordScripts
         {
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(this.transform.position, playerSwordRadius, enemyLayer);
             // print("Vurdugun kişi sayısı:" + hitEnemies.Length); // bunu canvasa yazdır.
-            StartCoroutine(__SwordSkilsScript.AttackAndMoveOn(moveOnTime, RB2));
+            if (myCoroutine != null)
+                StopCoroutine(myCoroutine);
+            myCoroutine = StartCoroutine(__SwordSkilsScript.AttackAndMoveOn(moveOnTime, RB2));
 
             float attackAngle = isJustHitFrontArea ? 0 : 180; // burda Sadece önüne vurdugu bir skilmi yoksa, arkasınada vurdugu bir skill mi oldugunun ayarını yapıyoruz.
 
