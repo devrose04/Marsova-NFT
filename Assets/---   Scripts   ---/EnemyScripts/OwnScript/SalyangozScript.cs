@@ -1,4 +1,5 @@
 using System;
+using ______Scripts______.Canvas.Player;
 using PlayerScripts.Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -18,10 +19,12 @@ namespace EnemyScripts.OwnScript
         private float suportArmor;
 
         private GameObject Player;
+        private HealthBarScript _healthBarScript;
 
         private void Awake()
         {
             Player = GameObject.Find("Player");
+            _healthBarScript = Player.GetComponent<HealthBarScript>();
         }
 
         public (float, float, float, float, float, float, bool, bool, float) OwnInformations()
@@ -41,7 +44,8 @@ namespace EnemyScripts.OwnScript
         public void TakeHeal()
         {
             PlayerScript _script = Player.GetComponent<PlayerScript>();
-            _script.health += 25;
+            _script.health += 35;
+            _healthBarScript.ChangeHealthBar();
             if (_script.health > 100)
             {
                 _script.health = 100;

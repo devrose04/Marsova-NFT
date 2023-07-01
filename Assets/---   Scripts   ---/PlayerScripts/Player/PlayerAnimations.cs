@@ -89,12 +89,12 @@ namespace ______Scripts______.PlayerScripts.Player
         {
             if (RB2.gravityScale == 1 && isAttacking == false && _skillsScript.JetPackFuel <= 0.2f)
             {
-                print("düşüyor");
+                // print("düşüyor");
                 // düşüyor
             }
             else if (RB2.gravityScale == 1 && isAttacking == false && _skillsScript.JetPackFuel > 0.2f)
             {
-                print("uçuyor");
+                // print("uçuyor");
                 // uçuyor
             }
         }

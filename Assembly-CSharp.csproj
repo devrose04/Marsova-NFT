@@ -82,6 +82,7 @@
      <Compile Include="Assets/---   Scripts   ---/GameManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyBulletScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/AhtapaotScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Canvas/Enemy/EnemyHealthBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/IsGroundTouchScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/ObjectsScripts/Calculations.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
@@ -92,6 +93,7 @@
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/EnemyDetector.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/SalyangozAnimations.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Canvas/Player/HealthBarScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/ButtonScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/PlayerBullet.cs" />
@@ -117,6 +119,7 @@
      <Folder Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts" />
      <Folder Include="Assets/---   Using Assets   ---/TextMesh Pro/Sprites" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Electric" />
+     <Folder Include="Assets/---   Prefabs   ---/HealtBar" />
      <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Shaders/CFX3 Multiply Color.shader" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails/Ice" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbUpRight" />
@@ -196,6 +199,7 @@
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Slide" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Punch01" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpFall" />
+     <Folder Include="Assets/---   Scripts   ---/Canvas" />
      <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LadderClimb" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Files/Scenes" />
@@ -250,6 +254,7 @@
      <Folder Include="Assets/---   All Effects   ---/AssetEfectlerim" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 1/thrust" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Meshes" />
+     <Folder Include="Assets/---   Scripts   ---/Canvas/Player" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Misc" />
      <Folder Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art" />
@@ -420,6 +425,7 @@
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Materials/Electric" />
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Hits/Hit-1" />
+     <Folder Include="Assets/---   Scripts   ---/Canvas/Enemy" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Kick02" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Roll" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Pulse" />

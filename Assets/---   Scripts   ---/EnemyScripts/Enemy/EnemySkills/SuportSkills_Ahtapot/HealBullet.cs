@@ -1,4 +1,5 @@
 using System;
+using ______Scripts______.Canvas.Enemy;
 using EnemyScripts.Enemy;
 using UnityEngine;
 
@@ -28,7 +29,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.EnemySkills.SuportSkills_Ahtapo
 
         void FiredBullet(Vector2 directionToTarget)
         {
-            float bulletSpeed = 2;
+            float bulletSpeed = 4;
 
             // Mermiyi hedefe doğru hareket ettir
             Vector2 yon = TargetEnemy.transform.position - transform.position;
@@ -45,6 +46,8 @@ namespace ______Scripts______.EnemyScripts.Enemy.EnemySkills.SuportSkills_Ahtapo
             if (other.gameObject == TargetEnemy) // HealBullet Enemy'e ulaştıgında armor'ı versin
             {
                 TargetEnemy.GetComponent<EnemyScript>().UpSuportArmor();
+                other.GetComponent<EnemyHealthBar>().ChangeArmorBar();
+
                 Destroy(this.gameObject);
             }
         }

@@ -1,4 +1,5 @@
 using System.Collections;
+using ______Scripts______.Canvas.Player;
 using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.Player;
 using GameManagerScript.SkillsScripts;
@@ -21,6 +22,10 @@ namespace PlayerScripts.Player
         private PlayerAnimations _playerAnimations;
         private CapsuleCollider2D _capsuleCollider2D;
         private GameObject IsGrounTouch;
+        private SpriteRenderer _spriteRenderer;
+        private HealthBarScript _healthBarScript;
+
+        private Coroutine _coroutine;
 
         [SerializeField] public float speed;
         [SerializeField] public float health;
@@ -40,12 +45,17 @@ namespace PlayerScripts.Player
             _swordController = Player.GetComponent<SwordController>();
             _playerAnimations = Player.GetComponent<PlayerAnimations>();
             _capsuleCollider2D = Player.GetComponent<CapsuleCollider2D>();
+            _spriteRenderer = Player.GetComponent<SpriteRenderer>();
+            _healthBarScript = Player.GetComponent<HealthBarScript>();
         }
 
         public void TakeDamage(float dmg, Vector2 directionToPlayer, float knockBackPower)
         {
+            TakeDamagesTransactions();
+
             dmg = dmg * (0.01f * (100 - armor)); // 0.01 yazma nedenim: 100'ü 0.01 ile çarparsak 1 elder ederiz. Yani %1 ini elde ederiz.
             health -= dmg;
+            _healthBarScript.ChangeHealthBar();
             // print($"<color=green>Player Health:</color>" + health);
             if (health <= 0)
             {
@@ -96,6 +106,45 @@ namespace PlayerScripts.Player
         void GameOver()
         {
             Time.timeScale = 0; // oyun bitti
+        }
+
+        IEnumerator TakeDamagesAnimation()
+        {
+            WaitForSeconds wait = new WaitForSeconds(0.2f);
+
+            Color color_half = _spriteRenderer.color;
+            color_half.a = 0.5f;
+
+            Color color_full = _spriteRenderer.color;
+            color_full.a = 1f;
+
+            yield return wait;
+            _spriteRenderer.color = color_half;
+            yield return wait;
+            _spriteRenderer.color = color_full;
+
+            yield return wait;
+            _spriteRenderer.color = color_half;
+            yield return wait;
+            _spriteRenderer.color = color_full;
+
+            yield return wait;
+            _spriteRenderer.color = color_half;
+            yield return wait;
+            _spriteRenderer.color = color_full;
+        }
+
+        void TakeDamagesTransactions()
+        {
+            Color color_full = _spriteRenderer.color;
+            color_full.a = 1f;
+
+            _spriteRenderer.color = color_full;
+
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _coroutine = StartCoroutine(TakeDamagesAnimation());
         }
     }
 }
