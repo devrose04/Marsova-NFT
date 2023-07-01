@@ -136,6 +136,7 @@ namespace ______Scripts______.PlayerScripts.Player
                     __SkillsManager.ArmorFrame_manager();
             }
 
+
             LaserTimer += Time.deltaTime;
             if (Input.GetMouseButton(0) && LaserTimer > 0.2f && _startShipAttack.SpaceShipAttackIsActive) // Laser silahı
             {

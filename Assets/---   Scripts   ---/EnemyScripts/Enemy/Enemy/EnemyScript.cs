@@ -1,3 +1,4 @@
+using ______Scripts______.Canvas.Enemy;
 using EnemyScripts.Enemy.Enemy;
 using EnemyScripts.OwnScript;
 using UnityEngine;
@@ -33,6 +34,7 @@ namespace EnemyScripts.Enemy
 
         private ICustomScript __ICustomScript;
         private EnemyKnockBackScript __EnemyKnockBackScript;
+        private EnemyHealthBar _enemyHealthBar;
 
         public float HitToPlayerTimer = 10f; // 10 verme nedenim bir hatayı önlediğinden.   // en son ne zaman vuruş yaptıgının verisini tutuyor.
         public float canUseDashHitTimer = 10f; // bu, burayla alakalı degil ama DeltaTimeUp() fonksiyonu için buraya yazdım. 
@@ -46,6 +48,7 @@ namespace EnemyScripts.Enemy
 
             __ICustomScript = Enemy.GetComponent<ICustomScript>(); // burda kendi özel oluşturdugumuz Scripti buluyoruz ve onu çagırıyoruz. 
             __EnemyKnockBackScript = Enemy.GetComponent<EnemyKnockBackScript>();
+            _enemyHealthBar = Enemy.GetComponent<EnemyHealthBar>();
 
             if (__ICustomScript != null)
                 OwnInformations = __ICustomScript.OwnInformations(); // Bu Obejini kendi bilgilerini buraya geçiriyoruz. Her Enemyinin farklı aralıkta bilgileri var.
@@ -74,9 +77,15 @@ namespace EnemyScripts.Enemy
             // print(health);
 
             if (suportArmor <= 0)
+            {
                 health -= dmg;
+                _enemyHealthBar.ChangeHealthBar();
+            }
             else
+            {
                 suportArmor -= dmg;
+                _enemyHealthBar.ChangeArmorBar();
+            }
 
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
@@ -112,7 +121,7 @@ namespace EnemyScripts.Enemy
         public void UpSuportArmor()
         {
             if (suportArmor <= maxSuportArmor)
-                suportArmor += 5;
+                suportArmor += 10;
             else if (suportArmor > maxSuportArmor)
                 suportArmor = maxSuportArmor;
             else

@@ -162,5 +162,9 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
                 }
             }
         }
+
+        public void SwordBlockAttack()
+        {
+        }
     }
 }
