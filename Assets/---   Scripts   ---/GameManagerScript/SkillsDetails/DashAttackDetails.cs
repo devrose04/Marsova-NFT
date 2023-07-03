@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using ______Scripts______.PlayerScripts.SwordScripts;
 using EnemyScripts;
 using EnemyScripts.Enemy;
@@ -40,8 +41,8 @@ namespace GameManagerScript.SkillsDetails
         {
             __EnemyScript.TakeDamages(dmg, directionToEnemy, false);
             ParticleSystem Effect = Player.GetComponent<SwordScript>().hitEffect; // Hangi Effekti oldugunu alıyor    
-            ParticleSystem effect = Instantiate(Effect, other.gameObject.transform);
-            Destroy(effect.gameObject, 5f);
+            ParticleSystem effect = Instantiate(Effect, other.gameObject.transform.position, Quaternion.identity);
+            Destroy(effect.gameObject, 2.5f);
         }
     }
 }

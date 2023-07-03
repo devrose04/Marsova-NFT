@@ -1,7 +1,10 @@
 using System.Collections;
 using ______Scripts______.Canvas.Enemy;
+using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimations;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimationsScripts;
+using ______Scripts______.EnemyScripts.Enemy.EnemyAttack;
+using ______Scripts______.EnemyScripts.Enemy.EnemySkills.EnemyAttackAnimation;
 using EnemyScripts.Enemy;
 using EnemyScripts.OwnScript;
 using PlayerScripts;
@@ -34,6 +37,7 @@ namespace EnemyScripts.AIScripts
         private NearEnemyAttackScript _nearEnemyAttackScript; //Todo: Enemy objesi yakından vuruyorsa __RangeEnemyAttackScript'ini kaldır.
         private RangeEnemyAttackScript __RangeEnemyAttackScript; //Todo: Enemy objesi uzaktan vuruyorsa _nearEnemyAttackScript'ini kaldır.
         private HealtBarBugFixed _healtBarBugFixed;
+        
 
         private Vector2 direction; // bu Enemy'e karşılık Player hangi yönde onu bulur.   -1 ise Enemy Player'ın sağında
         public Vector2 startingPosition; // Başlangıç pozisyonu

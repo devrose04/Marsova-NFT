@@ -155,6 +155,8 @@ MonoBehaviour:
   maxSuportArmor: 50
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6619194722741141945, guid: 3c0bbef8581a24016bbae2e3b92d15de, type: 3}
+  DieEffect: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
+  SalyangozEffect: {fileID: 0}
   effectCreationTimer: 0
   HitToPlayerTimer: 10
   canUseDashHitTimer: 10

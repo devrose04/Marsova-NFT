@@ -53,6 +53,7 @@
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation/AttackAnimation.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/SalyangozScript.cs" />
@@ -89,6 +90,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/RangeEnemyAttackScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyWeaponScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Canvas/Enemy/HealtBarBugFixed.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/EnemyDetector.cs" />
@@ -102,7 +104,6 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/WhiteScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Canvas/Enemy/HealtBarBugFixed.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
      <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Textures" />
@@ -221,6 +222,7 @@
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/GuardImpact" />
      <Folder Include="Assets/---   Using Assets   ---/Space Backgrounds Pack 2/Artwork" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Explosions" />
+     <Folder Include="Assets/---   All Effects   ---/AssetEfectlerim/Kullandıklarım" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LookUp" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Run" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbLeft" />
@@ -338,6 +340,7 @@
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/GunFire" />
      <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Toggles" />
      <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Music" />
+     <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation" />
      <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Rarity Frames" />
      <Folder Include="Assets/---   Using Assets   ---/GothicVania Church/Sprites" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Walk" />

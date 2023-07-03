@@ -1,6 +1,7 @@
+using EnemyScripts;
 using UnityEngine;
 
-namespace EnemyScripts.OwnScript
+namespace ______Scripts______.EnemyScripts.OwnScript
 {
     public class AhtapaotScript : MonoBehaviour, ICustomScript
     {

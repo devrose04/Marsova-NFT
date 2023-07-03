@@ -19,7 +19,7 @@ namespace EnemyScripts.OwnScript
             speed = Random.Range(2.5f, 3.2f ); 
             health = Random.Range(100f, 140f);
             damage = Random.Range(15f, 18f);
-            hitTimeRange = Random.Range(1.4f, 1.8f);
+            hitTimeRange = Random.Range(1.1f, 1.4f);
             attackRadius = Random.Range(2.5f, 3f);
             knockBackPower = Random.Range(1.2f, 1.4f);
             isAttackinRange = false;

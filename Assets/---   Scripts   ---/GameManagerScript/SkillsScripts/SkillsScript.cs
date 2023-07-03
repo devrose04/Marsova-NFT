@@ -110,7 +110,7 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
         {
             // Zombi Yeniçeri Özelligi
             justOneTimeWork = 1;
-            isArmorFrameUse = true; // todo: armor frame kullanıdlgıdan ve yere ilk degene kadar 1. animasyn çalışsın
+            isArmorFrameUse = true;
             isMoveSkilsUse = true;
 
             RB2.gravityScale = 10;

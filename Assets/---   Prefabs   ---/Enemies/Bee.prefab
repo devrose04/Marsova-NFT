@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 7707258981604300595}
   - component: {fileID: 8196989437344968102}
   - component: {fileID: 3334332494784501458}
+  - component: {fileID: 2338124537757286514}
   m_Layer: 6
   m_Name: Bee
   m_TagString: Bee
@@ -171,6 +172,8 @@ MonoBehaviour:
   maxSuportArmor: 50
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 7058215873622624022, guid: a149c616e912e4dc78eb39345fa63afa, type: 3}
+  DieEffect: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
+  SalyangozEffect: {fileID: 0}
   effectCreationTimer: 0
   HitToPlayerTimer: 10
   canUseDashHitTimer: 10
@@ -308,6 +311,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 7416877390771773724}
   ArmorBar: {fileID: 4068050965754456375}
+--- !u!114 &2338124537757286514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987624939279196154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b7c1cc098f34ac1ad41e2cfa63adf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1056054701171013676
 PrefabInstance:
   m_ObjectHideFlags: 0

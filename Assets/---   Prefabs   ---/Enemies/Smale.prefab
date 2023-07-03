@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: -7237852626617062216}
   - component: {fileID: 2299029026769846473}
   - component: {fileID: 8953177947898122116}
+  - component: {fileID: 7736978551709624245}
   m_Layer: 6
   m_Name: Smale
   m_TagString: Smale
@@ -157,6 +158,8 @@ MonoBehaviour:
   maxSuportArmor: 50
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6619194722741141945, guid: 3c0bbef8581a24016bbae2e3b92d15de, type: 3}
+  DieEffect: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
+  SalyangozEffect: {fileID: 0}
   effectCreationTimer: 0
   HitToPlayerTimer: 10
   canUseDashHitTimer: 10
@@ -322,6 +325,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 8318080701283828727}
   ArmorBar: {fileID: 3311647863739993052}
+--- !u!114 &7736978551709624245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3743587821907160077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b7c1cc098f34ac1ad41e2cfa63adf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3743587823310534013
 GameObject:
   m_ObjectHideFlags: 0

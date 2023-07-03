@@ -1,10 +1,11 @@
 using ______Scripts______.Canvas.Enemy;
+using ______Scripts______.EnemyScripts.OwnScript;
+using EnemyScripts;
 using EnemyScripts.Enemy.Enemy;
 using EnemyScripts.OwnScript;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace EnemyScripts.Enemy
+namespace ______Scripts______.EnemyScripts.Enemy.Enemy
 {
     public class EnemyScript : MonoBehaviour // Bu Scripte dışardan public ile kullanılacak kodlar olucak. 
     {
@@ -24,6 +25,8 @@ namespace EnemyScripts.Enemy
 
         [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
         [SerializeField] public ParticleSystem HitEffect; // bu vuruş effecti
+        [SerializeField] private ParticleSystem DieEffect;
+        [SerializeField] private ParticleSystem SalyangozEffect;
         [SerializeField] private float effectCreationTimer; // effecti gerçekleştirme sürem
         private float effectCreationTime; // Efekt kaç sn de bir tekrarlansın
 
@@ -91,10 +94,17 @@ namespace EnemyScripts.Enemy
             if (health <= 0)
             {
                 if (Enemy.CompareTag("Salyangoz"))
+                {
                     Enemy.GetComponent<SalyangozScript>().TakeHeal();
+                    ParticleSystem effect = Instantiate(SalyangozEffect, Enemy.transform.position, Quaternion.identity);
+                    Destroy(effect.gameObject, 3f);
+                }
 
                 if (Enemy.CompareTag("Ahtapot"))
                     Enemy.GetComponent<AhtapaotScript>().DestroyThisParentGameObject();
+
+                ParticleSystem _effect = Instantiate(DieEffect, Enemy.transform.position, Quaternion.identity);
+                Destroy(_effect.gameObject, 3f);
 
                 Destroy(this.gameObject);
             }
@@ -121,7 +131,7 @@ namespace EnemyScripts.Enemy
         public void UpSuportArmor()
         {
             if (suportArmor <= maxSuportArmor)
-                suportArmor += 10;
+                suportArmor += 5;
             else if (suportArmor > maxSuportArmor)
                 suportArmor = maxSuportArmor;
             else

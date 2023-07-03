@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 7484091862205281414}
   - component: {fileID: 7144133786758614519}
   - component: {fileID: 4854935233233150044}
+  - component: {fileID: 8079846346618974804}
   m_Layer: 6
   m_Name: Giant
   m_TagString: Giant
@@ -172,6 +173,8 @@ MonoBehaviour:
   maxSuportArmor: 50
   OwnEffect: {fileID: 6632549741689272037, guid: 368ae4ebaa8e74b6fb77ae4cc3cbdd4a, type: 3}
   HitEffect: {fileID: 7058215873622624022, guid: 5f57cac59b9de4f92a43fa37960cddb6, type: 3}
+  DieEffect: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
+  SalyangozEffect: {fileID: 0}
   effectCreationTimer: 5
   HitToPlayerTimer: 10
   canUseDashHitTimer: 10
@@ -321,6 +324,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 3041158756733902647}
   ArmorBar: {fileID: 8407879358384445212}
+--- !u!114 &8079846346618974804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173778304432394490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b7c1cc098f34ac1ad41e2cfa63adf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4791138762049406471
 PrefabInstance:
   m_ObjectHideFlags: 0
