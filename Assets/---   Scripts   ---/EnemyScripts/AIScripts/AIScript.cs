@@ -1,6 +1,10 @@
 using System.Collections;
+using ______Scripts______.Canvas.Enemy;
+using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimations;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimationsScripts;
+using ______Scripts______.EnemyScripts.Enemy.EnemyAttack;
+using ______Scripts______.EnemyScripts.Enemy.EnemySkills.EnemyAttackAnimation;
 using EnemyScripts.Enemy;
 using EnemyScripts.OwnScript;
 using PlayerScripts;
@@ -32,6 +36,8 @@ namespace EnemyScripts.AIScripts
         private AnimationsController _animationsController;
         private NearEnemyAttackScript _nearEnemyAttackScript; //Todo: Enemy objesi yakından vuruyorsa __RangeEnemyAttackScript'ini kaldır.
         private RangeEnemyAttackScript __RangeEnemyAttackScript; //Todo: Enemy objesi uzaktan vuruyorsa _nearEnemyAttackScript'ini kaldır.
+        private HealtBarBugFixed _healtBarBugFixed;
+        
 
         private Vector2 direction; // bu Enemy'e karşılık Player hangi yönde onu bulur.   -1 ise Enemy Player'ın sağında
         public Vector2 startingPosition; // Başlangıç pozisyonu
@@ -51,6 +57,7 @@ namespace EnemyScripts.AIScripts
             _animationsController = GameManager.GetComponent<AnimationsController>();
             _nearEnemyAttackScript = Enemy.GetComponent<NearEnemyAttackScript>();
             __RangeEnemyAttackScript = Enemy.GetComponent<RangeEnemyAttackScript>();
+            _healtBarBugFixed = Enemy.GetComponentInChildren<HealtBarBugFixed>();
 
             isKnockBackNotActive = true;
         }
@@ -104,9 +111,7 @@ namespace EnemyScripts.AIScripts
         void GoPlayerPosition() // Player'a doğru hareket etme
         {
             if (isKnockBackNotActive && !__EnemyScript.isItFly)
-            {
                 RB2.velocity = new Vector2(direction.x * moveSpeed, RB2.velocity.y); // direction.x 1 veya -1 dir
-            }
             else if (isKnockBackNotActive)
                 RB2.velocity = new Vector2(direction.x * moveSpeed, direction.y * moveSpeed); // direction.x 1 veya -1 dir
         }
@@ -114,9 +119,15 @@ namespace EnemyScripts.AIScripts
         void EnemyLookingToPlayer()
         {
             if (direction.x < 0) // Enemy Player'ın sağında ise çalışır     // direction.x < 0  :  Enemy Player'ın sağında olunca -1 olur
+            {
                 Enemy.transform.rotation = new Quaternion(0, 1, 0, 0); // baktıgı yöne çevirir
+                _healtBarBugFixed.TurnLeft();
+            }
             else if (direction.x > 0) // Enemy Player'ın solunda ise çalışır
+            {
                 Enemy.transform.rotation = new Quaternion(0, 0, 0, 0); // baktıgı yöne çevirir
+                _healtBarBugFixed.TurnRight();
+            }
 
             isEnemySeePlayer = true;
         }
@@ -124,9 +135,15 @@ namespace EnemyScripts.AIScripts
         void EnemyDontLookingToPlayer()
         {
             if (direction.x < 0 && isEnemySeePlayer) // Enemy Player'ın sağında ise çalışır 1 kez çalışır ve yönünü Player'ın zıttına döndürür.
+            {
                 Enemy.transform.rotation = new Quaternion(0, 0, 0, 0); // baktıgı yöne çevirir
+                _healtBarBugFixed.TurnRight();
+            }
             else if (direction.x > 0 && isEnemySeePlayer) // Enemy Player'ın solunda ise çalışır  1 kez çalışır ve yönünü Player'ın zıttına döndürür.
+            {
                 Enemy.transform.rotation = new Quaternion(0, 1, 0, 0); // baktıgı yöne çevirir
+                _healtBarBugFixed.TurnLeft();
+            }
 
             isEnemySeePlayer = false;
         }

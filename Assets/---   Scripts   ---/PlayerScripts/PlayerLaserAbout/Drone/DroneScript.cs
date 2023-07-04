@@ -1,8 +1,8 @@
-using Unity.VisualScripting;
+using ______Scripts______.UIScripts.Canvas;
+using PlayerScripts.PlayerLaserAbout.Drone;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace PlayerScripts.PlayerLaserAbout.Drone
+namespace ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone
 {
     public class DroneScript : MonoBehaviour
     {
@@ -17,13 +17,14 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
         private float distance;
         private Vector2 direction;
 
-        private float DroneSkilCD = 10;
-        private float DroneCDTimer = 10; // 10 verme nedenim oyun başladıgı gibi, skili kullanabiliyor olsun diye
+        private float DroneSkilCD = 10f; // sabit
+        private float DroneCDTimer = 10f; // bu hareketli,  10 verme nedenim oyun başladıgı gibi, skili kullanabiliyor olsun diye
 
-        private float ActiveDroneTime = 6.5f;
+        public float ActiveDroneTime = 6.5f;
         public float DroneStartAttackTimer = 0;
 
         private EnemyDetector _enemyDetector;
+        private DroneBar _droneBar;
 
         public GameObject DroneLookThisObject;
 
@@ -37,6 +38,7 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
             _enemyDetector = Drone.GetComponent<EnemyDetector>();
             Player = GameObject.Find("Player");
             DroneLookThisObject = LookAtThis;
+            _droneBar = Drone.GetComponent<DroneBar>();
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -120,10 +122,12 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
 
         void DroneSeeEnemyAndAttackHim()
         {
+            _droneBar.DroneBarFonk();
+
             if (EnemiesAreThere == true)
                 DroneStartAttackTimer += Time.deltaTime;
 
-            if (DroneStartAttackTimer >= ActiveDroneTime) // 5 saniye Player'ın yanında durduktan sonra gitsin.
+            if (DroneStartAttackTimer >= ActiveDroneTime) // 6.5 saniye Player'ın yanında durduktan sonra gitsin.
                 GoToSky();
         }
 

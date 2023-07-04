@@ -17,6 +17,7 @@ namespace EnemyScripts.OwnScript
         private bool isAttackinRange;
         private bool isItFly;
         private float suportArmor;
+        private int score;
 
         private GameObject Player;
         private HealthBarScript _healthBarScript;
@@ -27,7 +28,7 @@ namespace EnemyScripts.OwnScript
             _healthBarScript = Player.GetComponent<HealthBarScript>();
         }
 
-        public (float, float, float, float, float, float, bool, bool, float) OwnInformations()
+        public (float, float, float, float, float, float, bool, bool, float, int) OwnInformations()
         {
             speed = Random.Range(0.5f, 0.7f);
             health = Random.Range(80f, 100f);
@@ -38,7 +39,8 @@ namespace EnemyScripts.OwnScript
             isAttackinRange = false;
             isItFly = false;
             suportArmor = 0;
-            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor);
+            score = 0;
+            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor, score);
         }
 
         public void TakeHeal()

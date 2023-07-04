@@ -1,3 +1,4 @@
+using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using EnemyScripts.Enemy;
 using EnemyScripts.Enemy.SuportSkills_Ahtapot;
 using ObjectsScripts;
@@ -11,7 +12,7 @@ namespace PlayerScripts.PlayerLaserAbout
         private GameObject Player;
         private Rigidbody2D RB2;
         private Transform ShotPoint;
-        private GameObject Weapon;
+        private GameObject StarShip;
 
         private EnemyScript __EnemyScript;
         private Calculations _calculations;
@@ -22,13 +23,13 @@ namespace PlayerScripts.PlayerLaserAbout
         private void Awake()
         {
             Player = GameObject.Find("Player");
-            Weapon = GameObject.Find("Weapon");
+            StarShip = GameObject.Find("StarShip");
             Bullet = this.gameObject;
             RB2 = Bullet.GetComponent<Rigidbody2D>();
             damages = Random.Range(8f, 12f);
             _calculations = Player.GetComponent<Calculations>();
 
-            ShotPoint = Weapon.transform.Find("shotPoint");
+            ShotPoint = StarShip.transform.Find("shotPoint");
 
             FiredBullet();
         }

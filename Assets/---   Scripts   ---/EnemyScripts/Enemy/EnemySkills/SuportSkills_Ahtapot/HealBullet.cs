@@ -1,5 +1,6 @@
 using System;
 using ______Scripts______.Canvas.Enemy;
+using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using EnemyScripts.Enemy;
 using UnityEngine;
 

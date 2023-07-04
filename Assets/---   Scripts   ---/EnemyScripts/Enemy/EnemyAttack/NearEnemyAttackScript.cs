@@ -1,12 +1,12 @@
-using System;
 using System.Collections;
+using ______Scripts______.EnemyScripts.Enemy.Enemy;
+using ______Scripts______.EnemyScripts.Enemy.EnemySkills.EnemyAttackAnimation;
 using EnemyScripts.AIScripts;
 using ObjectsScripts;
-using PlayerScripts;
 using PlayerScripts.Player;
 using UnityEngine;
 
-namespace EnemyScripts.Enemy
+namespace ______Scripts______.EnemyScripts.Enemy.EnemyAttack
 {
     public class NearEnemyAttackScript : MonoBehaviour
     {
@@ -16,6 +16,7 @@ namespace EnemyScripts.Enemy
         private AIScript __AIScript;
         private Calculations __Calculations;
         private PlayerScript __PlayerScript;
+        private AttackAnimation _attackAnimation;
 
         private GameObject Enemy;
         private GameObject Player;
@@ -27,11 +28,14 @@ namespace EnemyScripts.Enemy
             __AIScript = Enemy.GetComponent<AIScript>();
             __Calculations = Player.GetComponent<Calculations>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
+
+            if (Enemy.GetComponent<AttackAnimation>() != null)
+                _attackAnimation = Enemy.GetComponent<AttackAnimation>();
         }
 
         public void StopAndAttack(GameObject enemy)
         {
-            __AIScript.isEnemyAttackToPlayer = true; 
+            __AIScript.isEnemyAttackToPlayer = true;
 
             StartCoroutine(AttackReaction(enemy));
         }
@@ -65,6 +69,9 @@ namespace EnemyScripts.Enemy
                         _enemyScript.HitToPlayerTimer = 0; // zamanı burdan sıfırlamak lazım yoksa hata veriyor.
                     }
                 }
+
+                if (_attackAnimation != null) // todo: hep döngüye giriyor onu araştır
+                    StartCoroutine(_attackAnimation.EnemyAttackAnimation());
 
                 __AIScript.isEnemyAttackToPlayer = false;
             }
