@@ -13,6 +13,16 @@ namespace GameManagerScript.SkillsScripts
         // ***  1-) lastPressTime = En son basıldıgı zamanın verisini tutar     // 2 3 kere bir tuşa arka arka basınca kullanılacak veride bu
         // ***  2-) lastPressCanUseTime = Skilin en son ne zaman kullanıldıgının zaman verisini tutar
 
+        [SerializeField] private GameObject ArmorFrameButton;
+        [SerializeField] private GameObject DashButton;
+        [SerializeField] private GameObject DodgeButton;
+
+        [SerializeField] private GameObject SwordAttack_1Button;
+        [SerializeField] private GameObject SwordAttack_2Button;
+
+        [SerializeField] private GameObject HittingAll_1Button;
+        [SerializeField] private GameObject HittingAll_2Button;
+
         // private float Sword1;                      // bu En son butona basıldıgı zamanın verisini tutar  
         public float SwordCanUse1; // bu Butonun en son ne zaman aktif olarak kullanıldıgının verisini tutuyor.
         [SerializeField] public float SwordCD1; // bu butonun dolum süresinin verisini tutuyor.
@@ -48,37 +58,45 @@ namespace GameManagerScript.SkillsScripts
             timer += Time.deltaTime;
 
             if (timer > HittingAllCD1 + HittingAllCanUse1) // HittingAll_1 Skils
-            {
-                // print("HittingAll1 Skili Kullanılabilir");   
-            }
-            else if (timer > HittingAllCD2 + HittingAllCanUse2) // HittingAll_2 Skils
-            {
-                // print("HittingAll2 Skili Kullanılabilir");   
-            }
+                HittingAll_1Button.SetActive(true);
+            else
+                HittingAll_1Button.SetActive(false);
+
+
+            if (timer > HittingAllCD2 + HittingAllCanUse2) // HittingAll_2 Skils
+                HittingAll_2Button.SetActive(true);
+            else
+                HittingAll_2Button.SetActive(false);
+
 
             if (timer > SwordCD1 + SwordCanUse1) // SwordAtack_1 Skils
-            {
-                // print("SwordAttack_1 Skili Kullanılabilir");   
-            }
-            else if (timer > SwordCD2 + SwordCanUse2) // SwordAtack_2 ve SwordAtack_3 Skils
-            {
-                // print("SwordAttack_2 ve SwordAttack_3 Skili Kullanılabilir");   // burda SwordAttack_2'nin dolum süresini alamıyorum ondan: Tasarım kısmında aralında bir köprü görevi görür gibi bir hissiyat vermek lazım.
-            }
+                SwordAttack_1Button.SetActive(true);
+            else
+                SwordAttack_1Button.SetActive(false);
+
+
+            if (timer > SwordCD2 + SwordCanUse2) // SwordAtack_2 ve SwordAtack_3 Skils
+                SwordAttack_2Button.SetActive(true);
+            else
+                SwordAttack_2Button.SetActive(false);
+
 
             if (timer > ArmorFrameCD + ArmorFrameCanUse) // ArmorFrame Skils
-            {
-                // print("ArmorFrame Skili kullanılabilir");
-            }
+                ArmorFrameButton.SetActive(true);
+            else
+                ArmorFrameButton.SetActive(false);
+
 
             if (timer > DashAtackCD + DashAttackCanUse) // DashAtack Skils
-            {
-                // print("DashAtack Skili kullanılabilir");
-            }
+                DashButton.SetActive(true);
+            else
+                DashButton.SetActive(false);
+
 
             if (timer > DodgeCD + DodgeCanUse)
-            {
-                // print("Dodge Skili kullanılabilir");
-            }
+                DodgeButton.SetActive(true);
+            else
+                DodgeButton.SetActive(false);
         }
     }
 }

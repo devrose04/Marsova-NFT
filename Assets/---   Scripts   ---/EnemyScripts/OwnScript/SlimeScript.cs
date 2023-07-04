@@ -16,7 +16,8 @@ namespace EnemyScripts.OwnScript
         private bool isAttackinRange;
         private bool isItFly;
         private float suportArmor;
-
+        private int score;
+        
         private Rigidbody2D RB2;
 
         private IsGroundTouchScript __isGroundTouch;
@@ -33,7 +34,7 @@ namespace EnemyScripts.OwnScript
                 RB2.velocity = new Vector2(RB2.velocity.x, Random.Range(3, 6));
         }
 
-        public (float, float, float, float, float, float, bool, bool, float) OwnInformations()
+        public (float, float, float, float, float, float, bool, bool, float,int) OwnInformations()
         {
             speed = Random.Range(3f, 4.5f);
             health = Random.Range(30f, 45f); 
@@ -44,7 +45,8 @@ namespace EnemyScripts.OwnScript
             isAttackinRange = false;
             isItFly = false;
             suportArmor = 0;
-            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor);
+            score = 5;
+            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor,score);
         }
     }
 }

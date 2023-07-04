@@ -17,10 +17,11 @@ namespace ______Scripts______.EnemyScripts.OwnScript
         private bool isAttackinRange;
         private bool isItFly;
         private float suportArmor;
+        private int score;
 
         [SerializeField] private GameObject ParentObject;
 
-        public (float, float, float, float, float, float, bool, bool, float) OwnInformations()
+        public (float, float, float, float, float, float, bool, bool, float, int) OwnInformations()
         {
             speed = Random.Range(2.7f, 3.1f);
             health = Random.Range(60f, 75f);
@@ -31,7 +32,8 @@ namespace ______Scripts______.EnemyScripts.OwnScript
             isAttackinRange = true; // not attack this object
             isItFly = true;
             suportArmor = 0;
-            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor);
+            score = 20;
+            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor, score);
         }
 
         public void DestroyThisParentGameObject() // Armor ile Ahtapot 1 tane GameObjesinde birlikte duruyor, bu fonk. onu yok eder.

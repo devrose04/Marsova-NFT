@@ -16,6 +16,7 @@ namespace PlayerScripts.Player
         private IsGroundTouchScript _isGroundTouchScript;
 
         [SerializeField] private ParticleSystem TouchGroundEffect;
+        [SerializeField] private GameObject GameOverimages;
 
         private SkillsScript __SkillsScript;
         private SwordController _swordController;
@@ -30,6 +31,8 @@ namespace PlayerScripts.Player
         [SerializeField] public float speed;
         [SerializeField] public float health;
         [SerializeField] public float armor; // armor 10 ise %10 hasar azaltır. max 100 olur
+        public int totalScore = 0;
+
         private float knockbackForce = 750;
 
         public bool isHeDead;
@@ -65,6 +68,7 @@ namespace PlayerScripts.Player
 
                 // Destroy(this.gameObject);
                 print($"<color=red>GAME OVER</color>");
+                GameOverimages.SetActive(true);
 
                 _capsuleCollider2D.size = new Vector2(0.13f, 0.2f);
                 IsGrounTouch.SetActive(false);

@@ -1,8 +1,10 @@
 using ______Scripts______.Canvas.Enemy;
 using ______Scripts______.EnemyScripts.OwnScript;
+using ______Scripts______.UIScripts.Canvas.Player;
 using EnemyScripts;
 using EnemyScripts.Enemy.Enemy;
 using EnemyScripts.OwnScript;
+using PlayerScripts.Player;
 using UnityEngine;
 
 namespace ______Scripts______.EnemyScripts.Enemy.Enemy
@@ -20,8 +22,9 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
         public bool isItFly;
         public float suportArmor;
         public float maxSuportArmor = 50;
+        public int score;
 
-        (float, float, float, float, float, float, bool, bool, float) OwnInformations;
+        (float, float, float, float, float, float, bool, bool, float, int) OwnInformations;
 
         [SerializeField] public ParticleSystem OwnEffect; // bu kendi Effecti, boş olsada olur
         [SerializeField] public ParticleSystem HitEffect; // bu vuruş effecti
@@ -34,10 +37,13 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
 
         private GameObject Enemy;
         private Rigidbody2D RB2;
+        private GameObject Player;
 
+        private PlayerScript _playerScript;
         private ICustomScript __ICustomScript;
         private EnemyKnockBackScript __EnemyKnockBackScript;
         private EnemyHealthBar _enemyHealthBar;
+        private PlayerScore _playerScore;
 
         public float HitToPlayerTimer = 10f; // 10 verme nedenim bir hatayı önlediğinden.   // en son ne zaman vuruş yaptıgının verisini tutuyor.
         public float canUseDashHitTimer = 10f; // bu, burayla alakalı degil ama DeltaTimeUp() fonksiyonu için buraya yazdım. 
@@ -45,6 +51,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
         private void Awake()
         {
             Enemy = this.gameObject;
+            Player = GameObject.Find("Player");
             Tag = Enemy.tag;
             RB2 = Enemy.GetComponent<Rigidbody2D>();
             effectCreationTime = effectCreationTimer;
@@ -52,6 +59,8 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
             __ICustomScript = Enemy.GetComponent<ICustomScript>(); // burda kendi özel oluşturdugumuz Scripti buluyoruz ve onu çagırıyoruz. 
             __EnemyKnockBackScript = Enemy.GetComponent<EnemyKnockBackScript>();
             _enemyHealthBar = Enemy.GetComponent<EnemyHealthBar>();
+            _playerScript = Player.GetComponent<PlayerScript>();
+            _playerScore = Player.GetComponent<PlayerScore>();
 
             if (__ICustomScript != null)
                 OwnInformations = __ICustomScript.OwnInformations(); // Bu Obejini kendi bilgilerini buraya geçiriyoruz. Her Enemyinin farklı aralıkta bilgileri var.
@@ -65,6 +74,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
             isAttackinRange = OwnInformations.Item7;
             isItFly = OwnInformations.Item8;
             suportArmor = OwnInformations.Item9;
+            score = OwnInformations.Item10;
         }
 
         public void MYFixedUpdate()
@@ -93,6 +103,9 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
             {
+                _playerScript.totalScore += score;
+                _playerScore.ScoreUpdate();
+
                 if (Enemy.CompareTag("Salyangoz"))
                 {
                     Enemy.GetComponent<SalyangozScript>().TakeHeal();

@@ -1,4 +1,5 @@
 using ______Scripts______.GameManagerScript.SkillsScripts;
+using ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone;
 using ______Scripts______.PlayerScripts.SwordScripts;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.Player;
@@ -34,7 +35,7 @@ namespace ______Scripts______.PlayerScripts.Player
         private GameObject GameManager;
         private GameObject Player;
         private Rigidbody2D RB2;
-        private GameObject Weapon;
+        private GameObject StarShip;
         private Transform ShotPoint;
         private GameObject Drone;
 
@@ -45,17 +46,17 @@ namespace ______Scripts______.PlayerScripts.Player
         private void Awake()
         {
             Player = GameObject.Find("Player");
-            Weapon = GameObject.Find("Weapon");
+            StarShip = GameObject.Find("StarShip");
             Drone = GameObject.Find("Drone");
             RB2 = Player.GetComponent<Rigidbody2D>();
             GameManager = GameObject.Find("GameManager");
-            ShotPoint = Weapon.transform.Find("shotPoint");
+            ShotPoint = StarShip.transform.Find("shotPoint");
             _enemyDetector = Drone.GetComponent<EnemyDetector>();
             _droneScript = Drone.GetComponent<DroneScript>();
             __SwordScript = Player.GetComponent<SwordScript>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
             _playerAnimations = Player.GetComponent<PlayerAnimations>();
-            _startShipAttack = Weapon.GetComponent<StartShipAttack>();
+            _startShipAttack = StarShip.GetComponent<StartShipAttack>();
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
             __SkillsData = GameManager.GetComponent<SkillsDataScript>();
             __SkillsManager = GameManager.GetComponent<SkillsManager>();

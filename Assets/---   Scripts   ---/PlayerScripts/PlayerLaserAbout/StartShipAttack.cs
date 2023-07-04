@@ -1,3 +1,4 @@
+using ______Scripts______.UIScripts.Canvas;
 using UnityEngine;
 
 namespace PlayerScripts.PlayerLaserAbout
@@ -12,16 +13,21 @@ namespace PlayerScripts.PlayerLaserAbout
         private float distance;
         private Vector2 direction;
 
-        private float ShipReloadTimeCD = 20;
-        private float ShipReloadTheBulletTimer = 20; // oyun başladıgında skilli direk kulana bilsin diye 20 verdim.
+        public float ShipReloadTimeCD = 20;
+        public float ShipReloadTheBulletTimer = 20; // oyun başladıgında skilli direk kulana bilsin diye 20 verdim.
         public bool SpaceShipAttackIsActive = true;
 
         public int amountOfBullets = 30;
+
+        private StarShipBar _starShipBar;
+        private StartShipBulletAmount _startShipBulletAmount;
 
         private void Awake()
         {
             Ship = this.gameObject;
             RB2 = Ship.GetComponent<Rigidbody2D>();
+            _starShipBar = Ship.GetComponent<StarShipBar>();
+            _startShipBulletAmount = Ship.GetComponent<StartShipBulletAmount>();
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -62,7 +68,10 @@ namespace PlayerScripts.PlayerLaserAbout
 
         void ShipBulletReload()
         {
-            if (amountOfBullets == 29)
+            _starShipBar.StartShipFonk();
+            _startShipBulletAmount.StartShipBulletFonk();
+
+            if (amountOfBullets == 29) // bu başta, ShipReloadTheBulletTimer'a 20 verdigimiz için oluşturulmuş bir if tir.
             {
                 ShipReloadTheBulletTimer = 0;
             }
@@ -73,15 +82,11 @@ namespace PlayerScripts.PlayerLaserAbout
                 amountOfBullets = 30;
             }
             else if (amountOfBullets != 30)
-            {
                 ShipReloadTheBulletTimer += Time.deltaTime;
-            }
 
 
             if (amountOfBullets == 0) // mermi 0 ise ateş edemesin.
-            {
                 SpaceShipAttackIsActive = false;
-            }
         }
     }
 }
