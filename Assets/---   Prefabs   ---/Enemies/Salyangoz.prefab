@@ -154,9 +154,10 @@ MonoBehaviour:
   isItFly: 0
   suportArmor: 0
   maxSuportArmor: 50
+  score: 0
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6632549741689272037, guid: 368ae4ebaa8e74b6fb77ae4cc3cbdd4a, type: 3}
-  DieEffect: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
+  DieEffect: {fileID: 0}
   SalyangozEffect: {fileID: 19800006, guid: 4943213b934e3454a83ed6048cb54e56, type: 3}
   effectCreationTimer: 0
   HitToPlayerTimer: 10

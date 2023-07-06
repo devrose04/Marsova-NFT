@@ -48,7 +48,7 @@ namespace ______Scripts______.UIScripts
             RotateDirection = Random.Range(1, 3);
         }
 
-        void AwakeMeteor()
+        public void AwakeMeteor()
         {
             Which_y_DirectionGo(); // MovingPower_y = Random.Range(-3f, 3f);
             x_Moving_Power(); // MovingPower_x = Random.Range(10f, 45f);
@@ -113,7 +113,7 @@ namespace ______Scripts______.UIScripts
         void MeteorRotaion()
         {
             float RotationPowerLess = RotationPower;
-            RotationPowerLess = RotationPowerLess;
+            // RotationPowerLess = RotationPowerLess;
 
             if (RotateDirection == 1) // %50 ihtimalle - ile çarpar, buda farklı yönde dönmesini sağlar
                 RotationPowerLess = -RotationPowerLess;
