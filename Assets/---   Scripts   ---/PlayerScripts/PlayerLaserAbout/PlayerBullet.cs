@@ -40,7 +40,7 @@ namespace PlayerScripts.PlayerLaserAbout
             var result = _calculations.CalculationsAboutToObject(this.gameObject, _enemy); // Enemy'lerin vuruş yaptıgı yerin verileri hesaplanır.
             Vector2 directionToEnemy = result.Item1;
 
-            ParticleSystem CreatedHitEffect = Instantiate(LaserHitEffeckt, _enemy.transform); // hitEffeckti oluşturduk
+            ParticleSystem CreatedHitEffect = Instantiate(LaserHitEffeckt, _enemy.transform.position,Quaternion.identity); // hitEffeckti oluşturduk
             Destroy(CreatedHitEffect.gameObject, 5f);
 
             __EnemyScript = _enemy.GetComponent<EnemyScript>();

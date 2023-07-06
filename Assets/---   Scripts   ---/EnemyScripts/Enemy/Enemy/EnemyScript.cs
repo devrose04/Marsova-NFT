@@ -148,7 +148,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
         public void UpSuportArmor()
         {
             if (suportArmor <= maxSuportArmor)
-                suportArmor += 5;
+                suportArmor += 3;
             else if (suportArmor > maxSuportArmor)
                 suportArmor = maxSuportArmor;
             else
