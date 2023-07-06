@@ -32,7 +32,7 @@ namespace PlayerScripts.Player
         [SerializeField] public float health;
         [SerializeField] public float armor; // armor 10 ise %10 hasar azaltır. max 100 olur
         public int totalScore = 0;
-
+        [SerializeField] private Transform touchGrand;
         private float knockbackForce = 750;
 
         public bool isHeDead;
@@ -100,7 +100,7 @@ namespace PlayerScripts.Player
         {
             if (__SkillsScript.isArmorFrameUse == true && _isGroundTouchScript.isGroundTouchBool == true && __SkillsScript.justOneTimeWork == 1)
             {
-                ParticleSystem _effect = Instantiate(TouchGroundEffect, Player.transform);
+                ParticleSystem _effect = Instantiate(TouchGroundEffect, touchGrand.position, Quaternion.identity);
                 Destroy(_effect.gameObject, 3f);
                 __SkillsScript.justOneTimeWork = 0;
                 _swordController.ArmorFrameAttack();

@@ -25,6 +25,9 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
 
         [SerializeField] public float JetPackFuel;
         [SerializeField] private ParticleSystem JetPackEffect;
+        [SerializeField] private ParticleSystem ArmorEffect;
+
+        [SerializeField] private Transform _transform;
 
         private void Awake()
         {
@@ -108,6 +111,8 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
 
         public IEnumerator ArmorFrame() // Player 4.5 saniyeligine daha az hasar alır.
         {
+            ParticleSystem _effect = Instantiate(ArmorEffect, _transform);
+            Destroy(_effect.gameObject, 3f);
             // Zombi Yeniçeri Özelligi
             justOneTimeWork = 1;
             isArmorFrameUse = true;

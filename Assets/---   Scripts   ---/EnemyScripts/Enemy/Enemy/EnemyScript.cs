@@ -116,8 +116,12 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
                 if (Enemy.CompareTag("Ahtapot"))
                     Enemy.GetComponent<AhtapaotScript>().DestroyThisParentGameObject();
 
-                ParticleSystem _effect = Instantiate(DieEffect, Enemy.transform.position, Quaternion.identity);
-                Destroy(_effect.gameObject, 3f);
+                if (DieEffect != null)
+                {
+                    ParticleSystem _effect = Instantiate(DieEffect, Enemy.transform.position, Quaternion.identity);
+                    Destroy(_effect.gameObject, 3f);
+                }
+                
 
                 Destroy(this.gameObject);
             }
@@ -144,7 +148,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
         public void UpSuportArmor()
         {
             if (suportArmor <= maxSuportArmor)
-                suportArmor += 5;
+                suportArmor += 3;
             else if (suportArmor > maxSuportArmor)
                 suportArmor = maxSuportArmor;
             else

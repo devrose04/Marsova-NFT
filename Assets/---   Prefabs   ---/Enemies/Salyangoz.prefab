@@ -87,7 +87,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: db8543398a4414458b56499a18ec1a37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -154,9 +154,10 @@ MonoBehaviour:
   isItFly: 0
   suportArmor: 0
   maxSuportArmor: 50
+  score: 0
   OwnEffect: {fileID: 0}
   HitEffect: {fileID: 6632549741689272037, guid: 368ae4ebaa8e74b6fb77ae4cc3cbdd4a, type: 3}
-  DieEffect: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
+  DieEffect: {fileID: 0}
   SalyangozEffect: {fileID: 19800006, guid: 4943213b934e3454a83ed6048cb54e56, type: 3}
   effectCreationTimer: 0
   HitToPlayerTimer: 10
@@ -412,11 +413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7974973649256022126, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7974973649256022126, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7974973649256022126, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_LocalPosition.x
