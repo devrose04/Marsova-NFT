@@ -5,6 +5,7 @@ using ______Scripts______.EnemyScripts.Enemy.EnemyAnimations;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAnimationsScripts;
 using ______Scripts______.EnemyScripts.Enemy.EnemyAttack;
 using ______Scripts______.EnemyScripts.Enemy.EnemySkills.EnemyAttackAnimation;
+using ______Scripts______.PlayerScripts;
 using EnemyScripts.Enemy;
 using EnemyScripts.OwnScript;
 using PlayerScripts;

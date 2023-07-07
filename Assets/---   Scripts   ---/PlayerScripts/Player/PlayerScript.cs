@@ -2,6 +2,7 @@ using System.Collections;
 using ______Scripts______.Canvas.Player;
 using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.Player;
+using ______Scripts______.PlayerScripts.SwordScripts;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.SwordScripts;
 using UIScripts;
@@ -26,6 +27,9 @@ namespace PlayerScripts.Player
         private SpriteRenderer _spriteRenderer;
         private HealthBarScript _healthBarScript;
 
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipTakeDamages;
+        [SerializeField] public AudioClip audioClipDeadth;
         private Coroutine _coroutine;
 
         [SerializeField] public float speed;
@@ -42,6 +46,7 @@ namespace PlayerScripts.Player
         {
             Player = GameObject.Find("Player");
             RB2 = Player.GetComponent<Rigidbody2D>();
+            _audioSource = Player.GetComponent<AudioSource>();
             __SkillsScript = GameObject.Find("GameManager").GetComponent<SkillsScript>();
             _isGroundTouchScript = Player.GetComponentInChildren<IsGroundTouchScript>();
             IsGrounTouch = _isGroundTouchScript.gameObject;
@@ -54,6 +59,7 @@ namespace PlayerScripts.Player
 
         public void TakeDamage(float dmg, Vector2 directionToPlayer, float knockBackPower)
         {
+            _audioSource.PlayOneShot(_audioClipTakeDamages);
             TakeDamagesTransactions();
 
             dmg = dmg * (0.01f * (100 - armor)); // 0.01 yazma nedenim: 100'ü 0.01 ile çarparsak 1 elder ederiz. Yani %1 ini elde ederiz.

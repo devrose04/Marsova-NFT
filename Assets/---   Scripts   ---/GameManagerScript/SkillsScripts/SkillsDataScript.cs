@@ -5,7 +5,7 @@ namespace GameManagerScript.SkillsScripts
 {
     public class SkillsDataScript : MonoBehaviour
     {
-        private float timer;
+        [SerializeField] private float timer;
 
         // *** Bu alltaki şeyler Data Verileridir. En son ne zaman tuşa bastığının veya o sklinin Dolum süresinin verisini burda tutar.
         // ***  1-) lastPressTime    2-) lastPressCanUseTime     Aşagıdakiler Bu 2 sinin kısaltımı şekilde yazılmıştır.

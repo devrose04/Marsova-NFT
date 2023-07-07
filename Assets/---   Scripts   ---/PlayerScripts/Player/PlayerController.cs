@@ -1,3 +1,4 @@
+using System.Collections;
 using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone;
 using ______Scripts______.PlayerScripts.SwordScripts;
@@ -8,6 +9,7 @@ using PlayerScripts.PlayerLaserAbout.Drone;
 using PlayerScripts.SwordScripts;
 using UIScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable RedundantCheckBeforeAssignment
@@ -43,6 +45,10 @@ namespace ______Scripts______.PlayerScripts.Player
         private float speed;
         private float speedAmount;
 
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipMove1;
+        [SerializeField] private AudioClip _audioClipMove2;
+
         private void Awake()
         {
             Player = GameObject.Find("Player");
@@ -51,6 +57,7 @@ namespace ______Scripts______.PlayerScripts.Player
             RB2 = Player.GetComponent<Rigidbody2D>();
             GameManager = GameObject.Find("GameManager");
             ShotPoint = StarShip.transform.Find("shotPoint");
+            _audioSource = Player.GetComponent<AudioSource>();
             _enemyDetector = Drone.GetComponent<EnemyDetector>();
             _droneScript = Drone.GetComponent<DroneScript>();
             __SwordScript = Player.GetComponent<SwordScript>();
@@ -179,7 +186,11 @@ namespace ______Scripts______.PlayerScripts.Player
             RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
 
             if (RB2.gravityScale == 0) // sadece yerde oldugunda çalışsın
+            {
+                _WalkSound();
+                // StartCoroutine("WalkSound");
                 _playerAnimations.ChangeAnimationState("Run");
+            }
 
             if (Input.GetAxisRaw("Horizontal") == -1)
                 Player.transform.rotation = new Quaternion(0, 180, 0, 0);
@@ -203,6 +214,23 @@ namespace ______Scripts______.PlayerScripts.Player
         void Jump()
         {
             RB2.velocity = new Vector2(RB2.velocity.x, 5);
+        }
+
+        // IEnumerator WalkSound()
+        // {
+        //     WaitForSeconds Wait = new WaitForSeconds(0.15f);
+        //
+        //     _audioSource.PlayOneShot(_audioClipMove1);
+        //     yield return Wait;
+        //     _audioSource.PlayOneShot(_audioClipMove2);
+        //     yield return Wait;
+        // }
+        void _WalkSound()
+        {
+            if (_audioSource.isPlaying == false)
+            {
+                // _audioSource.isPlaying
+            }
         }
     }
 

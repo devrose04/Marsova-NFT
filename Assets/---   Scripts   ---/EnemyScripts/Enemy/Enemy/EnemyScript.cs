@@ -45,6 +45,9 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
         private EnemyHealthBar _enemyHealthBar;
         private PlayerScore _playerScore;
 
+        private AudioSource _audioSource;
+        private AudioClip _audioClipDeadth;
+
         public float HitToPlayerTimer = 10f; // 10 verme nedenim bir hatayı önlediğinden.   // en son ne zaman vuruş yaptıgının verisini tutuyor.
         public float canUseDashHitTimer = 10f; // bu, burayla alakalı degil ama DeltaTimeUp() fonksiyonu için buraya yazdım. 
 
@@ -61,6 +64,9 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
             _enemyHealthBar = Enemy.GetComponent<EnemyHealthBar>();
             _playerScript = Player.GetComponent<PlayerScript>();
             _playerScore = Player.GetComponent<PlayerScore>();
+
+            _audioSource = Player.GetComponent<AudioSource>();
+            _audioClipDeadth = _playerScript.audioClipDeadth;
 
             if (__ICustomScript != null)
                 OwnInformations = __ICustomScript.OwnInformations(); // Bu Obejini kendi bilgilerini buraya geçiriyoruz. Her Enemyinin farklı aralıkta bilgileri var.
@@ -103,6 +109,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
             // print($"<color=yellow>Enemy Health:</color>" + health);
             if (health <= 0)
             {
+                _audioSource.PlayOneShot(_audioClipDeadth);
                 _playerScript.totalScore += score;
                 _playerScore.ScoreUpdate();
 
@@ -121,7 +128,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
                     ParticleSystem _effect = Instantiate(DieEffect, Enemy.transform.position, Quaternion.identity);
                     Destroy(_effect.gameObject, 3f);
                 }
-                
+
 
                 Destroy(this.gameObject);
             }

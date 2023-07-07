@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bafb030480924a299e90f83c5df316e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealSound: {fileID: 977876722516970291, guid: c0b8640a7e8d443af8ce3460131b00c2, type: 3}
 --- !u!114 &5439480361746743347
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,11 +29,15 @@ namespace ______Scripts______.PlayerScripts.SwordScripts
 
         private Coroutine myCoroutine;
 
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipHit;
+
         // ReSharper disable Unity.PerformanceAnalysis
         private void Awake()
         {
             Player = this.gameObject;
             RB2 = Player.GetComponent<Rigidbody2D>();
+            _audioSource = Player.GetComponent<AudioSource>();
             __SwordSkilsScript = Player.GetComponent<SwordSkilsScript>();
             __Calculations = Player.GetComponent<Calculations>();
         }
@@ -67,7 +71,10 @@ namespace ______Scripts______.PlayerScripts.SwordScripts
 
             EnemyScript _enemyScript = enemy.GetComponent<EnemyScript>();
             if (enemy != null)
+            {
+                _audioSource.PlayOneShot(_audioClipHit);
                 _enemyScript.TakeDamages(swordDamage * dmgPower, directionToEnemy * KnockBackPower, isJumpit);
+            }
         }
 
         // void OnDrawGizmosSelected() // Player'ın vuruş menzilini gösterir
