@@ -24,8 +24,10 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
         public int justOneTimeWork;
 
         private AudioSource _audioSource;
+
         [SerializeField] private AudioClip _audioClipArmorFrame;
         [SerializeField] private AudioClip _audioClipDodgeDash;
+        [SerializeField] private AudioClip _audioClipArmorUp;
 
         [SerializeField] public float JetPackFuel;
         [SerializeField] private ParticleSystem JetPackEffect;
@@ -123,6 +125,7 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
         public IEnumerator ArmorFrame() // Player 4.5 saniyeligine daha az hasar alır.
         {
             _audioSource.PlayOneShot(_audioClipArmorFrame);
+            _audioSource.PlayOneShot(_audioClipArmorUp);
 
             ParticleSystem _effect = Instantiate(ArmorEffect, _transform);
             Destroy(_effect.gameObject, 3f);
@@ -173,7 +176,7 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
             {
                 JetPackFuel -= Time.deltaTime;
                 RB2.AddForce(new Vector2(RB2.velocity.x, 50), ForceMode2D.Impulse);
-                if (JetPackFuel > 0.2)
+                if (JetPackFuel > 0.2f)
                 {
                     ParticleSystem Effect = Instantiate(JetPackEffect, Player.transform);
                     Destroy(Effect.gameObject, 1.2f);

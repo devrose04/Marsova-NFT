@@ -20,9 +20,11 @@ namespace ______Scripts______.VehicleScript
         [SerializeField] private GameObject Ahtapot;
         [SerializeField] private GameObject Smale;
 
+        private int SpanwLimitCount;
         private void Awake()
         {
             GameManager = GameObject.Find("GameManager");
+            SpanwLimitCount = GameManager.GetComponent<GameManager>()._SpanwLimitCount;
             _gameManager = GameManager.GetComponent<GameManager>();
             _audioSource = this.gameObject.GetComponent<AudioSource>();
         }
@@ -64,7 +66,7 @@ namespace ______Scripts______.VehicleScript
 
         void SpawnEneym()
         {
-            if (_gameManager.EnemyCount <= 20)
+            if (_gameManager.EnemyCount <= SpanwLimitCount)
             {
                 _audioSource.PlayOneShot(_audioSource.clip);
                 int spawCountPearly = Random.Range(1, 7);

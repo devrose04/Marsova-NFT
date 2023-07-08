@@ -33,7 +33,7 @@ namespace ______Scripts______.PlayerScripts.Player
         [SerializeField] private GameObject PlayerLaserBullet;
 
         private float LaserTimer = 1; // todo:  Laserle alakalı bir Script aç ve Oraya Mermi miktarını vb. şeyleride yaz 
-
+        int _count = 0;
         private GameObject GameManager;
         private GameObject Player;
         private Rigidbody2D RB2;
@@ -45,9 +45,15 @@ namespace ______Scripts______.PlayerScripts.Player
         private float speed;
         private float speedAmount;
 
-        private AudioSource _audioSource;
+        [SerializeField] private AudioSource _audioSourceStartShip;
+        [SerializeField] private AudioClip _audioClipLaser;
+
+        [SerializeField] private AudioSource _audioSourceMove;
         [SerializeField] private AudioClip _audioClipMove1;
         [SerializeField] private AudioClip _audioClipMove2;
+
+        [SerializeField] private AudioSource _audioSourceJetPack;
+        [SerializeField] private AudioClip _audioClipJetPack;
 
         private void Awake()
         {
@@ -57,7 +63,6 @@ namespace ______Scripts______.PlayerScripts.Player
             RB2 = Player.GetComponent<Rigidbody2D>();
             GameManager = GameObject.Find("GameManager");
             ShotPoint = StarShip.transform.Find("shotPoint");
-            _audioSource = Player.GetComponent<AudioSource>();
             _enemyDetector = Drone.GetComponent<EnemyDetector>();
             _droneScript = Drone.GetComponent<DroneScript>();
             __SwordScript = Player.GetComponent<SwordScript>();
@@ -78,9 +83,6 @@ namespace ______Scripts______.PlayerScripts.Player
 
         public void MYFixedUpdate() // GameManagerdan çagırıyorum
         {
-            __SkillsData.SkilsCoolDownTime(); // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
-
-
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __PlayerScript.isHeDead == true) // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
                 return;
 
@@ -108,17 +110,30 @@ namespace ______Scripts______.PlayerScripts.Player
             if (Input.GetKey(KeyCode.W)) // JetPack
             {
                 __SkillsScript.JetPack();
+                if (_count == 0 && __SkillsScript.JetPackFuel >= 0.2f)
+                {
+                    _count = 1;
+                    _audioSourceJetPack.PlayOneShot(_audioClipJetPack);
+                }
+                else if (__SkillsScript.JetPackFuel < 0.2f)
+                    _audioSourceJetPack.Stop();
+            }
+            else
+            {
+                _count = 0;
+                _audioSourceJetPack.Stop();
             }
         }
 
         public void MYUpdate() // GameManagerdan çagırıyorum
         {
+            __SkillsData.SkilsCoolDownTime(); // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
+
             _startShipAttack.MYUpdate();
             _droneScript.MYUpdate();
             _enemyDetector.MYUpdate();
             _playerAnimations.GroundSlameAnim(RB2);
             _playerAnimations.idleAnim(RB2);
-            _playerAnimations.JetPackAnimation(RB2, __SwordScript.isAttack);
 
             if (RB2.gravityScale == 10 || __PlayerScript.isHeDead == true) // ArmorFrame kullanıldıgında, hava da iken çalışacak.  Bu havadayekn vuruş yapmasın diye koydum
                 return; // bunun altındaki kodları etkiler.
@@ -141,13 +156,18 @@ namespace ______Scripts______.PlayerScripts.Player
             if (Input.GetKeyDown(KeyCode.X)) // ArmorFrame Skill
             {
                 if (RB2.gravityScale == 1) // havada ise çalışsın
+                {
                     __SkillsManager.ArmorFrame_manager();
+                    _audioSourceJetPack.Stop();
+                }
             }
-
 
             LaserTimer += Time.deltaTime;
             if (Input.GetMouseButton(0) && LaserTimer > 0.2f && _startShipAttack.SpaceShipAttackIsActive) // Laser silahı
             {
+                // _audioSourceStartShip.PlayDelayed(0.5f);
+                _audioSourceStartShip.PlayOneShot(_audioClipLaser);
+
                 GameObject Laser = Instantiate(PlayerLaserBullet, ShotPoint.position, transform.rotation);
                 Destroy(Laser, 5f);
 
@@ -175,6 +195,8 @@ namespace ______Scripts______.PlayerScripts.Player
             {
                 __SkillsManager.DodgeSkils_e_manager();
             }
+
+            _playerAnimations.JetPackAnimation(RB2, __SwordScript.isAttack);
         }
 
         void Walking()
@@ -225,11 +247,25 @@ namespace ______Scripts______.PlayerScripts.Player
         //     _audioSource.PlayOneShot(_audioClipMove2);
         //     yield return Wait;
         // }
+
+        int count = 1;
+
         void _WalkSound()
         {
-            if (_audioSource.isPlaying == false)
+            _audioSourceMove.volume = 0.5f;
+            _audioSourceMove.pitch = 3f;
+            if (_audioSourceMove.isPlaying == false)
             {
-                // _audioSource.isPlaying
+                if (count == 1)
+                {
+                    _audioSourceMove.PlayOneShot(_audioClipMove1);
+                    count = 0;
+                }
+                else if (count == 0)
+                {
+                    _audioSourceMove.PlayOneShot(_audioClipMove2);
+                    count = 1;
+                }
             }
         }
     }

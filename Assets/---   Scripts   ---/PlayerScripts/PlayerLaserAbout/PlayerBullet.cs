@@ -18,6 +18,10 @@ namespace PlayerScripts.PlayerLaserAbout
         private Calculations _calculations;
         [SerializeField] private ParticleSystem LaserHitEffeckt;
 
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipTocuhEnemy;
+        [SerializeField] private AudioClip _audioClipTocuhShield;
+
         private float damages;
 
         private void Awake()
@@ -29,6 +33,7 @@ namespace PlayerScripts.PlayerLaserAbout
             damages = Random.Range(8f, 12f);
             _calculations = Player.GetComponent<Calculations>();
 
+            _audioSource = Player.GetComponent<AudioSource>();
             ShotPoint = StarShip.transform.Find("shotPoint");
 
             FiredBullet();
@@ -36,11 +41,13 @@ namespace PlayerScripts.PlayerLaserAbout
 
         public void BulletIsTouchTheEnemy(GameObject enemy)
         {
+            _audioSource.PlayOneShot(_audioClipTocuhEnemy);
+
             Collider2D _enemy = enemy.GetComponent<Collider2D>();
             var result = _calculations.CalculationsAboutToObject(this.gameObject, _enemy); // Enemy'lerin vuruş yaptıgı yerin verileri hesaplanır.
             Vector2 directionToEnemy = result.Item1;
 
-            ParticleSystem CreatedHitEffect = Instantiate(LaserHitEffeckt, _enemy.transform.position,Quaternion.identity); // hitEffeckti oluşturduk
+            ParticleSystem CreatedHitEffect = Instantiate(LaserHitEffeckt, _enemy.transform.position, Quaternion.identity); // hitEffeckti oluşturduk
             Destroy(CreatedHitEffect.gameObject, 5f);
 
             __EnemyScript = _enemy.GetComponent<EnemyScript>();
@@ -66,6 +73,8 @@ namespace PlayerScripts.PlayerLaserAbout
 
             if (other.gameObject.CompareTag("Shield"))
             {
+                _audioSource.PlayOneShot(_audioClipTocuhShield);
+
                 SuportShield Script = other.GetComponent<SuportShield>();
                 Script.TakeDamagesShield(damages);
                 Script.CreateHitEffect(Bullet);
