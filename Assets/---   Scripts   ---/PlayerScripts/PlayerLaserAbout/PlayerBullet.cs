@@ -1,10 +1,9 @@
 using ______Scripts______.EnemyScripts.Enemy.Enemy;
-using EnemyScripts.Enemy;
 using EnemyScripts.Enemy.SuportSkills_Ahtapot;
 using ObjectsScripts;
 using UnityEngine;
 
-namespace PlayerScripts.PlayerLaserAbout
+namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
 {
     public class PlayerBullet : MonoBehaviour
     {
@@ -73,7 +72,9 @@ namespace PlayerScripts.PlayerLaserAbout
 
             if (other.gameObject.CompareTag("Shield"))
             {
+                _audioSource.volume = 0.2f;
                 _audioSource.PlayOneShot(_audioClipTocuhShield);
+                _audioSource.volume = 1f;
 
                 SuportShield Script = other.GetComponent<SuportShield>();
                 Script.TakeDamagesShield(damages);

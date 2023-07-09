@@ -10,7 +10,7 @@ namespace ______Scripts______.PlayerScripts.SwordScripts
         private SwordScript __SwordScript;
         private PlayerAnimations _playerAnimations;
 
-        private AudioSource _audioSource;
+        [SerializeField] private AudioSource _audioSource;
 
         [SerializeField] private AudioClip _audioClipAttack1;
         [SerializeField] private AudioClip _audioClipAttack2;
@@ -23,7 +23,6 @@ namespace ______Scripts______.PlayerScripts.SwordScripts
             Player = this.gameObject;
             __SwordScript = Player.GetComponent<SwordScript>();
             _playerAnimations = Player.GetComponent<PlayerAnimations>();
-            _audioSource = Player.GetComponent<AudioSource>();
         }
 
         public void SwordAttack1()

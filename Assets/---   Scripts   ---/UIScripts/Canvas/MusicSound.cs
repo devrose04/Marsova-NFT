@@ -15,10 +15,12 @@ namespace ______Scripts______.UIScripts.Canvas
         [SerializeField] private GameObject MainMenu;
         [SerializeField] private GameObject GameOver;
         [SerializeField] private GameObject DifficultyMenu;
+        [SerializeField] private GameObject OptinsMenuSetting;
+        [SerializeField] private GameObject OptinsMenuMain;
 
         public void MyUpdate()
         {
-            if (SettingMenu.activeSelf == false && MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false)
+            if (SettingMenu.activeSelf == false && MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && OptinsMenuMain.activeSelf == false && OptinsMenuSetting.activeSelf == false)
             {
                 if (_audioSource2.isPlaying == false)
                 {

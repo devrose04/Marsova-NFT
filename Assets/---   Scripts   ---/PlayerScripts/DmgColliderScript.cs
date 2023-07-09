@@ -25,7 +25,7 @@ namespace ______Scripts______.PlayerScripts
         private float health;
         private float canUseDashHitTimer;
 
-        private AudioSource _audioSource;
+        [SerializeField] private AudioSource _audioSource;
 
         [SerializeField] private AudioClip _audioClip_1;
         [SerializeField] private AudioClip _audioClip_2;
@@ -36,7 +36,6 @@ namespace ______Scripts______.PlayerScripts
         {
             Player = this.gameObject;
             GameManager = GameObject.Find("GameManager");
-            _audioSource = Player.GetComponent<AudioSource>();
             __Calculations = Player.GetComponent<Calculations>();
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
             __DashAttackDetails = GameManager.GetComponent<DashAttackDetails>();
