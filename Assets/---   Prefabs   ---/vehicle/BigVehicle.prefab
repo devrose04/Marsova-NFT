@@ -187,6 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82d810f98287457cbb6ad688142fdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 4887164577704686395, guid: e4e663a29e55c4dffa3f8fedb823a0bc, type: 3}
+  _audioClipSpawn: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
   SpawnPosition: {fileID: 6614454272409713347}
   Bee: {fileID: 1987624939279196154, guid: f0c4788cd0e40406f8358dfc6b5446f4, type: 3}
   White: {fileID: 6491440176511909091, guid: ca64d1762daf545f38c26e148c0247ff, type: 3}

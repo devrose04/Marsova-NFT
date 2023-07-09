@@ -9,7 +9,9 @@ namespace ______Scripts______.VehicleScript
     {
         private GameObject GameManager;
         private GameManager _gameManager;
-        private AudioSource _audioSource;
+
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipSpawn;
 
         [SerializeField] private Transform SpawnPosition;
 
@@ -21,12 +23,12 @@ namespace ______Scripts______.VehicleScript
         [SerializeField] private GameObject Smale;
 
         private int SpanwLimitCount;
+
         private void Awake()
         {
             GameManager = GameObject.Find("GameManager");
             SpanwLimitCount = GameManager.GetComponent<GameManager>()._SpanwLimitCount;
             _gameManager = GameManager.GetComponent<GameManager>();
-            _audioSource = this.gameObject.GetComponent<AudioSource>();
         }
 
         public IEnumerator SpawnEnemyForBigVehicle()
@@ -68,7 +70,7 @@ namespace ______Scripts______.VehicleScript
         {
             if (_gameManager.EnemyCount <= SpanwLimitCount)
             {
-                _audioSource.PlayOneShot(_audioSource.clip);
+                _audioSource.PlayOneShot(_audioClipSpawn);
                 int spawCountPearly = Random.Range(1, 7);
 
                 switch (spawCountPearly)

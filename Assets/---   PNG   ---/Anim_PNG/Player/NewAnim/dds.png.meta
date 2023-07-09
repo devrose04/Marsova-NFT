@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 951680c1c83a6475182c75952d79b889
+guid: 7970f79e228f347e8bb3bfce2c054dd7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,94 +105,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_slam_edit-Sheet_0
+      name: dds_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 1
-        width: 23
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9cba7b75dddd4fdbaa222c900634a8a
-      internalID: -1126867082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_edit-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 2
-        width: 24
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14128b48c04a549d885b7669a9d81cd4
-      internalID: 1098976027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_edit-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 4
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5228e9241efc48448c49f4acd323aa5
-      internalID: -85853259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_edit-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 317
-        y: 0
-        width: 39
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87d72bc2899914b1b95e8a5d33868a7f
-      internalID: 281090796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_edit-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 412
+        x: 22
         y: 0
         width: 39
         height: 29
@@ -203,17 +119,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdd63c075c9994d328dc05ea5cb38f8b
-      internalID: -290679255
+      spriteID: 5fb564f1d6e7745d7a8c59e2b149d163
+      internalID: 1785088340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_edit-Sheet_5
+      name: dds_1
       rect:
         serializedVersion: 2
-        x: 508
+        x: 118
         y: 0
         width: 39
         height: 25
@@ -224,17 +140,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0742c0c95d24367a285452ab674082
-      internalID: 486177219
+      spriteID: 197230d42376248e4ada95f73dcfdbc9
+      internalID: 501595400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_edit-Sheet_6
+      name: dds_2
       rect:
         serializedVersion: 2
-        x: 611
+        x: 221
         y: 0
         width: 32
         height: 25
@@ -245,17 +161,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b241bd9ff0b5490ebfddf3f665f6b73
-      internalID: -1912427342
+      spriteID: 69e4dd7449f3e48a6b519abaac5ea058
+      internalID: -1610858386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_edit-Sheet_7
+      name: dds_3
       rect:
         serializedVersion: 2
-        x: 710
+        x: 320
         y: 0
         width: 29
         height: 29
@@ -266,17 +182,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 452144bd41e354ee2acffea73ce0dfa1
-      internalID: -423450423
+      spriteID: 2e22ef76017c84f90908427f678dacc3
+      internalID: 658004540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_edit-Sheet_8
+      name: dds_4
       rect:
         serializedVersion: 2
-        x: 806
+        x: 416
         y: 0
         width: 29
         height: 36
@@ -287,17 +203,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b024e47b6d51e48ec9102aa81e77f199
-      internalID: -1532459484
+      spriteID: 514d9569ffc3a425682cf4b7074167a7
+      internalID: -146543456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_edit-Sheet_9
+      name: dds_5
       rect:
         serializedVersion: 2
-        x: 901
+        x: 511
         y: 0
         width: 30
         height: 42
@@ -308,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa058a701344a4775b8f392ddb30981e
-      internalID: 793404391
+      spriteID: 5e47935eaeecf447e91fa41ac91f2274
+      internalID: -1968393727
       vertices: []
       indices: 
       edges: []
@@ -325,16 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ground_slam_edit-Sheet_0: -1126867082
-      ground_slam_edit-Sheet_1: 1098976027
-      ground_slam_edit-Sheet_2: -85853259
-      ground_slam_edit-Sheet_3: 281090796
-      ground_slam_edit-Sheet_4: -290679255
-      ground_slam_edit-Sheet_5: 486177219
-      ground_slam_edit-Sheet_6: -1912427342
-      ground_slam_edit-Sheet_7: -423450423
-      ground_slam_edit-Sheet_8: -1532459484
-      ground_slam_edit-Sheet_9: 793404391
+      dds_0: 1785088340
+      dds_1: 501595400
+      dds_2: -1610858386
+      dds_3: 658004540
+      dds_4: -146543456
+      dds_5: -1968393727
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
