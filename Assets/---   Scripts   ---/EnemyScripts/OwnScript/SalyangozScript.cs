@@ -22,6 +22,8 @@ namespace EnemyScripts.OwnScript
         private GameObject Player;
         private HealthBarScript _healthBarScript;
 
+        [SerializeField] private GameObject HealSound;
+
         private void Awake()
         {
             Player = GameObject.Find("Player");
@@ -45,6 +47,8 @@ namespace EnemyScripts.OwnScript
 
         public void TakeHeal()
         {
+            GameObject _gameObject = Instantiate(HealSound, this.transform.position, Quaternion.identity);
+            Destroy(_gameObject, 3f);
             PlayerScript _script = Player.GetComponent<PlayerScript>();
             _script.health += 35;
             _healthBarScript.ChangeHealthBar();

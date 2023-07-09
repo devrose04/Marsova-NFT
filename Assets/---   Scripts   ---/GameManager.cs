@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using ______Scripts______.PlayerScripts.Player;
+using ______Scripts______.UIScripts.Canvas;
 using ______Scripts______.UIScripts.Canvas.Player;
 using EnemyScripts.AIScripts;
 using PlayerScripts.Player;
@@ -24,6 +25,7 @@ namespace ______Scripts______
         private PlayerScript _playerScript;
         private JetPackBar _jetPackBar;
 
+        [SerializeField] private MusicSound _musicSound;
         [SerializeField] private GameObject _SettingButton;
 
         [SerializeField] private GameObject MainMenu;
@@ -32,6 +34,8 @@ namespace ______Scripts______
 
         // [SerializeField] private GameObject Options; // todo: bunları yapınca ayarla
         // [SerializeField] private GameObject HowToPlay;
+
+        [SerializeField] public int _SpanwLimitCount;
 
         private GameObject Player;
         private GameObject ButtonManager;
@@ -72,6 +76,7 @@ namespace ______Scripts______
         {
             EnemyCount = enemyList.Count;
 
+            _musicSound.MyUpdate();
             SettingButton();
             __PlayerController.MYUpdate();
             _jetPackBar.JetPackBarUpdate();

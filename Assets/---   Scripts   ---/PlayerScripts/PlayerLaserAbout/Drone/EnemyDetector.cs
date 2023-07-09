@@ -19,6 +19,9 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
 
         [SerializeField] private GameObject LookAtThis;
 
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipEllectric;
+
         private Collider2D[] hitColliders;
 
         public bool DroneIsReadyToAttack = false;
@@ -34,6 +37,7 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
         {
             _droneScript = this.gameObject.GetComponent<DroneScript>();
             Player = GameObject.Find("Player");
+            _audioSource = this.gameObject.GetComponent<AudioSource>();
         }
 
         public void MYUpdate()
@@ -70,12 +74,13 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
                 Destroy(_smaleElectric.gameObject, 3f);
 
                 enemy.GetComponent<EnemyScript>().TakeDamages(5, new Vector2(0, 0), false);
+            }
 
-                if (enemy != null)
-                {
-                    ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
-                    Destroy(_bigElectric.gameObject, 3f);
-                }
+            if (detectedEnemies != null)
+            {
+                _audioSource.PlayOneShot(_audioClipEllectric);
+                ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
+                Destroy(_bigElectric.gameObject, 3f);
             }
         }
 

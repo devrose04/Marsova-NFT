@@ -1,3 +1,4 @@
+using System.Collections;
 using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone;
 using ______Scripts______.PlayerScripts.SwordScripts;
@@ -8,6 +9,7 @@ using PlayerScripts.PlayerLaserAbout.Drone;
 using PlayerScripts.SwordScripts;
 using UIScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable RedundantCheckBeforeAssignment
@@ -31,7 +33,7 @@ namespace ______Scripts______.PlayerScripts.Player
         [SerializeField] private GameObject PlayerLaserBullet;
 
         private float LaserTimer = 1; // todo:  Laserle alakalı bir Script aç ve Oraya Mermi miktarını vb. şeyleride yaz 
-
+        int _count = 0;
         private GameObject GameManager;
         private GameObject Player;
         private Rigidbody2D RB2;
@@ -42,6 +44,16 @@ namespace ______Scripts______.PlayerScripts.Player
         private float speedSabit;
         private float speed;
         private float speedAmount;
+
+        [SerializeField] private AudioSource _audioSourceStartShip;
+        [SerializeField] private AudioClip _audioClipLaser;
+
+        [SerializeField] private AudioSource _audioSourceMove;
+        [SerializeField] private AudioClip _audioClipMove1;
+        [SerializeField] private AudioClip _audioClipMove2;
+
+        [SerializeField] private AudioSource _audioSourceJetPack;
+        [SerializeField] private AudioClip _audioClipJetPack;
 
         private void Awake()
         {
@@ -71,9 +83,6 @@ namespace ______Scripts______.PlayerScripts.Player
 
         public void MYFixedUpdate() // GameManagerdan çagırıyorum
         {
-            __SkillsData.SkilsCoolDownTime(); // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
-
-
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __PlayerScript.isHeDead == true) // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
                 return;
 
@@ -101,17 +110,30 @@ namespace ______Scripts______.PlayerScripts.Player
             if (Input.GetKey(KeyCode.W)) // JetPack
             {
                 __SkillsScript.JetPack();
+                if (_count == 0 && __SkillsScript.JetPackFuel >= 0.2f)
+                {
+                    _count = 1;
+                    _audioSourceJetPack.PlayOneShot(_audioClipJetPack);
+                }
+                else if (__SkillsScript.JetPackFuel < 0.2f)
+                    _audioSourceJetPack.Stop();
+            }
+            else
+            {
+                _count = 0;
+                _audioSourceJetPack.Stop();
             }
         }
 
         public void MYUpdate() // GameManagerdan çagırıyorum
         {
+            __SkillsData.SkilsCoolDownTime(); // Skillerin kullanılabilir hale geçip geçmedigin kontrol eder.     
+
             _startShipAttack.MYUpdate();
             _droneScript.MYUpdate();
             _enemyDetector.MYUpdate();
             _playerAnimations.GroundSlameAnim(RB2);
             _playerAnimations.idleAnim(RB2);
-            _playerAnimations.JetPackAnimation(RB2, __SwordScript.isAttack);
 
             if (RB2.gravityScale == 10 || __PlayerScript.isHeDead == true) // ArmorFrame kullanıldıgında, hava da iken çalışacak.  Bu havadayekn vuruş yapmasın diye koydum
                 return; // bunun altındaki kodları etkiler.
@@ -134,13 +156,18 @@ namespace ______Scripts______.PlayerScripts.Player
             if (Input.GetKeyDown(KeyCode.X)) // ArmorFrame Skill
             {
                 if (RB2.gravityScale == 1) // havada ise çalışsın
+                {
                     __SkillsManager.ArmorFrame_manager();
+                    _audioSourceJetPack.Stop();
+                }
             }
-
 
             LaserTimer += Time.deltaTime;
             if (Input.GetMouseButton(0) && LaserTimer > 0.2f && _startShipAttack.SpaceShipAttackIsActive) // Laser silahı
             {
+                // _audioSourceStartShip.PlayDelayed(0.5f);
+                _audioSourceStartShip.PlayOneShot(_audioClipLaser);
+
                 GameObject Laser = Instantiate(PlayerLaserBullet, ShotPoint.position, transform.rotation);
                 Destroy(Laser, 5f);
 
@@ -168,6 +195,8 @@ namespace ______Scripts______.PlayerScripts.Player
             {
                 __SkillsManager.DodgeSkils_e_manager();
             }
+
+            _playerAnimations.JetPackAnimation(RB2, __SwordScript.isAttack);
         }
 
         void Walking()
@@ -179,7 +208,11 @@ namespace ______Scripts______.PlayerScripts.Player
             RB2.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speedAmount, RB2.velocity.y);
 
             if (RB2.gravityScale == 0) // sadece yerde oldugunda çalışsın
+            {
+                _WalkSound();
+                // StartCoroutine("WalkSound");
                 _playerAnimations.ChangeAnimationState("Run");
+            }
 
             if (Input.GetAxisRaw("Horizontal") == -1)
                 Player.transform.rotation = new Quaternion(0, 180, 0, 0);
@@ -203,6 +236,37 @@ namespace ______Scripts______.PlayerScripts.Player
         void Jump()
         {
             RB2.velocity = new Vector2(RB2.velocity.x, 5);
+        }
+
+        // IEnumerator WalkSound()
+        // {
+        //     WaitForSeconds Wait = new WaitForSeconds(0.15f);
+        //
+        //     _audioSource.PlayOneShot(_audioClipMove1);
+        //     yield return Wait;
+        //     _audioSource.PlayOneShot(_audioClipMove2);
+        //     yield return Wait;
+        // }
+
+        int count = 1;
+
+        void _WalkSound()
+        {
+            _audioSourceMove.volume = 0.5f;
+            _audioSourceMove.pitch = 3f;
+            if (_audioSourceMove.isPlaying == false)
+            {
+                if (count == 1)
+                {
+                    _audioSourceMove.PlayOneShot(_audioClipMove1);
+                    count = 0;
+                }
+                else if (count == 0)
+                {
+                    _audioSourceMove.PlayOneShot(_audioClipMove2);
+                    count = 1;
+                }
+            }
         }
     }
 

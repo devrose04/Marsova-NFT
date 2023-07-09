@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bafb030480924a299e90f83c5df316e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealSound: {fileID: 977876722516970291, guid: c0b8640a7e8d443af8ce3460131b00c2, type: 3}
 --- !u!114 &5439480361746743347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +161,8 @@ MonoBehaviour:
   DieEffect: {fileID: 0}
   SalyangozEffect: {fileID: 19800006, guid: 4943213b934e3454a83ed6048cb54e56, type: 3}
   effectCreationTimer: 0
+  _audioSource: {fileID: 4622123205694052264, guid: 95aa5ed57b7dd42b2ba31f1117f16a7c, type: 3}
+  _audioClipDeadth: {fileID: 0}
   HitToPlayerTimer: 10
   canUseDashHitTimer: 10
 --- !u!114 &5439480361746743346
@@ -249,6 +252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyBullet: {fileID: 8909499812899439524, guid: 138b51b8ba90f4894a11da96a0a217bf, type: 3}
   shotPoint: {fileID: 0}
+  _audioSource: {fileID: 0}
+  _audioClipFiredBullet: {fileID: 0}
 --- !u!114 &8622643392706713234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +357,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7226852040587540652, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226852040587540652, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226852040587540652, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -413,11 +426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7974973649256022126, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 4
+      value: 2.3333
       objectReference: {fileID: 0}
     - target: {fileID: 7974973649256022126, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 7974973649256022126, guid: 7c98ddcd53e154483b4218dd27c9edea, type: 3}
       propertyPath: m_LocalPosition.x

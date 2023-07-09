@@ -88,15 +88,9 @@ namespace ______Scripts______.PlayerScripts.Player
         public void JetPackAnimation(Rigidbody2D RB2, bool isAttacking)
         {
             if (RB2.gravityScale == 1 && isAttacking == false && _skillsScript.JetPackFuel <= 0.2f)
-            {
-                // print("düşüyor");
-                // düşüyor
-            }
+                ChangeAnimationState("DropFly");
             else if (RB2.gravityScale == 1 && isAttacking == false && _skillsScript.JetPackFuel > 0.2f)
-            {
-                // print("uçuyor");
-                // uçuyor
-            }
+                ChangeAnimationState("Fly");
         }
     }
 }

@@ -20,6 +20,9 @@ namespace EnemyScripts.Enemy
 
         [SerializeField] private GameObject shotPoint;
 
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipFiredBullet;
+
         private void Awake()
         {
             Enemy = this.gameObject;
@@ -41,6 +44,8 @@ namespace EnemyScripts.Enemy
 
             if (enemy != null)
             {
+                _audioSource.PlayOneShot(_audioClipFiredBullet);
+
                 EnemyScript _enemyScript = enemy.GetComponent<EnemyScript>();
 
                 ParticleSystem hitEffect = _enemyScript.HitEffect; // Enemy'nin vuruş Efektini burdan alıyoruz. 
