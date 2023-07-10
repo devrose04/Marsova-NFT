@@ -18,7 +18,7 @@ namespace ______Scripts______.VehicleScript
             thisVehicle = this.gameObject;
             _spawnEnemy = thisVehicle.GetComponent<SpawnEnemy>();
             RB2 = thisVehicle.GetComponent<Rigidbody2D>();
-            Spawn_x = Random.Range(-60f, -10f);
+            Spawn_x = Random.Range(-77f, 20f);
             Spawn_y = Random.Range(32f, 38f);
             thisVehicle.transform.position = new Vector3(Spawn_x, Spawn_y);
             StartCoroutine("BigVehicleFonks");
@@ -50,7 +50,7 @@ namespace ______Scripts______.VehicleScript
 
         void MoveUp()
         {
-            RB2.velocity = new Vector2(2f, 2.8f);
+            RB2.velocity = new Vector2(2f, 3.6f);
         }
     }
 }

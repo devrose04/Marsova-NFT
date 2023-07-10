@@ -44,7 +44,7 @@
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportGivesArmor.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenOptionsMain.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/MusicSound.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicSound.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/ICustomScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/MeteorMove.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/VehicleSpawner.cs" />
@@ -52,6 +52,7 @@
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerController.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/PlayerScore.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails/DashAttackDetails.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicDataManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/ObjectsScripts/ObjectColliderScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/NearEnemyAttackScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/DroneBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/SalyangozScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/WhiteEnemyCollider.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DifficultyButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsManager.cs" />
@@ -79,7 +81,7 @@
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/HealBullet.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShipBar.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StarShipBar.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/JetPackBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/GiantAnimations.cs" />
@@ -113,7 +115,7 @@
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MusicBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/RangeEnemyAttackScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyWeaponScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StartShipBulletAmount.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StartShipBulletAmount.cs" />
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/HealtBarBugFixed.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerScript.cs" />
@@ -129,6 +131,7 @@
      <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/WhiteScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
@@ -256,6 +259,7 @@
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Explosions" />
      <Folder Include="Assets/---   All Effects   ---/AssetEfectlerim/Kullandıklarım" />
      <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Gui" />
+     <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LookUp" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Run" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbLeft" />
@@ -424,6 +428,7 @@
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone" />
      <None Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Font/FontAttribution.txt" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills" />
+     <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound" />
      <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Water" />
      <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Procedural Ring.shader" />
      <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Art/Animations/UI" />

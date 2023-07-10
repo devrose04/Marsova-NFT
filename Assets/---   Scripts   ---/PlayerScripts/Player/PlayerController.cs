@@ -1,5 +1,6 @@
 using System.Collections;
 using ______Scripts______.GameManagerScript.SkillsScripts;
+using ______Scripts______.PlayerScripts.PlayerLaserAbout;
 using ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone;
 using ______Scripts______.PlayerScripts.SwordScripts;
 using GameManagerScript.SkillsScripts;

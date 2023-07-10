@@ -1,7 +1,7 @@
 using ______Scripts______.UIScripts.Canvas;
 using UnityEngine;
 
-namespace PlayerScripts.PlayerLaserAbout
+namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
 {
     public class StartShipAttack : MonoBehaviour
     {
@@ -58,12 +58,20 @@ namespace PlayerScripts.PlayerLaserAbout
             // RB2.velocity = new Vector2(playerTransform.position.x, playerTransform.position.y + 40);
         }
 
+
         void WalkingTheSky()
         {
             direction = (playerTransform.position - Ship.transform.position).normalized; // Player Enemy'nin hangi tarafında onu hesaplar
             distance = Vector2.Distance(playerTransform.position, transform.position); // Player ile Drone arasoındaki mesafeyi ölçer
 
-            RB2.AddForce(new Vector2(direction.x, RB2.velocity.y), ForceMode2D.Impulse); // direction.x 1 veya -1 dir
+            direction = direction.normalized;
+
+            float power = 1f;
+            if (RB2.velocity.magnitude < 50) // çok fazla dışa savrulmasını engelliyor
+                power = 0.2f;
+
+
+            RB2.AddForce(new Vector2(direction.x * power, RB2.velocity.y), ForceMode2D.Impulse); // direction.x 1 veya -1 dir
         }
 
         void ShipBulletReload()

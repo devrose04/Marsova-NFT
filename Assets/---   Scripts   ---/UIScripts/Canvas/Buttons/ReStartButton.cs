@@ -18,10 +18,14 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
         {
             _playerScript.totalScore = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            // ###
             GameOverimages.SetActive(false);
             SettingMenu.SetActive(false);
             MainMenu.SetActive(true);
             Time.timeScale = 1;
+            // ###     
+
             // Player.transform.position = new Vector3(10, 0, 0); // todo: ReStrart ve Start'ta hata var düzelt onu
         }
     }

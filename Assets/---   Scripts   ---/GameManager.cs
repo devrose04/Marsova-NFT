@@ -31,9 +31,11 @@ namespace ______Scripts______
         [SerializeField] private GameObject MainMenu;
         [SerializeField] private GameObject GameOver;
         [SerializeField] private GameObject DifficultyMenu;
+        [SerializeField] private GameObject OptionsMenu;
+        [SerializeField] private GameObject AudioSetting;
 
-        // [SerializeField] private GameObject Options; // todo: bunları yapınca ayarla
-        // [SerializeField] private GameObject HowToPlay;
+        [SerializeField] private GameObject AudioMain;
+        // [SerializeField] private GameObject HowToPlay; // todo: bunları yapınca ayarla
 
         [SerializeField] public int _SpanwLimitCount;
 
@@ -143,7 +145,7 @@ namespace ______Scripts______
 
         void SettingButton()
         {
-            if (MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false)
+            if (MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && AudioMain.activeSelf == false && AudioSetting.activeSelf == false && OptionsMenu.activeSelf == false)
                 _SettingButton.SetActive(true);
             else
                 _SettingButton.SetActive(false);

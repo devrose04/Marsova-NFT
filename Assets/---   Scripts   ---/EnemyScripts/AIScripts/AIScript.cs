@@ -38,7 +38,7 @@ namespace EnemyScripts.AIScripts
         private NearEnemyAttackScript _nearEnemyAttackScript; //Todo: Enemy objesi yakından vuruyorsa __RangeEnemyAttackScript'ini kaldır.
         private RangeEnemyAttackScript __RangeEnemyAttackScript; //Todo: Enemy objesi uzaktan vuruyorsa _nearEnemyAttackScript'ini kaldır.
         private HealtBarBugFixed _healtBarBugFixed;
-        
+
 
         private Vector2 direction; // bu Enemy'e karşılık Player hangi yönde onu bulur.   -1 ise Enemy Player'ın sağında
         public Vector2 startingPosition; // Başlangıç pozisyonu
@@ -163,6 +163,7 @@ namespace EnemyScripts.AIScripts
             _animationsController.SalyangozTurtleActive(Enemy);
             _animationsController.AnimationSpeedUp(Enemy, isEnemySeePlayer);
             _animationsController.EnemyAnimations(Enemy);
+            BugGiant(Enemy);
         }
 
         void NearAttackToPlayer()
@@ -177,6 +178,20 @@ namespace EnemyScripts.AIScripts
 
             if (!isEnemyAttackToPlayer)
                 __RangeEnemyAttackScript.StopAndAttack(Enemy);
+        }
+
+        public void BugGiant(GameObject _gameObject) // en sol ve en saga gidince blockalrın içinden geçiyor, onun için yazdım
+        {
+            if (_gameObject.CompareTag("Giant"))
+            {
+                if (gameObject.transform.position.x <= -42)
+                    gameObject.transform.position = new Vector3(-32f, -2.82f);
+                else if (gameObject.transform.position.x >= 47)
+                {
+                    gameObject.transform.position = new Vector3(32f, -2.82f);
+                    print("çalışıyor");
+                }
+            }
         }
     }
 }
