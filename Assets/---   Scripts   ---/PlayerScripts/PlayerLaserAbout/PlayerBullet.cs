@@ -72,9 +72,10 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
 
             if (other.gameObject.CompareTag("Shield"))
             {
-                _audioSource.volume = 0.2f;
+                float volume = _audioSource.volume;
+                _audioSource.volume = volume/5f;
                 _audioSource.PlayOneShot(_audioClipTocuhShield);
-                _audioSource.volume = 1f;
+                _audioSource.volume = volume;
 
                 SuportShield Script = other.GetComponent<SuportShield>();
                 Script.TakeDamagesShield(damages);

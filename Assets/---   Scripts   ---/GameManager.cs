@@ -3,6 +3,7 @@ using System.Linq;
 using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using ______Scripts______.PlayerScripts.Player;
 using ______Scripts______.UIScripts.Canvas;
+using ______Scripts______.UIScripts.Canvas.Buttons;
 using ______Scripts______.UIScripts.Canvas.Player;
 using EnemyScripts.AIScripts;
 using PlayerScripts.Player;
@@ -36,6 +37,11 @@ namespace ______Scripts______
 
         [SerializeField] private GameObject AudioMain;
         // [SerializeField] private GameObject HowToPlay; // todo: bunları yapınca ayarla
+
+        [SerializeField] private CloseAudioMenuMain _closeAudioMenuMain;
+        [SerializeField] private CloseAudioMenuSetting _closeAudioMenuSetting;
+        [SerializeField] private CloseDifficultyMenu _closeDifficultyMenu;
+        [SerializeField] private CloseSettingMenu _closeSettingMenu;
 
         [SerializeField] public int _SpanwLimitCount;
 
@@ -149,6 +155,21 @@ namespace ______Scripts______
                 _SettingButton.SetActive(true);
             else
                 _SettingButton.SetActive(false);
+        }
+
+        public void EscExitMenu()
+        {
+            if (DifficultyMenu.activeSelf == true)
+                _closeDifficultyMenu.CloseMenu();
+
+            if (AudioMain.activeSelf == true)
+                _closeAudioMenuMain.CloseAudioMenu();
+
+            if (AudioSetting.activeSelf == true)
+                _closeAudioMenuSetting.CloseAudioMenu();
+
+            if (OptionsMenu.activeSelf == true)
+                _closeSettingMenu._ClosePauseMenu();
         }
     }
 }

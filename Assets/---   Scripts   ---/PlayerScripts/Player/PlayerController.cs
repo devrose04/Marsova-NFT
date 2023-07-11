@@ -3,6 +3,7 @@ using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.PlayerLaserAbout;
 using ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone;
 using ______Scripts______.PlayerScripts.SwordScripts;
+using ______Scripts______.UIScripts.Canvas.Buttons;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.Player;
 using PlayerScripts.PlayerLaserAbout;
@@ -30,12 +31,13 @@ namespace ______Scripts______.PlayerScripts.Player
         private DroneScript _droneScript;
         private EnemyDetector _enemyDetector;
         private PlayerAnimations _playerAnimations;
+        private GameManager _gameManagerScript;
 
         [SerializeField] private GameObject PlayerLaserBullet;
 
         private float LaserTimer = 1; // todo:  Laserle alakalı bir Script aç ve Oraya Mermi miktarını vb. şeyleride yaz 
         int _count = 0;
-        private GameObject GameManager;
+        private GameObject _GameManager;
         private GameObject Player;
         private Rigidbody2D RB2;
         private GameObject StarShip;
@@ -56,23 +58,26 @@ namespace ______Scripts______.PlayerScripts.Player
         [SerializeField] private AudioSource _audioSourceJetPack;
         [SerializeField] private AudioClip _audioClipJetPack;
 
+        [SerializeField] private StartButton _startButton;
+
         private void Awake()
         {
             Player = GameObject.Find("Player");
             StarShip = GameObject.Find("StarShip");
             Drone = GameObject.Find("Drone");
             RB2 = Player.GetComponent<Rigidbody2D>();
-            GameManager = GameObject.Find("GameManager");
+            _GameManager = GameObject.Find("GameManager");
             ShotPoint = StarShip.transform.Find("shotPoint");
+            _gameManagerScript = _GameManager.GetComponent<GameManager>();
             _enemyDetector = Drone.GetComponent<EnemyDetector>();
             _droneScript = Drone.GetComponent<DroneScript>();
             __SwordScript = Player.GetComponent<SwordScript>();
             __PlayerScript = Player.GetComponent<PlayerScript>();
             _playerAnimations = Player.GetComponent<PlayerAnimations>();
             _startShipAttack = StarShip.GetComponent<StartShipAttack>();
-            __SkillsScript = GameManager.GetComponent<SkillsScript>();
-            __SkillsData = GameManager.GetComponent<SkillsDataScript>();
-            __SkillsManager = GameManager.GetComponent<SkillsManager>();
+            __SkillsScript = _GameManager.GetComponent<SkillsScript>();
+            __SkillsData = _GameManager.GetComponent<SkillsDataScript>();
+            __SkillsManager = _GameManager.GetComponent<SkillsManager>();
             __isGroundTouch = Player.transform.Find("IsGrounTouch").GetComponent<IsGroundTouchScript>(); // IsGrounTouch sonunda d yok
         }
 
@@ -84,6 +89,12 @@ namespace ______Scripts______.PlayerScripts.Player
 
         public void MYFixedUpdate() // GameManagerdan çagırıyorum
         {
+            if (_startButton.isGameStart == false) // oyun başlamamışsa çalışacak.
+            {
+                _startButton.StopPlayer(); // oyun başlamadıgı için karakter gemini içinde sabit durması lazım
+                return;
+            }
+
             if (__PlayerScript.isKnockbacked || __SkillsScript.isMoveSkilsUse || __PlayerScript.isHeDead == true) // Bu kod Player hit yediginde ve dodge, tumble vs attıgında: hareket etmesini ve zıplamasını engeliyecektir.
                 return;
 
@@ -135,6 +146,14 @@ namespace ______Scripts______.PlayerScripts.Player
             _enemyDetector.MYUpdate();
             _playerAnimations.GroundSlameAnim(RB2);
             _playerAnimations.idleAnim(RB2);
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                _gameManagerScript.EscExitMenu();
+            }
+
+            if (_startButton.isGameStart == false) // oyun başlamamışsa çalışacak.
+                return;
 
             if (RB2.gravityScale == 10 || __PlayerScript.isHeDead == true) // ArmorFrame kullanıldıgında, hava da iken çalışacak.  Bu havadayekn vuruş yapmasın diye koydum
                 return; // bunun altındaki kodları etkiler.
@@ -253,7 +272,8 @@ namespace ______Scripts______.PlayerScripts.Player
 
         void _WalkSound()
         {
-            _audioSourceMove.volume = 0.5f;
+            float volume = _audioSourceMove.volume;
+            _audioSourceMove.volume = volume / 2f;
             _audioSourceMove.pitch = 3f;
             if (_audioSourceMove.isPlaying == false)
             {
@@ -268,6 +288,8 @@ namespace ______Scripts______.PlayerScripts.Player
                     count = 1;
                 }
             }
+
+            _audioSourceMove.volume = volume;
         }
     }
 

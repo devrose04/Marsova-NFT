@@ -58,20 +58,29 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
             // RB2.velocity = new Vector2(playerTransform.position.x, playerTransform.position.y + 40);
         }
 
+        int count = 0;
 
         void WalkingTheSky()
         {
-            direction = (playerTransform.position - Ship.transform.position).normalized; // Player Enemy'nin hangi tarafında onu hesaplar
+            direction = (playerTransform.position - Ship.transform.position); // Player Enemy'nin hangi tarafında onu hesaplar
             distance = Vector2.Distance(playerTransform.position, transform.position); // Player ile Drone arasoındaki mesafeyi ölçer
 
-            direction = direction.normalized;
+            // direction = direction.normalized;
 
-            float power = 1f;
-            if (RB2.velocity.magnitude < 50) // çok fazla dışa savrulmasını engelliyor
-                power = 0.2f;
+            // float power = 1f;
+            // if (RB2.velocity.magnitude < 50) // çok fazla dışa savrulmasını engelliyor
+            //     power = 0.2f;
 
 
-            RB2.AddForce(new Vector2(direction.x * power, RB2.velocity.y), ForceMode2D.Impulse); // direction.x 1 veya -1 dir
+            if ((Ship.transform.localPosition.x <= -40 || Ship.transform.localPosition.x >= 40) && count == 1)
+            {
+                RB2.velocity = new Vector2(0, 0);
+                count = 0;
+            }
+            else if ((Ship.transform.localPosition.x > -40 || Ship.transform.localPosition.x < 40) && count == 0)
+                count = 1;
+
+            RB2.AddForce(new Vector2(direction.x, RB2.velocity.y), ForceMode2D.Impulse); // direction.x 1 veya -1 dir
         }
 
         void ShipBulletReload()
