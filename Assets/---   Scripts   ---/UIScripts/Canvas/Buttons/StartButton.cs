@@ -77,7 +77,7 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
             Invoke("Explosion3", 13f);
 
             Invoke("CloseText1", 13.8f); // text
-            Invoke("OpenText2", 13.8f); //text
+            Invoke("OpenText2", 14.6f); //text
 
             Invoke("Explosion6", 13.8f);
 

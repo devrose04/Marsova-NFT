@@ -163,7 +163,7 @@ namespace EnemyScripts.AIScripts
             _animationsController.SalyangozTurtleActive(Enemy);
             _animationsController.AnimationSpeedUp(Enemy, isEnemySeePlayer);
             _animationsController.EnemyAnimations(Enemy);
-            BugGiant(Enemy);
+            BugFixed(Enemy);
         }
 
         void NearAttackToPlayer()
@@ -180,17 +180,14 @@ namespace EnemyScripts.AIScripts
                 __RangeEnemyAttackScript.StopAndAttack(Enemy);
         }
 
-        public void BugGiant(GameObject _gameObject) // en sol ve en saga gidince blockalrın içinden geçiyor, onun için yazdım
+        void BugFixed(GameObject _gameObject) // en sol ve en saga gidince blockalrın içinden geçiyor, onun için yazdım
         {
-            if (_gameObject.CompareTag("Giant"))
+            if (_gameObject.CompareTag("Giant") || _gameObject.CompareTag("Salyangoz"))
             {
                 if (gameObject.transform.position.x <= -42)
                     gameObject.transform.position = new Vector3(-32f, -2.82f);
                 else if (gameObject.transform.position.x >= 47)
-                {
                     gameObject.transform.position = new Vector3(32f, -2.82f);
-                    print("çalışıyor");
-                }
             }
         }
     }

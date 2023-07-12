@@ -25,6 +25,8 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
 
         private AudioSource _audioSource;
 
+        [SerializeField] private PlayerArmorFrameIcon _playerArmorFrameIcon;
+
         [SerializeField] private AudioClip _audioClipArmorFrame;
         [SerializeField] private AudioClip _audioClipDodgeDash;
         [SerializeField] private AudioClip _audioClipArmorUp;
@@ -134,6 +136,9 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
             isArmorFrameUse = true;
             isMoveSkilsUse = true;
 
+            _playerArmorFrameIcon.ArmorUppIconActive();
+            _playerArmorFrameIcon.JetPackOffIconActive();
+
             RB2.gravityScale = 10;
 
             float realArmor = __PlayerScript.armor; // gerçek Armor
@@ -157,7 +162,8 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
             yield return new WaitForSeconds(2f);
 
             RB2.gravityScale = 0;
-            isArmorFrameUse = false; // karakter hareket edebilir artık.
+            isArmorFrameUse = false; // karakter JetPack kullanabilir artık.
+            _playerArmorFrameIcon.JetPackOffIconDeActive();
             __PlayerScript.armor = armorFrameArmor - 10f;
             __PlayerScript.speed = realSpeed * (1 - 0.3f);
             yield return new WaitForSeconds(1.5f);
@@ -166,6 +172,7 @@ namespace ______Scripts______.GameManagerScript.SkillsScripts
             __PlayerScript.speed = realSpeed * (1 - 0.1f);
             yield return new WaitForSeconds(1f);
 
+            _playerArmorFrameIcon.ArmorUppIconDeAcive();
             __PlayerScript.armor = realArmor;
             __PlayerScript.speed = realSpeed;
         }

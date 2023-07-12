@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{aafa9df9-dc6a-0e9c-f2ac-860575a4a990}</ProjectGuid>
+    <ProjectGuid>{939c7638-d1c8-6019-851e-2da591a5d85f}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>CFXREditor</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,7 +25,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\CFXREditor\</OutputPath>
+    <OutputPath>Temp\Bin\Debug\Assembly-CSharp-Editor\</OutputPath>
     <DefineConstants>UNITY_2021_3_24;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,12 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_BuildShaderPreprocessor.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_Styles.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_MaterialInspector.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_ExpressionParser.cs" />
-     <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor" />
-     <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR Editor.asmdef" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Installer/Editor/MetaMaskInstallerWindow.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Installer/Editor/VspAttribution.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Installer/Editor/MetaMaskUnityAnalytics.cs" />
+     <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/1.2.175" />
+     <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Installer/Editor" />
+     <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor" />
+     <None Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.175_manifest.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -743,20 +744,224 @@
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.TestRunner">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.TestRunner">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.InternalAPIEngineBridge.001">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.PixelPerfect">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     </Reference>
+     <Reference Include="PsdPlugin">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.IK.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Path.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.IK.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Common.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Animation.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Psdimporter.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Animation.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.PixelPerfect.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Common.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.SpriteShape.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.SpriteShape.Runtime">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{a5083eee-c7e5-fb56-5dc3-2f0d4dc7ec63}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{85445c75-6e4b-38c3-bde7-4e2423ca8dbe}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{aafa9df9-dc6a-0e9c-f2ac-860575a4a990}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MetaMask.SocketIOUnity.csproj">
+      <Project>{f1101ad2-44c9-a870-1c49-30a0464b4674}</Project>
+      <Name>MetaMask.SocketIOUnity</Name>
+    </ProjectReference>
+    <ProjectReference Include="MetaMaskUnity.Runtime.csproj">
+      <Project>{115b9c89-7dea-7606-0b27-fb387c2ec077}</Project>
+      <Name>MetaMaskUnity.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{a4f114d8-da33-a828-7788-cfa1f58ec168}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{c2928448-d8c3-6755-1096-ce1045cd6ac9}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="MetaMask.NativeWebSocket.csproj">
+      <Project>{7d514a92-9f8a-8324-b724-4cd05a48f0f0}</Project>
+      <Name>MetaMask.NativeWebSocket</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{1d513ffe-afd2-6d61-3ecc-8c4de2a5b8cb}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{d8166b55-34d3-1148-7eae-d01da71d4f3a}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="MetaMask.Runtime.csproj">
+      <Project>{e1f4ff88-e52c-83cd-e454-f26f23186221}</Project>
+      <Name>MetaMask.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="MetaMaskUnity.Editor.csproj">
+      <Project>{5c58a328-9f3a-ad10-7460-921bc57a672b}</Project>
+      <Name>MetaMaskUnity.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

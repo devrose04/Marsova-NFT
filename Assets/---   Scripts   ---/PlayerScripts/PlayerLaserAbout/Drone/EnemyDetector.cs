@@ -90,8 +90,7 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, detectionRadius);
         }
-
-
+        
         void AddToList()
         {
             // Algılanan her bir obje için işlem yapın
