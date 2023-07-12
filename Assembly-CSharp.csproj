@@ -66,7 +66,7 @@
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation/AttackAnimation.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/StartButton.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseAudioMenuMain.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/DroneBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
@@ -75,7 +75,7 @@
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DifficultyButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseDifficultyMenu.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseDifficultyMenu.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/SmaleAnimations.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/GameAudioBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DeadSettingButton.cs" />
@@ -99,7 +99,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/GiantAnimations.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/ArıScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalPrefabs.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseSettingMenu.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseSettingMenu.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportShield.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/CharracterFollow.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/ShotBehavior.cs" />
@@ -110,7 +110,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/AnimationsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerArmorFrameIcon.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/UIModalManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseAudioMenuSetting.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuSetting.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/DemoUIManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/SetttingMenu.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/SlimeScript.cs" />
@@ -157,7 +157,8 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseLeaderBoard.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardMain.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardSetting.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Mac/amd64" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
@@ -263,6 +264,7 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Collectible" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExamplePrefabs" />
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons" />
+     <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Sliders" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Control Buttons" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Idle" />
