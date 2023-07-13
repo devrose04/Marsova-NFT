@@ -84,6 +84,7 @@
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/dreamloPromoCode.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/TweenIn.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardMain.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineStripBehavior.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/VisualController.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/ButtonEffect.cs" />
@@ -157,8 +158,6 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardMain.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardSetting.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Mac/amd64" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
@@ -354,7 +353,7 @@
      <Folder Include="Assets/---   Animations   ---/UçanAhtapot" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art/Crossed" />
-     <Folder Include="Assets/---   PNG   ---/Old_Photos" />
+     <Folder Include="Assets/---   PNG   ---/Old_ALL/Old_Photos" />
      <None Include="Assets/---   Using Assets   ---/Finished/Free Minerals Pixel Art Icons/readme.txt" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire" />
      <Folder Include="Assets/---   Scripts   ---/UIScripts" />
@@ -379,6 +378,7 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Misc" />
      <Folder Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art" />
+     <Folder Include="Assets/---   PNG   ---/New_Png" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Resources/MetaMask/Config" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleTextures" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles" />
@@ -573,6 +573,7 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Pickup Items" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/RunDustFront" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets/---   PNG   ---/Old_ALL" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs" />
      <None Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Third Party Notices/Third Party Notices.txt" />
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc" />

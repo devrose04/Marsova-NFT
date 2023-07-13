@@ -4,7 +4,6 @@ using ______Scripts______.EnemyScripts.Enemy.Enemy;
 using ______Scripts______.PlayerScripts.Player;
 using ______Scripts______.UIScripts.Canvas;
 using ______Scripts______.UIScripts.Canvas.Buttons;
-using ______Scripts______.UIScripts.Canvas.Buttons.CloseButton;
 using ______Scripts______.UIScripts.Canvas.Player;
 using EnemyScripts.AIScripts;
 using PlayerScripts.Player;
@@ -46,7 +45,6 @@ namespace ______Scripts______
         [SerializeField] private CloseDifficultyMenu _closeDifficultyMenu;
         [SerializeField] private CloseSettingMenu _closeSettingMenu;
         [SerializeField] private CloseLeaderBoardMain _closeLeaderBoardMain;
-        [SerializeField] private CloseLeaderBoardSetting _closeLeaderBoardSetting;
 
         [SerializeField] public int _SpanwLimitCount;
 
@@ -156,7 +154,7 @@ namespace ______Scripts______
 
         void SettingButton()
         {
-            if (MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && AudioMain.activeSelf == false && AudioSetting.activeSelf == false && OptionsMenu.activeSelf == false && LeaderBoardMain.activeSelf == false && LeaderBoardSetting.activeSelf == false)
+            if (MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && AudioMain.activeSelf == false && AudioSetting.activeSelf == false && OptionsMenu.activeSelf == false && LeaderBoardMain.activeSelf == false)
                 _SettingButton.SetActive(true);
             else
                 _SettingButton.SetActive(false);
@@ -179,8 +177,6 @@ namespace ______Scripts______
             if (LeaderBoardMain.activeSelf == true)
                 _closeLeaderBoardMain.CloseLeaderBoard();
 
-            if (LeaderBoardSetting.activeSelf == true)
-                _closeLeaderBoardSetting.CloseLeaderBoard();
         }
     }
 }

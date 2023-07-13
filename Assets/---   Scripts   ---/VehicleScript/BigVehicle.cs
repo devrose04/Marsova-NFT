@@ -21,7 +21,7 @@ namespace ______Scripts______.VehicleScript
             thisVehicle = this.gameObject;
             _spawnEnemy = thisVehicle.GetComponent<SpawnEnemy>();
             RB2 = thisVehicle.GetComponent<Rigidbody2D>();
-            Spawn_x = Random.Range(-77f, 20f);
+            Spawn_x = Random.Range(-75f, 18f);
             Spawn_y = Random.Range(32f, 38f);
             thisVehicle.transform.position = new Vector3(Spawn_x, Spawn_y);
             StartCoroutine("BigVehicleFonks");

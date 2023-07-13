@@ -4,13 +4,35 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
 {
     public class CloseLeaderBoardMain : MonoBehaviour
     {
-        [SerializeField] private GameObject LeaderBoardMain;
+        [SerializeField] private GameObject LeaderBoard;
         [SerializeField] private GameObject MainMenu;
+        [SerializeField] private GameObject SettingMenu;
+
+        [SerializeField] private StartButton _startButton;
+
+        void _CloseLeaderBoardMain()
+        {
+            if (_startButton.isGameStart == false)
+            {
+                LeaderBoard.SetActive(false);
+                MainMenu.SetActive(true);
+            }
+        }
+
+        void _CloseLeaderBoardSetting()
+        {
+            if (_startButton.isGameStart == true)
+            {
+                LeaderBoard.SetActive(false);
+                SettingMenu.SetActive(true);
+            }
+        }
+
 
         public void CloseLeaderBoard()
         {
-            LeaderBoardMain.SetActive(false);
-            MainMenu.SetActive(true);
+            _CloseLeaderBoardSetting();
+            _CloseLeaderBoardMain();
         }
     }
 }
