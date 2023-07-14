@@ -35,7 +35,6 @@ namespace ______Scripts______
         [SerializeField] private GameObject OptionsMenu;
         [SerializeField] private GameObject AudioSetting;
         [SerializeField] private GameObject LeaderBoardMain;
-        [SerializeField] private GameObject LeaderBoardSetting;
 
         [SerializeField] private GameObject AudioMain;
         // [SerializeField] private GameObject HowToPlay; // todo: bunları yapınca ayarla

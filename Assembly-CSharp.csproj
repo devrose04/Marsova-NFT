@@ -52,7 +52,7 @@
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineVertexData.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerController.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalData.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/PlayerScore.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/PlayerScore_my.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails/DashAttackDetails.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/CanvasScaler.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicDataManager.cs" />
@@ -62,10 +62,13 @@
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/SmallVehicle.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard/DisplayHighscores.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/CreateSinShapedLineStrip.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/SaveData.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation/AttackAnimation.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/StartButton.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenLeaderBoardMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/DroneBar.cs" />
@@ -108,6 +111,7 @@
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/DroneScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MainMenuButton.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard/HighScores.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/AnimationsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerArmorFrameIcon.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/UIModalManager.cs" />
@@ -124,6 +128,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyBulletScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/AhtapaotScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/EnemyHealthBar.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenLeaderBoardSetting.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/BigVehicle.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/SpawnEnemy.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/Scripts/Demo.cs" />
@@ -387,6 +392,7 @@
      <None Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/Shaders/LineStrip-TextureAlphaBlended.shader" />
      <Folder Include="Assets/---   Prefabs   ---" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/biceraptor/idle" />
+     <Folder Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Android/libs/armeabi-v7a" />
      <Folder Include="Assets/---   PNG   ---/Anim_PNG/Player/NewAnim" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Materials/Shape" />
@@ -495,6 +501,7 @@
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Rarity Frames" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Walk" />
+     <Folder Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Prefabs/Particles" />

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace ______Scripts______.UIScripts.Canvas.Player
 {
-    public class PlayerScore : MonoBehaviour
+    public class PlayerScore_my : MonoBehaviour
     {
         [SerializeField] private Text _text;
 

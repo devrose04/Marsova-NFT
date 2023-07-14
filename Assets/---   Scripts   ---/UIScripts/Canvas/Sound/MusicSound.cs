@@ -18,11 +18,10 @@ namespace ______Scripts______.UIScripts.Canvas
         [SerializeField] private GameObject OptinsMenuSetting;
         [SerializeField] private GameObject OptinsMenuMain;
         [SerializeField] private GameObject LeaderBoardMain;
-        [SerializeField] private GameObject LeaderBoardSetting;
 
         public void MyUpdate()
         {
-            if (SettingMenu.activeSelf == false && MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && OptinsMenuMain.activeSelf == false && OptinsMenuSetting.activeSelf == false && LeaderBoardMain.activeSelf == false && LeaderBoardSetting.activeSelf == false)
+            if (SettingMenu.activeSelf == false && MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && OptinsMenuMain.activeSelf == false && OptinsMenuSetting.activeSelf == false && LeaderBoardMain.activeSelf == false)
             {
                 if (_audioSource2.isPlaying == false)
                 {
