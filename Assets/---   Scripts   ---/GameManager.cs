@@ -175,7 +175,6 @@ namespace ______Scripts______
 
             if (LeaderBoardMain.activeSelf == true)
                 _closeLeaderBoardMain.CloseLeaderBoard();
-
         }
     }
 }

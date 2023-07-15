@@ -43,7 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportGivesArmor.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenOptionsMain.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenOptionsMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicSound.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/ICustomScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/MeteorMove.cs" />
@@ -68,7 +68,8 @@
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation/AttackAnimation.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/StartButton.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenLeaderBoardMain.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardMain.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/InputText/NickNameInput.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/DroneBar.cs" />
@@ -128,7 +129,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyBulletScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/AhtapaotScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/EnemyHealthBar.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenLeaderBoardSetting.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardSetting.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/BigVehicle.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/SpawnEnemy.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/Scripts/Demo.cs" />
@@ -146,7 +147,7 @@
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/HealtBarBugFixed.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalPrefabData.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenOptionsSetting.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenOptionsSetting.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/dreamloLeaderBoard.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/VolumetricMultiLineBehavior.cs" />
@@ -163,6 +164,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseNickName_GoButton.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Mac/amd64" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
@@ -304,6 +306,7 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LadderClimb" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/Scenes" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Fire" />
+     <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/InputText" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Resources" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/shell/cover-sprites" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Leohpaz/RPG_Essentials_Free/8_Atk_Magic_SFX" />
@@ -375,6 +378,7 @@
      <None Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Third Party Notices/Indivdiual Licenses/Starscream Apache 2.0.txt" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Magic Misc" />
+     <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Light" />
      <Folder Include="Assets/---   All Effects   ---/AssetEfectlerim" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles/Pixel Art/vehicle 1/thrust" />
