@@ -43,9 +43,11 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
         private void Awake()
         {
             RB2 = Player.GetComponent<Rigidbody2D>();
+
+            // PlayerPrefs.DeleteKey("NickName"); // bug: bunu gerektiginde kullan
         }
 
-        public void StartGame()
+        public void StartGame() // bunu OpenNickName.cs te çagırıyorum
         {
             CrashPlayerVehicle.SetActive(true);
             RB2.gravityScale = 1;
