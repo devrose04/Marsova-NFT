@@ -33,7 +33,7 @@ namespace ______Scripts______.UIScripts.Canvas.Sound
         {
             // Ses seviyesini uygula (örneğin, AudioSource'lara atanabilir)
 
-            Debug.Log("SoundVolume: " + volume);
+            // Debug.Log("SoundVolume: " + volume);
         }
 
         public void SetVolume(float newVolume)

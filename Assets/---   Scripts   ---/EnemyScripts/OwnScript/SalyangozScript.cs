@@ -1,5 +1,6 @@
 using System;
 using ______Scripts______.Canvas.Player;
+using ______Scripts______.EnemyScripts;
 using PlayerScripts.Player;
 using UnityEngine;
 using Random = UnityEngine.Random;

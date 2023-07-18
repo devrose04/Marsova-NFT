@@ -1,3 +1,4 @@
+using ______Scripts______.EnemyScripts;
 using UnityEngine;
 
 namespace EnemyScripts.OwnScript
