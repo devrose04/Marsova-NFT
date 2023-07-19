@@ -119,7 +119,7 @@ namespace ______Scripts______
             isNotHaveRemoveList(enemyColliders);
             addToList(enemyColliders);
 
-            // print("Çevredeki düşmanların sayısı: " + enemyList.Count); // bunu canvasa geçir
+            // print("Çevredeki düşmanların sayısı: " + enemyList.Count); //todo: bunu canvasa geçir
         }
 
         void isNotHaveRemoveList(Collider2D[] _enemyColliders) // GameRadiues alanındaki olmayan Enemyleri listeden çıkart

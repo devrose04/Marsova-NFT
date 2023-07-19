@@ -70,7 +70,7 @@
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation/AttackAnimation.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/StartButton.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpSpeed.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpSpeed.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/InputText/NickNameInput.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuMain.cs" />
@@ -100,7 +100,7 @@
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/LeaderBoardSample.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/HealBullet.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/IUprade_Chose_2.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/IUpgrade_Chose_2.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StarShipBar.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/UpManager_Chose_2.cs" />
@@ -112,6 +112,7 @@
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseSettingMenu.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportShield.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/CharracterFollow.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpBulletReload.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/ShotBehavior.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/LookAtCamera.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
@@ -119,7 +120,9 @@
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MainMenuButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard/HighScores.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/AnimationsController.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpDmg.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpArmor.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpHealth.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpDmg.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerArmorFrameIcon.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/UIModalManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuSetting.cs" />
@@ -136,6 +139,7 @@
      <Compile Include="Assets/---   Scripts   ---/GameManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyBulletScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/AhtapaotScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpBulletAmount.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/EnemyHealthBar.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/PlayerShowOwnScore.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardSetting.cs" />
@@ -152,6 +156,7 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyWeaponScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StartShipBulletAmount.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineBehavior.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpBulletDmg.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/HealtBarBugFixed.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerScript.cs" />
@@ -175,6 +180,11 @@
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpActiveDroneTime.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpDroneDmg.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpDroneAttackRadius.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpLaserAttackTime.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpDroneAttackTime_.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Mac/amd64" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
@@ -520,6 +530,7 @@
      <Folder Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <Folder Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Prefabs/Particles" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Materials" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles/Pixel Art" />
@@ -581,6 +592,7 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Art/Animations" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES" />
      <Folder Include="Assets/---   Scripts   ---" />
+     <Folder Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art/Hits/Hit-2" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/shell/move-sprites" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets" />

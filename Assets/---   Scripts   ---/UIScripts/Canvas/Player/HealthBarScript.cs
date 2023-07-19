@@ -1,9 +1,8 @@
-using System;
 using PlayerScripts.Player;
 using UnityEngine;
 using Slider = UnityEngine.UI.Slider;
 
-namespace ______Scripts______.Canvas.Player
+namespace ______Scripts______.UIScripts.Canvas.Player
 {
     public class HealthBarScript : MonoBehaviour
     {
@@ -12,6 +11,8 @@ namespace ______Scripts______.Canvas.Player
 
         private Slider _slider;
         private PlayerScript _playerScript;
+
+        public float maxHealth;
 
         private void Start()
         {
@@ -22,11 +23,19 @@ namespace ______Scripts______.Canvas.Player
 
             _slider.maxValue = _playerScript.health;
             _slider.value = _playerScript.health;
+
+            maxHealth = _playerScript.health;
         }
 
         public void ChangeHealthBar()
         {
             _slider.value = _playerScript.health;
+        }
+
+        public void UpgreadHealth()
+        {
+            _slider.maxValue = maxHealth + 30;
+            ChangeHealthBar();
         }
     }
 }

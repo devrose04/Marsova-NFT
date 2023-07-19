@@ -7267,9 +7267,9 @@ GameObject:
   m_Component:
   - component: {fileID: 317045518}
   - component: {fileID: 317045519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_lev_build_70 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8002,11 +8002,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743587821907160064, guid: f61eedc1a3afe42d7b931738aeea2d42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.020004
+      value: 26.160004
       objectReference: {fileID: 0}
     - target: {fileID: 3743587821907160064, guid: f61eedc1a3afe42d7b931738aeea2d42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.17000008
+      value: 6.3399997
       objectReference: {fileID: 0}
     - target: {fileID: 3743587821907160064, guid: f61eedc1a3afe42d7b931738aeea2d42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10191,11 +10191,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4173778304432394467, guid: af3e03097697c4826953eb00ec04a236, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.33
+      value: 18.47
       objectReference: {fileID: 0}
     - target: {fileID: 4173778304432394467, guid: af3e03097697c4826953eb00ec04a236, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.37
+      value: 5.14
       objectReference: {fileID: 0}
     - target: {fileID: 4173778304432394467, guid: af3e03097697c4826953eb00ec04a236, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10257,9 +10257,9 @@ GameObject:
   m_Component:
   - component: {fileID: 435419629}
   - component: {fileID: 435419630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_lev_build_70 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13548,7 +13548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743587821907160064, guid: f61eedc1a3afe42d7b931738aeea2d42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.9
+      value: 36.33
       objectReference: {fileID: 0}
     - target: {fileID: 3743587821907160064, guid: f61eedc1a3afe42d7b931738aeea2d42, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14325,6 +14325,9 @@ MonoBehaviour:
   ShipReloadTheBulletTimer: 20
   SpaceShipAttackIsActive: 1
   amountOfBullets: 30
+  extraAmountOfBullets: 0
+  totalBullets: 0
+  extraBullletDamges: 10
 --- !u!212 &628961542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15667,9 +15670,9 @@ GameObject:
   m_Component:
   - component: {fileID: 722024117}
   - component: {fileID: 722024118}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_lev_build_70 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16294,6 +16297,10 @@ GameObject:
   - component: {fileID: 740697959}
   - component: {fileID: 740697960}
   - component: {fileID: 740697961}
+  - component: {fileID: 740697962}
+  - component: {fileID: 740697963}
+  - component: {fileID: 740697964}
+  - component: {fileID: 740697965}
   m_Layer: 0
   m_Name: Chose_1_Manager
   m_TagString: Untagged
@@ -16342,6 +16349,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerScript: {fileID: 999068446}
+--- !u!114 &740697962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740697958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272e3c44b997e436babe55da0f03a68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startShipAttack: {fileID: 628961541}
+--- !u!114 &740697963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740697958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae874f3241b764e5894f20ff099baf25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerScript: {fileID: 999068446}
+  _healthBarScript: {fileID: 999068458}
+--- !u!114 &740697964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740697958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21640bd94118b46c393d6fca98acc270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyDetector: {fileID: 1306678885}
+--- !u!114 &740697965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740697958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf1fd92d6ee6431aad4dbf9f80d236b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 999068448}
 --- !u!1001 &744346725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21063,9 +21123,9 @@ GameObject:
   m_Component:
   - component: {fileID: 939453612}
   - component: {fileID: 939453613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_lev_build_70
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21147,9 +21207,9 @@ GameObject:
   m_Component:
   - component: {fileID: 939810393}
   - component: {fileID: 939810394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_lev_build_70 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22469,6 +22529,7 @@ MonoBehaviour:
   speed: 150
   health: 120
   armor: 10
+  ExtraArmor: 0
   totalScore: 0
   touchGrand: {fileID: 1368822870}
   isHeDead: 0
@@ -22510,6 +22571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLaserBullet: {fileID: 696932412015399337, guid: df62ffb97d82f489ba7c2bdcc577b885, type: 3}
+  LaserCD: 0.2
   _audioSourceStartShip: {fileID: 1903170630}
   _audioClipLaser: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   _audioSourceMove: {fileID: 999068462}
@@ -22659,6 +22721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bar: {fileID: 172761716}
+  maxHealth: 0
 --- !u!114 &999068459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22674,6 +22737,7 @@ MonoBehaviour:
   _text: {fileID: 2017943171}
   Block2: {fileID: 86462663}
   Block3: {fileID: 1569987745}
+  _upController: {fileID: 1718197814}
 --- !u!114 &999068460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28119,9 +28183,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1262873979}
   - component: {fileID: 1262873980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: main_lev_build_70
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29264,12 +29328,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRadius: 8
+  DroneDmg: 5
+  timeLimit: 2
+  JustOneTimeWork: 0
   BigElectric: {fileID: 3542710854727196543, guid: eba51b7826099438b88cdad476f1f2a8, type: 3}
   SmaleElectric: {fileID: 5570896015971585017, guid: ce6c4827529e84e10ae33bef676f3c33, type: 3}
   LookAtThis: {fileID: 1889166202}
   _audioClipEllectric: {fileID: 8300000, guid: ab297b593498a6e47ba84de770477cbe, type: 3}
   DroneIsReadyToAttack: 0
-  JustOneTimeWork: 0
 --- !u!114 &1306678886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29423,7 +29489,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ab297b593498a6e47ba84de770477cbe, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -29882,6 +29948,7 @@ MonoBehaviour:
   GameAudioSliderSetting: {fileID: 1457895756}
   GameAudioSliderMain: {fileID: 549105122}
   _soundDataManager: {fileID: 1315921264}
+  DroneAuidoSource: {fileID: 1306678892}
 --- !u!114 &1315921263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34834,6 +34901,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1582963092}
+  - component: {fileID: 1582963093}
+  - component: {fileID: 1582963094}
+  - component: {fileID: 1582963095}
+  - component: {fileID: 1582963096}
+  - component: {fileID: 1582963097}
+  - component: {fileID: 1582963098}
   m_Layer: 0
   m_Name: Chose_2_Manager
   m_TagString: Untagged
@@ -34856,6 +34929,84 @@ Transform:
   m_Father: {fileID: 1718197811}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1582963093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582963091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc3812ad9ed74567a64c44bb4e990ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerScript: {fileID: 999068446}
+--- !u!114 &1582963094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582963091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57cde7523028a49e4ba7b897b6ec821d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startShipAttack: {fileID: 628961541}
+--- !u!114 &1582963095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582963091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1b34bed136d43a58934a5104b5a4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startShipAttack: {fileID: 628961541}
+--- !u!114 &1582963096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582963091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79394791b05714c878abdc0f484ee70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _droneScript: {fileID: 1306678886}
+--- !u!114 &1582963097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582963091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29667e37692d45a8806d0320b4bd2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyDetector: {fileID: 1306678885}
+--- !u!114 &1582963098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582963091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b70bd4b4abe49b385215c95a48f9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyDetector: {fileID: 1306678885}
 --- !u!1001 &1583234054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35090,7 +35241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1586117004
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37431,7 +37582,6 @@ MonoBehaviour:
   MainSentence: {fileID: 1507896931291406920}
   ExtraSentence: {fileID: 73613701}
   ChoseMenu: {fileID: 1586117003}
-  Chose_1_Manager: {fileID: 740697958}
 --- !u!114 &1718197813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37460,6 +37610,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b463c231bec4f2181c07827edf0a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _upDmg: {fileID: 740697960}
+  _upSpeed: {fileID: 740697961}
+  _bulletAmount: {fileID: 740697962}
+  _upHealth: {fileID: 740697963}
+  _droneDmg: {fileID: 740697964}
+  _attackTime: {fileID: 740697965}
+  _upArmor: {fileID: 1582963093}
+  _bulletDmg: {fileID: 1582963094}
+  _bulletReload: {fileID: 1582963095}
+  _activeDroneTime: {fileID: 1582963096}
+  _attackRadius: {fileID: 1582963097}
+  attackTimeDrone: {fileID: 1582963098}
+  _upManagerChose1: {fileID: 1718197812}
+  _upmanagerChose2: {fileID: 1718197813}
 --- !u!1 &1728921551
 GameObject:
   m_ObjectHideFlags: 0
@@ -51687,7 +51851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &9060166381401512903
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,13 +15,18 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
 
         [SerializeField] private SoundDataManager _soundDataManager;
 
+        [SerializeField] private AudioSource DroneAuidoSource;
+
         private void Start()
         {
             GameAudioSliderMain.value = _soundDataManager.volume;
             GameAudioSliderSetting.value = _soundDataManager.volume;
 
             foreach (var audioSource in audioSources)
+            {
                 audioSource.volume = _soundDataManager.volume;
+                ChaneDroneEllectricVolume(audioSource);
+            }
         }
 
         public void ChangeVolumeSetting()
@@ -32,6 +37,7 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
             foreach (AudioSource audioSource in audioSources)
             {
                 audioSource.volume = volume;
+                ChaneDroneEllectricVolume(audioSource);
             }
         }
 
@@ -43,6 +49,16 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
             foreach (AudioSource audioSource in audioSources)
             {
                 audioSource.volume = volume;
+                ChaneDroneEllectricVolume(audioSource);
+            }
+        }
+
+        void ChaneDroneEllectricVolume(AudioSource _audioSource) // this is fixed a bugg
+        {
+            if (DroneAuidoSource == _audioSource)
+            {
+                float _volume = _audioSource.volume;
+                _audioSource.volume = _volume / 3;
             }
         }
     }

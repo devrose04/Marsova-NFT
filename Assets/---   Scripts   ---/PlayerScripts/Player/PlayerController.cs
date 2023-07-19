@@ -6,8 +6,7 @@ using ______Scripts______.PlayerScripts.SwordScripts;
 using ______Scripts______.UIScripts.Canvas.Buttons;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.Player;
-using PlayerScripts.PlayerLaserAbout;
-using PlayerScripts.PlayerLaserAbout.Drone;
+// using PlayerScripts.PlayerLaserAbout;
 using PlayerScripts.SwordScripts;
 using UIScripts;
 using UnityEngine;
@@ -35,7 +34,8 @@ namespace ______Scripts______.PlayerScripts.Player
 
         [SerializeField] private GameObject PlayerLaserBullet;
 
-        private float LaserTimer = 1; // todo:  Laserle alakalı bir Script aç ve Oraya Mermi miktarını vb. şeyleride yaz 
+        private float LaserTimer = 1;
+        public float LaserCD = 0.2f;
         int _count = 0;
         private GameObject _GameManager;
         private GameObject Player;
@@ -183,7 +183,7 @@ namespace ______Scripts______.PlayerScripts.Player
             }
 
             LaserTimer += Time.deltaTime;
-            if (Input.GetMouseButton(0) && LaserTimer > 0.2f && _startShipAttack.SpaceShipAttackIsActive) // Laser silahı
+            if (Input.GetMouseButton(0) && LaserTimer > LaserCD && _startShipAttack.SpaceShipAttackIsActive) // Laser silahı
             {
                 // _audioSourceStartShip.PlayDelayed(0.5f);
                 _audioSourceStartShip.PlayOneShot(_audioClipLaser);

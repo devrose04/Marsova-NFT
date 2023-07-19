@@ -13,36 +13,61 @@ namespace ______Scripts______.Upgrade
 
         [SerializeField] private GameObject ChoseMenu;
 
-        private IUprade_Chose_2 _upradeChose2;
-
         private string _mainSentece;
         private string _extraSentecen;
 
         private UnityAction _action;
 
-        private void Awake()
+        (string, string, UnityAction) Upgrade;
+
+        public void AllTogether(Component _ScriptName)
         {
-            _upradeChose2 = this.gameObject.GetComponentInChildren<IUprade_Chose_2>();
+            UploadData(_ScriptName);
+            WriteText();
+            ClickUptadeButton();
         }
 
-        public void UploadData()
+        void UploadData(Component ScriptName)
         {
-            _mainSentece = _upradeChose2.Upgrade().Item1;
-            _extraSentecen = _upradeChose2.Upgrade().Item2;
-            _action = _upradeChose2.Upgrade().Item3;
+            if (ScriptName != null)
+            {
+                IUpgrade_Chose_2[] Interface = ScriptName.GetComponents<IUpgrade_Chose_2>();
+
+                if (Interface != null)
+                {
+                    foreach (var Script in Interface)
+                    {
+                        if (ScriptName == Script)
+                        {
+                            Upgrade = Script.Upgrade();
+
+                            _mainSentece = Upgrade.Item1;
+                            _extraSentecen = Upgrade.Item2;
+                            _action = Upgrade.Item3;
+                        }
+                    }
+                }
+            }
+            else
+                print("Eror");
         }
 
-        public void WriteText() // todo: açılma  sesi ekle
+        void WriteText() // todo: açılma  sesi ekle
         {
             MainSentence.text = _mainSentece;
             ExtraSentence.text = _extraSentecen;
-            ChoseMenu.SetActive(true);
+            // ChoseMenu.SetActive(true);
             Time.timeScale = 0;
         }
 
-        public void RunAction() // todo: kapanma sesi ekle
+        void ClickUptadeButton()
         {
-            _button.onClick.AddListener(_action);
+            _button.onClick.AddListener(RunAction);
+        }
+
+        void RunAction() // todo: kapanma sesi ekle
+        {
+            _action.Invoke();
             ChoseMenu.SetActive(false);
             Time.timeScale = 1;
         }

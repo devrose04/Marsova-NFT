@@ -13,7 +13,7 @@ namespace ______Scripts______.Upgrade.All_Upgrade
 
         void CheckText()
         {
-            MainSentece = "It increases the player's movement speed by 20.";
+            MainSentece = "It increases the Player's movement speed by 20.";
             ExtraSentecen = $"{_playerScript.speed} --> {_playerScript.speed + 20}";
         }
 

@@ -18,9 +18,14 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
         public bool SpaceShipAttackIsActive = true;
 
         public int amountOfBullets = 30;
+        public int extraAmountOfBullets = 0;
+
+        public int totalBullets;
 
         private StarShipBar _starShipBar;
         private StartShipBulletAmount _startShipBulletAmount;
+
+        public float extraBullletDamges = 10; // this for UpdateChoce
 
         private void Awake()
         {
@@ -28,6 +33,8 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
             RB2 = Ship.GetComponent<Rigidbody2D>();
             _starShipBar = Ship.GetComponent<StarShipBar>();
             _startShipBulletAmount = Ship.GetComponent<StartShipBulletAmount>();
+
+            totalBullets = amountOfBullets + extraAmountOfBullets;
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -88,7 +95,7 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
             _starShipBar.StartShipFonk();
             _startShipBulletAmount.StartShipBulletFonk();
 
-            if (amountOfBullets == 29) // bu başta, ShipReloadTheBulletTimer'a 20 verdigimiz için oluşturulmuş bir if tir.
+            if (amountOfBullets == 29 + extraAmountOfBullets) // bu başta, ShipReloadTheBulletTimer'a 20 verdigimiz için oluşturulmuş bir if tir.
             {
                 ShipReloadTheBulletTimer = 0;
             }
@@ -96,9 +103,9 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
             if (ShipReloadTheBulletTimer > ShipReloadTimeCD) // mermileri 20 sn de bir fullüyor
             {
                 SpaceShipAttackIsActive = true;
-                amountOfBullets = 30;
+                amountOfBullets = 30 + extraAmountOfBullets;
             }
-            else if (amountOfBullets != 30)
+            else if (amountOfBullets != 30 + extraAmountOfBullets)
                 ShipReloadTheBulletTimer += Time.deltaTime;
 
 

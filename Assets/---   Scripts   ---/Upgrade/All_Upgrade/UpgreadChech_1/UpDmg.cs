@@ -2,7 +2,7 @@ using ______Scripts______.PlayerScripts.SwordScripts;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ______Scripts______.Upgrade.All_Upgrade
+namespace ______Scripts______.Upgrade.All_Upgrade.UpgreadChech_1
 {
     public class UpDmg : MonoBehaviour, IUpgrade_Chose_1
     {
@@ -13,7 +13,7 @@ namespace ______Scripts______.Upgrade.All_Upgrade
 
         void CheckText()
         {
-            MainSentece = "Increase the player's sword attack power by 3.";
+            MainSentece = "Increase the Player's sword attack power by 3.";
             ExtraSentecen = $"{_swordScript.swordDamage} --> {_swordScript.swordDamage + 3}";
         }
 

@@ -17,7 +17,6 @@ namespace ______Scripts______.PlayerScripts.Player
             ArmorUppIcon.SetActive(false);
         }
 
-
         public void JetPackOffIconActive()
         {
             JetPackOffIcon.SetActive(true);

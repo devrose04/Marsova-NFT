@@ -1,8 +1,8 @@
 using System.Collections;
-using ______Scripts______.Canvas.Player;
 using ______Scripts______.GameManagerScript.SkillsScripts;
 using ______Scripts______.PlayerScripts.Player;
 using ______Scripts______.PlayerScripts.SwordScripts;
+using ______Scripts______.UIScripts.Canvas.Player;
 using GameManagerScript.SkillsScripts;
 using PlayerScripts.SwordScripts;
 using UIScripts;
@@ -35,7 +35,9 @@ namespace PlayerScripts.Player
         [SerializeField] public float speed;
         [SerializeField] public float health;
         [SerializeField] public float armor; // armor 10 ise %10 hasar azaltır. max 100 olur
+        public float ExtraArmor = 0;
         public int totalScore = 0;
+        
         [SerializeField] private Transform touchGrand;
         private float knockbackForce = 750;
 
@@ -62,7 +64,7 @@ namespace PlayerScripts.Player
             _audioSource.PlayOneShot(_audioClipTakeDamages);
             TakeDamagesTransactions();
 
-            dmg = dmg * (0.01f * (100 - armor)); // 0.01 yazma nedenim: 100'ü 0.01 ile çarparsak 1 elder ederiz. Yani %1 ini elde ederiz.
+            dmg = dmg * (0.01f * (100 - armor - ExtraArmor)); // 0.01 yazma nedenim: 100'ü 0.01 ile çarparsak 1 elder ederiz. Yani %1 ini elde ederiz.
             health -= dmg;
             _healthBarScript.ChangeHealthBar();
             // print($"<color=green>Player Health:</color>" + health);

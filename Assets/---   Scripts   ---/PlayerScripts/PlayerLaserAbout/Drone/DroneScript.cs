@@ -1,5 +1,4 @@
 using ______Scripts______.UIScripts.Canvas;
-using PlayerScripts.PlayerLaserAbout.Drone;
 using UnityEngine;
 
 namespace ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone

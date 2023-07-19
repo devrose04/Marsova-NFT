@@ -1,17 +1,19 @@
-using System;
 using System.Collections.Generic;
 using ______Scripts______.EnemyScripts.Enemy.Enemy;
-using ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone;
-using EnemyScripts.Enemy;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace PlayerScripts.PlayerLaserAbout.Drone
+namespace ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone
 {
     public class EnemyDetector : MonoBehaviour
     {
         public float detectionRadius = 8; //Canvastan değiştir 
+        public int DroneDmg = 5;
+
+        private float time;
+        public float timeLimit = 2;
+        
+        public int JustOneTimeWork; // Drone Player'ın yanında durmasına yarıcak değişken
+        
         private List<GameObject> detectedEnemies = new List<GameObject>();
 
         [SerializeField] private ParticleSystem BigElectric;
@@ -19,20 +21,16 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
 
         [SerializeField] private GameObject LookAtThis;
 
-        private AudioSource _audioSource;
         [SerializeField] private AudioClip _audioClipEllectric;
+        private AudioSource _audioSource;
 
         private Collider2D[] hitColliders;
 
         public bool DroneIsReadyToAttack = false;
 
-        private float time;
-
-        public int JustOneTimeWork; // Drone Player'ın yanında durmasına yarıcak değişken
-
         private DroneScript _droneScript;
         private GameObject Player;
-
+        
         private void Awake()
         {
             _droneScript = this.gameObject.GetComponent<DroneScript>();
@@ -46,7 +44,7 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
             {
                 CalculationsWhichEnemiesAround();
                 time += Time.deltaTime;
-                if (time > 2)
+                if (time > timeLimit)
                 {
                     time = 0;
                     AttackingDrone();
@@ -73,12 +71,13 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
                 ParticleSystem _smaleElectric = Instantiate(SmaleElectric, enemy.transform.position, transform.rotation);
                 Destroy(_smaleElectric.gameObject, 3f);
 
-                enemy.GetComponent<EnemyScript>().TakeDamages(5, new Vector2(0, 0), false);
+                enemy.GetComponent<EnemyScript>().TakeDamages(DroneDmg, new Vector2(0, 0), false);
             }
 
             if (detectedEnemies != null)
             {
                 _audioSource.PlayOneShot(_audioClipEllectric);
+
                 ParticleSystem _bigElectric = Instantiate(BigElectric, this.transform.position, transform.rotation);
                 Destroy(_bigElectric.gameObject, 3f);
             }
@@ -90,7 +89,7 @@ namespace PlayerScripts.PlayerLaserAbout.Drone
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, detectionRadius);
         }
-        
+
         void AddToList()
         {
             // Algılanan her bir obje için işlem yapın

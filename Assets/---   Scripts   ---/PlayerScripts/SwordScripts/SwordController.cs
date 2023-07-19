@@ -17,7 +17,7 @@ namespace ______Scripts______.PlayerScripts.SwordScripts
         [SerializeField] private AudioClip _audioClipAttack3;
         [SerializeField] private AudioClip _audioClipAll1;
         [SerializeField] private AudioClip _audioClipAll2;
-
+        
         private void Awake()
         {
             Player = this.gameObject;
