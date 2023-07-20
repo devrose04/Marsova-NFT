@@ -1,4 +1,7 @@
+using System;
+using ______Scripts______.EnemyScripts;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace EnemyScripts.OwnScript
 {
@@ -14,10 +17,10 @@ namespace EnemyScripts.OwnScript
         private bool isItFly;
         private float suportArmor;
         private int score;
-        
-        public (float, float, float, float, float, float, bool, bool, float,int) OwnInformations()
+
+        public (float, float, float, float, float, float, bool, bool, float, int) OwnInformations()
         {
-            speed = Random.Range(2.5f, 3.2f ); 
+            speed = Random.Range(2.5f, 3.2f);
             health = Random.Range(100f, 140f);
             damage = Random.Range(15f, 18f);
             hitTimeRange = Random.Range(1.1f, 1.4f);
@@ -27,7 +30,7 @@ namespace EnemyScripts.OwnScript
             isItFly = false;
             suportArmor = 0;
             score = 10;
-            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange,isItFly, suportArmor, score);
+            return (speed, health, damage, hitTimeRange, attackRadius, knockBackPower, isAttackinRange, isItFly, suportArmor, score);
         }
     }
 }

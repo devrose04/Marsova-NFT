@@ -43,7 +43,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
         private ICustomScript __ICustomScript;
         private EnemyKnockBackScript __EnemyKnockBackScript;
         private EnemyHealthBar _enemyHealthBar;
-        private PlayerScore _playerScore;
+        private PlayerScore_my _playerScore;
 
         private AudioSource _audioSource;
         private AudioClip _audioClipDeadth;
@@ -63,7 +63,7 @@ namespace ______Scripts______.EnemyScripts.Enemy.Enemy
             __EnemyKnockBackScript = Enemy.GetComponent<EnemyKnockBackScript>();
             _enemyHealthBar = Enemy.GetComponent<EnemyHealthBar>();
             _playerScript = Player.GetComponent<PlayerScript>();
-            _playerScore = Player.GetComponent<PlayerScore>();
+            _playerScore = Player.GetComponent<PlayerScore_my>();
 
             _audioSource = Player.GetComponent<AudioSource>();
             _audioClipDeadth = _playerScript.audioClipDeadth;

@@ -16,6 +16,7 @@ TagManager:
   - PlayerBullet
   - White
   - Meteors
+  - Wall
   layers:
   - Default
   - TransparentFX

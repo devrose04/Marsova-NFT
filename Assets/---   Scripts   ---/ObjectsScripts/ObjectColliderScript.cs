@@ -14,6 +14,7 @@ namespace ObjectsScripts
         private Rigidbody2D RB2;
         private GameObject GameManager;
 
+        private CapsuleCollider2D _capsuleCollider;
         private SkillsScript __SkillsScript;
 
         private float JetPackFuelRealAmount;
@@ -22,6 +23,7 @@ namespace ObjectsScripts
         {
             GameObject = this.gameObject;
             RB2 = GameObject.GetComponent<Rigidbody2D>();
+            _capsuleCollider = GameObject.GetComponent<CapsuleCollider2D>();
             GameManager = GameObject.Find("GameManager");
             __SkillsScript = GameManager.GetComponent<SkillsScript>();
             JetPackFuelRealAmount = __SkillsScript.JetPackFuel;
@@ -52,6 +54,16 @@ namespace ObjectsScripts
                 if (__SkillsScript.JetPackFuel < JetPackFuelRealAmount)
                     __SkillsScript.JetPackFuel += Time.deltaTime;
             }
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            // if (other.gameObject.name == "KraterDuvarıSağ" || other.gameObject.name == "BugBlock2")
+            // _capsuleCollider.isTrigger = false;
+
+            if (other.gameObject.CompareTag("Ground"))
+                RB2.gravityScale = 0f;
+            RB2.velocity = new Vector2(RB2.velocity.x * 0.5f, 0); // bu: Obje zıplayıp zemine degdiginde çarpmış hissi uyandırıyor.
         }
     }
 }

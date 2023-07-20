@@ -1,7 +1,7 @@
 using ______Scripts______.UIScripts.Canvas;
 using UnityEngine;
 
-namespace PlayerScripts.PlayerLaserAbout
+namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
 {
     public class StartShipAttack : MonoBehaviour
     {
@@ -18,9 +18,14 @@ namespace PlayerScripts.PlayerLaserAbout
         public bool SpaceShipAttackIsActive = true;
 
         public int amountOfBullets = 30;
+        public int extraAmountOfBullets = 0;
+
+        public int totalBullets;
 
         private StarShipBar _starShipBar;
         private StartShipBulletAmount _startShipBulletAmount;
+
+        public float extraBullletDamges = 10; // this for UpdateChoce
 
         private void Awake()
         {
@@ -28,6 +33,8 @@ namespace PlayerScripts.PlayerLaserAbout
             RB2 = Ship.GetComponent<Rigidbody2D>();
             _starShipBar = Ship.GetComponent<StarShipBar>();
             _startShipBulletAmount = Ship.GetComponent<StartShipBulletAmount>();
+
+            totalBullets = amountOfBullets + extraAmountOfBullets;
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -58,10 +65,27 @@ namespace PlayerScripts.PlayerLaserAbout
             // RB2.velocity = new Vector2(playerTransform.position.x, playerTransform.position.y + 40);
         }
 
+        int count = 0;
+
         void WalkingTheSky()
         {
-            direction = (playerTransform.position - Ship.transform.position).normalized; // Player Enemy'nin hangi tarafında onu hesaplar
+            direction = (playerTransform.position - Ship.transform.position); // Player Enemy'nin hangi tarafında onu hesaplar
             distance = Vector2.Distance(playerTransform.position, transform.position); // Player ile Drone arasoındaki mesafeyi ölçer
+
+            // direction = direction.normalized;
+
+            // float power = 1f;
+            // if (RB2.velocity.magnitude < 50) // çok fazla dışa savrulmasını engelliyor
+            //     power = 0.2f;
+
+
+            if ((Ship.transform.localPosition.x <= -40 || Ship.transform.localPosition.x >= 40) && count == 1)
+            {
+                RB2.velocity = new Vector2(0, 0);
+                count = 0;
+            }
+            else if ((Ship.transform.localPosition.x > -40 || Ship.transform.localPosition.x < 40) && count == 0)
+                count = 1;
 
             RB2.AddForce(new Vector2(direction.x, RB2.velocity.y), ForceMode2D.Impulse); // direction.x 1 veya -1 dir
         }
@@ -71,7 +95,7 @@ namespace PlayerScripts.PlayerLaserAbout
             _starShipBar.StartShipFonk();
             _startShipBulletAmount.StartShipBulletFonk();
 
-            if (amountOfBullets == 29) // bu başta, ShipReloadTheBulletTimer'a 20 verdigimiz için oluşturulmuş bir if tir.
+            if (amountOfBullets == 29 + extraAmountOfBullets) // bu başta, ShipReloadTheBulletTimer'a 20 verdigimiz için oluşturulmuş bir if tir.
             {
                 ShipReloadTheBulletTimer = 0;
             }
@@ -79,9 +103,9 @@ namespace PlayerScripts.PlayerLaserAbout
             if (ShipReloadTheBulletTimer > ShipReloadTimeCD) // mermileri 20 sn de bir fullüyor
             {
                 SpaceShipAttackIsActive = true;
-                amountOfBullets = 30;
+                amountOfBullets = 30 + extraAmountOfBullets;
             }
-            else if (amountOfBullets != 30)
+            else if (amountOfBullets != 30 + extraAmountOfBullets)
                 ShipReloadTheBulletTimer += Time.deltaTime;
 
 

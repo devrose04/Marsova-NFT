@@ -1,4 +1,4 @@
-namespace EnemyScripts
+namespace ______Scripts______.EnemyScripts
 {
     public interface ICustomScript
     {

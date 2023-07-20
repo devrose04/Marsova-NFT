@@ -73,6 +73,11 @@ namespace ______Scripts______.PlayerScripts
 
                 CollisionIsActive(other, directionToEnemy);
             }
+
+            if (other.gameObject.CompareTag("Ground"))
+            {
+                // Player.GetComponent<Rigidbody2D>().gravityScale = 1;
+            }
         }
 
         private void CollisionIsActive(Collider2D other, Vector2 directionToEnemy) // bu Dash kullanıldıgında dmg olmasın diye yazılmıştır.
@@ -96,7 +101,7 @@ namespace ______Scripts______.PlayerScripts
             }
         }
 
-        void RandomSound()
+        void RandomSound() //dash attack
         {
             int count = Random.Range(1, 5);
             switch (count)

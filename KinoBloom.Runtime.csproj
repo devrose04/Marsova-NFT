@@ -41,13 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.shader" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.cginc" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/KinoBloom.Runtime.asmdef" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Kino Bloom License.txt" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs" />
+     <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader" />
+     <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.shader" />
+     <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Shader/Bloom.cginc" />
+     <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/KinoBloom.Runtime.asmdef" />
+     <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom" />
+     <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Kino Bloom License.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -300,8 +300,44 @@
      <Reference Include="UnityEditor.OSXStandalone.Extensions">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="zxing.unity">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/zxing.unity.dll</HintPath>
+     </Reference>
+     <Reference Include="Google.PackageManagerResolver">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/1.2.175/Google.PackageManagerResolver.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.Encodings.Web">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/SocketIOUnity/Runtime/libs/System.Text.Encodings.Web.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.collab-proxy@2.0.3/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Google.IOSResolver">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/1.2.175/Google.IOSResolver.dll</HintPath>
+     </Reference>
+     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/SocketIOUnity/Runtime/libs/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reactive">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/SocketIOUnity/Runtime/libs/System.Reactive.dll</HintPath>
+     </Reference>
+     <Reference Include="BouncyCastle.Crypto">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/BouncyCastle.Crypto.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.CompilerServices.Unsafe">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/SocketIOUnity/Runtime/libs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.collab-proxy@2.0.3/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.Json">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/SocketIOUnity/Runtime/libs/System.Text.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.collab-proxy@2.0.3/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
@@ -309,20 +345,23 @@
      <Reference Include="Unity.VisualScripting.YamlDotNet">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
+     <Reference Include="Google.VersionHandlerImpl">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/1.2.175/Google.VersionHandlerImpl.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.collab-proxy@2.0.3/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
      </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.collab-proxy@2.0.3/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+     <Reference Include="Google.VersionHandler">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>/Users/uur/Desktop/UzayProje/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Google.JarResolver">
+     <HintPath>/Users/uur/Desktop/UzayProje/Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager/Editor/1.2.175/Google.JarResolver.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>

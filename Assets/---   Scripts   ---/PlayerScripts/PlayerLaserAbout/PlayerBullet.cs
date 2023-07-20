@@ -13,6 +13,7 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
         private Transform ShotPoint;
         private GameObject StarShip;
 
+        private StartShipAttack _startShipAttack;
         private EnemyScript __EnemyScript;
         private Calculations _calculations;
         [SerializeField] private ParticleSystem LaserHitEffeckt;
@@ -21,15 +22,16 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
         [SerializeField] private AudioClip _audioClipTocuhEnemy;
         [SerializeField] private AudioClip _audioClipTocuhShield;
 
-        private float damages;
+        public float damages;
 
         private void Awake()
         {
             Player = GameObject.Find("Player");
             StarShip = GameObject.Find("StarShip");
+            _startShipAttack = StarShip.GetComponent<StartShipAttack>();
             Bullet = this.gameObject;
             RB2 = Bullet.GetComponent<Rigidbody2D>();
-            damages = Random.Range(8f, 12f);
+            damages = Random.Range(2f, 8f) + _startShipAttack.extraBullletDamges; // todo: burda kaldın.
             _calculations = Player.GetComponent<Calculations>();
 
             _audioSource = Player.GetComponent<AudioSource>();
@@ -72,9 +74,10 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout
 
             if (other.gameObject.CompareTag("Shield"))
             {
-                _audioSource.volume = 0.2f;
+                float volume = _audioSource.volume;
+                _audioSource.volume = volume / 5f;
                 _audioSource.PlayOneShot(_audioClipTocuhShield);
-                _audioSource.volume = 1f;
+                _audioSource.volume = volume;
 
                 SuportShield Script = other.GetComponent<SuportShield>();
                 Script.TakeDamagesShield(damages);

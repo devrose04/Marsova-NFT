@@ -63,7 +63,7 @@ namespace GameManagerScript.SkillsScripts
                 HittingAll_1Button.SetActive(false);
 
 
-            if (timer > HittingAllCD2 + HittingAllCanUse2) // HittingAll_2 Skils
+            if (timer > HittingAllCD2 + HittingAllCanUse2 && HittingAll_1Button.activeSelf == true) // HittingAll_2 Skils
                 HittingAll_2Button.SetActive(true);
             else
                 HittingAll_2Button.SetActive(false);
@@ -75,7 +75,7 @@ namespace GameManagerScript.SkillsScripts
                 SwordAttack_1Button.SetActive(false);
 
 
-            if (timer > SwordCD2 + SwordCanUse2) // SwordAtack_2 ve SwordAtack_3 Skils
+            if (timer > SwordCD2 + SwordCanUse2 && SwordAttack_1Button.activeSelf == true) // SwordAtack_2 ve SwordAtack_3 Skils
                 SwordAttack_2Button.SetActive(true);
             else
                 SwordAttack_2Button.SetActive(false);

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: -5785462073563028885}
   - component: {fileID: 2314362125632607497}
   - component: {fileID: 4901450062919974812}
+  - component: {fileID: 7108242361408705748}
   m_Layer: 6
   m_Name: "BeyazU\xE7an"
   m_TagString: White
@@ -301,6 +302,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 293998166376606428}
   ArmorBar: {fileID: 6525409896271651575}
+--- !u!114 &7108242361408705748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491440176511909091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e129abac59d4473bc2382351a21860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5319494254202013172
 PrefabInstance:
   m_ObjectHideFlags: 0
