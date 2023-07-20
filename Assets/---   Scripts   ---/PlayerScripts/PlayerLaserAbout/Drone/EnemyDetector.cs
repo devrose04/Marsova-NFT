@@ -11,9 +11,9 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone
 
         private float time;
         public float timeLimit = 2;
-        
+
         public int JustOneTimeWork; // Drone Player'ın yanında durmasına yarıcak değişken
-        
+
         private List<GameObject> detectedEnemies = new List<GameObject>();
 
         [SerializeField] private ParticleSystem BigElectric;
@@ -30,7 +30,7 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone
 
         private DroneScript _droneScript;
         private GameObject Player;
-        
+
         private void Awake()
         {
             _droneScript = this.gameObject.GetComponent<DroneScript>();

@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_ParticleText.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_EmissionBySurface.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_ParticleTextFontAsset.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.CameraShake.cs" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts" />
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR Runtime.asmdef" />

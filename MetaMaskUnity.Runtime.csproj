@@ -41,20 +41,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/UGUI/MetaMaskUnityUIHandler.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Cryptography/BouncyEciesProvider.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Utilities/UnityWebRequestAwaiter.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Logging/MetaMaskUnityLogger.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Sockets/MetaMaskUnitySocketIO.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/IO/MetaMaskPlayerPrefsStorage.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/UGUI/MetaMaskUnityUIQRImage.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Cryptography/UnityEciesProvider.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/MetaMaskUnityTransportBroadcaster.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/MetaMaskConfig.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/UGUI/MetaMaskUnityUITransport.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/MetaMaskUnity.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/MetaMaskUnityScriptableObjectTransport.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/IMetaMaskUnityTransportListener.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/UGUI/MetaMaskUnityUIHandler.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Sockets/MetaMaskUnitySocketIO.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/IO/MetaMaskPlayerPrefsStorage.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/MetaMaskUnityTransportBroadcaster.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/UGUI/MetaMaskUnityUITransport.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity/MetaMaskUnityScriptableObjectTransport.cs" />
      <None Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/MetaMaskUnity.Runtime.asmdef" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Transports/Unity" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Scripts/Logging" />

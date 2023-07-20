@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_BuildShaderPreprocessor.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_ExpressionParser.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_Styles.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_MaterialInspector.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_ExpressionParser.cs" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor" />
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR Editor.asmdef" />
      <Reference Include="UnityEngine">

@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomEditor.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomGraphDrawer.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomEditor.cs" />
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/KinoBloom.Editor.asmdef" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor" />
      <Reference Include="UnityEngine">

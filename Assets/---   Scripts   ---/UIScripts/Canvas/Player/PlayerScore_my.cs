@@ -30,7 +30,7 @@ namespace ______Scripts______.UIScripts.Canvas.Player
         {
             _text.text = _playerScript.totalScore.ToString();
 
-            if (_playerScript.totalScore >= 150 * Product)
+            if (_playerScript.totalScore >= 10 * Product)
             {
                 _upController.ShowUpdateMenu();
                 Product += 1;

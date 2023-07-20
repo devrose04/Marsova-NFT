@@ -34,7 +34,8 @@ namespace ______Scripts______.UIScripts.Canvas.Player
 
         public void UpgreadHealth()
         {
-            _slider.maxValue = maxHealth + 30;
+            maxHealth += 30;
+            _slider.maxValue = maxHealth;
             ChangeHealthBar();
         }
     }

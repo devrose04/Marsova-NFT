@@ -371,6 +371,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23308487}
   m_CullTransparentMesh: 0
+--- !u!1 &23864125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2320253839905525106, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
+  m_PrefabInstance: {fileID: 397602452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &24035318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2259,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &110074912
 SpriteRenderer:
@@ -3433,7 +3438,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &154196149
 SpriteRenderer:
@@ -4254,7 +4259,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1278931394}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &210454361
 GameObject:
@@ -5850,7 +5855,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &285088351
 SpriteRenderer:
@@ -7267,9 +7272,9 @@ GameObject:
   m_Component:
   - component: {fileID: 317045518}
   - component: {fileID: 317045519}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: main_lev_build_70 (2)
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7287,7 +7292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.71}
 --- !u!212 &317045519
 SpriteRenderer:
@@ -7638,7 +7643,7 @@ Transform:
   - {fileID: 1590842962}
   - {fileID: 1815381392}
   m_Father: {fileID: 1278931394}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335664945
 GameObject:
@@ -9423,6 +9428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainButton
       objectReference: {fileID: 0}
+    - target: {fileID: 2320253839905525106, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
 --- !u!224 &397602453 stripped
@@ -10257,9 +10266,9 @@ GameObject:
   m_Component:
   - component: {fileID: 435419629}
   - component: {fileID: 435419630}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: main_lev_build_70 (2)
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10277,7 +10286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.71}
 --- !u!212 &435419630
 SpriteRenderer:
@@ -12016,7 +12025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &536134306
 SpriteRenderer:
@@ -12443,6 +12452,10 @@ PrefabInstance:
     - target: {fileID: 2320253839905525106, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
       propertyPath: m_Name
       value: MainButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320253839905525106, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
@@ -15670,6 +15683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722024117}
   - component: {fileID: 722024118}
+  - component: {fileID: 722024119}
   m_Layer: 3
   m_Name: main_lev_build_70 (1)
   m_TagString: Ground
@@ -15689,7 +15703,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1397418987}
+  m_Father: {fileID: 1192522510}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.258}
 --- !u!212 &722024118
@@ -15744,6 +15758,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &722024119
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722024116}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 2.4}
+    newSize: {x: 0.34, y: 2.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 2.4}
+  m_EdgeRadius: 0
 --- !u!1001 &725364911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16007,7 +16047,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &735143571
 SpriteRenderer:
@@ -17444,7 +17484,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.437}
 --- !u!212 &812182265
 SpriteRenderer:
@@ -21123,6 +21163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939453612}
   - component: {fileID: 939453613}
+  - component: {fileID: 939453614}
   m_Layer: 3
   m_Name: main_lev_build_70
   m_TagString: Ground
@@ -21137,12 +21178,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939453611}
-  m_LocalRotation: {x: -0, y: -0, z: 0.42616358, w: 0.9046461}
-  m_LocalPosition: {x: -48.87, y: -2.65, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.42616358, w: 0.9046461}
+  m_LocalPosition: {x: 52.87, y: -2.65, z: 0}
+  m_LocalScale: {x: -4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2019797804}
+  m_Father: {fileID: 1598631047}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.449}
 --- !u!212 &939453613
@@ -21197,6 +21238,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &939453614
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939453611}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 2.4}
+    newSize: {x: 0.34, y: 2.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 2.4}
+  m_EdgeRadius: 0
 --- !u!1 &939810392
 GameObject:
   m_ObjectHideFlags: 0
@@ -21207,6 +21274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939810393}
   - component: {fileID: 939810394}
+  - component: {fileID: 939810395}
   m_Layer: 3
   m_Name: main_lev_build_70 (1)
   m_TagString: Ground
@@ -21221,12 +21289,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939810392}
-  m_LocalRotation: {x: -0, y: -0, z: 0.3194418, w: 0.9476059}
-  m_LocalPosition: {x: -54.48, y: 3.22, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3194418, w: 0.9476059}
+  m_LocalPosition: {x: 58.48, y: 3.22, z: 0}
+  m_LocalScale: {x: -4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2019797804}
+  m_Father: {fileID: 1598631047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.258}
 --- !u!212 &939810394
@@ -21281,6 +21349,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &939810395
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939810392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 2.4}
+    newSize: {x: 0.34, y: 2.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 2.4}
+  m_EdgeRadius: 0
 --- !u!1 &943969292
 GameObject:
   m_ObjectHideFlags: 0
@@ -21625,7 +21719,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &958222851
 SpriteRenderer:
@@ -27019,6 +27113,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191942226}
   m_CullTransparentMesh: 0
+--- !u!1 &1192522509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192522510}
+  m_Layer: 0
+  m_Name: "KraterDuvar\u0131Sol_GroundTag"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1192522510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192522509}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1262873979}
+  - {fileID: 722024117}
+  m_Father: {fileID: 1278931394}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206765041
 GameObject:
   m_ObjectHideFlags: 0
@@ -27760,6 +27887,11 @@ Transform:
   m_Father: {fileID: 324913744}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1242406211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2320253839905525106, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
+  m_PrefabInstance: {fileID: 556754915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1245344877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28183,6 +28315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262873979}
   - component: {fileID: 1262873980}
+  - component: {fileID: 1262873981}
   m_Layer: 3
   m_Name: main_lev_build_70
   m_TagString: Ground
@@ -28202,7 +28335,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1397418987}
+  m_Father: {fileID: 1192522510}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.449}
 --- !u!212 &1262873980
@@ -28257,6 +28390,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1262873981
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262873978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 2.4}
+    newSize: {x: 0.34, y: 2.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 2.4}
+  m_EdgeRadius: 0
 --- !u!1 &1265059525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1537597345426705714, guid: a3ae32c5194908449ae379e354a18b22, type: 3}
@@ -28782,7 +28941,9 @@ Transform:
   - {fileID: 846874599}
   - {fileID: 1531304625}
   - {fileID: 1397418987}
+  - {fileID: 1192522510}
   - {fileID: 2019797804}
+  - {fileID: 1598631047}
   - {fileID: 324913744}
   - {fileID: 4997880607961090732}
   - {fileID: 1403653070}
@@ -30342,7 +30503,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2320253839905525068, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
   m_PrefabInstance: {fileID: 556754915}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1242406211}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -31005,7 +31166,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1278931394}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1365244213
 BoxCollider2D:
@@ -31621,9 +31782,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1397418987}
   - component: {fileID: 1397418988}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: "KraterDuvar\u0131Sol"
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31640,8 +31801,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1262873979}
-  - {fileID: 722024117}
   - {fileID: 435419629}
   - {fileID: 2070518529}
   - {fileID: 285088350}
@@ -31722,7 +31881,7 @@ Transform:
   - {fileID: 1584013503}
   - {fileID: 424828049}
   m_Father: {fileID: 1278931394}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1405153224
 GameObject:
@@ -32879,6 +33038,7 @@ MonoBehaviour:
   OptionsMenu: {fileID: 818860863}
   AudioSetting: {fileID: 1145925624}
   LeaderBoardMain: {fileID: 1585743980}
+  UpgreadeMenu: {fileID: 1586117003}
   AudioMain: {fileID: 1227604838}
   _closeAudioMenuMain: {fileID: 288403869}
   _closeAudioMenuSetting: {fileID: 288403870}
@@ -33525,7 +33685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &1525552311
 SpriteRenderer:
@@ -35633,6 +35793,39 @@ Transform:
   m_Father: {fileID: 324913744}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &1598631046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598631047}
+  m_Layer: 0
+  m_Name: "KraterDuvar\u0131Sa\u011F_GroundTag"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598631047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598631046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 939453612}
+  - {fileID: 939810393}
+  m_Father: {fileID: 1278931394}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1605369699 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9060166380758743516, guid: d1535bd09cc4a8b4ca118dd5a39f377c, type: 3}
@@ -36410,7 +36603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &1666200854
 SpriteRenderer:
@@ -37582,6 +37775,10 @@ MonoBehaviour:
   MainSentence: {fileID: 1507896931291406920}
   ExtraSentence: {fileID: 73613701}
   ChoseMenu: {fileID: 1586117003}
+  _audioSource: {fileID: 1464104255}
+  _audioClipOpen: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
+  _audioClipClose: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
+  ButtonGameObject: {fileID: 1242406211}
 --- !u!114 &1718197813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37598,6 +37795,10 @@ MonoBehaviour:
   MainSentence: {fileID: 1507896932412624250}
   ExtraSentence: {fileID: 2072204380}
   ChoseMenu: {fileID: 1586117003}
+  _audioSource: {fileID: 1464104255}
+  _audioClipOpen: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
+  _audioClipClose: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
+  ButtonGameObject: {fileID: 23864125}
 --- !u!114 &1718197814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37624,6 +37825,7 @@ MonoBehaviour:
   attackTimeDrone: {fileID: 1582963098}
   _upManagerChose1: {fileID: 1718197812}
   _upmanagerChose2: {fileID: 1718197813}
+  _playerController: {fileID: 999068448}
 --- !u!1 &1728921551
 GameObject:
   m_ObjectHideFlags: 0
@@ -37986,7 +38188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &1732347823
 SpriteRenderer:
@@ -38951,7 +39153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &1785402468
 SpriteRenderer:
@@ -39510,7 +39712,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2320253839905525068, guid: 8c2f7ba743563b648937144b6083b180, type: 3}
   m_PrefabInstance: {fileID: 397602452}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 23864125}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -43859,9 +44061,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2019797804}
   - component: {fileID: 2019797803}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: "KraterDuvar\u0131Sa\u011F"
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43892,7 +44094,7 @@ EdgeCollider2D:
   - {x: -52.003574, y: 0.6294457}
   - {x: -52.111008, y: 0.777171}
   - {x: -55.509975, y: 5.1139317}
-  - {x: -56.709503, y: 7.423559}
+  - {x: -57.017513, y: 7.423559}
   - {x: -58.421303, y: 14.73006}
   - {x: -59.344173, y: 23.29955}
   - {x: -58.444836, y: 69.84016}
@@ -43912,8 +44114,6 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 939453612}
-  - {fileID: 939810393}
   - {fileID: 317045518}
   - {fileID: 812182264}
   - {fileID: 154196148}
@@ -43923,7 +44123,7 @@ Transform:
   - {fileID: 958222850}
   - {fileID: 735143570}
   m_Father: {fileID: 1278931394}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2019833609
 PrefabInstance:
@@ -44434,7 +44634,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &2030966677
 SpriteRenderer:
@@ -44940,7 +45140,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019797804}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.64}
 --- !u!212 &2049638545
 SpriteRenderer:
@@ -45329,7 +45529,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1397418987}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.437}
 --- !u!212 &2070518530
 SpriteRenderer:
@@ -49506,7 +49706,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1278931394}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4997880607961090733
 GameObject:

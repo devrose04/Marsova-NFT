@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -13,6 +15,12 @@ namespace ______Scripts______.Upgrade
 
         [SerializeField] private GameObject ChoseMenu;
 
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _audioClipOpen;
+        [SerializeField] private AudioClip _audioClipClose;
+
+        [SerializeField] private GameObject ButtonGameObject;
+
         private string _mainSentece;
         private string _extraSentecen;
 
@@ -20,8 +28,11 @@ namespace ______Scripts______.Upgrade
 
         (string, string, UnityAction) Upgrade;
 
+        private int BugFixed_i = 0;
+
         public void AllTogether(Component _ScriptName)
         {
+            StartCoroutine(DelayedCall());
             UploadData(_ScriptName);
             WriteText();
             ClickUptadeButton();
@@ -52,12 +63,14 @@ namespace ______Scripts______.Upgrade
                 print("Eror");
         }
 
-        void WriteText() // todo: açılma  sesi ekle
+        void WriteText()
         {
+            _audioSource.PlayOneShot(_audioClipOpen);
             MainSentence.text = _mainSentece;
             ExtraSentence.text = _extraSentecen;
             // ChoseMenu.SetActive(true);
             Time.timeScale = 0;
+            BugFixed_i = 0;
         }
 
         void ClickUptadeButton()
@@ -65,11 +78,32 @@ namespace ______Scripts______.Upgrade
             _button.onClick.AddListener(RunAction);
         }
 
-        void RunAction() // todo: kapanma sesi ekle
+        void RunAction()
         {
-            _action.Invoke();
-            ChoseMenu.SetActive(false);
-            Time.timeScale = 1;
+            if (BugFixed_i == 0)
+            {
+                BugFixed_i = 1;
+                _audioSource.PlayOneShot(_audioClipClose);
+                _action.Invoke();
+                ButtonGameObject.SetActive(false);
+                ChoseMenu.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
+
+        IEnumerator DelayedCall()
+        {
+            // 1 saniye beklet
+            yield return new WaitForSecondsRealtime(1f);
+
+            // İlgili işlemi gerçekleştir
+            LateSetActiveButton();
+        }
+
+
+        void LateSetActiveButton()
+        {
+            ButtonGameObject.SetActive(true);
         }
     }
 }

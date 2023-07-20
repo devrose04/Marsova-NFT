@@ -291,6 +291,11 @@ namespace ______Scripts______.PlayerScripts.Player
 
             _audioSourceMove.volume = volume;
         }
+
+        public void BugFixedJetPackSound()
+        {
+            _audioSourceJetPack.Stop();
+        }
     }
 
     // -*-Todo: -Uğur-

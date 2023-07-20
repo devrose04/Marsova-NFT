@@ -19,7 +19,7 @@ namespace ______Scripts______.Upgrade.All_Upgrade.UpgreadeCheck_2
 
         void DownAttackCD()
         {
-            _enemyDetector.timeLimit -= 0.2f;
+            _enemyDetector.timeLimit = Mathf.Round(_enemyDetector.timeLimit - 0.2f); // yuvarlıyoruz
         }
 
         public (string, string, UnityAction) Upgrade()

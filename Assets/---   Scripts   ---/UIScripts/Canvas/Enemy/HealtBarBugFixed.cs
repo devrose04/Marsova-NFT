@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace ______Scripts______.Canvas.Enemy
+namespace ______Scripts______.UIScripts.Canvas.Enemy
 {
     public class HealtBarBugFixed : MonoBehaviour
     {

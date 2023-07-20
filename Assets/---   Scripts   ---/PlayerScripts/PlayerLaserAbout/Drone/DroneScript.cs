@@ -126,7 +126,7 @@ namespace ______Scripts______.PlayerScripts.PlayerLaserAbout.Drone
             if (EnemiesAreThere == true)
                 DroneStartAttackTimer += Time.deltaTime;
 
-            if (DroneStartAttackTimer >= ActiveDroneTime) // 6.5 saniye Player'ın yanında durduktan sonra gitsin.
+            if (DroneStartAttackTimer >= ActiveDroneTime ) // 6.5 saniye Player'ın yanında durduktan sonra gitsin.
                 GoToSky();
         }
 

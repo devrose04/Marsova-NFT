@@ -1,4 +1,5 @@
 using System;
+using ______Scripts______.PlayerScripts.Player;
 using ______Scripts______.Upgrade.All_Upgrade;
 using ______Scripts______.Upgrade.All_Upgrade.UpgreadChech_1;
 using ______Scripts______.Upgrade.All_Upgrade.UpgreadeCheck_2;
@@ -30,6 +31,8 @@ namespace ______Scripts______.Upgrade
         [SerializeField] private UpManager_Chose_1 _upManagerChose1;
         [SerializeField] private UpManager_Chose_2 _upmanagerChose2;
 
+        [SerializeField] private PlayerController _playerController;
+
         private int RandomCount_1;
         private int RandomCount_2;
 
@@ -40,6 +43,8 @@ namespace ______Scripts______.Upgrade
         {
             SelectUpgrade_1();
             SelectUpgrade_2();
+
+            _playerController.BugFixedJetPackSound();
         }
 
         void SelectUpgrade_1()

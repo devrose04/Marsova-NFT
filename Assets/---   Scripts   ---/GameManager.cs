@@ -35,6 +35,7 @@ namespace ______Scripts______
         [SerializeField] private GameObject OptionsMenu;
         [SerializeField] private GameObject AudioSetting;
         [SerializeField] private GameObject LeaderBoardMain;
+        [SerializeField] private GameObject UpgreadeMenu;
 
         [SerializeField] private GameObject AudioMain;
         // [SerializeField] private GameObject HowToPlay; // todo: bunları yapınca ayarla
@@ -153,7 +154,7 @@ namespace ______Scripts______
 
         void SettingButton()
         {
-            if (MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && AudioMain.activeSelf == false && AudioSetting.activeSelf == false && OptionsMenu.activeSelf == false && LeaderBoardMain.activeSelf == false)
+            if (MainMenu.activeSelf == false && GameOver.activeSelf == false && DifficultyMenu.activeSelf == false && AudioMain.activeSelf == false && AudioSetting.activeSelf == false && OptionsMenu.activeSelf == false && LeaderBoardMain.activeSelf == false && UpgreadeMenu.activeSelf == false)
                 _SettingButton.SetActive(true);
             else
                 _SettingButton.SetActive(false);
@@ -176,5 +177,7 @@ namespace ______Scripts______
             if (LeaderBoardMain.activeSelf == true)
                 _closeLeaderBoardMain.CloseLeaderBoard();
         }
+
+      
     }
 }
