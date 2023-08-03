@@ -11,6 +11,8 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
         [SerializeField] private GameObject MainMenu;
         [SerializeField] private GameObject Player;
 
+        [SerializeField] private HowToPlayButton HowToPlayMenu;
+
         [SerializeField] private PlayerScript _playerScript;
 
         [SerializeField] private GameObject CrashPlayerVehicle;
@@ -40,6 +42,7 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
         [SerializeField] private ParticleSystem _Ellectric;
         [SerializeField] private ParticleSystem _electircBall;
 
+
         private void Awake()
         {
             RB2 = Player.GetComponent<Rigidbody2D>();
@@ -60,6 +63,8 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons
             _audioSource.PlayOneShot(_audioClipTeleport);
             _audioSource.PlayOneShot(_audioClipElectir);
 
+            HowToPlayMenu.StartGameOpenHowToPlayMenu();
+            
             Invoke("Explosion1", 1f);
             Invoke("Explosion5", 1.8f);
             Invoke("Explosion2", 3.2f);
