@@ -43,196 +43,154 @@
   <ItemGroup>
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportGivesArmor.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineVertexData.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalData.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/PlayerScore_my.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/CanvasScaler.cs" />
-=======
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenOptionsMain.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/MusicSound.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenOptionsMain.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicSound.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/ICustomScript.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/ScoreSender.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/MeteorMove.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/VehicleSpawner.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineVertexData.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerController.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/PlayerScore.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalData.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/PlayerScore_my.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails/DashAttackDetails.cs" />
->>>>>>> origin/main
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/CanvasScaler.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicDataManager.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/CannonBehavior.cs" />
      <Compile Include="Assets/---   Scripts   ---/ObjectsScripts/ObjectColliderScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/NearEnemyAttackScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
+     <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/SmallVehicle.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard/DisplayHighscores.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseNickName_GoButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/CreateSinShapedLineStrip.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/SaveData.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation/AttackAnimation.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpDroneAttackTime_.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/StartButton.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpSpeed.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardMain.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/InputText/NickNameInput.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuMain.cs" />
-=======
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseAudioMenuMain.cs" />
->>>>>>> origin/main
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/AIScripts/AISkillsScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/DroneBar.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/SalyangozScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/WhiteEnemyCollider.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DifficultyButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsManager.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseDifficultyMenu.cs" />
-=======
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseDifficultyMenu.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/SmaleAnimations.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/GameAudioBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DeadSettingButton.cs" />
->>>>>>> origin/main
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/StartShipAttack.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardMain.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/VisualController.cs" />
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordController.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StarShipBar.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/UpManager_Chose_2.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/UIModal.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/GiantAnimations.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/ArıScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportShield.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpDroneDmg.cs" />
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/DroneScript.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerArmorFrameIcon.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/DemoUIManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/UpManager_Chose_1.cs" />
-=======
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MainMenuButton.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/AnimationsController.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseAudioMenuSetting.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/DemoUIManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/SetttingMenu.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/SlimeScript.cs" />
->>>>>>> origin/main
-     <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsDataScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerAnimations.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DifficultyToggle.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/GameManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpBulletAmount.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/EnemyHealthBar.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/PlayerShowOwnScore.cs" />
-     <Compile Include="Assets/---   Scripts   ---/VehicleScript/SpawnEnemy.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/Scripts/Demo.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/RangeEnemyAttackScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MusicBar.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyWeaponScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StartShipBulletAmount.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineBehavior.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/HealtBarBugFixed.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalPrefabData.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenOptionsSetting.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpDroneAttackRadius.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpLaserAttackTime.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/dreamloLeaderBoard.cs" />
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/EnemyDetector.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/MetaMaskDemo.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenOptionsMain.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicSound.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/ScoreSender.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/ICustomScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/VehicleScript/VehicleSpawner.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/MeteorMove.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
-     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerController.cs" />
-     <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails/DashAttackDetails.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/MusicDataManager.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/CannonBehavior.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/NearEnemyAttackScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsScript.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard/DisplayHighscores.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseNickName_GoButton.cs" />
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpDroneAttackTime_.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardMain.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyDmgCollider.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/SmaleAnimations.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/GameAudioBar.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DeadSettingButton.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/ReStartButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/dreamloPromoCode.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/TweenIn.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordSkilsScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseLeaderBoardMain.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineStripBehavior.cs" />
-     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyKnockBackScript.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/VisualController.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/ButtonEffect.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyKnockBackScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/LeaderBoardSample.cs" />
+     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts/SwordController.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/HealBullet.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/IUpgrade_Chose_2.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StarShipBar.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/UpManager_Chose_2.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/JetPackBar.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/UIModal.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/GiantAnimations.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/ArıScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalPrefabs.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseSettingMenu.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot/SuportShield.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/CharracterFollow.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpBulletReload.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/ShotBehavior.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/LookAtCamera.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpDroneDmg.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/DroneScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MainMenuButton.cs" />
      <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard/HighScores.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/AnimationsController.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpArmor.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpHealth.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpDmg.cs" />
+     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerArmorFrameIcon.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/UIModalManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton/CloseAudioMenuSetting.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/DemoUIManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/SetttingMenu.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/UpController.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/UpManager_Chose_1.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/SlimeScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/GameManagerScript/SkillsScripts/SkillsDataScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerAnimations.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/DifficultyToggle.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/AIScripts/AIScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy/EnemyScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/GameManager.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyBulletScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/AhtapaotScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpBulletAmount.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/EnemyHealthBar.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript/PlayerShowOwnScore.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenLeaderBoardSetting.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/BigVehicle.cs" />
+     <Compile Include="Assets/---   Scripts   ---/VehicleScript/SpawnEnemy.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/Scripts/Demo.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/IsGroundTouchScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/ObjectsScripts/Calculations.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/Visuals/BackgroundShape.cs" />
      <Compile Include="Assets/---   Scripts   ---/VehicleScript/MediumVehicle.cs" />
-<<<<<<< HEAD
-     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpBulletDmg.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
-=======
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/MusicBar.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/RangeEnemyAttackScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack/EnemyWeaponScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StartShipBulletAmount.cs" />
-     <Compile Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip/StartShipBulletAmount.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/Scripts/VolumetricLineBehavior.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpBulletDmg.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy/HealtBarBugFixed.cs" />
->>>>>>> origin/main
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/Player/PlayerScript.cs" />
-     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenOptionsSetting.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/ModalPrefabData.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenOptionsSetting.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpDroneAttackRadius.cs" />
+     <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadChech_1/UpLaserAttackTime.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/dreamloLeaderBoard.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/DmgColliderScript.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts/VolumetricMultiLineBehavior.cs" />
+     <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone/EnemyDetector.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations/SalyangozAnimations.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player/HealthBarScript.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Scripts/MetaMaskDemo.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/IUpgrade_Chose_1.cs" />
      <Compile Include="Assets/---   Scripts   ---/GameManagerScript/ButtonScript.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
      <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/OpenButton/OpenNickName.cs" />
      <Compile Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/PlayerBullet.cs" />
      <Compile Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Demo/Scripts/CanvasController.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
      <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/WhiteScript.cs" />
+     <Compile Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript/GiantScript.cs" />
      <Compile Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade/UpgreadeCheck_2/UpActiveDroneTime.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Sound/SoundDataManager.cs" />
+     <Compile Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Scripts/PlayerPreviewManager.cs" />
+     <Compile Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/HowToPlayButton.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Mac/amd64" />
      <Folder Include="Assets/---   Animations   ---/BeyazUçanGöz" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Textures" />
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts/SwordScripts" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Sprites/GinoCharacter" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files" />
@@ -241,14 +199,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/GroundSlam" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Sprites/Logos" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMPro.cginc" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Files" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/GroundSlam" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Prefabs   ---/Enemies" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Guard" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LadderClimbHorizontal" />
@@ -304,7 +254,6 @@
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbDownRight" />
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts" />
-<<<<<<< HEAD
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/SwordAttack" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Scripts" />
@@ -318,20 +267,6 @@
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CartoonFX Free.txt" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails/Fire" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Art/Animations/Animators" />
-=======
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/SwordAttack" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Scripts" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Art" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Misc" />
-     <Folder Include="Assets/---   Using Assets   ---/GothicVania Church" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Hits/Hit-4" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbIdle" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Music" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CartoonFX Free.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails/Fire" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Art/Animations/Animators" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Animations   ---" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Dash" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/WebGLTemplates/MetaMask/TemplateData" />
@@ -342,7 +277,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Electric" />
      <None Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Third Party Notices/Indivdiual Licenses/Text Mesh Pro.txt" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/OwnScript" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles/Pixel Art/vehicle 1/frames" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/UI/Mask" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles/Pixel Art/vehicle 2/thrust" />
@@ -357,17 +291,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Text" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Collectible" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExamplePrefabs" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 1/frames" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 2/thrust" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 2" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/GunAim" />
-     <Folder Include="Assets/---   Scenes   ---" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Nature" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 3/frames-thrust/thrust-back" />
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Text" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Collectible" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons" />
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Buttons/CloseButton" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Sliders" />
@@ -390,7 +313,6 @@
      <None Include="Assets/---   Using Assets   ---/Finished/ShootingSound/ReadMe.txt" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbUpLeft" />
      <Folder Include="Assets/---   Materials    ---" />
-<<<<<<< HEAD
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries/ECIES/Android/libs/x86" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc" />
@@ -401,16 +323,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Sprites/GinoCharacter/AttackinJump" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Punch01" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpFall" />
-=======
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX4 Prefabs/Magic" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX Prefabs" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Slide" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/AttackinJump" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Punch01" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpFall" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LadderClimb" />
@@ -440,7 +352,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/Space Backgrounds Pack 2/Artwork" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Explosions" />
      <Folder Include="Assets/---   All Effects   ---/AssetEfectlerim/Kullandıklarım" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Gui" />
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/StarShip" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LookUp" />
@@ -464,27 +375,9 @@
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Sprites" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpMid" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Demo/Prefabs" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Gui" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LookUp" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Run" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbLeft" />
-     <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAttack" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/ComboAttack02" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/ThrowAttack" />
-     <Folder Include="Assets/---   Using Assets   ---/Leohpaz/RPG_Essentials_Free" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/DoubleJump" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbGrab" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Hits" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/BulletImpact" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpMid" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Demo/Prefabs" />
->>>>>>> origin/main
      <Folder Include="Assets/---   All Effects   ---/Effektler_eski" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Materials/Animated" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/Enemy" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Models/Materials" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Free Minerals Pixel Art Icons/PNG/Transperent" />
      <Folder Include="Assets/---   Scripts   ---/Upgrade/All_Upgrade" />
@@ -494,15 +387,6 @@
      <Folder Include="Assets/---   PNG   ---/Old_ALL/Old_Photos" />
      <None Include="Assets/---   Using Assets   ---/Finished/Free Minerals Pixel Art Icons/readme.txt" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/Free Minerals Pixel Art Icons/PNG/Transperent" />
-     <Folder Include="Assets/---   Animations   ---/UçanAhtapot" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Crossed" />
-     <Folder Include="Assets/---   PNG   ---/Old_Photos" />
-     <None Include="Assets/---   Using Assets   ---/Free Minerals Pixel Art Icons/readme.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Scripts   ---/UIScripts" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/Barbarian/Preview" />
@@ -525,7 +409,6 @@
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Player" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Misc" />
      <Folder Include="Assets/---   Scripts   ---/GameManagerScript/SkillsDetails" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art" />
      <Folder Include="Assets/---   PNG   ---/New_Png" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Resources/MetaMask/Config" />
@@ -534,12 +417,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Demo" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Sprites/GinoCharacter/slide" />
      <None Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/Shaders/LineStrip-TextureAlphaBlended.shader" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Demo" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/slide" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Prefabs   ---" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/biceraptor/idle" />
      <Folder Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/MyScript" />
@@ -557,7 +434,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets" />
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts/Player" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Crouch" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/ExternalDependencyManager" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow/SpellIconsVolume_2/Scripts" />
@@ -617,58 +493,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Solid Buttons" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Mesh" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Sprites/GinoCharacter/IdleRunJump" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Crouch" />
-     <Folder Include="Assets/---   Using Assets   ---/Leohpaz/RPG_Essentials_Free/12_Player_Movement_SFX" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbDownLeft" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 3/frames-thrust/thrust-bottom" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Materials/Misc" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Enemies Pack 1/Sentinel" />
-     <Folder Include="Assets/---   Using Assets   ---/Space Backgrounds Pack 2/Artwork/Planets" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Hits/Hit-3" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Enemies Pack 1/Scenes" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/IdleTransition" />
-     <Folder Include="Assets/---   Using Assets   ---/Space Backgrounds Pack 2/Artwork/Galaxy/Props" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Eerie" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Misc" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/Readme Cartoon FX Remaster FREE.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/Enemy1" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/Free Minerals Pixel Art Icons/PNG" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/InteractionPull" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/BowAim" />
-     <Folder Include="Assets/---   Using Assets   ---/ShootingSound" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Light" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/DashDust" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Shaders" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)" />
-     <Folder Include="Assets/---   Using Assets   ---/Leohpaz/RPG_Essentials_Free/10_UI_Menu_SFX" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Materials/Texts" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/WallClimb" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Skull &amp; Ghosts Effects" />
-     <Folder Include="Assets/---   Using Assets   ---" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/LandingDust" />
-     <Folder Include="Assets/---   Animations   ---/Salyangoz" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Scenes" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/attacks" />
-     <Folder Include="Assets/---   Using Assets   ---/Space Backgrounds Pack 2" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Punch02" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Animations" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Misc" />
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Solid Buttons" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Mesh" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/IdleRunJump" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Prefabs   ---/Sounds" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Kick03" />
@@ -702,7 +526,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles/Music" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/EnemyAttackAnimation" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Rarity Frames" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Walk" />
      <Folder Include="Assets/---   Using Assets   ---/DataBaseAssets/dreamlo/ScoreBoard" />
@@ -729,24 +552,6 @@
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/ComboAttack01" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs/Rarity Frames" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Walk" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Materials" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art" />
-     <Folder Include="Assets/---   Using Assets   ---/Free Minerals Pixel Art Icons/PNG/Background" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/BowFire" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/ClimbJumpPrepare" />
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Prefabs" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Enemies Pack 1/RinoFish" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/ComboAttack04" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/LedgeGrab" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/SlideDust" />
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/ComboAttack01" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Animations   ---/KüçükYerdeOlan" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art/Hits/Hit-6" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Demo/Animation" />
@@ -761,7 +566,6 @@
      <Folder Include="Assets/---   Animations   ---/MaviBüyükAnim" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Scenes" />
      <Folder Include="Assets/---   Animations   ---/Player" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Effects" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Sprites" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Plugins/Libraries" />
@@ -771,14 +575,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/RockyWorld/Sprites/GinoCharacter/HitDeath" />
      <None Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Shaders/CFXM_MobileParticleAdd_Alpha8.shader" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Effects" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites" />
-     <Folder Include="Assets/---   All Effects   ---" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/GinoCharacter/HitDeath" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Shaders/CFXM_MobileParticleAdd_Alpha8.shader" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout/Drone" />
      <None Include="Assets/---   Using Assets   ---/Finished/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Font/FontAttribution.txt" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills" />
@@ -806,7 +602,6 @@
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <Folder Include="Assets/---   Scripts   ---/ObjectsScripts" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Resources" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art/Waveform" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Water" />
@@ -850,41 +645,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/biceraptor/walk" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/WallJump" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Waveform" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Water" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Vehicles/Pixel Art/vehicle 3/frames" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Pickup Items" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/FX/RunDustFront" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc" />
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Demo/Scripts" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Materials/Water" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Impacts" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
-     <Folder Include="Assets/---   Using Assets   ---/SwordSoundPack" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Debris Hits" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/JumpRise" />
-     <Folder Include="Assets/---   PNG   ---/Anim_PNG/Player/Attack" />
-     <Folder Include="Assets/---   Animations   ---/Drone" />
-     <Folder Include="Assets/---   Using Assets   ---/Jack_Tolmachoff_Design/Sci Fi Pixel Art UI Kit/Font" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/BowDraw" />
-     <Folder Include="Assets/---   Prefabs   ---/Blocklar" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Animations/Animators" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites" />
-     <Folder Include="Assets/---   Using Assets   ---/TextMesh Pro/Documentation" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Blood" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/GroundSlam" />
-     <Folder Include="Assets/---   PNG   ---" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/Textures" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Jump" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Scene" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Files/biceraptor/walk" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/WallJump" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
->>>>>>> origin/main
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemySkills/SuportSkills_Ahtapot" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Vehicles/Pixel Art/vehicle 2/frames" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/JMO Assets/Cartoon FX (legacy)/Materials/Electric" />
@@ -892,7 +652,6 @@
      <Folder Include="Assets/---   Scripts   ---/PlayerScripts/PlayerLaserAbout" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art/Hits/Hit-1" />
      <Folder Include="Assets/---   Scripts   ---/UIScripts/Canvas/Enemy" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Kick02" />
      <Folder Include="Assets/---   Using Assets   ---/Finished" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Roll" />
@@ -910,23 +669,10 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/CaptainCatSparrow" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/VolumetricLines/BuiltInRenderPipeline/ExampleScenes/ExampleScripts" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/WallClimbIdle" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Kick02" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Roll" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Shooting Fx/Pixel Art/Pulse" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/Enemy3" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/Punch03" />
-     <None Include="Assets/---   Using Assets   ---/TextMesh Pro/Sprites/EmojiOne.json" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/Combat/ComboAttack03" />
-     <None Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Distortion.shader" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Enemies Pack 1/Fly" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/WallClimbIdle" />
->>>>>>> origin/main
      <Folder Include="Assets/---   PNG   ---/PrefabsAssets" />
      <None Include="Assets/---   Using Assets   ---/Finished/TextMesh Pro/Shaders/TMP_Sprite.shader" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Shooting Fx/Pixel Art/Spark" />
      <Folder Include="Assets/---   PNG   ---/Anim_PNG/Player/Attack_White" />
-<<<<<<< HEAD
      <Folder Include="Assets/---   Using Assets   ---/Finished/Free Minerals Pixel Art Icons" />
      <Folder Include="Assets/---   Using Assets   ---/MetaMaskFile_I_created/MetaMask/Samples/Main/Audio/Tracks" />
      <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations" />
@@ -937,15 +683,6 @@
      <Folder Include="Assets/---   Using Assets   ---/Finished/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LedgeClimb" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Space Backgrounds Pack 2/Scenes" />
      <Folder Include="Assets/---   Using Assets   ---/Finished/Warped Files/eye" />
-=======
-     <Folder Include="Assets/---   Using Assets   ---/Free Minerals Pixel Art Icons" />
-     <Folder Include="Assets/---   Scripts   ---/EnemyScripts/Enemy/EnemyAnimations" />
-     <Folder Include="Assets/---   Using Assets   ---/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs/Explosions" />
-     <Folder Include="Assets/---   Using Assets   ---/RockyWorld/Sprites/Enemy2" />
-     <Folder Include="Assets/---   Using Assets   ---/DeadRevolver/PixelPrototypePlayerSprites/Art/Sprites/LedgeClimb" />
-     <Folder Include="Assets/---   Using Assets   ---/Space Backgrounds Pack 2/Scenes" />
-     <Folder Include="Assets/---   Using Assets   ---/Warped Files/eye" />
->>>>>>> origin/main
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.24f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

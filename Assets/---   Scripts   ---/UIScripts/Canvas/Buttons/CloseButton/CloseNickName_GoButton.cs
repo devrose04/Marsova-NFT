@@ -12,6 +12,7 @@ namespace ______Scripts______.UIScripts.Canvas.Buttons.CloseButton
         public void CloseNickNameMenu()
         {
             PlayerPrefs.SetString("NickName", _nickNameInput.NickName);
+            PlayerPrefs.Save();
             _nickNameMenu.SetActive(false);
             _startButton.StartGame();
         }
